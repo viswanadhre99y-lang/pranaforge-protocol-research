@@ -9,6 +9,7 @@
   --warn: #e6b35a;
   --danger: #e07070;
   --ok: #5dce8d;
+  --below: #6b7a88;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --sans: "IBM Plex Sans", system-ui, sans-serif;
 }
@@ -57,7 +58,9 @@ textarea { min-height: 64px; resize: vertical; font-family: var(--mono); font-si
 .checks { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; padding-top: 8px; }
 .checks label { display: flex; gap: 8px; align-items: center; color: var(--text); font-size: 0.9rem; }
 .checks input { width: auto; }
-.actions { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+.actions { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; align-items: center; }
+.pin-row { display: flex; gap: 10px; align-items: center; }
+.pin-row input { flex: 1; }
 button {
   border: 0; border-radius: 8px; padding: 10px 16px; font-weight: 600; cursor: pointer;
 }
@@ -75,13 +78,27 @@ h2 { margin: 0 0 10px; font-size: 1rem; }
   background: #121920;
 }
 .card.rank-1 { border-color: var(--accent); }
+/* P2-3 / P3 a11y: below-τ visually distinct with adequate contrast */
+.card.below-tau {
+  opacity: 0.72;
+  filter: grayscale(0.55);
+  border-color: #3a4654;
+  background: #0e1318;
+  color: #c5d0da;
+}
+.card.below-tau .meta { color: #9aafc0; }
+.card.below-tau .below-label {
+  color: #c9a227;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
 .card h3 { margin: 0 0 6px; font-size: 1rem; }
 .meta { color: var(--muted); font-size: 0.82rem; font-family: var(--mono); }
 .message {
   white-space: pre-wrap; line-height: 1.45; background: #10161d; border-radius: 8px;
   padding: 12px; border: 1px solid var(--border); margin-top: 8px;
 }
-.exclusions { max-height: 220px; overflow: auto; font-size: 0.8rem; font-family: var(--mono); color: var(--muted); }
+.exclusions { max-height: 280px; overflow: auto; font-size: 0.8rem; font-family: var(--mono); color: var(--muted); }
 .exclusions div { padding: 4px 0; border-bottom: 1px solid #1c2630; }
 .lede { color: var(--muted); font-size: 0.92rem; margin: 0 0 12px; }
-#status { font-size: 0.85rem; color: var(--muted); }
+#status, #outcome-status { font-size: 0.85rem; color: var(--muted); }

@@ -10,13 +10,27 @@
   <div class="shell">
     <header>
       <div class="brand">PranaForge <span>PIE</span></div>
-      <span class="tag">Staff Top-3 Picker · V1 MVP</span>
+      <span class="tag">Staff Top-3 Picker · V1.1</span>
       <span class="tag" id="health-tag">health…</span>
+      <span class="tag" id="auth-tag">auth…</span>
     </header>
 
+    <section class="panel" id="auth-panel">
+      <label for="staff_pin">Staff PIN (stored in sessionStorage; sent as X-PIE-Staff-Pin)</label>
+      <div class="pin-row">
+        <input id="staff_pin" type="password" autocomplete="off" placeholder="Leave blank if server auth=open_dev" aria-describedby="pin-help" />
+        <button type="button" class="btn-ghost" id="btn-save-pin">Save PIN</button>
+      </div>
+      <p id="pin-help" class="lede">Required when PIE_STAFF_PIN is set on the server. Wrong/missing PIN → 401.</p>
+    </section>
+
     <section class="panel" id="form-panel">
-      <p class="lede">Explainable protocol selection from the public catalog. Silence is a first-class action. Vault IP never expands into steps.</p>
+      <p class="lede">Explainable protocol selection from the public catalog. Silence is a first-class action. Vault IP never expands into steps. Crisis keywords in free text force escalate (false-positive risk — see README).</p>
       <div class="grid">
+        <div>
+          <label for="client_id">client_id (isolation key)</label>
+          <input id="client_id" type="text" value="demo-client" autocomplete="off" />
+        </div>
         <div>
           <label for="client_type">client_type</label>
           <select id="client_type">
@@ -43,6 +57,9 @@
             <option value="home">home</option>
             <option value="hotel">hotel</option>
             <option value="public">public</option>
+            <option value="airport">airport</option>
+            <option value="plane">plane</option>
+            <option value="open_office">open_office</option>
             <option value="transit">transit</option>
             <option value="bedroom">bedroom</option>
             <option value="outdoors">outdoors</option>
@@ -50,6 +67,14 @@
             <option value="bathroom">bathroom</option>
             <option value="backstage">backstage</option>
             <option value="private">private</option>
+          </select>
+        </div>
+        <div>
+          <label for="privacy">privacy</label>
+          <select id="privacy">
+            <option value="" selected>(unset)</option>
+            <option value="private">private</option>
+            <option value="public">public</option>
           </select>
         </div>
         <div>
@@ -94,19 +119,27 @@
             <option value="no">no</option>
           </select>
         </div>
+        <div>
+          <label for="goal">goal</label>
+          <input id="goal" type="text" placeholder="e.g. pre_performance" autocomplete="off" />
+        </div>
       </div>
       <div style="margin-top:12px">
         <label for="history_notes">history_notes</label>
-        <textarea id="history_notes" placeholder="e.g. prior_negative:cyclic-sighing; prior_positive:ppr; contra:pregnancy"></textarea>
+        <textarea id="history_notes" placeholder="e.g. prior_negative:cyclic-sighing; prior_positive:ppr; contra:breath"></textarea>
+      </div>
+      <div style="margin-top:12px">
+        <label for="notes">notes (free text — scanned for crisis keywords)</label>
+        <textarea id="notes" placeholder="Optional staff notes"></textarea>
       </div>
       <div class="checks">
-        <label><input type="checkbox" id="clinician_mode" /> clinician_mode</label>
-        <label><input type="checkbox" id="crisis_flag" /> crisis_flag</label>
+        <label for="clinician_mode"><input type="checkbox" id="clinician_mode" /> clinician_mode</label>
+        <label for="crisis_flag"><input type="checkbox" id="crisis_flag" /> crisis_flag</label>
       </div>
       <div class="actions">
         <button type="button" class="btn-primary" id="btn-recommend">Recommend Top-3</button>
         <button type="button" class="btn-ghost" id="btn-reset">Reset</button>
-        <span id="status"></span>
+        <span id="status" role="status" aria-live="polite"></span>
       </div>
     </section>
 
@@ -115,9 +148,32 @@
       <div id="inferred" class="meta"></div>
       <div id="message" class="message" hidden></div>
       <div id="why" class="meta" style="margin-top:8px"></div>
+      <div id="sequence" class="meta" style="margin-top:8px"></div>
       <div id="recs" style="margin-top:14px"></div>
-      <h2 style="margin-top:16px">Exclusions (sample)</h2>
+      <h2 style="margin-top:16px">Exclusions</h2>
       <div id="exclusions" class="exclusions"></div>
+    </section>
+
+    <section class="panel" id="outcome-panel">
+      <h2>Log outcome (learning loop MVP)</h2>
+      <div class="grid">
+        <div>
+          <label for="outcome_protocol">protocol_id</label>
+          <input id="outcome_protocol" type="text" autocomplete="off" />
+        </div>
+        <div>
+          <label for="outcome_rating">rating_1_to_10</label>
+          <input id="outcome_rating" type="number" min="1" max="10" value="8" />
+        </div>
+        <div>
+          <label for="outcome_context">context_key</label>
+          <input id="outcome_context" type="text" placeholder="optional" autocomplete="off" />
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn-ghost" id="btn-outcome">POST /api/outcome</button>
+        <span id="outcome-status" role="status"></span>
+      </div>
     </section>
   </div>
   <script src="/app.js"></script>

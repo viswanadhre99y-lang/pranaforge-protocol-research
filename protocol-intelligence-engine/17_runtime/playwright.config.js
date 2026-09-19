@@ -6,7 +6,7 @@ module.exports = defineConfig({
   timeout: 120000,
   expect: { timeout: 15000 },
   fullyParallel: false,
-  workers: 1,
+  workers: 2,
   retries: 0,
   reporter: [['list'], ['json', { outputFile: '../18_qa/playwright-results.json' }]],
   use: {

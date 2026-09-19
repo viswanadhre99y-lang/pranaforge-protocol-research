@@ -56,86 +56,6 @@
     ],
     "recommendations": [
       {
-        "protocol_id": "exhale-emphasized",
-        "name": "Exhale-Emphasized Paced Breathing (No Holds)",
-        "evidence": "B",
-        "max_duration_sec": 300,
-        "recommended_duration_sec": 120,
-        "min_duration_sec": 120,
-        "arousal_direction": "down",
-        "need_tags": [
-          "stress_acute",
-          "arousal_down"
-        ],
-        "categories": [
-          "breathing",
-          "stress"
-        ],
-        "public_discrete": true,
-        "clinician_only": false,
-        "score": 0.646,
-        "features": {
-          "need_match": 0.58,
-          "context_match": 0,
-          "timing": 0.5,
-          "evidence": 0.8,
-          "history": 0.5,
-          "preference": 0.55,
-          "feasibility": 0.96,
-          "expected_benefit": 0.65,
-          "adherence_prob": 1,
-          "penalties": 0
-        },
-        "why": [
-          "need:stress_acute",
-          "evidence:B",
-          "duration:2m"
-        ],
-        "purpose": "Simple calm breathing without holds: longer exhale than inhale.",
-        "is_vault_ip": false
-      },
-      {
-        "protocol_id": "pmr",
-        "name": "Progressive Muscle Relaxation (PMR)",
-        "evidence": "B",
-        "max_duration_sec": 1200,
-        "recommended_duration_sec": 720,
-        "min_duration_sec": 600,
-        "arousal_direction": "down",
-        "need_tags": [
-          "stress_acute",
-          "sleep_prep",
-          "muscle_tension"
-        ],
-        "categories": [
-          "stress",
-          "sleep",
-          "emotional"
-        ],
-        "public_discrete": false,
-        "clinician_only": false,
-        "score": 0.642,
-        "features": {
-          "need_match": 0.56,
-          "context_match": 0.25,
-          "timing": 0.5,
-          "evidence": 0.8,
-          "history": 0.5,
-          "preference": 0.55,
-          "feasibility": 0.76,
-          "expected_benefit": 0.76,
-          "adherence_prob": 0.7,
-          "penalties": 0
-        },
-        "why": [
-          "need:stress_acute",
-          "evidence:B",
-          "duration:12m"
-        ],
-        "purpose": "Systematically tense and release muscle groups to reduce somatic tension and anxiety.",
-        "is_vault_ip": false
-      },
-      {
         "protocol_id": "physiological-sigh-acute",
         "name": "Acute Physiological Sigh (1–3 Cycles)",
         "evidence": "B",
@@ -153,7 +73,7 @@
         ],
         "public_discrete": true,
         "clinician_only": false,
-        "score": 0.64,
+        "score": 0.86,
         "features": {
           "need_match": 0.56,
           "context_match": 0,
@@ -172,6 +92,88 @@
           "duration:2m"
         ],
         "purpose": "Fastest practical application of cyclic sigh pattern for spike stress.",
+        "is_vault_ip": false
+      },
+      {
+        "protocol_id": "54321-grounding",
+        "name": "5-4-3-2-1 Sensory Grounding",
+        "evidence": "C",
+        "max_duration_sec": 300,
+        "recommended_duration_sec": 120,
+        "min_duration_sec": 120,
+        "arousal_direction": "down",
+        "need_tags": [
+          "panic_spike",
+          "dissociation_guard",
+          "stress_acute"
+        ],
+        "categories": [
+          "stress",
+          "emotional",
+          "cognitive"
+        ],
+        "public_discrete": true,
+        "clinician_only": false,
+        "score": 0.848,
+        "features": {
+          "need_match": 0.44,
+          "context_match": 0,
+          "timing": 0.5,
+          "evidence": 0.55,
+          "history": 0.5,
+          "preference": 0.55,
+          "feasibility": 0.96,
+          "expected_benefit": 0.5,
+          "adherence_prob": 1,
+          "penalties": 0.08
+        },
+        "why": [
+          "need:stress_acute",
+          "evidence:C",
+          "duration:2m"
+        ],
+        "purpose": "Interrupt anxiety spiral by orienting attention to present sensory details.",
+        "is_vault_ip": false
+      },
+      {
+        "protocol_id": "cyclic-sighing",
+        "name": "Cyclic Sighing (Physiological Sigh Pattern)",
+        "evidence": "B",
+        "max_duration_sec": 300,
+        "recommended_duration_sec": 300,
+        "min_duration_sec": 300,
+        "arousal_direction": "down",
+        "need_tags": [
+          "stress_acute",
+          "arousal_down",
+          "mood_lift"
+        ],
+        "categories": [
+          "breathing",
+          "stress",
+          "emotional"
+        ],
+        "public_discrete": true,
+        "clinician_only": false,
+        "score": 0.811,
+        "features": {
+          "need_match": 0.56,
+          "context_match": 0,
+          "timing": 0.5,
+          "evidence": 0.8,
+          "history": 0.5,
+          "preference": 0.55,
+          "feasibility": 0.9,
+          "expected_benefit": 0.65,
+          "adherence_prob": 0.93,
+          "penalties": 0
+        },
+        "why": [
+          "need:stress_acute",
+          "evidence:B",
+          "duration:5m"
+        ],
+        "purpose": "Rapidly reduce acute arousal and improve mood via exhale-emphasized double inhale + long exhale.",
         "is_vault_ip": false
       }
     ],
@@ -248,8 +250,9 @@
         ]
       }
     ],
-    "exclusion_count": 10,
-    "personalized_message": "Context: T sleep · bedroom. Why now: inferred need “stress acute” (stress 4/5, energy 2/5). Action: run “Exhale-Emphasized Paced Breathing (No Holds)” (exhale-emphasized). Duration: ~2 min (fits 20 min gap). Skip/SILENCE is always OK.",
+    "exclusions_total": 10,
+    "exclusions_truncated": false,
+    "personalized_message": "Context: t sleep · bedroom. Why now: inferred need “stress acute” (stress 4/5, energy 2/5). Action: run “Acute Physiological Sigh (1–3 Cycles)” (physiological-sigh-acute). Duration: ~2 min (fits 20 min gap; dose ≤ gap). Skip/SILENCE is always OK.",
     "why_selected": [
       "need:stress_acute",
       "evidence:B",
@@ -257,34 +260,40 @@
     ],
     "tau_select": 0.42,
     "scores": {
-      "exhale-emphasized": 0.646,
-      "pmr": 0.642,
-      "physiological-sigh-acute": 0.64,
-      "cyclic-sighing": 0.631,
-      "brief-pmr-acute": 0.614,
-      "tipp": 0.607,
-      "diaphragmatic": 0.588,
-      "box-breathing": 0.581,
-      "tactical-breath-reset": 0.568,
-      "coherent-resonance": 0.533
+      "physiological-sigh-acute": 0.86,
+      "54321-grounding": 0.848,
+      "cyclic-sighing": 0.811,
+      "exhale-emphasized": 0.806,
+      "tactical-breath-reset": 0.728,
+      "box-breathing": 0.701,
+      "pmr": 0.662,
+      "brief-pmr-acute": 0.634,
+      "tipp": 0.627,
+      "diaphragmatic": 0.608
     },
     "input": {
       "client_type": "startup_founder",
+      "client_id": null,
       "available_minutes": 20,
       "place_class": "bedroom",
+      "privacy": null,
       "upcoming_event_tag": "T_sleep",
       "stress": 4,
       "energy": 2,
       "sleep_h": 4.5,
       "prefers_breath": "neutral",
       "history_notes": "",
+      "notes": "",
       "clinician_mode": false,
       "crisis_flag": false,
       "hard_exclude_prior_negative": false,
       "goal": "",
       "activity": "",
       "force_silence": false
-    }
+    },
+    "suggested_sequence": [
+      "exhale-emphasized"
+    ]
   },
   "B": {
     "action": "suggest",
@@ -359,7 +368,7 @@
         ],
         "public_discrete": false,
         "clinician_only": false,
-        "score": 0.877,
+        "score": 1.307,
         "features": {
           "need_match": 0.45,
           "context_match": 0.25,
@@ -382,6 +391,46 @@
         "is_vault_ip": false
       },
       {
+        "protocol_id": "centering-ravizza",
+        "name": "Centering (Ravizza-Style)",
+        "evidence": "C",
+        "max_duration_sec": 120,
+        "recommended_duration_sec": 120,
+        "min_duration_sec": 120,
+        "arousal_direction": "down",
+        "need_tags": [
+          "pre_performance",
+          "micro_reset"
+        ],
+        "categories": [
+          "performance",
+          "stress"
+        ],
+        "public_discrete": true,
+        "clinician_only": false,
+        "score": 1.101,
+        "features": {
+          "need_match": 0.45,
+          "context_match": 0,
+          "timing": 0.95,
+          "evidence": 0.55,
+          "history": 0.5,
+          "preference": 0.55,
+          "feasibility": 0.9,
+          "expected_benefit": 0.52,
+          "adherence_prob": 1,
+          "penalties": 0
+        },
+        "why": [
+          "need:pre_performance",
+          "moment:investor_meeting",
+          "evidence:C",
+          "duration:2m"
+        ],
+        "purpose": "Rapidly shift from distracted/tense state to controlled, present, process-focused state.",
+        "is_vault_ip": false
+      },
+      {
         "protocol_id": "ppr",
         "name": "Pre-Performance Routine (PPR)",
         "evidence": "B",
@@ -397,7 +446,7 @@
         ],
         "public_discrete": false,
         "clinician_only": false,
-        "score": 0.861,
+        "score": 1.071,
         "features": {
           "need_match": 0.47,
           "context_match": 0,
@@ -417,47 +466,6 @@
           "duration:2m"
         ],
         "purpose": "Stabilize attention and arousal before a skilled performance via a consistent short sequence.",
-        "is_vault_ip": false
-      },
-      {
-        "protocol_id": "centering-ravizza",
-        "name": "Centering (Ravizza-Style)",
-        "evidence": "C",
-        "max_duration_sec": 120,
-        "recommended_duration_sec": 120,
-        "min_duration_sec": 120,
-        "arousal_direction": "down",
-        "need_tags": [
-          "pre_performance",
-          "micro_reset"
-        ],
-        "categories": [
-          "performance",
-          "stress"
-        ],
-        "public_discrete": true,
-        "clinician_only": false,
-        "score": 0.811,
-        "features": {
-          "need_match": 0.45,
-          "context_match": 0,
-          "timing": 0.95,
-          "evidence": 0.55,
-          "history": 0.5,
-          "preference": 0.55,
-          "feasibility": 0.9,
-          "expected_benefit": 0.52,
-          "adherence_prob": 1,
-          "penalties": 0
-        },
-        "why": [
-          "need:pre_performance",
-          "moment:investor_meeting",
-          "evidence:C",
-          "duration:2m",
-          "public_discrete"
-        ],
-        "purpose": "Rapidly shift from distracted/tense state to controlled, present, process-focused state.",
         "is_vault_ip": false
       }
     ],
@@ -582,17 +590,11 @@
         "reasons": [
           "equipment_missing:cold_water"
         ]
-      },
-      {
-        "protocol_id": "pomodoro-ultradian",
-        "name": "Focused Work Block + Break (Pomodoro-style)",
-        "reasons": [
-          "duration_exceeds_gap:1200s>480s"
-        ]
       }
     ],
-    "exclusion_count": 18,
-    "personalized_message": "Context: investor meeting · office. Why now: inferred need “pre performance” (stress 5/5, energy 2/5). Action: run “Process Visualization (vs Outcome-Only Fantasy)” (process-visualization). Duration: ~5 min (fits 8 min gap). Skip/SILENCE is always OK.",
+    "exclusions_total": 17,
+    "exclusions_truncated": false,
+    "personalized_message": "Context: investor / high-stakes meeting soon · office. Why now: settle arousal and rehearse the open (need “pre performance”; stress 5/5). Action: run “Process Visualization (vs Outcome-Only Fantasy)” (process-visualization). Duration: ~5 min (fits 8 min gap; dose ≤ gap). Skip/SILENCE is always OK.",
     "why_selected": [
       "need:pre_performance",
       "moment:investor_meeting",
@@ -601,34 +603,41 @@
     ],
     "tau_select": 0.42,
     "scores": {
-      "process-visualization": 0.877,
-      "ppr": 0.861,
-      "centering-ravizza": 0.811,
-      "box-breathing": 0.794,
-      "pettlep": 0.775,
-      "tactical-breath-reset": 0.695,
-      "exhale-emphasized": 0.669,
-      "cyclic-sighing": 0.658,
-      "physiological-sigh-acute": 0.648,
-      "brief-pmr-acute": 0.639
+      "process-visualization": 1.307,
+      "centering-ravizza": 1.101,
+      "ppr": 1.071,
+      "pettlep": 0.965,
+      "box-breathing": 0.844,
+      "tactical-breath-reset": 0.725,
+      "exhale-emphasized": 0.679,
+      "cyclic-sighing": 0.668,
+      "physiological-sigh-acute": 0.658,
+      "brief-pmr-acute": 0.649
     },
     "input": {
       "client_type": "startup_founder",
+      "client_id": null,
       "available_minutes": 8,
       "place_class": "office",
+      "privacy": null,
       "upcoming_event_tag": "investor_meeting",
       "stress": 5,
       "energy": 2,
       "sleep_h": 4,
       "prefers_breath": "neutral",
       "history_notes": "",
+      "notes": "",
       "clinician_mode": false,
       "crisis_flag": false,
       "hard_exclude_prior_negative": false,
       "goal": "",
       "activity": "",
       "force_silence": false
-    }
+    },
+    "suggested_sequence": [
+      "physiological-sigh-acute",
+      "task-switch-buffer"
+    ]
   },
   "C": {
     "action": "suggest",
@@ -699,127 +708,124 @@
     ],
     "recommendations": [
       {
-        "protocol_id": "pmr",
-        "name": "Progressive Muscle Relaxation (PMR)",
+        "protocol_id": "physiological-sigh-acute",
+        "name": "Acute Physiological Sigh (1–3 Cycles)",
         "evidence": "B",
-        "max_duration_sec": 1200,
-        "recommended_duration_sec": 720,
-        "min_duration_sec": 600,
+        "max_duration_sec": 120,
+        "recommended_duration_sec": 120,
+        "min_duration_sec": 120,
         "arousal_direction": "down",
         "need_tags": [
           "stress_acute",
-          "sleep_prep",
-          "muscle_tension"
+          "arousal_down",
+          "micro_reset"
         ],
         "categories": [
-          "stress",
-          "sleep",
-          "emotional"
+          "stress"
         ],
-        "public_discrete": false,
+        "public_discrete": true,
         "clinician_only": false,
-        "score": 0.746,
+        "score": 0.835,
         "features": {
           "need_match": 0.52,
-          "context_match": 0.25,
-          "timing": 0.95,
+          "context_match": 0,
+          "timing": 0.35,
           "evidence": 0.8,
           "history": 0.5,
           "preference": 0.55,
-          "feasibility": 0.84,
-          "expected_benefit": 0.76,
-          "adherence_prob": 0.7,
+          "feasibility": 0.97,
+          "expected_benefit": 0.65,
+          "adherence_prob": 1,
           "penalties": 0
         },
         "why": [
           "need:stress_acute",
-          "moment:1am_spiral",
           "evidence:B",
-          "duration:12m"
+          "duration:2m"
         ],
-        "purpose": "Systematically tense and release muscle groups to reduce somatic tension and anxiety.",
+        "purpose": "Fastest practical application of cyclic sigh pattern for spike stress.",
         "is_vault_ip": false
       },
       {
-        "protocol_id": "body-scan",
-        "name": "Body Scan (MBSR Element)",
-        "evidence": "B",
-        "max_duration_sec": 2700,
-        "recommended_duration_sec": 720,
-        "min_duration_sec": 600,
+        "protocol_id": "54321-grounding",
+        "name": "5-4-3-2-1 Sensory Grounding",
+        "evidence": "C",
+        "max_duration_sec": 300,
+        "recommended_duration_sec": 120,
+        "min_duration_sec": 120,
         "arousal_direction": "down",
         "need_tags": [
-          "sleep_prep",
-          "rumination",
-          "body_settle"
+          "panic_spike",
+          "dissociation_guard",
+          "stress_acute"
         ],
         "categories": [
           "stress",
-          "sleep",
-          "cognitive",
-          "emotional"
+          "emotional",
+          "cognitive"
         ],
-        "public_discrete": false,
+        "public_discrete": true,
         "clinician_only": false,
-        "score": 0.633,
+        "score": 0.828,
         "features": {
-          "need_match": 0.18,
-          "context_match": 0.43,
-          "timing": 0.95,
-          "evidence": 0.8,
+          "need_match": 0.42,
+          "context_match": 0,
+          "timing": 0.35,
+          "evidence": 0.55,
           "history": 0.5,
           "preference": 0.55,
-          "feasibility": 0.84,
-          "expected_benefit": 0.76,
-          "adherence_prob": 0.7,
-          "penalties": 0
+          "feasibility": 0.97,
+          "expected_benefit": 0.5,
+          "adherence_prob": 1,
+          "penalties": 0.08
         },
         "why": [
-          "moment:1am_spiral",
-          "evidence:B",
-          "duration:12m"
+          "need:stress_acute",
+          "evidence:C",
+          "duration:2m"
         ],
-        "purpose": "Systematically move attention through the body with nonjudgmental awareness.",
+        "purpose": "Interrupt anxiety spiral by orienting attention to present sensory details.",
         "is_vault_ip": false
       },
       {
-        "protocol_id": "worry-postpone",
-        "name": "Scheduled Worry / Postpone Worry",
+        "protocol_id": "cyclic-sighing",
+        "name": "Cyclic Sighing (Physiological Sigh Pattern)",
         "evidence": "B",
-        "max_duration_sec": 1200,
-        "recommended_duration_sec": 600,
-        "min_duration_sec": 600,
+        "max_duration_sec": 300,
+        "recommended_duration_sec": 300,
+        "min_duration_sec": 300,
         "arousal_direction": "down",
         "need_tags": [
-          "rumination",
-          "sleep_prep"
+          "stress_acute",
+          "arousal_down",
+          "mood_lift"
         ],
         "categories": [
+          "breathing",
           "stress",
-          "cognitive",
           "emotional"
         ],
         "public_discrete": true,
         "clinician_only": false,
-        "score": 0.621,
+        "score": 0.787,
         "features": {
-          "need_match": 0.19,
-          "context_match": 0.25,
-          "timing": 0.95,
+          "need_match": 0.52,
+          "context_match": 0,
+          "timing": 0.35,
           "evidence": 0.8,
           "history": 0.5,
           "preference": 0.55,
-          "feasibility": 0.87,
-          "expected_benefit": 0.76,
-          "adherence_prob": 0.77,
+          "feasibility": 0.93,
+          "expected_benefit": 0.65,
+          "adherence_prob": 0.93,
           "penalties": 0
         },
         "why": [
-          "moment:1am_spiral",
+          "need:stress_acute",
           "evidence:B",
-          "duration:10m"
+          "duration:5m"
         ],
-        "purpose": "Contain rumination by postponing worry to a limited daily worry period.",
+        "purpose": "Rapidly reduce acute arousal and improve mood via exhale-emphasized double inhale + long exhale.",
         "is_vault_ip": false
       }
     ],
@@ -896,44 +902,50 @@
         ]
       }
     ],
-    "exclusion_count": 10,
-    "personalized_message": "Context: 1am spiral · bedroom. Why now: inferred need “stress acute” (stress 4/5, energy 2/5). Action: run “Progressive Muscle Relaxation (PMR)” (pmr). Duration: ~12 min (fits 30 min gap). Skip/SILENCE is always OK.",
+    "exclusions_total": 10,
+    "exclusions_truncated": false,
+    "personalized_message": "Context: night rumination · bedroom. Why now: interrupt spiral without screens or protocols that raise arousal. Action: run “Acute Physiological Sigh (1–3 Cycles)” (physiological-sigh-acute). Duration: ~2 min (fits 30 min gap; dose ≤ gap). Skip/SILENCE is always OK.",
     "why_selected": [
       "need:stress_acute",
-      "moment:1am_spiral",
       "evidence:B",
-      "duration:12m"
+      "duration:2m"
     ],
     "tau_select": 0.42,
     "scores": {
-      "pmr": 0.746,
-      "body-scan": 0.633,
-      "worry-postpone": 0.621,
-      "exhale-emphasized": 0.618,
-      "physiological-sigh-acute": 0.615,
-      "478-breathing": 0.611,
-      "cyclic-sighing": 0.607,
-      "brief-pmr-acute": 0.594,
-      "tipp": 0.589,
-      "autogenic": 0.567
+      "physiological-sigh-acute": 0.835,
+      "54321-grounding": 0.828,
+      "cyclic-sighing": 0.787,
+      "exhale-emphasized": 0.778,
+      "pmr": 0.776,
+      "tactical-breath-reset": 0.708,
+      "box-breathing": 0.681,
+      "body-scan": 0.643,
+      "worry-postpone": 0.631,
+      "478-breathing": 0.621
     },
     "input": {
       "client_type": "sleep_recovery_seekers",
+      "client_id": null,
       "available_minutes": 30,
       "place_class": "bedroom",
+      "privacy": null,
       "upcoming_event_tag": "1am_spiral",
       "stress": 4,
       "energy": 2,
       "sleep_h": 3,
       "prefers_breath": "neutral",
       "history_notes": "",
+      "notes": "",
       "clinician_mode": false,
       "crisis_flag": false,
       "hard_exclude_prior_negative": false,
       "goal": "",
       "activity": "",
       "force_silence": false
-    }
+    },
+    "suggested_sequence": [
+      "exhale-emphasized"
+    ]
   },
   "D": {
     "action": "suggest",
@@ -985,7 +997,7 @@
         ],
         "public_discrete": true,
         "clinician_only": false,
-        "score": 0.799,
+        "score": 1.129,
         "features": {
           "need_match": 0.84,
           "context_match": 0.57,
@@ -1026,7 +1038,7 @@
         ],
         "public_discrete": true,
         "clinician_only": false,
-        "score": 0.644,
+        "score": 0.694,
         "features": {
           "need_match": 0.39,
           "context_match": 0.54,
@@ -1067,7 +1079,7 @@
         ],
         "public_discrete": true,
         "clinician_only": false,
-        "score": 0.616,
+        "score": 0.666,
         "features": {
           "need_match": 0.16,
           "context_match": 0.73,
@@ -1095,15 +1107,14 @@
         "protocol_id": "cyclic-sighing",
         "name": "Cyclic Sighing (Physiological Sigh Pattern)",
         "reasons": [
-          "duration_exceeds_gap:300s>120s",
-          "prefers_breath_no"
+          "duration_exceeds_gap:300s>120s"
         ]
       },
       {
         "protocol_id": "box-breathing",
         "name": "Box Breathing (Square Breathing)",
         "reasons": [
-          "prefers_breath_no"
+          "public_discrete_false:public"
         ]
       },
       {
@@ -1111,7 +1122,7 @@
         "name": "Coherent / Resonance Frequency Breathing (~6 breaths/min)",
         "reasons": [
           "duration_exceeds_gap:300s>120s",
-          "prefers_breath_no"
+          "public_discrete_false:public"
         ]
       },
       {
@@ -1119,14 +1130,14 @@
         "name": "Diaphragmatic (Belly) Breathing",
         "reasons": [
           "duration_exceeds_gap:180s>120s",
-          "prefers_breath_no"
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "478-breathing",
         "name": "4-7-8 Breathing (as popularized by Weil)",
         "reasons": [
-          "prefers_breath_no"
+          "public_discrete_false:public"
         ]
       },
       {
@@ -1134,14 +1145,7 @@
         "name": "Alternate Nostril Breathing (Nadi Shodhana / Anulom Vilom)",
         "reasons": [
           "duration_exceeds_gap:300s>120s",
-          "prefers_breath_no"
-        ]
-      },
-      {
-        "protocol_id": "exhale-emphasized",
-        "name": "Exhale-Emphasized Paced Breathing (No Holds)",
-        "reasons": [
-          "prefers_breath_no"
+          "public_discrete_false:public"
         ]
       },
       {
@@ -1149,56 +1153,63 @@
         "name": "Cyclic Hyperventilation with Retention (Caution Protocol)",
         "reasons": [
           "duration_exceeds_gap:300s>120s",
-          "prefers_breath_no"
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "pmr",
         "name": "Progressive Muscle Relaxation (PMR)",
         "reasons": [
-          "duration_exceeds_gap:600s>120s"
+          "duration_exceeds_gap:600s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "autogenic",
         "name": "Autogenic Training (AT)",
         "reasons": [
-          "duration_exceeds_gap:600s>120s"
+          "duration_exceeds_gap:600s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "body-scan",
         "name": "Body Scan (MBSR Element)",
         "reasons": [
-          "duration_exceeds_gap:600s>120s"
+          "duration_exceeds_gap:600s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "yoga-nidra-nsdr",
         "name": "Yoga Nidra / NSDR (Non-Sleep Deep Rest)",
         "reasons": [
-          "duration_exceeds_gap:600s>120s"
+          "duration_exceeds_gap:600s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "stimulus-control",
         "name": "Stimulus Control Therapy (CBT-I Component)",
         "reasons": [
-          "duration_exceeds_gap:3600s>120s"
+          "duration_exceeds_gap:3600s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "sleep-restriction",
         "name": "Sleep Restriction Therapy (CBT-I Component)",
         "reasons": [
-          "clinician_only_without_clinician_mode"
+          "clinician_only_without_clinician_mode",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "wind-down",
         "name": "Behavioral Wind-Down Routine",
         "reasons": [
-          "duration_exceeds_gap:1200s>120s"
+          "duration_exceeds_gap:1200s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
@@ -1206,6 +1217,7 @@
         "name": "Morning Outdoor Light Timing",
         "reasons": [
           "duration_exceeds_gap:600s>120s",
+          "public_discrete_false:public",
           "equipment_missing:outdoors_or_bright_light"
         ]
       },
@@ -1213,28 +1225,31 @@
         "protocol_id": "nap-protocol",
         "name": "Brief Nap Protocol (10–20 min)",
         "reasons": [
-          "duration_exceeds_gap:600s>120s"
+          "duration_exceeds_gap:600s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "jetlag-light-melatonin",
         "name": "Jet Lag Light and Melatonin Timing (Careful Protocol)",
         "reasons": [
+          "public_discrete_false:public",
           "equipment_missing:bright_light_access,melatonin_optional_clinician"
+        ]
+      },
+      {
+        "protocol_id": "sleep-consistency",
+        "name": "Fixed Wake-Time Sleep Schedule",
+        "reasons": [
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "evening-light-hygiene",
         "name": "Evening Light Hygiene (Dim and Warm)",
         "reasons": [
-          "duration_exceeds_gap:3600s>120s"
-        ]
-      },
-      {
-        "protocol_id": "physiological-sigh-acute",
-        "name": "Acute Physiological Sigh (1–3 Cycles)",
-        "reasons": [
-          "prefers_breath_no"
+          "duration_exceeds_gap:3600s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
@@ -1242,6 +1257,7 @@
         "name": "Moderate Aerobic Exercise Bout",
         "reasons": [
           "duration_exceeds_gap:900s>120s",
+          "public_discrete_false:public",
           "equipment_missing:space_to_move"
         ]
       },
@@ -1257,14 +1273,22 @@
         "name": "Mindfulness of Breath (Formal Sitting)",
         "reasons": [
           "duration_exceeds_gap:300s>120s",
-          "prefers_breath_no"
+          "public_discrete_false:public"
+        ]
+      },
+      {
+        "protocol_id": "ppr",
+        "name": "Pre-Performance Routine (PPR)",
+        "reasons": [
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "pettlep",
         "name": "PETTLEP Imagery",
         "reasons": [
-          "duration_exceeds_gap:300s>120s"
+          "duration_exceeds_gap:300s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
@@ -1275,38 +1299,49 @@
         ]
       },
       {
-        "protocol_id": "tactical-breath-reset",
-        "name": "Tactical Breath Reset (Short Box-like)",
-        "reasons": [
-          "prefers_breath_no"
-        ]
-      },
-      {
         "protocol_id": "woop",
         "name": "WOOP (Mental Contrasting + Implementation Intentions)",
         "reasons": [
-          "duration_exceeds_gap:300s>120s"
+          "duration_exceeds_gap:300s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "smart-caveats",
         "name": "SMART Goals with Evidence Caveats",
         "reasons": [
-          "duration_exceeds_gap:720s>120s"
+          "duration_exceeds_gap:720s>120s",
+          "public_discrete_false:public"
+        ]
+      },
+      {
+        "protocol_id": "habit-stacking",
+        "name": "Habit Stacking (Routine-Based Cueing)",
+        "reasons": [
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "process-visualization",
         "name": "Process Visualization (vs Outcome-Only Fantasy)",
         "reasons": [
-          "duration_exceeds_gap:180s>120s"
+          "duration_exceeds_gap:180s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "values-compass",
         "name": "Values Compass (Brief ACT/Values Clarification)",
         "reasons": [
-          "duration_exceeds_gap:600s>120s"
+          "duration_exceeds_gap:600s>120s",
+          "public_discrete_false:public"
+        ]
+      },
+      {
+        "protocol_id": "tipp",
+        "name": "TIPP (DBT Crisis Survival Skill)",
+        "reasons": [
+          "public_discrete_false:public"
         ]
       },
       {
@@ -1320,13 +1355,15 @@
         "protocol_id": "cognitive-reappraisal",
         "name": "Cognitive Reappraisal",
         "reasons": [
-          "duration_exceeds_gap:300s>120s"
+          "duration_exceeds_gap:300s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "cold-face",
         "name": "Cold Face Stimulation (Dive-Reflex Informed)",
         "reasons": [
+          "public_discrete_false:public",
           "equipment_missing:cold_water"
         ]
       },
@@ -1334,19 +1371,36 @@
         "protocol_id": "self-distancing",
         "name": "Self-Distancing Reflection",
         "reasons": [
-          "duration_exceeds_gap:180s>120s"
+          "duration_exceeds_gap:180s>120s",
+          "public_discrete_false:public"
         ]
       },
       {
         "protocol_id": "art-brief",
         "name": "Brief Attention Restoration (Soft Fascination Break)",
         "reasons": [
-          "duration_exceeds_gap:300s>120s"
+          "duration_exceeds_gap:300s>120s",
+          "public_discrete_false:public"
+        ]
+      },
+      {
+        "protocol_id": "task-switch-buffer",
+        "name": "Task-Switching Buffer",
+        "reasons": [
+          "public_discrete_false:public"
+        ]
+      },
+      {
+        "protocol_id": "pomodoro-ultradian",
+        "name": "Focused Work Block + Break (Pomodoro-style)",
+        "reasons": [
+          "public_discrete_false:public"
         ]
       }
     ],
-    "exclusion_count": 35,
-    "personalized_message": "Context: live blank · public. Why now: inferred need “pre performance” (stress 5/5, energy 3/5). Action: run “Centering (Ravizza-Style)” (centering-ravizza). Duration: ~2 min (fits 2 min gap). Skip/SILENCE is always OK.",
+    "exclusions_total": 38,
+    "exclusions_truncated": false,
+    "personalized_message": "Context: acute micro-gap · public. Why now: 60–120s reset before the next beat (stress 5/5). Action: run “Centering (Ravizza-Style)” (centering-ravizza). Duration: ~2 min (fits 2 min gap; dose ≤ gap). Skip/SILENCE is always OK.",
     "why_selected": [
       "need:pre_performance",
       "evidence:C",
@@ -1356,33 +1410,39 @@
     ],
     "tau_select": 0.42,
     "scores": {
-      "centering-ravizza": 0.799,
-      "brief-pmr-acute": 0.644,
-      "affect-labeling": 0.616,
-      "ppr": 0.524,
+      "centering-ravizza": 1.129,
+      "brief-pmr-acute": 0.694,
+      "affect-labeling": 0.666,
+      "physiological-sigh-acute": 0.534,
+      "tactical-breath-reset": 0.512,
       "gratitude-brief": 0.44,
       "social-connection-micro": 0.434,
       "54321-grounding": 0.396,
       "behavioral-activation-tiny": 0.391,
-      "act-defusion": 0.365,
-      "tipp": 0.283
+      "act-defusion": 0.365
     },
     "input": {
       "client_type": "corporate_ceo",
+      "client_id": null,
       "available_minutes": 2,
       "place_class": "public",
+      "privacy": null,
       "upcoming_event_tag": "live_blank",
       "stress": 5,
       "energy": 3,
       "sleep_h": null,
       "prefers_breath": "no",
       "history_notes": "",
+      "notes": "",
       "clinician_mode": false,
       "crisis_flag": false,
       "hard_exclude_prior_negative": false,
       "goal": "",
       "activity": "",
       "force_silence": false
-    }
+    },
+    "suggested_sequence": [
+      "exhale-emphasized"
+    ]
   }
 }
