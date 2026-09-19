@@ -78,5 +78,48 @@
     "note": "No new GOAL_PROTOCOL_BOOST rows/keys. EVENT_PROTOCOL_BOOST T_sleep affinity only."
   },
   "note": "exact_dump counts silence agrees; pie.spec exact excludes silence. Production readiness NOT claimed.",
-  "generated_at_ist": "2026-09-19 Asia/Calcutta"
+  "generated_at_ist": "2026-09-19 Asia/Calcutta",
+  "after_tc007_remaining_family": {
+    "full": {
+      "n": 110,
+      "exact_dump": 70,
+      "soft": 110,
+      "exact_rate_dump": 0.636,
+      "soft_rate": 1.0,
+      "exact_pie_spec": 58,
+      "exact_pie_spec_rate": 0.527,
+      "top3": 0.936
+    },
+    "holdout": {
+      "n": 22,
+      "exact_strict": 16,
+      "soft": 22,
+      "exact_rate_strict": 0.727,
+      "soft_rate": 1.0
+    },
+    "remainder": {
+      "n": 88,
+      "soft": 88,
+      "soft_rate": 1.0
+    },
+    "abc": {
+      "never_generated": 0,
+      "incorrectly_excluded": 0,
+      "ranked_too_low": 2
+    },
+    "soft_fail_ids": [],
+    "tc007": {
+      "soft": true,
+      "exact": true,
+      "top1": "values-compass"
+    },
+    "goal_protocol_boost_expanded": false,
+    "playwright": {
+      "passed": 41,
+      "skipped": 1,
+      "failed": 0
+    },
+    "note": "Production readiness NOT claimed. Dump exact 70/110; pie.spec exact excludes some silence/staff agreements.",
+    "generated_at_ist": "2026-09-19 Asia/Calcutta"
+  }
 }

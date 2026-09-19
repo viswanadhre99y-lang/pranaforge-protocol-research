@@ -106,9 +106,31 @@ function mapGoldenCase(tc) {
       (/SILENCE_or/i.test(expected) && (!!tc.ambiguous || /ambiguous|false high|uncertain|calendar/i.test(reason + ' ' + ctx)));
   }
 
-  // Staff medical screen labels: do not auto-push recovery protocols
-  if (/^staff_screen/i.test(expected) || (/\bOSA\b|untreated OSA/i.test(String(tc.constraints || '') + ' ' + reason + ' ' + String(tc.state || '')) && /^staff_/i.test(expected))) {
+  // Staff medical screen labels: do not auto-push recovery protocols.
+  // staff_queue_* during live staff-channel meeting is gated below (activity silence);
+  // otherwise ranker uses staff_queue tokens for modality preference (queue target).
+  if (
+    /^staff_screen/i.test(expected) ||
+    (/\bOSA\b|untreated OSA/i.test(String(tc.constraints || '') + ' ' + reason + ' ' + String(tc.state || '')) &&
+      /^staff_/i.test(expected))
+  ) {
     force_silence = true;
+  }
+  // Staff channel during live meeting → activity gate (queue; no client push)
+  if (
+    /staff\s*channel/i.test(constraints) &&
+    (/in_meeting|in meeting/.test(ctx) || /in.?meeting|during meeting/i.test(String(tc.state || '') + ' ' + reason))
+  ) {
+    activity = activity || 'in_meeting';
+    force_silence = true;
+  }
+
+  // State/reason can carry event cues the short context string missed
+  if (cx.upcoming_event_tag === 'none') {
+    const stateReason = String(tc.state || '') + ' ' + reason;
+    if (/conflict|argument|fight with|partner dispute/i.test(stateReason)) cx.upcoming_event_tag = 'post_conflict';
+    else if (/hiring|firing|moral.?load/i.test(stateReason)) cx.upcoming_event_tag = 'hiring_firing';
+    else if (/reject|turned down|no from/i.test(stateReason)) cx.upcoming_event_tag = 'post_rejection';
   }
 
   // Goal → event when context thin; prefer micro event when gap is tiny
@@ -155,6 +177,13 @@ function mapGoldenCase(tc) {
     .replace(/\s+/g, ' ')
     .trim()
     .slice(0, 280);
+  // staff_queue_<id> meta: surface queued catalog id(s) for note→modality preference
+  const staffQueueTokens = [];
+  const sqm = expected.match(/^staff_queue[_-](.+)$/i);
+  if (sqm) staffQueueTokens.push(sqm[1].replace(/_/g, '-'));
+  if (/^staff_queue/i.test(expected)) {
+    for (const c of tc.candidates || []) staffQueueTokens.push(String(c));
+  }
   const notes = [
     tc.constraints || '',
     reason.includes('orthosomnia') ? 'orthosomnia' : '',
@@ -165,6 +194,7 @@ function mapGoldenCase(tc) {
     ...priorPos.map((id) => 'prior_positive:' + id),
     /\bevening\b/i.test(ctx) ? 'evening' : '',
     /\bmorning\b/i.test(ctx) ? 'morning' : '',
+    ...staffQueueTokens.map((id) => 'staff_queue:' + id + ' ' + id),
     prefProse,
   ]
     .filter(Boolean)

@@ -299,6 +299,11 @@ const EVENT_PROTOCOL_BOOST = {
     'cognitive-reappraisal': 0.1,
     'self-distancing': 0.1,
   },
+  hiring_firing: {
+    'values-compass': 0.2,
+    'affect-labeling': 0.12,
+    'social-connection-micro': 0.08,
+  },
   '1am_spiral': {
     'stimulus-control': 0.2,
     'worry-postpone': 0.12,
@@ -784,27 +789,34 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
   if ((goal === 'micro_reset' || needNames[0] === 'micro_reset') && protocol.protocol_id === 'physiological-sigh-acute') {
     raw += 0.16;
   }
-  // Emotion: micro labeling on short slots; somatic PMR when evening/tension signal
+  // Emotion: micro labeling on short slots; somatic PMR when true tension signal
+  // (not bare "evening" from hiring/moral contexts). Moral/values → temper PMR.
   if (needNames[0] === 'emotion_regulate' || goal === 'emotion_regulate') {
     const emoBlob = String(input.notes || '') + ' ' + String(input.history_notes || '');
+    const moralValues =
+      /values|moral|boundary|compass|hiring|firing|shame|guilt/i.test(emoBlob) ||
+      event === 'hiring_firing' ||
+      (want || []).some((m) => ['hiring_firing', 'moral_load', 'shame'].includes(m));
+    const somaticSignal = /alcohol|tension|muscle|somatic|\bpmr\b|progressive muscle/i.test(emoBlob);
+    const eveningSomatic =
+      /\bevening\b/i.test(emoBlob) && somaticSignal && !moralValues;
     if (gapSec <= 180 && pNeedTags.includes('micro_reset') && pNeedTags.includes('emotion_regulate')) {
       raw += 0.12;
     }
     if (/\blabel\b|affect-label/i.test(emoBlob) && protocol.protocol_id === 'affect-labeling') raw += 0.16;
-    if (
-      gapSec >= 600 &&
-      protocol.protocol_id === 'pmr' &&
-      /evening|alcohol|tension|muscle|somatic|\bpmr\b/i.test(emoBlob)
-    ) {
+    if (gapSec >= 600 && protocol.protocol_id === 'pmr' && (somaticSignal || eveningSomatic)) {
       raw += 0.12;
+    }
+    if (protocol.protocol_id === 'pmr' && moralValues && !somaticSignal) {
+      raw -= 0.16; // moral/values load is not a somatic-tension default
     }
     if (
       gapSec <= 600 &&
       protocol.protocol_id === 'opposite-action' &&
       !(want || []).some((m) => ['avoidance', 'mood_low', 'post_conflict', 'post_rejection'].includes(m)) &&
-      /\blabel\b|affect-label|\bpmr\b|evening|alcohol/i.test(emoBlob)
+      (/\blabel\b|affect-label|\bpmr\b|alcohol|tension|muscle/i.test(emoBlob) || moralValues)
     ) {
-      // Competing label/PMR notes → do not let generic opposite-action dominate
+      // Competing label/PMR/values notes → do not let generic opposite-action dominate
       raw -= 0.14;
     }
   }
@@ -903,10 +915,10 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
     }
     if (
       goal === 'pre_performance' &&
-      /if-?then|implementation intention/i.test(prefBlob) &&
+      /if-?then|implementation intention|discovery\s*q|open question/i.test(prefBlob) &&
       protocol.protocol_id === 'if-then-gollwitzer'
     ) {
-      raw += 0.14;
+      raw += 0.28;
     }
     if (
       goal === 'rumination' &&
@@ -915,6 +927,22 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
     ) {
       raw += 0.16;
     }
+    // Third-person / self-distancing writeup (rumination family)
+    if (
+      (goal === 'rumination' || needSet.has('rumination')) &&
+      /third-?person|self-?distanc|fly.?on.?the.?wall|distanced writeup/i.test(prefBlob) &&
+      protocol.protocol_id === 'self-distancing'
+    ) {
+      raw += 0.2;
+    }
+    if (
+      (goal === 'rumination' || needSet.has('rumination')) &&
+      /third-?person|self-?distanc/i.test(prefBlob) &&
+      !/defusion|leaves on (a )?stream/i.test(prefBlob) &&
+      protocol.protocol_id === 'act-defusion'
+    ) {
+      raw -= 0.12;
+    }
     if (
       goal === 'emotion_regulate' &&
       /opposite.?action/i.test(prefBlob) &&
@@ -922,10 +950,103 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
     ) {
       raw += 0.16;
     }
+    // Values/moral/compass on emotion_regulate + hiring/moral events (not only goal_clarity)
+    if (
+      (goal === 'emotion_regulate' ||
+        event === 'hiring_firing' ||
+        /moral_load|hiring_firing/i.test(prefBlob)) &&
+      /values|moral|boundary|compass|values conflict/i.test(prefBlob) &&
+      protocol.protocol_id === 'values-compass'
+    ) {
+      raw += 0.22;
+    }
+    // Named cognitive reappraisal
+    if (
+      (goal === 'emotion_regulate' || needSet.has('emotion_regulate')) &&
+      /reapprais/i.test(prefBlob) &&
+      protocol.protocol_id === 'cognitive-reappraisal'
+    ) {
+      raw += 0.2;
+    }
+    if (
+      (goal === 'emotion_regulate' || needSet.has('emotion_regulate')) &&
+      /reapprais/i.test(prefBlob) &&
+      protocol.protocol_id === 'pmr' &&
+      !/tension|muscle|somatic|\bpmr\b/i.test(prefBlob)
+    ) {
+      raw -= 0.1;
+    }
+    // Named PPR ritual (pre_performance)
+    if (
+      goal === 'pre_performance' &&
+      /\bppr\b|performance.?ready|90-?s(?:ec)?\s+ppr|90.?sec ppr/i.test(prefBlob) &&
+      protocol.protocol_id === 'ppr'
+    ) {
+      raw += 0.18;
+    }
+    if (
+      goal === 'pre_performance' &&
+      /\bppr\b|performance.?ready|90-?s(?:ec)?\s+ppr/i.test(prefBlob) &&
+      !/process.?viz|visualization|imagery|rehearse/i.test(prefBlob) &&
+      protocol.protocol_id === 'process-visualization'
+    ) {
+      raw -= 0.12;
+    }
+    // If-then / discovery cue as primary ask: prefer plan over generic breath/imagery stack
+    if (
+      goal === 'pre_performance' &&
+      /if-?then|implementation intention|discovery\s*q|open question/i.test(prefBlob) &&
+      !/box breath|box-breathing|4.?4.?4.?4|tactical breath|prefer breath/i.test(prefBlob)
+    ) {
+      if (protocol.protocol_id === 'box-breathing') raw -= 0.16;
+      if (protocol.protocol_id === 'tactical-breath-reset') raw -= 0.14;
+      if (protocol.protocol_id === 'centering-ravizza') raw -= 0.1;
+      if (protocol.protocol_id === 'ppr' && !/\bppr\b|performance.?ready/i.test(prefBlob)) raw -= 0.12;
+      if (
+        protocol.protocol_id === 'process-visualization' &&
+        !/process.?viz|visualization|imagery|rehearse/i.test(prefBlob)
+      ) {
+        raw -= 0.1;
+      }
+    }
+    // Quiet sighs named alongside planning → physiological sigh (candidate-family)
+    if (
+      goal === 'pre_performance' &&
+      /quiet sighs|two sighs|\bsighs\b first|physiological sigh/i.test(prefBlob) &&
+      protocol.protocol_id === 'physiological-sigh-acute'
+    ) {
+      raw += 0.18;
+    }
+    // Named exhale pace (stress_acute)
+    if (
+      (goal === 'stress_acute' || needSet.has('stress_acute')) &&
+      /exhale|exhale-emphasized|exhale pace|gentle exhale/i.test(prefBlob) &&
+      protocol.protocol_id === 'exhale-emphasized'
+    ) {
+      raw += 0.18;
+    }
+    if (
+      (goal === 'stress_acute' || needSet.has('stress_acute')) &&
+      /exhale pace|exhale-emphasized|gentle exhale/i.test(prefBlob) &&
+      !/sigh|physiological/i.test(prefBlob) &&
+      protocol.protocol_id === 'physiological-sigh-acute'
+    ) {
+      raw -= 0.12;
+    }
     if (goal === 'sleep_prep' || needSet.has('sleep_prep')) {
       if (/autogenic|heaviness|warmth/i.test(prefBlob) && protocol.protocol_id === 'autogenic') raw += 0.2;
       if (/park.*worry|worry slot|postpone|worry-postpone/i.test(prefBlob) && protocol.protocol_id === 'worry-postpone') {
         raw += 0.16;
+      }
+      if (/wind-?down|wind down/i.test(prefBlob) && protocol.protocol_id === 'wind-down') {
+        raw += 0.2;
+      }
+      if (
+        /wind-?down|wind down/i.test(prefBlob) &&
+        !/breath anchor|mbsr|trauma|seated breath/i.test(prefBlob) &&
+        protocol.protocol_id === 'mbsr-breath-anchor'
+      ) {
+        raw -= 0.12;
       }
     }
   }

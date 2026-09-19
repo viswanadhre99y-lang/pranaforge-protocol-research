@@ -3,13 +3,7 @@
     "argv": [
       "/usr/bin/node",
       "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/node_modules/.bin/playwright",
-      "test",
-      "tests/golden_mapper.spec.js",
-      "tests/phase1.spec.js",
-      "tests/phase2.spec.js",
-      "tests/pie.spec.js",
-      "--grep-invert",
-      "Concierge"
+      "test"
     ],
     "configFile": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/playwright.config.js",
     "rootDir": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests",
@@ -99,12 +93,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12,
+                      "duration": 13,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T09:35:44.795Z",
+                      "startTime": "2026-09-19T09:43:11.575Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -118,7 +112,7 @@
               "column": 3
             },
             {
-              "title": "force_silence / activity only when expected SILENCE",
+              "title": "force_silence / activity for SILENCE and staff-channel queue; not for live staff_*",
               "ok": true,
               "tags": [],
               "tests": [
@@ -133,12 +127,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7,
+                      "duration": 11,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T09:35:44.853Z",
+                      "startTime": "2026-09-19T09:43:11.633Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -146,7 +140,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "cb88cce12b7ee6a04a68-3d4cea1dd0b7e6efcb78",
+              "id": "cb88cce12b7ee6a04a68-9416af2e8303a69ae409",
               "file": "golden_mapper.spec.js",
               "line": 24,
               "column": 3
@@ -167,12 +161,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4,
+                      "duration": 3,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T09:35:44.879Z",
+                      "startTime": "2026-09-19T09:43:11.661Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -182,7 +176,7 @@
               ],
               "id": "cb88cce12b7ee6a04a68-042d0f3f2a6c5928b835",
               "file": "golden_mapper.spec.js",
-              "line": 48,
+              "line": 63,
               "column": 3
             },
             {
@@ -206,7 +200,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T09:35:44.903Z",
+                      "startTime": "2026-09-19T09:43:11.686Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -216,7 +210,7 @@
               ],
               "id": "cb88cce12b7ee6a04a68-414d1abdc6cb007e61b2",
               "file": "golden_mapper.spec.js",
-              "line": 54,
+              "line": 69,
               "column": 3
             },
             {
@@ -240,7 +234,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T09:35:44.913Z",
+                      "startTime": "2026-09-19T09:43:11.695Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -250,7 +244,7 @@
               ],
               "id": "cb88cce12b7ee6a04a68-3fe16ed59ae056bb570e",
               "file": "golden_mapper.spec.js",
-              "line": 62,
+              "line": 77,
               "column": 3
             }
           ]
@@ -258,7 +252,7 @@
         {
           "title": "golden_mapper auditor fixes",
           "file": "golden_mapper.spec.js",
-          "line": 69,
+          "line": 84,
           "column": 6,
           "specs": [
             {
@@ -282,7 +276,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T09:35:44.924Z",
+                      "startTime": "2026-09-19T09:43:11.707Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -292,7 +286,7 @@
               ],
               "id": "cb88cce12b7ee6a04a68-cef51d5f522a6cd47c09",
               "file": "golden_mapper.spec.js",
-              "line": 70,
+              "line": 85,
               "column": 3
             },
             {
@@ -311,12 +305,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1,
+                      "duration": 2,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T09:35:44.934Z",
+                      "startTime": "2026-09-19T09:43:11.717Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -326,7 +320,7 @@
               ],
               "id": "cb88cce12b7ee6a04a68-85e43c94dc614250d351",
               "file": "golden_mapper.spec.js",
-              "line": 85,
+              "line": 100,
               "column": 3
             },
             {
@@ -350,7 +344,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T09:35:44.947Z",
+                      "startTime": "2026-09-19T09:43:11.729Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -360,7 +354,7 @@
               ],
               "id": "cb88cce12b7ee6a04a68-d86a695f278e23d361cd",
               "file": "golden_mapper.spec.js",
-              "line": 97,
+              "line": 112,
               "column": 3
             },
             {
@@ -384,7 +378,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T09:35:44.956Z",
+                      "startTime": "2026-09-19T09:43:11.739Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -394,7 +388,7 @@
               ],
               "id": "cb88cce12b7ee6a04a68-c0f9029d27b0fe5273aa",
               "file": "golden_mapper.spec.js",
-              "line": 111,
+              "line": 126,
               "column": 3
             },
             {
@@ -418,7 +412,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T09:35:44.967Z",
+                      "startTime": "2026-09-19T09:43:11.749Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -428,7 +422,7 @@
               ],
               "id": "cb88cce12b7ee6a04a68-c930a7bcd5064b5cf5bb",
               "file": "golden_mapper.spec.js",
-              "line": 124,
+              "line": 139,
               "column": 3
             }
           ]
@@ -443,7 +437,7 @@
       "specs": [
         {
           "title": "P1. nested ClientState API works",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -465,13 +459,21 @@
                 {
                   "workerIndex": 1,
                   "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 48,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 11,
+                  "error": {
+                    "message": "Error: socket hang up",
+                    "stack": "Error: socket hang up"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: socket hang up"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:44.791Z",
+                  "startTime": "2026-09-19T09:43:11.571Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -482,10 +484,16 @@
                       }
                     }
                   ],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/test-results/phase1-P1-nested-ClientState-API-works-chromium/error-context.md"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "61533eb7f4fb9fda5467-05f1288f12e46355180a",
@@ -515,29 +523,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 14,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:44.887Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:11.633Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "61533eb7f4fb9fda5467-9a59aab2a0fd7bd83e6f",
@@ -567,29 +566,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 14,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:44.918Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:11.633Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "61533eb7f4fb9fda5467-818993e3969071708b3c",
@@ -619,29 +609,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 6,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:44.947Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:11.633Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "61533eb7f4fb9fda5467-24e8af63c365bea12163",
@@ -671,29 +652,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 9,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:44.965Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:11.633Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "61533eb7f4fb9fda5467-9dd10e86b98ccc501801",
@@ -723,29 +695,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 6,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:44.985Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:11.633Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "61533eb7f4fb9fda5467-472ae28f70106b9a61a5",
@@ -775,29 +738,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 6,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:45.000Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:11.633Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "61533eb7f4fb9fda5467-e7237350e343e54192fd",
@@ -827,29 +781,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 7,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:45.016Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:11.633Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "61533eb7f4fb9fda5467-fb18e4f6eff5bd843e45",
@@ -879,29 +824,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 575,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:45.034Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:11.634Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "61533eb7f4fb9fda5467-a71ea239d565977450b3",
@@ -939,15 +875,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 13,
+                  "duration": 20,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:44.984Z",
+                  "startTime": "2026-09-19T09:43:12.266Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -991,15 +927,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 11,
+                  "duration": 14,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:45.007Z",
+                  "startTime": "2026-09-19T09:43:12.324Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -1043,15 +979,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 6,
+                  "duration": 9,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:45.028Z",
+                  "startTime": "2026-09-19T09:43:12.352Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -1095,15 +1031,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
                   "status": "passed",
                   "duration": 7,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:45.047Z",
+                  "startTime": "2026-09-19T09:43:12.371Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -1147,15 +1083,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 23,
+                  "duration": 24,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:45.063Z",
+                  "startTime": "2026-09-19T09:43:12.389Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -1199,15 +1135,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 284,
+                  "duration": 306,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:45.096Z",
+                  "startTime": "2026-09-19T09:43:12.423Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -1251,15 +1187,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 435,
+                  "duration": 383,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:45.389Z",
+                  "startTime": "2026-09-19T09:43:12.738Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -1291,7 +1227,7 @@
       "specs": [
         {
           "title": "1. Open UI and map visible controls",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -1311,15 +1247,34 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 574,
-                  "errors": [],
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 180,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_EMPTY_RESPONSE at http://127.0.0.1:8790/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8790/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_EMPTY_RESPONSE at http://127.0.0.1:8790/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8790/\", waiting until \"load\"\u001b[22m\n\n    at /workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js:87:14",
+                    "location": {
+                      "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                      "column": 14,
+                      "line": 87
+                    },
+                    "snippet": "  85 |\n  86 | test('1. Open UI and map visible controls', async ({ page }) => {\n> 87 |   await page.goto(PIE_URL + '/');\n     |              ^\n  88 |   await page.fill('#staff_pin', STAFF_PIN);\n  89 |   await page.click('#btn-save-pin');\n  90 |   await expect(page.locator('#client_type')).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "column": 14,
+                        "line": 87
+                      },
+                      "message": "Error: page.goto: net::ERR_EMPTY_RESPONSE at http://127.0.0.1:8790/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8790/\", waiting until \"load\"\u001b[22m\n\n\n  85 |\n  86 | test('1. Open UI and map visible controls', async ({ page }) => {\n> 87 |   await page.goto(PIE_URL + '/');\n     |              ^\n  88 |   await page.fill('#staff_pin', STAFF_PIN);\n  89 |   await page.click('#btn-save-pin');\n  90 |   await expect(page.locator('#client_type')).toBeVisible();\n    at /workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js:87:14"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:45.758Z",
+                  "startTime": "2026-09-19T09:43:11.776Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -1330,10 +1285,26 @@
                       }
                     }
                   ],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/test-results/pie-1-Open-UI-and-map-visible-controls-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/test-results/pie-1-Open-UI-and-map-visible-controls-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "column": 14,
+                    "line": 87
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "56d74c9d4d3c90829a42-773069587d10519bda49",
@@ -1363,29 +1334,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 565,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:46.346Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.082Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-8534a30a9b40dcd716f6",
@@ -1415,29 +1377,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 396,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:46.928Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.082Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-981bb5880c8dbe2339e1",
@@ -1467,29 +1420,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 375,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:47.336Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.082Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-a6c07545ba4997385e40",
@@ -1519,29 +1463,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 81,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:47.723Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.082Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-9a8cda6bd7deedefa2f0",
@@ -1571,29 +1506,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 415,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:47.815Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.082Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-1fd540c468a79f466165",
@@ -1623,29 +1549,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 76,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:48.243Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.083Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-b127ce111196ee08f8be",
@@ -1675,37 +1592,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 306,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "GOLDEN agreement exact=45.5% soft=91.8% top3=85.5% (50/110 exact, 101/110 soft)\n"
-                    }
-                  ],
-                  "stderr": [
-                    {
-                      "text": "(node:390743) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
-                    }
-                  ],
+                  "stdout": [],
+                  "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:48.331Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.083Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-1b441fc1afc4e275a4e0",
@@ -1735,38 +1635,68 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 242,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "MATRIX n=120 suggest=120 silence=0 infeasible=0\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:48.648Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.083Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-d14fa011f12063267cdd",
           "file": "pie.spec.js",
           "line": 462,
+          "column": 1
+        },
+        {
+          "title": "10. Concierge UI smoke on :8787",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:43:12.083Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-44ea1bdb8defb14c8478",
+          "file": "pie.spec.js",
+          "line": 563,
           "column": 1
         },
         {
@@ -1791,29 +1721,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 174,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:48.901Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.083Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-4d345d4f5000f8e9e37a",
@@ -1843,29 +1764,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 405,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:49.089Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.083Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-10ec22c54102bbe58672",
@@ -1895,29 +1807,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 79,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:49.509Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.083Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-f28484894563a7e5c68d",
@@ -1947,29 +1850,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 87,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:49.599Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.083Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-9bb305aeff2022bf7e5c",
@@ -1999,29 +1893,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 480,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:49.697Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.083Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-c0b49903bc997f5e4436",
@@ -2051,29 +1936,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 81,
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T09:35:50.189Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
+                  "startTime": "2026-09-19T09:43:12.083Z",
+                  "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "56d74c9d4d3c90829a42-05d56c8b8dcd343c72ca",
@@ -2086,11 +1962,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-19T09:35:43.951Z",
-    "duration": 6367.9839999999995,
-    "expected": 41,
-    "skipped": 0,
-    "unexpected": 0,
+    "startTime": "2026-09-19T09:43:10.910Z",
+    "duration": 2345.475,
+    "expected": 17,
+    "skipped": 23,
+    "unexpected": 2,
     "flaky": 0
   }
 }

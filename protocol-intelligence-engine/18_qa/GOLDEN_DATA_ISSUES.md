@@ -67,3 +67,10 @@ Many soft-ok / exact-miss rows have top-1 in a **related family** but not the au
 - Shift / day-sleep contexts (`home morning` + sleep_prep) are easy to confuse with morning-light circadian cards.
 - Single-candidate goldens (`candidates: [only-one]`) make soft agreement brittle when founder CPI imagery priors dominate.
 - Historical response is sparse in goldens → `historical_response` feature often default 0.5.
+
+## 9. Residual C after TC007 residual-C pass (2026-09-19)
+
+After systemic EVENT/preference fixes on `pie/golden-tc007-residual-c`, soft = 110/110 and holdout soft = 22/22. Remaining **C ranked_too_low**: `TC025`, `TC028` only.
+
+- Not silent-edited.
+- Further gains would require either catalog/moment coverage for those narrative IDs or human golden review — not GOAL_PROTOCOL_BOOST expansion.

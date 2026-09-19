@@ -1,94 +1,58 @@
 {
-  "generated_at": "2026-09-19T09:35:24.451Z",
+  "generated_at": "2026-09-19T09:45:07.120Z",
   "cases_path": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/13_test_cases/test_cases.jsonl",
   "n": 110,
-  "exact_match": 61,
-  "exact_rate": 0.5545454545454546,
-  "soft_agree": 101,
-  "soft_rate": 0.9181818181818182,
-  "soft_fails": 9,
+  "exact_match": 69,
+  "exact_rate": 0.6272727272727273,
+  "soft_agree": 110,
+  "soft_rate": 1,
+  "soft_fails": 0,
   "missing_golden_ABC_counts": {
     "never_generated": 0,
     "incorrectly_excluded": 0,
-    "ranked_too_low": 11,
-    "null": 99
+    "ranked_too_low": 2,
+    "null": 108
   },
   "failure_category_counts": [
     {
       "category": "exact_miss_soft_ok",
-      "count": 40
+      "count": 41
     },
     {
       "category": "golden_ranked_too_low",
-      "count": 11
-    },
-    {
-      "category": "wrong_family_top1",
-      "count": 9
-    },
-    {
-      "category": "no_history_signal",
-      "count": 9
-    },
-    {
-      "category": "goal:pre_performance",
-      "count": 3
-    },
-    {
-      "category": "goal:emotion_regulate",
       "count": 2
-    },
-    {
-      "category": "goal:rumination",
-      "count": 2
-    },
-    {
-      "category": "goal:sleep_prep",
-      "count": 1
-    },
-    {
-      "category": "goal:stress_acute",
-      "count": 1
     },
     {
       "category": "policy_gate_silence",
-      "count": 1
+      "count": 2
     }
   ],
-  "soft_fail_ids": [
-    "TC007",
-    "TC023",
-    "TC042",
-    "TC050",
-    "TC059",
-    "TC061",
-    "TC066",
-    "TC067",
-    "TC088"
-  ],
+  "soft_fail_ids": [],
   "exact_fail_soft_ok_ids": [
     "TC004",
-    "TC009",
+    "TC008",
     "TC010",
+    "TC011",
     "TC014",
     "TC015",
     "TC016",
     "TC017",
     "TC018",
-    "TC021",
     "TC025",
     "TC028",
+    "TC030",
     "TC035",
     "TC039",
-    "TC044",
+    "TC042",
     "TC047",
     "TC048",
     "TC049",
+    "TC050",
     "TC053",
     "TC054",
     "TC055",
     "TC057",
-    "TC062",
+    "TC061",
     "TC069",
     "TC071",
     "TC073",
@@ -103,7 +67,6 @@
     "TC093",
     "TC098",
     "TC103",
-    "TC105",
     "TC106",
     "TC107",
     "TC108"

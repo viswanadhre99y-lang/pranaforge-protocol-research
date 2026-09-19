@@ -1,14 +1,14 @@
 {
   "total": 110,
   "comparable": 110,
-  "exact_match": 50,
-  "exact_rate": 0.45454545454545453,
-  "candidate_hits": 63,
+  "exact_match": 58,
+  "exact_rate": 0.5272727272727272,
+  "candidate_hits": 75,
   "silence_agree": 11,
-  "soft_agree": 101,
-  "soft_agreement_rate": 0.9181818181818182,
-  "top3_agree": 94,
-  "top3_agreement_rate": 0.8545454545454545,
+  "soft_agree": 110,
+  "soft_agreement_rate": 1,
+  "top3_agree": 103,
+  "top3_agreement_rate": 0.9363636363636364,
   "note": "Suite does not fail on heuristic disagreement with golden selected; rates recorded only. soft = exact OR top-in-candidates OR expected-in-top3 OR silence-agree OR staff_*/SEQUENCE soft.",
   "rows": [
     {
@@ -110,81 +110,81 @@
     {
       "id": "TC007",
       "expected": "values-compass",
-      "got": "pmr",
+      "got": "values-compass",
       "top3": [
-        "pmr",
+        "values-compass",
         "affect-labeling",
         "act-defusion"
-      ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 0.967,
-      "ambiguous": false
-    },
-    {
-      "id": "TC008",
-      "expected": "affect-labeling",
-      "got": "affect-labeling",
-      "top3": [
-        "affect-labeling",
-        "cognitive-reappraisal",
-        "self-distancing"
       ],
       "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.156,
+      "score": 1.193,
       "ambiguous": false
     },
     {
-      "id": "TC009",
-      "expected": "ppr",
-      "got": "process-visualization",
+      "id": "TC008",
+      "expected": "affect-labeling",
+      "got": "cognitive-reappraisal",
       "top3": [
-        "process-visualization",
-        "centering-ravizza",
-        "ppr"
+        "cognitive-reappraisal",
+        "affect-labeling",
+        "self-distancing"
       ],
       "match": false,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.059,
+      "score": 1.229,
+      "ambiguous": false
+    },
+    {
+      "id": "TC009",
+      "expected": "ppr",
+      "got": "ppr",
+      "top3": [
+        "ppr",
+        "process-visualization",
+        "centering-ravizza"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.092,
       "ambiguous": false
     },
     {
       "id": "TC010",
       "expected": "worry-postpone",
-      "got": "mbsr-breath-anchor",
+      "got": "pmr",
       "top3": [
-        "mbsr-breath-anchor",
         "pmr",
+        "mbsr-breath-anchor",
         "worry-postpone"
       ],
       "match": false,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.873,
+      "score": 0.865,
       "ambiguous": false
     },
     {
       "id": "TC011",
       "expected": "task-switch-buffer",
-      "got": "task-switch-buffer",
+      "got": "exhale-emphasized",
       "top3": [
-        "task-switch-buffer",
         "exhale-emphasized",
+        "task-switch-buffer",
         "art-brief"
       ],
-      "match": true,
+      "match": false,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.954,
+      "score": 0.999,
       "ambiguous": false
     },
     {
@@ -326,17 +326,17 @@
     {
       "id": "TC021",
       "expected": "ppr",
-      "got": "tactical-breath-reset",
+      "got": "ppr",
       "top3": [
+        "ppr",
         "tactical-breath-reset",
-        "box-breathing",
-        "centering-ravizza"
+        "box-breathing"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
-      "top3Hit": false,
+      "top3Hit": true,
       "soft": true,
-      "score": 1.103,
+      "score": 1.22,
       "ambiguous": false
     },
     {
@@ -358,17 +358,17 @@
     {
       "id": "TC023",
       "expected": "self-distancing",
-      "got": "act-defusion",
+      "got": "self-distancing",
       "top3": [
-        "act-defusion",
+        "self-distancing",
         "art-brief",
         "cognitive-reappraisal"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 0.862,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.01,
       "ambiguous": false
     },
     {
@@ -466,17 +466,17 @@
     {
       "id": "TC030",
       "expected": "task-switch-buffer",
-      "got": "task-switch-buffer",
+      "got": "exhale-emphasized",
       "top3": [
-        "task-switch-buffer",
         "exhale-emphasized",
+        "task-switch-buffer",
         "art-brief"
       ],
-      "match": true,
+      "match": false,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.954,
+      "score": 0.999,
       "ambiguous": false
     },
     {
@@ -600,7 +600,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.992,
+      "score": 1.172,
       "ambiguous": false
     },
     {
@@ -638,7 +638,7 @@
       "top3": [
         "process-visualization",
         "ppr",
-        "centering-ravizza"
+        "physiological-sigh-acute"
       ],
       "match": true,
       "candHit": true,
@@ -650,17 +650,17 @@
     {
       "id": "TC042",
       "expected": "if-then-gollwitzer",
-      "got": "box-breathing",
+      "got": "physiological-sigh-acute",
       "top3": [
-        "box-breathing",
-        "tactical-breath-reset",
-        "centering-ravizza"
+        "physiological-sigh-acute",
+        "if-then-gollwitzer",
+        "box-breathing"
       ],
       "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 1.061,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 0.916,
       "ambiguous": false
     },
     {
@@ -682,17 +682,17 @@
     {
       "id": "TC044",
       "expected": "ppr",
-      "got": "process-visualization",
+      "got": "ppr",
       "top3": [
+        "ppr",
         "process-visualization",
-        "centering-ravizza",
-        "ppr"
+        "centering-ravizza"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.04,
+      "score": 1.08,
       "ambiguous": false
     },
     {
@@ -740,7 +740,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.822,
+      "score": 1.002,
       "ambiguous": false
     },
     {
@@ -778,17 +778,17 @@
     {
       "id": "TC050",
       "expected": "wind-down",
-      "got": "mbsr-breath-anchor",
+      "got": "pmr",
       "top3": [
-        "mbsr-breath-anchor",
         "pmr",
-        "worry-postpone"
+        "mbsr-breath-anchor",
+        "wind-down"
       ],
       "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 0.892,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 0.884,
       "ambiguous": false
     },
     {
@@ -918,17 +918,17 @@
     {
       "id": "TC059",
       "expected": "cognitive-reappraisal",
-      "got": "pmr",
+      "got": "cognitive-reappraisal",
       "top3": [
-        "pmr",
-        "act-defusion",
-        "opposite-action"
+        "cognitive-reappraisal",
+        "affect-labeling",
+        "self-distancing"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 0.865,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.237,
       "ambiguous": false
     },
     {
@@ -950,33 +950,29 @@
     {
       "id": "TC061",
       "expected": "staff_queue_ppr",
-      "got": "process-visualization",
-      "top3": [
-        "process-visualization",
-        "centering-ravizza",
-        "physiological-sigh-acute"
-      ],
+      "got": "SILENCE",
+      "top3": [],
       "match": false,
-      "candHit": false,
+      "candHit": true,
       "top3Hit": false,
-      "soft": false,
-      "score": 0.95,
+      "soft": true,
+      "score": null,
       "ambiguous": false
     },
     {
       "id": "TC062",
       "expected": "exhale-emphasized",
-      "got": "task-switch-buffer",
+      "got": "exhale-emphasized",
       "top3": [
-        "task-switch-buffer",
         "exhale-emphasized",
+        "task-switch-buffer",
         "art-brief"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.954,
+      "score": 0.999,
       "ambiguous": false
     },
     {
@@ -985,14 +981,14 @@
       "got": "wind-down",
       "top3": [
         "wind-down",
-        "mbsr-breath-anchor",
-        "pmr"
+        "pmr",
+        "stimulus-control"
       ],
       "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.918,
+      "score": 1.118,
       "ambiguous": false
     },
     {
@@ -1030,33 +1026,33 @@
     {
       "id": "TC066",
       "expected": "exhale-emphasized",
-      "got": "physiological-sigh-acute",
+      "got": "exhale-emphasized",
       "top3": [
-        "physiological-sigh-acute",
+        "exhale-emphasized",
         "cyclic-sighing",
         "54321-grounding"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 0.819,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 0.978,
       "ambiguous": false
     },
     {
       "id": "TC067",
       "expected": "ppr",
-      "got": "process-visualization",
+      "got": "ppr",
       "top3": [
-        "process-visualization",
+        "ppr",
         "physiological-sigh-acute",
         "centering-ravizza"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 1.01,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.08,
       "ambiguous": false
     },
     {
@@ -1378,17 +1374,17 @@
     {
       "id": "TC088",
       "expected": "self-distancing",
-      "got": "act-defusion",
+      "got": "self-distancing",
       "top3": [
-        "act-defusion",
+        "self-distancing",
         "art-brief",
         "cognitive-reappraisal"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 0.862,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.01,
       "ambiguous": false
     },
     {
@@ -1429,14 +1425,14 @@
       "got": "values-compass",
       "top3": [
         "values-compass",
-        "smart-caveats",
-        "process-visualization"
+        "cognitive-reappraisal",
+        "smart-caveats"
       ],
       "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.897,
+      "score": 0.894,
       "ambiguous": false
     },
     {
@@ -1634,17 +1630,17 @@
     {
       "id": "TC105",
       "expected": "exhale-emphasized",
-      "got": "cyclic-sighing",
+      "got": "exhale-emphasized",
       "top3": [
-        "cyclic-sighing",
         "exhale-emphasized",
+        "cyclic-sighing",
         "brief-pmr-acute"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.647,
+      "score": 0.812,
       "ambiguous": false
     },
     {
@@ -1713,7 +1709,7 @@
       "got": "affect-labeling",
       "top3": [
         "affect-labeling",
-        "pmr",
+        "values-compass",
         "act-defusion"
       ],
       "match": true,
