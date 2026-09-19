@@ -1,0 +1,47 @@
+{
+  "spec_version": "1.0.0",
+  "disclaimer": "Engineering heuristic weights. Not a validated clinical instrument. Not for medical diagnosis/treatment claims.",
+  "weights": {
+    "need_match": 0.22,
+    "context_match": 0.12,
+    "timing": 0.12,
+    "evidence": 0.14,
+    "history": 0.10,
+    "preference": 0.08,
+    "feasibility": 0.10,
+    "expected_benefit": 0.07,
+    "adherence_prob": 0.05
+  },
+  "penalties": {
+    "complexity_high": 0.08,
+    "friction_public": 0.10,
+    "prior_negative": 0.15,
+    "repeat_within_cooldown": 0.12,
+    "soft_contra_residual": 0.25
+  },
+  "evidence_map": {"A": 1.0, "B": 0.8, "C": 0.55, "D": 0.35, "E": 0.0},
+  "thresholds": {
+    "tau_receptivity_push": 0.45,
+    "tau_receptivity_staff": 0.25,
+    "tau_select": 0.42,
+    "tau_urgency_push": 0.35
+  },
+  "cooldowns_min": {
+    "default_same_protocol": 180,
+    "micro_protocol": 60,
+    "policy_card": 1440
+  },
+  "hard_exclude_rules": [
+    {"rule": "contraindication_intersection_nonempty"},
+    {"rule": "clinician_only_without_clinician_mode"},
+    {"rule": "automation_false_on_autopush_channel"},
+    {"rule": "evidence_E_on_evidence_path"},
+    {"rule": "duration_exceeds_gap"},
+    {"rule": "arousal_up_when_need_sleep_prep"},
+    {"rule": "crisis_path_no_protocol"},
+    {"rule": "activity_driving_or_sleeping_on_push"}
+  ],
+  "channel_caps": {
+    "max_unsolicited_pushes_per_day_default": 3
+  }
+}

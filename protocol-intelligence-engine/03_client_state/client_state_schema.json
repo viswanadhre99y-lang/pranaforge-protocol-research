@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ClientStateVector",
+  "type": "object",
+  "required": ["client_id", "as_of", "receptivity"],
+  "properties": {
+    "client_id": {"type": "string"},
+    "as_of": {"type": "string", "format": "date-time"},
+    "identity": {
+      "type": "object",
+      "properties": {
+        "client_type": {"type": "string"},
+        "goals": {"type": "array", "items": {"type": "string"}},
+        "prefs": {"type": "object"},
+        "safety_profile": {
+          "type": "object",
+          "properties": {
+            "tags": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "schedule": {
+      "type": "object",
+      "properties": {
+        "tz": {"type": "string"},
+        "local_hour": {"type": "number"},
+        "available_gap_sec": {"type": "integer"},
+        "meeting_density_4h": {"type": "number"},
+        "meeting_streak": {"type": "integer"},
+        "next_event": {
+          "type": "object",
+          "properties": {
+            "in_min": {"type": "integer"},
+            "tag": {"type": "string"},
+            "stakes": {"type": "string", "enum": ["low", "med", "high"]}
+          }
+        },
+        "flight_in_h": {"type": ["number", "null"]},
+        "hours_since_landing": {"type": ["number", "null"]}
+      }
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "place_class": {"type": "string"},
+        "privacy_level": {"type": "string"},
+        "equipment_ok": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "activity": {
+      "type": "object",
+      "properties": {
+        "label": {"type": "string"},
+        "confidence": {"type": "number"},
+        "source_class": {"type": "string", "enum": ["measured", "estimated", "self_report", "staff_observed", "unknown"]}
+      }
+    },
+    "physical": {"type": "object"},
+    "mental": {"type": "object"},
+    "emotional": {"type": "object"},
+    "behavioral": {"type": "object"},
+    "receptivity": {
+      "type": "object",
+      "required": ["score", "reason"],
+      "properties": {
+        "score": {"type": "number", "minimum": 0, "maximum": 1},
+        "reason": {"type": "string"}
+      }
+    },
+    "safety": {
+      "type": "object",
+      "properties": {
+        "crisis_language_detected": {"type": "boolean"},
+        "escalate": {"type": "boolean"},
+        "notes": {"type": "string"}
+      }
+    },
+    "inferred_needs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "need": {"type": "string"},
+          "urgency": {"type": "number"},
+          "confidence": {"type": "number"},
+          "source_class": {"type": "string"}
+        }
+      }
+    }
+  }
+}

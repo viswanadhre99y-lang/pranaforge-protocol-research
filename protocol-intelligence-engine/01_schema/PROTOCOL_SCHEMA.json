@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pranaforge.local/schemas/protocol-v1.json",
+  "title": "PranaForgeSelectableProtocol",
+  "description": "Machine-readable selectable protocol card for PIE. Public evidence-graded library entries OR opaque vault protocol_id references. Ranking score is an engineering heuristic, not a clinical instrument.",
+  "type": "object",
+  "required": [
+    "protocol_id",
+    "name",
+    "evidence_A_to_E",
+    "need_tags",
+    "context_tags",
+    "max_duration_sec",
+    "privacy_ok",
+    "automation_ok",
+    "is_vault_ip"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "protocol_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{1,63}$",
+      "description": "Stable ID. Vault methods use opaque IDs only; never expand proprietary steps here."
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "default": "1.0.0" },
+    "source_library": {
+      "type": "string",
+      "enum": ["pranaforge-public-protocol-research", "pranaforge-vault-opaque", "external-licensed", "custom-client"]
+    },
+    "is_vault_ip": {
+      "type": "boolean",
+      "description": "If true: steps_public must be empty or redacted; delivery is session_reminder/staff only."
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["breathing", "stress", "sleep", "performance", "emotional", "cognitive", "goals"]
+      }
+    },
+    "purpose": { "type": "string" },
+    "problem": { "type": "string" },
+    "steps_public": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Public steps only. Empty when is_vault_ip=true."
+    },
+    "when_indicated": { "type": "string" },
+    "mechanism_summary": { "type": "string" },
+    "short_effect": { "type": "string" },
+    "long_effect": { "type": "string" },
+    "evidence_A_to_E": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E"],
+      "description": "A=strong guidelines/trials; B=moderate; C=preliminary; D=traditional; E=unsupported — do not sell as science."
+    },
+    "research_notes": { "type": ["string", "null"] },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "creator_attribution": { "type": ["string", "null"] },
+    "risks": { "type": ["string", "null"] },
+    "avoid_text": { "type": ["string", "null"] },
+    "contraindication_tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "clinician_only": { "type": "boolean", "default": false },
+    "clinician_guided": { "type": "boolean", "default": false },
+    "nsdr_not_sleep_replacement": { "type": "boolean", "default": false },
+    "need_tags": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "What need this protocol addresses (stress_acute, sleep_prep, pre_performance, rumination, ...)."
+    },
+    "context_tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Where/how it can run (private, public_discrete, desk, travel, bedtime, ...)."
+    },
+    "moment_tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "CPI high-value moments (pre_pitch, post_landing, T_sleep, post_conflict, ...)."
+    },
+    "time_buckets": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "min_duration_sec": { "type": "integer", "minimum": 5 },
+    "max_duration_sec": { "type": "integer", "minimum": 5 },
+    "recommended_duration_sec": { "type": "integer", "minimum": 5 },
+    "arousal_direction": {
+      "type": "string",
+      "enum": ["down", "up", "up_then_down", "down_fast", "activate", "focus", "neutral"]
+    },
+    "intensity": {
+      "type": "string",
+      "enum": ["micro", "low", "moderate", "moderate_high", "high"]
+    },
+    "equipment": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "delivery_channels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["text", "audio", "staff_prompt", "policy_card", "session_reminder", "in_room"]
+      }
+    },
+    "privacy_ok": {
+      "type": "boolean",
+      "description": "Content itself is OK to store/send under normal consent. Does not authorize covert psych inference."
+    },
+    "automation_ok": {
+      "type": "boolean",
+      "description": "May be auto-suggested by rules engine without clinician. False for clinician-only / high-risk."
+    },
+    "staff_preferred": { "type": "boolean", "default": false },
+    "followup_min": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Suggested minutes until outcome check-in."
+    },
+    "complexity": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "public_discrete": { "type": "boolean" },
+    "selection_notes": { "type": ["string", "null"] },
+    "client_type_priors": {
+      "type": "object",
+      "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 },
+      "description": "Optional CPI prior boosts by client slug."
+    },
+    "excludes_if_needs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Hard-incompatible need tags (e.g. activation protocol when need=sleep_prep)."
+    }
+  }
+}
