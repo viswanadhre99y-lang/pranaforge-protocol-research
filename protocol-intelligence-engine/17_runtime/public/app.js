@@ -321,7 +321,7 @@ async function loadClientHistory() {
       lines.push('');
       lines.push(`Recent decisions (${j.decisions.length}):`);
       for (const d of j.decisions.slice(0, 5)) {
-        const top = (d.top3 || []).map((x) => x.protocol_id).filter(Boolean).slice(0, 3).join(',');
+        const top = (d.top3 || d.top3 || []).map((x) => x.protocol_id).filter(Boolean).slice(0, 3).join(',');
         lines.push(`• ${d.ts || ''} ${d.action || d.kind}${top ? ' top=' + top : ''}`);
       }
     }
