@@ -102,3 +102,28 @@ Every protocol in `02_protocols_by_client/` uses:
 - **Maps to question #**  
 
 Base building blocks live in parent library `../01_MASTER_DATABASE.md`. Cluster B adds **client framing + profession-specific literature**.
+
+
+---
+
+## Cluster B delivery inventory (2026-09-19 IST)
+
+| Slug | Protocols | Profile | Moments | Stack |
+|------|-----------|---------|---------|-------|
+| `management_consultants` | 21 | ✓ | ✓ | ✓ |
+| `lawyers` | 22 | ✓ | ✓ | ✓ |
+| `physicians_surgeons` | 23 | ✓ | ✓ | ✓ |
+| `dentists` | 22 | ✓ | ✓ | ✓ |
+| `psychologists_therapists` | 21 | ✓ | ✓ | ✓ |
+| `software_engineers` | 21 | ✓ | ✓ | ✓ |
+| `academics_researchers` | 21 | ✓ | ✓ | ✓ |
+| `sales_professionals` | 21 | ✓ | ✓ | ✓ |
+| `real_estate_professionals` | 21 | ✓ | ✓ | ✓ |
+| `journalists_media` | 21 | ✓ | ✓ | ✓ |
+| `architects_designers` | 21 | ✓ | ✓ | ✓ |
+
+**Total protocol records:** 235 across 11 clients (shared A/B rails + profession-specific extras; never mixed across clients).
+
+**Matrix:** `05_matrix/MATRIX_PROFESSIONALS.csv`  
+**Synthesis:** `06_synthesis/CLUSTER_B_SYNTHESIS.md`  
+**Sources:** `07_sources/CLUSTER_B_SOURCES.md`
