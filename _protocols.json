@@ -1,0 +1,1680 @@
+[
+  {
+    "id": "cyclic-sighing",
+    "cats": [
+      "breathing",
+      "stress",
+      "emotional"
+    ],
+    "buckets": [
+      "2min",
+      "5min",
+      "extremely-stressed",
+      "perform-in-15min"
+    ],
+    "name": "Cyclic Sighing (Physiological Sigh Pattern)",
+    "purpose": "Rapidly reduce acute arousal and improve mood via exhale-emphasized double inhale + long exhale.",
+    "problem": "Acute stress, elevated respiratory rate, low positive affect, need for a brief downshift.",
+    "typical": "5 minutes daily; 1\u20133 cycles acutely",
+    "minimum": "1\u20133 sighs (~30\u201360 seconds) for acute relief; 5 minutes for studied daily dose",
+    "steps": [
+      "Sit or stand comfortably with upright posture.",
+      "Inhale slowly through the nose until lungs feel mostly full.",
+      "Without exhaling, take a second shorter inhale through the nose to maximally inflate the lungs.",
+      "Exhale slowly and fully through the mouth (or nose) until lungs empty.",
+      "Repeat continuously for ~5 minutes (or 1\u20133 cycles for acute use).",
+      "Return to normal breathing; notice body sensations without forcing calm."
+    ],
+    "when": "Acute stress spikes, pre-meeting nerves, end-of-day wind-down, or as a daily 5-min mood practice.",
+    "short": "Often reduced respiratory rate and improved positive affect within minutes to days of practice.",
+    "long": "In a 28-day RCT, daily cyclic sighing improved mood more than matched mindfulness and reduced resting respiratory rate.",
+    "mechanism": "Double inhale recruits collapsed alveoli (physiological sigh); prolonged exhale increases parasympathetic influence via pulmonary stretch and vagal pathways; reduced chemoreflex drive may lower respiratory rate over time.",
+    "evidence": "B",
+    "research": "Yilmaz Balban et al., Cell Reports Medicine 2023 (NCT05304000): remote RCT, daily 5-min cyclic sighing vs box breathing, cyclic hyperventilation, mindfulness; cyclic sighing best for positive affect and respiratory-rate reduction. PubMed 36630953; DOI 10.1016/j.xcrm.2022.100895. Note: HR/HRV did not significantly differ; healthy adults; remote delivery.",
+    "risks": "Lightheadedness if overdone; mouth-breathing dryness; may feel unusual initially.",
+    "avoid": "Modify if severe respiratory disease, recent thoracic surgery, uncontrolled panic with breath-focus intolerance, or pregnancy-related breathing limits\u2014use gentle single long exhales instead of forced maximal fills.",
+    "sources": "https://pubmed.ncbi.nlm.nih.gov/36630953/ ; https://pmc.ncbi.nlm.nih.gov/articles/PMC9873947/ ; https://clinicaltrials.gov/study/NCT05304000",
+    "creator": "Studied by Yilmaz Balban, Huberman, Spiegel et al. (Stanford); pattern based on known physiological sighing (respiratory neuroscience)."
+  },
+  {
+    "id": "box-breathing",
+    "cats": [
+      "breathing",
+      "stress",
+      "performance",
+      "cognitive"
+    ],
+    "buckets": [
+      "2min",
+      "5min",
+      "perform-in-15min",
+      "extremely-stressed"
+    ],
+    "name": "Box Breathing (Square Breathing)",
+    "purpose": "Stabilize attention and arousal with equal inhale\u2013hold\u2013exhale\u2013hold timing.",
+    "problem": "Performance anxiety, scattered attention, need for structured paced breathing under pressure.",
+    "typical": "2\u20135 minutes (e.g., 4-4-4-4)",
+    "minimum": "~1\u20132 minutes (4\u20138 cycles)",
+    "steps": [
+      "Choose a count you can sustain without strain (commonly 4 seconds each side; some use 3\u20135).",
+      "Inhale through the nose for the count.",
+      "Hold lungs gently full for the same count (no straining).",
+      "Exhale through nose or mouth for the same count.",
+      "Hold empty (or near-empty) for the same count.",
+      "Repeat for 2\u20135 minutes; stop if dizzy."
+    ],
+    "when": "Pre-performance, between tasks, tactical stress contexts, brief reset.",
+    "short": "Subjective calm and attentional anchoring; may reduce state anxiety for some users.",
+    "long": "In Balban 2023, box breathing improved mood/anxiety similarly to other groups but was not superior to cyclic sighing on primary mood/respiratory outcomes.",
+    "mechanism": "Paced breathing + mild breath holds provide cognitive structure (attentional load) and may modulate autonomic balance; equal counts are a convenience heuristic, not an individually optimized resonance rate.",
+    "evidence": "C",
+    "research": "Comparator arm in Yilmaz Balban et al. 2023 (Cell Rep Med). Broader paced-breathing literature supports slow breathing for HRV/stress more than the specific equal-hold box pattern. Limited high-quality trials isolating box breathing alone.",
+    "risks": "Breath holds can raise CO2/discomfort; dizziness; hypervigilance if counts are too long.",
+    "avoid": "Avoid long holds if pregnancy, uncontrolled hypertension, panic disorder with breath-hold sensitivity, COPD/severe asthma. Shorten or remove holds.",
+    "sources": "https://pubmed.ncbi.nlm.nih.gov/36630953/ ; Fincham et al. Sci Rep 2023 https://doi.org/10.1038/s41598-022-27247-y",
+    "creator": "Popularized in tactical/performance settings (often linked to Navy SEAL training popularization; exact single inventor unclear)."
+  },
+  {
+    "id": "coherent-resonance",
+    "cats": [
+      "breathing",
+      "stress",
+      "performance"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min",
+      "20min",
+      "mind-wont-stop"
+    ],
+    "name": "Coherent / Resonance Frequency Breathing (~6 breaths/min)",
+    "purpose": "Maximize respiratory sinus arrhythmia / HRV via slow paced breathing near ~0.1 Hz.",
+    "problem": "Chronic stress load, low HRV, need for a trainable autonomic downshift practice.",
+    "typical": "10\u201320 minutes; often ~5.5\u20136 breaths/min",
+    "minimum": "5 minutes of comfortable slow breathing (~6/min)",
+    "steps": [
+      "Sit upright, relaxed shoulders; breathe through the nose if comfortable.",
+      "Pace at about 6 breaths per minute (e.g., ~5 s inhale, ~5 s exhale) OR find personal resonance (~4.5\u20137/min) if using HRV guidance.",
+      "Prefer slightly longer exhale than inhale if that feels easier (common coaching cue).",
+      "Breathe gently\u2014avoid overbreathing; if lightheaded, reduce depth.",
+      "Optional: visual/audio pacer; optional HRV biofeedback to maximize LF/RSA amplitude.",
+      "Practice daily; Lehrer protocols historically used ~20 min twice daily with biofeedback."
+    ],
+    "when": "Daily stress regulation, pre-sleep wind-down (if not too alerting), HRV training blocks, anxiety adjunct.",
+    "short": "Increased HRV/RSA during practice; often calmer mood and lower perceived stress.",
+    "long": "HRV biofeedback / resonance breathing associated with small\u2013moderate benefits for stress, some anxiety/depression, and BP in reviews; individual resonance may help but fixed ~6/min is often sufficient.",
+    "mechanism": "Near ~0.1 Hz, respiration, heart-rate oscillations, and baroreflex resonate, maximizing RSA and stimulating baroreflex gain (Lehrer/Vaschillo model).",
+    "evidence": "B",
+    "research": "Lehrer & Gevirtz Frontiers Psychol 2014 PMC4104929; Steffen et al. 2017 resonance breathing HRV/BP/mood PMC5575449; Frontiers Neurosci 2020 practical guide to RF assessment. Newer work questions necessity of exact individual RF vs fixed 6/min.",
+    "risks": "Overbreathing (low CO2) causing dizziness/tingling; frustration with pacing; rare anxiety increase with interoceptive focus.",
+    "avoid": "Severe respiratory disease; acute panic if breath focus worsens symptoms\u2014use shorter sessions or therapist guidance. Capnometry advised in clinical HRVB when available.",
+    "sources": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4104929/ ; https://pmc.ncbi.nlm.nih.gov/articles/PMC5575449/ ; https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2020.570400/full",
+    "creator": "Paul Lehrer, Evgeny Vaschillo, and collaborators (HRV biofeedback / resonance frequency training)."
+  },
+  {
+    "id": "diaphragmatic",
+    "cats": [
+      "breathing",
+      "stress"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min"
+    ],
+    "name": "Diaphragmatic (Belly) Breathing",
+    "purpose": "Reduce accessory-muscle breathing and promote slower, deeper abdominal expansion for relaxation.",
+    "problem": "Chest-dominant breathing under stress, somatic anxiety, tension.",
+    "typical": "5\u201315 minutes",
+    "minimum": "2\u20133 minutes of deliberate belly breathing",
+    "steps": [
+      "Lie down or sit; one hand on chest, one on abdomen.",
+      "Inhale slowly through nose so the abdomen rises more than the chest.",
+      "Exhale slowly through nose or pursed lips, abdomen falling.",
+      "Keep shoulders relaxed; do not force maximal depth.",
+      "Continue 5\u201315 minutes; optionally combine with 6/min pacing."
+    ],
+    "when": "General anxiety reduction; physiotherapy adjunct for dysfunctional breathing; wind-down.",
+    "short": "Reduced muscle tension and subjective anxiety for many practitioners.",
+    "long": "RCTs and reviews support diaphragmatic/slow breathing for anxiety symptoms with small\u2013moderate effects; quality and protocols vary.",
+    "mechanism": "Reduced accessory muscle use, increased tidal volume at lower rate, possible vagal/parasympathetic facilitation, interoceptive attention shift.",
+    "evidence": "B",
+    "research": "Diaphragmatic breathing RCTs for anxiety (e.g., Chen et al. related work); Fincham et al. 2023 breathwork meta-analysis (Sci Rep) small\u2013moderate stress effects; technique heterogeneity is a limitation.",
+    "risks": "Hyperventilation if too deep/fast; abdominal discomfort; increased awareness of breath may worsen panic in some.",
+    "avoid": "Acute abdominal pain/surgery; severe COPD may need clinician-guided breathing rehab rather than DIY max belly breathing.",
+    "sources": "https://doi.org/10.1038/s41598-022-27247-y ; https://pubmed.ncbi.nlm.nih.gov/27553981/",
+    "creator": "Longstanding clinical/physiotherapy practice; not a single inventor."
+  },
+  {
+    "id": "478-breathing",
+    "cats": [
+      "breathing",
+      "sleep",
+      "stress"
+    ],
+    "buckets": [
+      "2min",
+      "5min",
+      "bad-sleep"
+    ],
+    "name": "4-7-8 Breathing (as popularized by Weil)",
+    "purpose": "Use a counted inhale\u2013hold\u2013long-exhale pattern as a bedtime or acute calming cue.",
+    "problem": "Difficulty falling asleep, acute anxiety, need for a simple memorable ratio.",
+    "typical": "4 breath cycles (~1\u20132 minutes); repeat up to ~8 cycles if needed",
+    "minimum": "4 cycles",
+    "steps": [
+      "Place tongue tip behind upper front teeth (Weil cue; optional).",
+      "Exhale fully through mouth with a whoosh sound.",
+      "Close mouth; inhale quietly through nose for count of 4.",
+      "Hold breath for count of 7.",
+      "Exhale completely through mouth for count of 8.",
+      "Repeat for 4 cycles initially; do not exceed ~8 cycles when new."
+    ],
+    "when": "In bed when sleep onset is delayed; acute anxiety if holds are tolerated.",
+    "short": "May feel calmer via extended exhale and attentional focus; acute autonomic changes in some small studies.",
+    "long": "Limited high-quality evidence specific to the exact 4-7-8 ratio; benefits likely overlap with slow breathing + prolonged exhale. Not a validated insomnia monotherapy.",
+    "mechanism": "Proposed: extended exhale and mild hypercapnia during hold; attentional distraction from rumination. Specific 4:7:8 timing is largely a mnemonic.",
+    "evidence": "C",
+    "research": "Sparse dedicated RCTs for Weil exact protocol; related paced/exhale-focused breathing has better support (Balban 2023; Lehrer HRVB). Small 4-7-8 studies show autonomic/anxiety changes\u2014interpret cautiously.",
+    "risks": "Breath holds can cause discomfort, dizziness, or panic in sensitive people.",
+    "avoid": "Skip or shorten holds in pregnancy, uncontrolled hypertension, panic with breath-hold aversion, or respiratory disease. Prefer cyclic sighing or 6/min breathing without holds.",
+    "sources": "Andrew Weil public educational materials (popularization); compare Balban 2023 and Lehrer HRVB literature.",
+    "creator": "Popularized by Andrew Weil, MD (pranayama-inspired counted breathing)."
+  },
+  {
+    "id": "nadi-shodhana",
+    "cats": [
+      "breathing",
+      "stress",
+      "cognitive"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min"
+    ],
+    "name": "Alternate Nostril Breathing (Nadi Shodhana / Anulom Vilom)",
+    "purpose": "Traditional paced unilateral nostril breathing used for calm focus.",
+    "problem": "Restlessness, desire for a structured traditional breathing ritual.",
+    "typical": "5\u201310 minutes",
+    "minimum": "3\u20135 minutes",
+    "steps": [
+      "Sit upright. Thumb closes right nostril, ring finger closes left (classic; adaptations OK).",
+      "Close right; inhale left.",
+      "Close left; open right; exhale right.",
+      "Inhale right; switch; exhale left.",
+      "Continue 5\u201310 minutes at comfortable pace.",
+      "Optional equal counts; advanced retentions only with teacher guidance."
+    ],
+    "when": "Transition into meditation/focus work; evening downshift if calming.",
+    "short": "Often subjective calm and focused attention; some small studies show autonomic/HRV changes.",
+    "long": "Evidence preliminary/mixed; many studies small or high bias risk. Treat as traditional with plausible paced-breathing benefits.",
+    "mechanism": "Traditional: balance of ida/pingala (not scientific). Scientific candidates: paced breathing effects, attentional control, mild unilateral nasal airflow differences (limited evidence).",
+    "evidence": "D",
+    "research": "Small trials and yoga research reviews report anxiety/HRV changes; quality generally lower than Western paced-breathing RCTs.",
+    "risks": "Finger pressure discomfort; nasal congestion frustration; advanced breath holds add risk.",
+    "avoid": "Significant nasal obstruction, active sinus infection, or breath-hold variants if contraindicated.",
+    "sources": "Traditional hatha yoga texts; modern small clinical/yoga studies (heterogeneous).",
+    "creator": "Classical yoga tradition (hatha/pranayama lineages)."
+  },
+  {
+    "id": "exhale-emphasized",
+    "cats": [
+      "breathing",
+      "stress"
+    ],
+    "buckets": [
+      "2min",
+      "5min",
+      "extremely-stressed"
+    ],
+    "name": "Exhale-Emphasized Paced Breathing (No Holds)",
+    "purpose": "Simple calm breathing without holds: longer exhale than inhale.",
+    "problem": "Need easy breathing tool when box holds or 4-7-8 holds are poorly tolerated.",
+    "typical": "5 minutes",
+    "minimum": "2 minutes",
+    "steps": [
+      "Inhale nose ~3\u20134 seconds.",
+      "Exhale nose/mouth ~5\u20137 seconds.",
+      "No forced holds.",
+      "Keep breaths gentle.",
+      "Continue 5 minutes."
+    ],
+    "when": "Anxiety with hold intolerance; bridge to resonance breathing.",
+    "short": "Calm via extended exhale.",
+    "long": "Consistent with Balban finding favoring exhale emphasis vs matched mindfulness.",
+    "mechanism": "Extended exhale / pulmonary stretch \u2192 parasympathetic bias hypotheses.",
+    "evidence": "B",
+    "research": "Aligned with cyclic sighing emphasis (Balban 2023) and slow-breathing literature.",
+    "risks": "Minimal if gentle.",
+    "avoid": "Severe respiratory disease\u2014physiotherapist guidance.",
+    "sources": "https://pubmed.ncbi.nlm.nih.gov/36630953/",
+    "creator": "Applied synthesis from paced-breathing research."
+  },
+  {
+    "id": "cyclic-hyperventilation-caution",
+    "cats": [
+      "breathing",
+      "performance"
+    ],
+    "buckets": [
+      "5min"
+    ],
+    "name": "Cyclic Hyperventilation with Retention (Caution Protocol)",
+    "purpose": "Inhale-emphasized cycling with short exhales and retention (studied comparator; not first-line calm tool).",
+    "problem": "Sometimes sought for alertness/activation; used in some breathwork traditions.",
+    "typical": "5 minutes (as in Balban 2023)",
+    "minimum": "Not recommended as default self-help for stress\u2014prefer cyclic sighing.",
+    "steps": [
+      "Only if medically appropriate and not seeking calm: relatively vigorous inhales with shorter passive exhales for cycles, with brief retention as instructed.",
+      "Stop immediately if dizziness, tingling, chest pain, or panic.",
+      "Prefer cyclic sighing / resonance breathing for stress/anxiety."
+    ],
+    "when": "Research context or carefully supervised activation\u2014not for panic, insomnia, or hypertension.",
+    "short": "May increase arousal; in Balban 2023 still reduced anxiety vs baseline but was not best mood protocol.",
+    "long": "Not superior to cyclic sighing for mood; hyperventilation-style practices carry more physiological risk.",
+    "mechanism": "Lowered CO2 (hypocapnia) alters cerebral blood flow; can create lightheadedness/tingling; retention adds CO2 rebound.",
+    "evidence": "C",
+    "research": "Comparator arm in Yilmaz Balban et al. 2023. Distinct from Wim Hof Method (separate evidence/risks).",
+    "risks": "Syncope, arrhythmia risk in susceptible people, panic, hypocapnia; never practice in water or while driving.",
+    "avoid": "Cardiovascular disease, pregnancy, epilepsy, fainting history, bipolar mania risk, panic disorder\u2014avoid. Not for children.",
+    "sources": "https://pubmed.ncbi.nlm.nih.gov/36630953/",
+    "creator": "Operationalized in Balban/Huberman trial; related to cyclic hyperventilation traditions."
+  },
+  {
+    "id": "pmr",
+    "cats": [
+      "stress",
+      "sleep",
+      "emotional"
+    ],
+    "buckets": [
+      "10-12min",
+      "20min",
+      "bad-sleep",
+      "extremely-stressed"
+    ],
+    "name": "Progressive Muscle Relaxation (PMR)",
+    "purpose": "Systematically tense and release muscle groups to reduce somatic tension and anxiety.",
+    "problem": "Muscle tension, somatic anxiety, sleep-onset difficulty related to bodily arousal.",
+    "typical": "10\u201320 minutes (abbreviated) to 30\u201345 minutes (full)",
+    "minimum": "5\u201310 minutes abbreviated (major groups only)",
+    "steps": [
+      "Sit or lie down in a quiet place.",
+      "For each muscle group: tense gently 5\u20137 seconds, then release 20\u201330 seconds, noticing contrast.",
+      "Common order: hands/forearms \u2192 upper arms \u2192 forehead \u2192 eyes/cheeks \u2192 jaw \u2192 neck \u2192 shoulders \u2192 chest \u2192 abdomen \u2192 thighs \u2192 calves \u2192 feet.",
+      "Use only mild\u2013moderate tension\u2014never pain.",
+      "End with brief whole-body scan of residual tension."
+    ],
+    "when": "Evening wind-down, acute somatic anxiety, insomnia behavioral component (relaxation training).",
+    "short": "Reduced muscle tension and state anxiety for many users.",
+    "long": "Meta-analyses support relaxation training including PMR for anxiety with moderate effects; AASM lists relaxation among behavioral insomnia options. Component network meta-analysis suggests relaxation alone may be less critical than sleep restriction/stimulus control for insomnia remission.",
+    "mechanism": "Learned discrimination of tension vs relaxation; reduced sympathetic/somatic arousal; attentional shift from worry to body sensations.",
+    "evidence": "B",
+    "research": "Manzoni et al. BMC Psychiatry 2008 relaxation meta-analysis PMC2427027; Muhammad Khir et al. 2024 PMR systematic review PMC10844009; AASM 2021 behavioral insomnia guidelines.",
+    "risks": "Muscle strain if over-tensing; paradoxical anxiety; trauma survivors may find body focus activating.",
+    "avoid": "Acute injuries; uncontrolled hypertension for strong isometric holds (use passive PMR); psychosis; severe trauma without support.",
+    "sources": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2427027/ ; https://pmc.ncbi.nlm.nih.gov/articles/PMC10844009/",
+    "creator": "Edmund Jacobson (Progressive Relaxation)."
+  },
+  {
+    "id": "autogenic",
+    "cats": [
+      "stress",
+      "sleep"
+    ],
+    "buckets": [
+      "10-12min",
+      "20min"
+    ],
+    "name": "Autogenic Training (AT)",
+    "purpose": "Self-generated passive concentration on heaviness/warmth and calm bodily states.",
+    "problem": "Chronic tension, anxiety, psychosomatic stress symptoms.",
+    "typical": "10\u201320 minutes per session; traditionally trained over weeks",
+    "minimum": "5\u201310 minutes of heaviness/warmth formulas",
+    "steps": [
+      "Sit or lie comfortably; eyes closed.",
+      "Silently repeat standard formulas with passive attention (e.g., My arms are heavy; My arms are warm; calm heartbeat/breathing; solar plexus warmth; forehead cool).",
+      "Do not force sensations; observe passively.",
+      "Practice regularly; traditionally learned with instructor for full protocol."
+    ],
+    "when": "Daily self-regulation; anxiety adjunct; some clinical AT programs.",
+    "short": "Warmth/heaviness sensations and subjective calm when training succeeds.",
+    "long": "Systematic reviews suggest benefits for stress/anxiety; some meta-analytic estimates large but based on limited/heterogeneous trials\u2014grade moderate-to-preliminary for general use.",
+    "mechanism": "Self-hypnosis-like passive concentration; learned autonomic self-regulation; expectancy and attentional control.",
+    "evidence": "C",
+    "research": "Seo & Kim 2019 AT stress meta-analysis PubMed 31477667; earlier AT reviews (Stetter & Kupper).",
+    "risks": "Anxiety increase in some; rare dissociation; not a substitute for medical care of somatic symptoms.",
+    "avoid": "Acute psychosis; severe depression with passive suicidal ideation without care; trauma triggers with passive body focus.",
+    "sources": "https://pubmed.ncbi.nlm.nih.gov/31477667/",
+    "creator": "Johannes Heinrich Schultz (1930s)."
+  },
+  {
+    "id": "body-scan",
+    "cats": [
+      "stress",
+      "sleep",
+      "cognitive",
+      "emotional"
+    ],
+    "buckets": [
+      "10-12min",
+      "20min",
+      "30-60min",
+      "mind-wont-stop"
+    ],
+    "name": "Body Scan (MBSR Element)",
+    "purpose": "Systematically move attention through the body with nonjudgmental awareness.",
+    "problem": "Mind wandering, tension unawareness, need for mindfulness anchor.",
+    "typical": "10\u201345 minutes (MBSR classically ~45 min)",
+    "minimum": "5\u201310 minutes abbreviated scan",
+    "steps": [
+      "Lie down or sit; close eyes if comfortable.",
+      "Begin at feet (or head); notice sensations without trying to change them.",
+      "Move slowly region by region.",
+      "When mind wanders, note gently and return.",
+      "End with whole-body awareness for a few breaths."
+    ],
+    "when": "Mindfulness practice, wind-down, stress reduction programs.",
+    "short": "Increased body awareness; often mild relaxation; sometimes sleepiness.",
+    "long": "MBSR as a package has moderate evidence for stress/anxiety/depression symptoms vs waitlist; isolated body-scan evidence thinner than full program.",
+    "mechanism": "Interoceptive attention training; decentering from rumination; possible autonomic calming secondary to sustained attention.",
+    "evidence": "B",
+    "research": "MBSR evidence base (Kabat-Zinn); mindfulness meta-analyses for anxiety/depression. Attribute stronger evidence to MBSR package than stand-alone scan.",
+    "risks": "Trauma reactivation; frustration; sleepiness when driving after.",
+    "avoid": "Active PTSD without trauma-sensitive guidance; acute mania; if lying down triggers panic\u2014sit upright.",
+    "sources": "Kabat-Zinn MBSR curriculum; mindfulness clinical trial literature.",
+    "creator": "Jon Kabat-Zinn (MBSR formalization); vipassana-derived roots."
+  },
+  {
+    "id": "yoga-nidra-nsdr",
+    "cats": [
+      "sleep",
+      "stress",
+      "cognitive"
+    ],
+    "buckets": [
+      "10-12min",
+      "20min",
+      "30-60min",
+      "bad-sleep"
+    ],
+    "name": "Yoga Nidra / NSDR (Non-Sleep Deep Rest)",
+    "purpose": "Guided rest inducing deep relaxation while typically remaining behaviorally awake; rest-without-requiring-sleep framing.",
+    "problem": "High stress, recovery need when sleep is insufficient, structured rest; adjunct for insomnia symptoms (not proven sleep replacement).",
+    "typical": "10\u201345 minutes guided audio",
+    "minimum": "10 minutes guided body awareness + breath rest",
+    "steps": [
+      "Lie down in a quiet safe place; use headphones with a reputable guided script.",
+      "Set intention/resolve if script includes sankalpa (optional traditional element).",
+      "Follow rotation of consciousness through body, breath, imagery as guided.",
+      "Remain still; falling asleep is OK\u2014not a failure.",
+      "After ending cue, reorient slowly before standing.",
+      "Do NOT claim or expect this to replace nocturnal sleep physiological functions."
+    ],
+    "when": "Afternoon recovery, evening wind-down, high cognitive load days, insomnia adjunct under guidance.",
+    "short": "Reduced subjective stress/arousal; sometimes local EEG slow-wave features while scored awake; respiratory rate may fall.",
+    "long": "Preliminary evidence for improved subjective sleep and some PSG metrics in small trials; mixed lab findings vs quiet rest. Promising but not equivalent to CBT-I or replacing sleep debt.",
+    "mechanism": "Guided attention + reduced sensory load may produce deep relaxation and local-sleep-like EEG features without whole-organism sleep. Traditional: yogic conscious sleep. Scientific claim of replacing sleep is not strongly supported.",
+    "evidence": "C",
+    "research": "Datta et al. NMJI 2021 (YN vs CBT-I, small RCT); local sleep EEG PMC9315270; PLOS One 2023 cognition/sleep novices; 2023 sleep-lab feasibility mixed vs quiet rest; EEG systematic reviews heterogeneous.",
+    "risks": "Dissociation; falling asleep in unsafe contexts; delaying medical insomnia care.",
+    "avoid": "Narcolepsy diagnostic confusion; untreated severe OSA; trauma-sensitive needs\u2014choose secular scripts. Not a substitute for prescribed sleep therapy.",
+    "sources": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0294678 ; https://pmc.ncbi.nlm.nih.gov/articles/PMC9315270/",
+    "creator": "Modern Yoga Nidra systematized by Swami Satyananda Saraswati et al.; NSDR popularized by Andrew Huberman as umbrella label."
+  },
+  {
+    "id": "stimulus-control",
+    "cats": [
+      "sleep"
+    ],
+    "buckets": [
+      "bad-sleep",
+      "30-60min"
+    ],
+    "name": "Stimulus Control Therapy (CBT-I Component)",
+    "purpose": "Re-associate bed/bedroom with sleep by eliminating incompatible bed behaviors and regulating sleep\u2013wake contingencies.",
+    "problem": "Chronic insomnia with conditioned arousal in bed (clock-watching, worry in bed).",
+    "typical": "Ongoing nightly rules (behavioral regimen), not a timed exercise",
+    "minimum": "Consistent application for \u22651\u20132 weeks to evaluate",
+    "steps": [
+      "Use bed/bedroom only for sleep and sex (no work, scrolling, TV).",
+      "Go to bed only when sleepy.",
+      "If unable to sleep after ~15\u201320 minutes (rough estimate, avoid obsessive clock-watching), leave bed; do quiet non-stimulating activity in dim light; return when sleepy.",
+      "Repeat as needed.",
+      "Keep a fixed wake time every day including weekends.",
+      "Avoid daytime napping (or keep very brief/early if needed)."
+    ],
+    "when": "Chronic insomnia disorder\u2014ideally within full CBT-I under clinician guidance.",
+    "short": "May increase temporary sleepiness/frustration early while extinguishing conditioned arousal.",
+    "long": "AASM supports stimulus control; 2024 component network meta-analysis finds stimulus control contributes to sleep quality/continuity improvements.",
+    "mechanism": "Classical/operant conditioning: extinguish bed\u2013wake association; strengthen bed\u2013sleep association; consolidate sleep drive with fixed wake time.",
+    "evidence": "A",
+    "research": "AASM 2021 CPG for behavioral/psychological insomnia treatments PMC7853203; Edinger et al. systematic review; Furukawa et al. JAMA Psychiatry 2024 component network meta-analysis.",
+    "risks": "Temporary sleep loss; safety if drowsy driving; partner disruption.",
+    "avoid": "Clinician guidance if bipolar spectrum (sleep loss mania risk), seizure disorders, high-risk occupations, pregnancy with medical complexity. Clinical protocol\u2014not casual biohacking.",
+    "sources": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/ ; https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2814164",
+    "creator": "Richard Bootzin (stimulus control therapy for insomnia)."
+  },
+  {
+    "id": "sleep-restriction",
+    "cats": [
+      "sleep"
+    ],
+    "buckets": [
+      "bad-sleep"
+    ],
+    "name": "Sleep Restriction Therapy (CBT-I Component)",
+    "purpose": "Temporarily limit time in bed to match average sleep time, consolidating sleep, then titrate upward.",
+    "problem": "Chronic insomnia with low sleep efficiency (long time in bed, fragmented sleep).",
+    "typical": "Multi-week clinician-guided titration",
+    "minimum": "Requires baseline sleep diary \u22651 week before starting",
+    "steps": [
+      "Track sleep diary (time in bed, estimated total sleep).",
+      "Set time-in-bed window \u2248 average total sleep time (often with a floor, e.g., \u22655\u20135.5 h\u2014clinician sets).",
+      "Fix wake time; derive bedtime from window.",
+      "No additional time in bed outside window.",
+      "When sleep efficiency improves (often \u226585\u201390% for a week), extend time in bed by ~15\u201320 minutes.",
+      "Continue titration until optimal consolidation with adequate duration."
+    ],
+    "when": "Chronic insomnia\u2014strongly prefer trained CBT-I clinician.",
+    "short": "Increased sleepiness, irritability, cognitive slowing early\u2014expected and monitored.",
+    "long": "Among the most potent CBT-I components for sleep continuity/efficiency (network meta-analysis).",
+    "mechanism": "Increases homeostatic sleep pressure; reduces excess time awake in bed; consolidates sleep.",
+    "evidence": "A",
+    "research": "AASM 2021 guideline; Furukawa et al. JAMA Psychiatry 2024 cNMA\u2014sleep restriction among critical components. ACP CBT-I guideline context.",
+    "risks": "Significant daytime impairment; drowsy driving; mania precipitation; seizure risk in predisposed.",
+    "avoid": "High-risk jobs, bipolar/mania predisposition, uncontrolled epilepsy, untreated severe OSA without guidance, pregnancy\u2014clinician decision. Do not DIY aggressively.",
+    "sources": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/ ; https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2814164",
+    "creator": "Arthur Spielman (sleep restriction therapy)."
+  },
+  {
+    "id": "wind-down",
+    "cats": [
+      "sleep"
+    ],
+    "buckets": [
+      "20min",
+      "30-60min",
+      "bad-sleep"
+    ],
+    "name": "Behavioral Wind-Down Routine",
+    "purpose": "Create a consistent pre-sleep buffer that reduces cognitive/physiological arousal.",
+    "problem": "Sleep onset delay from evening stimulation, work spillover, bright light/screens.",
+    "typical": "30\u201360 minutes",
+    "minimum": "15\u201320 minutes protected buffer",
+    "steps": [
+      "Set a nightly off-ramp alarm 30\u201360 min before target bedtime.",
+      "Dim lights; prefer warm/low lux lighting.",
+      "Stop work email and activating content; switch to low-arousal activities (reading, light stretching, PMR, slow breathing).",
+      "Avoid clock obsession; keep bedroom cool and dark for sleep.",
+      "If using CBT-I, ensure wind-down does not become long lying awake in bed (combine with stimulus control)."
+    ],
+    "when": "Habitual delayed sleep onset; high evening cognitive load.",
+    "short": "Lower pre-sleep arousal; easier sleep initiation for many.",
+    "long": "Supports sleep hygiene + CBT-I context; sleep hygiene alone is weak as monotherapy (AASM).",
+    "mechanism": "Reduced sensory/cognitive stimulation; circadian-friendly light; conditioned relaxation cues.",
+    "evidence": "C",
+    "research": "Sleep hygiene alone insufficient per AASM; wind-down practically useful within multicomponent care.",
+    "risks": "Becoming another performance demand.",
+    "avoid": "If wind-down becomes lengthy wakefulness in bed, apply stimulus control instead.",
+    "sources": "AASM behavioral insomnia guidelines.",
+    "creator": "Clinical sleep medicine / CBT-I practice synthesis."
+  },
+  {
+    "id": "caffeine-cutoff",
+    "cats": [
+      "sleep"
+    ],
+    "buckets": [
+      "bad-sleep"
+    ],
+    "name": "Caffeine Timing Cutoff",
+    "purpose": "Reduce caffeine-related sleep disruption by stopping intake sufficiently before bedtime.",
+    "problem": "Sleep latency/continuity problems with afternoon/evening caffeine.",
+    "typical": "Policy: no caffeine within 8\u201310+ hours of bedtime (individualize)",
+    "minimum": "Avoid caffeine after early afternoon if sensitive",
+    "steps": [
+      "Estimate bedtime; set last-caffeine time (common heuristic 8\u201310 hours prior; half-life ~5 h average, wide variability).",
+      "Include hidden sources (tea, cola, chocolate, pre-workout, some analgesics).",
+      "Trial 1\u20132 weeks; track sleep diary.",
+      "If still impaired, move cutoff earlier or reduce total daily dose."
+    ],
+    "when": "Insomnia or non-restorative sleep with regular caffeine use.",
+    "short": "May improve sleep onset/continuity within days for sensitive individuals.",
+    "long": "Pharmacokinetic rationale strong; experimental support that evening caffeine impairs sleep\u2014individual differences large.",
+    "mechanism": "Adenosine receptor antagonism maintains wakefulness; residual caffeine can delay sleep and reduce quality.",
+    "evidence": "B",
+    "research": "Laboratory caffeine\u2013sleep studies; clinical sleep education summaries. Not a cure for chronic insomnia disorder alone.",
+    "risks": "Withdrawal headache/fatigue if abrupt large cuts\u2014taper if heavy user.",
+    "avoid": "Not applicable as sole therapy for severe insomnia; consider medical causes.",
+    "sources": "Peer-reviewed caffeine\u2013sleep experimental literature; clinical sleep guidance.",
+    "creator": "N/A (pharmacology-informed behavioral rule)."
+  },
+  {
+    "id": "morning-light",
+    "cats": [
+      "sleep",
+      "performance"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min",
+      "bad-sleep",
+      "perform-in-15min"
+    ],
+    "name": "Morning Outdoor Light Timing",
+    "purpose": "Anchor circadian phase with bright morning light exposure.",
+    "problem": "Delayed sleep phase tendency, morning grogginess, jet-lag eastward prep support.",
+    "typical": "10\u201330 minutes outdoor light soon after waking",
+    "minimum": "5\u201310 minutes on a bright morning (longer if overcast)",
+    "steps": [
+      "Within ~30\u201360 minutes of waking, go outdoors without sunglasses if safe (do not stare at sun).",
+      "Face general outdoor ambient light; cloudy still helps vs indoor.",
+      "Combine with movement if desired.",
+      "In evening, dim indoor lights to avoid delaying circadian phase.",
+      "For jet lag: timing depends on direction/phase\u2014use careful schedules."
+    ],
+    "when": "Daily circadian anchoring; seasonal low light; mild DSPS tendencies.",
+    "short": "Increased alertness; morning melatonin suppression supports wake consolidation.",
+    "long": "Regular morning light helps stabilize circadian timing; clinical chronotherapy uses timed light for circadian rhythm disorders (AASM parameters).",
+    "mechanism": "Intrinsically photosensitive retinal ganglion cells (melanopsin) signal SCN; morning light advances/stabilizes phase depending on prior phase.",
+    "evidence": "A",
+    "research": "Circadian photoreception science; AASM practice parameters for circadian rhythm sleep-wake disorders; jet-lag intervention reviews (Frontiers Physiol 2019).",
+    "risks": "UV skin/eye risk\u2014use sensible outdoor practice; manic precipitation rare in bipolar with very bright light therapy boxes\u2014medical supervision for clinical light boxes.",
+    "avoid": "Ocular conditions per ophthalmologist; bipolar\u2014coordinate timed bright light with clinician.",
+    "sources": "https://aasm.org/resources/practiceparameters/pp_circadianrhythm.pdf ; https://doi.org/10.3389/fphys.2019.00927",
+    "creator": "Circadian biology / sleep medicine field."
+  },
+  {
+    "id": "nap-protocol",
+    "cats": [
+      "sleep",
+      "performance",
+      "cognitive"
+    ],
+    "buckets": [
+      "10-12min",
+      "20min"
+    ],
+    "name": "Brief Nap Protocol (10\u201320 min)",
+    "purpose": "Reduce sleepiness and restore alertness without deep-sleep inertia.",
+    "problem": "Afternoon sleepiness, performance dip, partial sleep restriction recovery assist.",
+    "typical": "10\u201320 minutes",
+    "minimum": "~10 minutes if very sleepy (set alarm)",
+    "steps": [
+      "Nap early afternoon when possible (circadian nap window).",
+      "Set alarm for 10\u201320 minutes; dark cool place.",
+      "Optional caffeine-nap: caffeine immediately before nap so it kicks in on waking (practical; evidence mixed).",
+      "Avoid 60\u201390+ min naps if inertia or night insomnia is a problem.",
+      "If chronic insomnia, avoid naps per stimulus control unless clinician allows."
+    ],
+    "when": "Sleep-restricted days, shift workers (with care), students\u2014avoid if it ruins night sleep.",
+    "short": "Improved alertness and cognitive performance for many after brief naps.",
+    "long": "Habitual long daytime sleep can fragment nocturnal sleep in insomnia; brief naps are a tool, not a fix for chronic sleep debt.",
+    "mechanism": "Reduce homeostatic sleep pressure partially; avoid slow-wave heavy sleep that causes inertia.",
+    "evidence": "B",
+    "research": "Nap/performance literature in sleep science; operational studies support brief naps. Insomnia guidelines often discourage naps.",
+    "risks": "Sleep inertia if longer; nocturnal insomnia worsening.",
+    "avoid": "Chronic insomnia under stimulus control; untreated severe OSA; immediately before high-risk driving if inertia risk.",
+    "sources": "Sleep research reviews on napping and performance; AASM insomnia guidance on naps.",
+    "creator": "N/A (operational sleep science practice)."
+  },
+  {
+    "id": "jetlag-light-melatonin",
+    "cats": [
+      "sleep"
+    ],
+    "buckets": [
+      "bad-sleep"
+    ],
+    "name": "Jet Lag Light and Melatonin Timing (Careful Protocol)",
+    "purpose": "Accelerate circadian adaptation after time-zone travel using timed light and, when appropriate, melatonin.",
+    "problem": "Jet lag insomnia/sleepiness after east/west flights.",
+    "typical": "Plan 2\u20133 days pre-travel + several days post-arrival",
+    "minimum": "Correct first-day light timing at destination + sleep opportunity alignment",
+    "steps": [
+      "Determine shift direction: eastward generally needs phase advance; westward phase delay.",
+      "Seek bright light at times that push clock in desired direction; avoid light at opposing times (use reputable jet-lag planners/clinicians).",
+      "Melatonin (when appropriate): often discussed at destination bedtime for eastward travel\u2014individualize; medical advice for dosing.",
+      "Hydrate; strategic short naps; avoid alcohol as sleep aid.",
+      "Consider pre-shifting sleep 30\u201360 min/day before departure for large shifts."
+    ],
+    "when": "Flights crossing multiple time zones.",
+    "short": "Reduced jet-lag severity when timing is correct; wrong timing can worsen misalignment.",
+    "long": "Faster adaptation over days; melatonin has better evidence for jet lag than many supplements.",
+    "mechanism": "Light is primary zeitgeber to SCN; melatonin signals biological night and can phase-shift depending on timing.",
+    "evidence": "B",
+    "research": "AASM circadian practice parameters; jet-lag reviews (Frontiers Physiol 2019). Melatonin evidence for jet lag stronger than for primary chronic insomnia.",
+    "risks": "Melatonin next-day drowsiness; light therapy mania risk; incorrect timing.",
+    "avoid": "Self-prescribe high-dose melatonin in pregnancy, autoimmune disease, or with interacting meds without clinician. Bipolar: caution with bright light.",
+    "sources": "https://doi.org/10.3389/fphys.2019.00927 ; AASM circadian practice parameters",
+    "creator": "Chronobiology / sleep medicine field protocols."
+  },
+  {
+    "id": "sleep-consistency",
+    "cats": [
+      "sleep"
+    ],
+    "buckets": [
+      "bad-sleep"
+    ],
+    "name": "Fixed Wake-Time Sleep Schedule",
+    "purpose": "Stabilize circadian and homeostatic systems with consistent wake time.",
+    "problem": "Social jet lag, irregular sleep timing, weekend oversleep cycles.",
+    "typical": "Daily habit; wake time within \u00b130 min",
+    "minimum": "7 consecutive days of fixed wake time",
+    "steps": [
+      "Choose a wake time you can keep 7 days/week.",
+      "Get morning light soon after waking.",
+      "Allow bedtime to flex slightly with sleepiness (especially with stimulus control).",
+      "Avoid large weekend phase shifts.",
+      "Track for 2 weeks before judging."
+    ],
+    "when": "Irregular schedules; mild insomnia; circadian instability.",
+    "short": "More predictable sleepiness in evening over days.",
+    "long": "Foundational chronobiological hygiene; supports CBT-I.",
+    "mechanism": "Stabilizes circadian phase and sleep pressure patterns.",
+    "evidence": "B",
+    "research": "Circadian science; CBT-I stimulus control includes fixed wake time; social jet lag research.",
+    "risks": "Sleep debt if bedtime too late with early fixed wake\u2014protect sleep opportunity.",
+    "avoid": "Shift workers need specialized schedules.",
+    "sources": "CBT-I manuals; circadian medicine reviews.",
+    "creator": "Sleep medicine / CBT-I practice."
+  },
+  {
+    "id": "evening-light-hygiene",
+    "cats": [
+      "sleep"
+    ],
+    "buckets": [
+      "bad-sleep",
+      "20min",
+      "30-60min"
+    ],
+    "name": "Evening Light Hygiene (Dim and Warm)",
+    "purpose": "Reduce circadian delay from evening bright/blue-enriched light.",
+    "problem": "Late sleep onset from screens/overhead LEDs.",
+    "typical": "2\u20133 hours pre-bed dimming",
+    "minimum": "Last 60 minutes dim + screen reduction",
+    "steps": [
+      "Dim overhead lights 2\u20133 hours before bed; prefer lamps.",
+      "Reduce phone/laptop brightness; night mode helps comfort (circadian benefit imperfect).",
+      "Avoid bright bathroom lights near bedtime if possible.",
+      "Keep bedroom dark for sleep."
+    ],
+    "when": "Delayed sleep phase tendencies; screen-heavy evenings.",
+    "short": "Easier melatonin rise and sleepiness for many.",
+    "long": "Supports circadian alignment with morning light.",
+    "mechanism": "Reduce evening melanopsin stimulation that delays circadian phase and suppresses melatonin.",
+    "evidence": "B",
+    "research": "Circadian photoreception and evening light studies; sleep medicine light hygiene guidance.",
+    "risks": "Unduly fearing all screens; shame cycles\u2014be practical.",
+    "avoid": "Night-shift workers need different timing strategies.",
+    "sources": "Circadian lighting research reviews; AASM-related circadian guidance.",
+    "creator": "Chronobiology field."
+  },
+  {
+    "id": "physiological-sigh-acute",
+    "cats": [
+      "stress"
+    ],
+    "buckets": [
+      "2min",
+      "extremely-stressed"
+    ],
+    "name": "Acute Physiological Sigh (1\u20133 Cycles)",
+    "purpose": "Fastest practical application of cyclic sigh pattern for spike stress.",
+    "problem": "Panic-adjacent spike, argument aftermath, sudden performance fear.",
+    "typical": "30\u201390 seconds",
+    "minimum": "1 double-inhale + long exhale",
+    "steps": [
+      "Stop amplifying the stressor briefly if safe.",
+      "Nasal inhale; second short nasal top-up; long exhale (mouth or nose).",
+      "Repeat 1\u20133 times.",
+      "Name one next controllable action."
+    ],
+    "when": "In the moment; can be done discreetly.",
+    "short": "Often noticeable exhale-related relief; not guaranteed panic abort.",
+    "long": "Same family as cyclic sighing daily practice evidence.",
+    "mechanism": "Same as cyclic sighing; acute use is extrapolation from daily RCT + known physiological sigh.",
+    "evidence": "B",
+    "research": "Balban et al. 2023 primarily studied 5-min daily cyclic sighing; acute 1\u20133 cycle use is mechanistically related but less directly trial-defined.",
+    "risks": "Minimal; overuse as avoidance of needed action/problem-solving.",
+    "avoid": "If breath focus worsens panic\u2014pair with grounding instead.",
+    "sources": "https://pubmed.ncbi.nlm.nih.gov/36630953/",
+    "creator": "See cyclic sighing entry."
+  },
+  {
+    "id": "54321-grounding",
+    "cats": [
+      "stress",
+      "emotional",
+      "cognitive"
+    ],
+    "buckets": [
+      "2min",
+      "5min",
+      "extremely-stressed",
+      "mind-wont-stop"
+    ],
+    "name": "5-4-3-2-1 Sensory Grounding",
+    "purpose": "Interrupt anxiety spiral by orienting attention to present sensory details.",
+    "problem": "Acute anxiety, dissociation risk, racing thoughts.",
+    "typical": "2\u20135 minutes",
+    "minimum": "~1\u20132 minutes",
+    "steps": [
+      "Name 5 things you can see.",
+      "Name 4 things you can feel/touch.",
+      "Name 3 things you can hear.",
+      "Name 2 things you can smell (or like the smell of).",
+      "Name 1 thing you can taste (or like the taste of).",
+      "Optionally add slow exhales between items."
+    ],
+    "when": "Acute anxiety, panic onset, overwhelm, trauma-triggered present-moment need.",
+    "short": "Often reduced subjective intensity via attentional shift.",
+    "long": "Skill becomes faster with practice; direct RCT evidence for this exact mnemonic is limited\u2014grounding widely used clinically.",
+    "mechanism": "Competing attentional resource allocation away from threat imagery; sensory reorientation; DBT/trauma-informed grounding family.",
+    "evidence": "C",
+    "research": "Widely taught in clinical practice. Specific 5-4-3-2-1 RCTs sparse; small student studies exist. Practical coping\u2014not strong experimental grade.",
+    "risks": "Can feel trivializing if used dismissively; smell/taste steps hard in some environments.",
+    "avoid": "If it becomes compulsive counting ritual in OCD\u2014use clinician-guided alternatives.",
+    "sources": "Clinical psychoeducation (major medical centers); trauma-informed care curricula.",
+    "creator": "Exact mnemonic authorship unclear; sensory grounding long used in trauma/anxiety treatment."
+  },
+  {
+    "id": "brief-pmr-acute",
+    "cats": [
+      "stress"
+    ],
+    "buckets": [
+      "2min",
+      "5min",
+      "extremely-stressed"
+    ],
+    "name": "Brief PMR (Hands-Shoulders-Face)",
+    "purpose": "Rapid somatic release when full PMR is impractical.",
+    "problem": "Acute muscle bracing with stress.",
+    "typical": "2\u20135 minutes",
+    "minimum": "60\u201390 seconds",
+    "steps": [
+      "Tense fists 5 sec, release 20 sec.",
+      "Shrug shoulders to ears 5 sec, release.",
+      "Gently tense face/jaw 5 sec, release (avoid TMJ pain).",
+      "Take one long exhale; notice warmth/heaviness."
+    ],
+    "when": "At desk, before calls, after startling stress.",
+    "short": "Local tension reduction.",
+    "long": "Gateway skill to full PMR.",
+    "mechanism": "Same as PMR contrast effect.",
+    "evidence": "B",
+    "research": "Extrapolated from PMR evidence base (abbreviated PMR commonly used).",
+    "risks": "Over-tensing injured areas.",
+    "avoid": "Acute injury to involved muscles.",
+    "sources": "See PMR entry.",
+    "creator": "Derived from Jacobson PMR."
+  },
+  {
+    "id": "aerobic-exercise-stress",
+    "cats": [
+      "stress",
+      "performance",
+      "emotional"
+    ],
+    "buckets": [
+      "20min",
+      "30-60min"
+    ],
+    "name": "Moderate Aerobic Exercise Bout",
+    "purpose": "Reduce stress/anxiety/depressive symptoms via planned aerobic activity.",
+    "problem": "Chronic stress, low mood, anxiety symptoms, sedentary load.",
+    "typical": "20\u201340 minutes moderate intensity",
+    "minimum": "10\u201315 minutes brisk movement if that is all available",
+    "steps": [
+      "Choose sustainable modality (brisk walk, cycle, swim, jog).",
+      "Warm up 3\u20135 min.",
+      "Work at moderate intensity (can talk but not sing) 20\u201340 min.",
+      "Cool down; hydrate.",
+      "Aim most days/week for chronic benefits; even single bouts help acute mood for many."
+    ],
+    "when": "Chronic stress management; acute mood lift; foundational health behavior.",
+    "short": "Often improved mood/anxiety within minutes to hours post-exercise.",
+    "long": "Meta-analyses support exercise for depressive symptoms; anxiety benefits present but sometimes smaller/less consistent vs active controls.",
+    "mechanism": "Multiple: monoamines, neurotrophic factors (e.g., BDNF hypotheses), HPA modulation, thermogenic, self-efficacy, sleep improvement.",
+    "evidence": "A",
+    "research": "Cochrane exercise for depression reviews; newer umbrella/meta-analyses of exercise for depression/anxiety. Adjunct, not always monotherapy for major clinical disorders.",
+    "risks": "Injury; cardiac events in high-risk unscreened individuals; overtraining.",
+    "avoid": "Medical clearance if cardiovascular risk, acute injury, eating-disorder exercise compulsion.",
+    "sources": "Cochrane Library exercise-depression reviews; recent exercise\u2013anxiety/depression meta-analyses.",
+    "creator": "N/A (exercise physiology / psychiatry evidence synthesis)."
+  },
+  {
+    "id": "worry-postpone",
+    "cats": [
+      "stress",
+      "cognitive",
+      "emotional"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min",
+      "mind-wont-stop"
+    ],
+    "name": "Scheduled Worry / Postpone Worry",
+    "purpose": "Contain rumination by postponing worry to a limited daily worry period.",
+    "problem": "Uncontrollable worry, bedtime rumination, productivity-killing loops.",
+    "typical": "10\u201320 minute daily worry slot + brief postponement cues",
+    "minimum": "30-second postpone note + same-day 10-min slot",
+    "steps": [
+      "When worry arises outside the slot, jot a brief cue word and postpone: I will worry at 5:30.",
+      "Return attention to present task (use grounding if needed).",
+      "At the scheduled slot, worry deliberately for 10\u201320 minutes; problem-solve what is solvable; write unresolved items.",
+      "End slot with a transition ritual (walk, wash hands, breathing).",
+      "If worry returns after slot, postpone again to tomorrow's slot."
+    ],
+    "when": "GAD-like worry patterns; bedtime mind-racing (combine with stimulus control).",
+    "short": "Reduced intrusion frequency for many with practice.",
+    "long": "Component of CBT for worry/GAD; evidence for worry-time techniques within broader CBT packages.",
+    "mechanism": "Stimulus control for worry; reduces negative reinforcement of continuous worrying; trains attentional control.",
+    "evidence": "B",
+    "research": "CBT for GAD literature; Borkovec and related stimulus-control approaches to worry; clinical CBT protocols.",
+    "risks": "Avoidance of necessary problem-solving if slot is never used for action planning.",
+    "avoid": "Active crisis/safety issues\u2014do not postpone safety planning. Severe OCD may need ERP specialist approaches.",
+    "sources": "CBT worry literature; clinical GAD treatment manuals.",
+    "creator": "Associated with CBT worry treatments (e.g., Borkovec traditions)."
+  },
+  {
+    "id": "mbsr-breath-anchor",
+    "cats": [
+      "stress",
+      "cognitive",
+      "emotional"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min",
+      "20min",
+      "mind-wont-stop"
+    ],
+    "name": "Mindfulness of Breath (Formal Sitting)",
+    "purpose": "Train nonjudgmental attention by returning to breath sensations.",
+    "problem": "Rumination, stress reactivity, attentional instability.",
+    "typical": "10\u201320 minutes (MBSR often longer)",
+    "minimum": "5 minutes",
+    "steps": [
+      "Sit upright; eyes closed or soft gaze.",
+      "Feel breath at nostrils, chest, or abdomen.",
+      "When mind wanders, note briefly and return\u2014no blame.",
+      "Optionally label thinking/feeling then return.",
+      "End by widening awareness to room."
+    ],
+    "when": "Daily mind training; stress reduction programs.",
+    "short": "Occasional calm; often also restlessness (normal).",
+    "long": "MBSR/MBCT packages show benefits for stress, recurrent depression prevention (MBCT), anxiety symptoms\u2014effects moderate; depend on fidelity.",
+    "mechanism": "Attention regulation, body awareness, emotion regulation, change in self-perspective (proposed mindfulness mechanisms).",
+    "evidence": "B",
+    "research": "MBSR evidence base; MBCT for recurrent depression; Balban 2023 used mindfulness as active comparator (breathwork edged mood/RR).",
+    "risks": "Trauma reactivation; meditation-related adverse effects in a minority (anxiety, dissociation).",
+    "avoid": "Active unstable PTSD without trauma-sensitive mindfulness; acute psychosis.",
+    "sources": "MBSR/MBCT clinical trial literature; meditation adverse effects reviews.",
+    "creator": "Jon Kabat-Zinn (MBSR); MBCT: Segal, Williams, Teasdale."
+  },
+  {
+    "id": "social-connection-micro",
+    "cats": [
+      "emotional",
+      "stress"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min"
+    ],
+    "name": "Micro Social Connection Check-In",
+    "purpose": "Counter stress isolation with a brief high-quality social contact.",
+    "problem": "Loneliness-amplified stress; co-rumination risk if misused.",
+    "typical": "5\u201310 minutes",
+    "minimum": "One genuine 2-minute check-in message/call",
+    "steps": [
+      "Identify a safe person.",
+      "Share specifically (feeling + need) or offer support.",
+      "Prefer voice/face when possible.",
+      "Avoid co-rumination spirals\u2014balance venting with values/action."
+    ],
+    "when": "After acute stress; low mood isolation.",
+    "short": "Often affiliative calm and perspective.",
+    "long": "Social support is among the most robust stress buffers epidemiologically; micro-protocol operationalizes it.",
+    "mechanism": "Perceived social support modulates stress appraisals and HPA responses.",
+    "evidence": "B",
+    "research": "Social support and health psychology literature; loneliness intervention research (heterogeneous).",
+    "risks": "Venting-only loops; contacting unsafe people.",
+    "avoid": "Abuse dynamics\u2014use professional/safe channels.",
+    "sources": "Health psychology social support reviews.",
+    "creator": "Applied synthesis from social support science."
+  },
+  {
+    "id": "ppr",
+    "cats": [
+      "performance"
+    ],
+    "buckets": [
+      "2min",
+      "5min",
+      "perform-in-15min"
+    ],
+    "name": "Pre-Performance Routine (PPR)",
+    "purpose": "Stabilize attention and arousal before a skilled performance via a consistent short sequence.",
+    "problem": "Choking under pressure, variable warm-up, distracted start.",
+    "typical": "30\u2013120 seconds immediately before execution",
+    "minimum": "15\u201330 seconds consistent cue sequence",
+    "steps": [
+      "Define 3\u20135 steps you can repeat identically (e.g., breath \u2192 cue word \u2192 visual target \u2192 physical set).",
+      "Include one arousal tool (e.g., physiological sigh or box breath) and one attentional cue (external focus preferred for many motor skills).",
+      "Practice the routine in low-stakes settings until automatic.",
+      "Use the same routine in competition/high stakes.",
+      "Evaluate and simplify if it becomes over-controlling."
+    ],
+    "when": "Sports, music, presentations, procedural skills, exams.",
+    "short": "Reduced performance variability; better attentional set.",
+    "long": "Sport psychology research supports PPRs for consistency under pressure.",
+    "mechanism": "Attentional control; reduced irrelevant cognitions; arousal regulation; motor preparation consistency.",
+    "evidence": "B",
+    "research": "Sport psychology reviews on pre-performance routines; experimental studies under pressure. Effects vary by sport/skill and routine quality.",
+    "risks": "Superstition/compulsion if overly rigid; time-wasting complexity.",
+    "avoid": "If routine morphs into OCD-like compulsion\u2014simplify with sport psychologist.",
+    "sources": "Applied sport psychology literature on routines under pressure.",
+    "creator": "Applied sport psychology field practice."
+  },
+  {
+    "id": "centering-ravizza",
+    "cats": [
+      "performance",
+      "stress"
+    ],
+    "buckets": [
+      "2min",
+      "perform-in-15min"
+    ],
+    "name": "Centering (Ravizza-Style)",
+    "purpose": "Rapidly shift from distracted/tense state to controlled, present, process-focused state.",
+    "problem": "Pre-competition nerves, emotional carryover, loss of composure.",
+    "typical": "30\u201390 seconds",
+    "minimum": "1 deliberate breath + focal cue",
+    "steps": [
+      "Recognize tension/distraction (awareness).",
+      "Pick a physical focal point (e.g., podium edge).",
+      "Diaphragmatic breath; release shoulders/jaw on exhale.",
+      "Use a short process cue (see seams, smooth start) not outcome (win).",
+      "Commit to first action."
+    ],
+    "when": "Between plays, backstage, before a critical attempt.",
+    "short": "Regain composure and external/process focus.",
+    "long": "Part of mental skills packages; limited standalone RCTs for branded sequence\u2014supported within broader arousal/attention control evidence.",
+    "mechanism": "Breath + attentional narrowing to controllable process cues; interrupt threat-oriented self-talk.",
+    "evidence": "C",
+    "research": "Ken Ravizza applied sport psychology teachings; empirical support largely from related PPR/breath/attention research.",
+    "risks": "Over-centering delaying action; inward focus harming automatic skills if too internal.",
+    "avoid": "Prefer external focus cues for many closed motor skills.",
+    "sources": "Ravizza applied materials; sport psychology centering descriptions.",
+    "creator": "Ken Ravizza (popularized centering in sport psychology)."
+  },
+  {
+    "id": "pettlep",
+    "cats": [
+      "performance",
+      "goals"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min",
+      "20min",
+      "perform-in-15min"
+    ],
+    "name": "PETTLEP Imagery",
+    "purpose": "Mentally rehearse performance with functional equivalence to real execution.",
+    "problem": "Skill learning limits, travel without practice access, confidence/preparation gaps.",
+    "typical": "5\u201315 minutes focused imagery blocks",
+    "minimum": "3\u20135 minutes of high-quality, specific imagery",
+    "steps": [
+      "Physical: imagery in similar stance/clothing when possible.",
+      "Environment: include venue details (or photos/video).",
+      "Task: image the exact skill/tactics.",
+      "Timing: real-time speed (not slow-mo unless drilling a cue).",
+      "Learning: update imagery as skill level changes.",
+      "Emotion: include typical competition emotions at manageable intensity.",
+      "Perspective: usually prefer first-person for motor skills; experiment.",
+      "Pair with physical practice when possible; imagery supplements, rarely replaces, practice."
+    ],
+    "when": "Skill acquisition, return-from-injury adjunct, pre-competition activation.",
+    "short": "Improved readiness and cue familiarity.",
+    "long": "Systematic reviews support PETTLEP-informed imagery for sport performance, especially with physical practice.",
+    "mechanism": "Functional equivalence / overlapping motor cognitive networks; motivational and cognitive rehearsal.",
+    "evidence": "B",
+    "research": "Holmes & Collins 2001 PETTLEP model; 2022 systematic reviews on PETTLEP and sport performance.",
+    "risks": "Anxiety amplification if imagery is catastrophe-focused; neglecting physical training.",
+    "avoid": "Active psychosis with imagery conflation; severe PTSD without guidance if imagery triggers trauma.",
+    "sources": "https://doi.org/10.3390/app12199753 ; Holmes & Collins JASP 2001",
+    "creator": "Paul Holmes & Dave Collins (PETTLEP model)."
+  },
+  {
+    "id": "if-then-gollwitzer",
+    "cats": [
+      "goals",
+      "performance",
+      "cognitive"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min"
+    ],
+    "name": "Implementation Intentions (If\u2013Then Plans)",
+    "purpose": "Link situational cues to goal-directed responses to automate follow-through.",
+    "problem": "Intention\u2013behavior gap, forgotten habits, stalled goals.",
+    "typical": "5\u201310 minutes to write plans; seconds to execute",
+    "minimum": "One precise if\u2013then for one behavior",
+    "steps": [
+      "Specify a critical cue: If situation X occurs\u2026",
+      "Specify a concrete response: \u2026then I will do Y (physical, observable).",
+      "Make X detectable (time, place, preceding action).",
+      "Optionally add obstacle if\u2013thens: If craving hits after lunch, then I walk 5 minutes.",
+      "Review plans daily until automatic."
+    ],
+    "when": "Habit formation, health behaviors, study plans, performance cues.",
+    "short": "Higher likelihood of enacting intended behavior when cue appears.",
+    "long": "Meta-analyses show medium effects on goal attainment historically (classic d\u22480.65; interpret with heterogeneity/publication-bias caution).",
+    "mechanism": "Delegates control to situational cues; reduces deliberative load; strengthens cue\u2013response links.",
+    "evidence": "A",
+    "research": "Gollwitzer & Sheeran meta-analytic work on implementation intentions; extensive experimental literature.",
+    "risks": "Overly many plans causing clutter; rigid plans that ignore context\u2014revise.",
+    "avoid": "Not a therapy for clinical depression amotivation alone\u2014combine with care.",
+    "sources": "Gollwitzer & Sheeran implementation intention meta-analyses.",
+    "creator": "Peter Gollwitzer."
+  },
+  {
+    "id": "tactical-breath-reset",
+    "cats": [
+      "performance",
+      "breathing"
+    ],
+    "buckets": [
+      "2min",
+      "perform-in-15min"
+    ],
+    "name": "Tactical Breath Reset (Short Box-like)",
+    "purpose": "Short box-like reset emphasizing comfort over long holds for performance.",
+    "problem": "Pre-performance adrenaline with need to stay sharp (not sleepy).",
+    "typical": "60\u2013120 seconds",
+    "minimum": "4 cycles",
+    "steps": [
+      "Inhale 4, hold 2\u20134 (only if comfortable), exhale 4, hold 2\u20134.",
+      "Keep eyes open on task-relevant target.",
+      "End on exhale; execute first action cue."
+    ],
+    "when": "Seconds before performance when cyclic sighing feels too downshifting.",
+    "short": "Composure with alertness preserved better than long meditation.",
+    "long": "Practical; evidence inferential from paced breathing + PPR research.",
+    "mechanism": "Attentional scaffolding + mild autonomic regulation.",
+    "evidence": "C",
+    "research": "See box breathing + PPR entries.",
+    "risks": "Holds too long \u2192 dizziness.",
+    "avoid": "Hold-intolerant individuals\u2014use exhale-only pacing.",
+    "sources": "Applied tactical breathing education; Balban 2023 box arm.",
+    "creator": "Tactical/performance popularization; applied synthesis."
+  },
+  {
+    "id": "woop",
+    "cats": [
+      "goals"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min"
+    ],
+    "name": "WOOP (Mental Contrasting + Implementation Intentions)",
+    "purpose": "Increase goal attainment by contrasting wished future with real obstacles, then forming if\u2013then plans.",
+    "problem": "Fantasy-only goal setting that fails on contact with reality; motivation without strategy.",
+    "typical": "5\u201315 minutes per goal",
+    "minimum": "5 minutes for one wish",
+    "steps": [
+      "Wish: choose a meaningful, challenging, feasible wish.",
+      "Outcome: vividly imagine the best outcome and how it would feel.",
+      "Obstacle: identify the main inner obstacle (habit, emotion, belief)\u2014be honest.",
+      "Plan: form If [obstacle], then I will [action].",
+      "Repeat for key goals; revisit weekly."
+    ],
+    "when": "Personal/health/academic/work goals; de-biasing pure positive visualization.",
+    "short": "Clearer commitment when expectancy is adequate; sometimes decreased commitment if goal is unrealistic (feature, not bug).",
+    "long": "MCII meta-analyses show small\u2013moderate benefits for goal attainment; useful low-cost strategy.",
+    "mechanism": "Mental contrasting energizes goal pursuit when expectations are sufficient by linking future to present obstacle; II automates obstacle response (Oettingen + Gollwitzer).",
+    "evidence": "A",
+    "research": "Oettingen mental contrasting; WOOP practicalization; Frontiers Psychology 2021 MCII meta-analysis (g\u22480.34; trim-and-fill lower). Health behavior MCII meta-analyses similar.",
+    "risks": "Demotivation if wish is fantasy-only with low expectancy\u2014may correctly reduce pursuit.",
+    "avoid": "Not for acute suicidality/crisis planning\u2014seek professional care.",
+    "sources": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.565202/full",
+    "creator": "Gabriele Oettingen (mental contrasting/WOOP); II with Peter Gollwitzer."
+  },
+  {
+    "id": "smart-caveats",
+    "cats": [
+      "goals"
+    ],
+    "buckets": [
+      "10-12min"
+    ],
+    "name": "SMART Goals with Evidence Caveats",
+    "purpose": "Structure goals as Specific, Measurable, Achievable, Relevant, Time-bound\u2014while recognizing SMART is a heuristic, not a magic formula.",
+    "problem": "Vague goals; also over-constraining exploratory/creative aims.",
+    "typical": "10\u201320 minutes planning",
+    "minimum": "Rewrite one vague goal into a testable next action",
+    "steps": [
+      "Write the goal specifically (what/when/where).",
+      "Define measurement and a check-in date.",
+      "Reality-check achievability with constraints.",
+      "Confirm relevance to values (avoid inherited shoulds).",
+      "Set time bound and first if\u2013then plan.",
+      "Caveat: for learning/creative goals, pair with process metrics, not only outcome KPIs."
+    ],
+    "when": "Project planning, team OKRs translation to personal actions.",
+    "short": "Clarity and coordination.",
+    "long": "Organizational practice support; experimental superiority of SMART acronym vs other frameworks is not strongly established as unique\u2014implementation quality matters more.",
+    "mechanism": "Reduces ambiguity; enables feedback; may increase commitment via concreteness.",
+    "evidence": "C",
+    "research": "SMART popular management heuristic (Doran 1981 often cited). Goal-setting theory (Locke & Latham) has stronger evidence for specific difficult goals + feedback than for the SMART acronym per se.",
+    "risks": "False precision; neglecting autonomy/mastery; demotivating impossible A.",
+    "avoid": "Using SMART to micromanage recovery from depression\u2014prefer values + tiny actions with clinician/coach.",
+    "sources": "Locke & Latham goal-setting theory reviews; Doran SMART note.",
+    "creator": "George T. Doran (SMART popularization); Locke & Latham (goal-setting science)."
+  },
+  {
+    "id": "habit-stacking",
+    "cats": [
+      "goals"
+    ],
+    "buckets": [
+      "5min"
+    ],
+    "name": "Habit Stacking (Routine-Based Cueing)",
+    "purpose": "Attach a new tiny behavior to an existing reliable routine cue.",
+    "problem": "Forgetting new habits; weak cues.",
+    "typical": "2\u20135 minutes to design; seconds to perform",
+    "minimum": "One stack: After [current habit], I will [new habit <2 min].",
+    "steps": [
+      "Identify a stable daily routine (make coffee, brush teeth).",
+      "Attach a tiny version of the new habit immediately after.",
+      "Keep the new habit laughably small initially.",
+      "Increase only after automaticity grows.",
+      "Label: popularized by James Clear; scientifically closest to implementation intentions / habit cue research."
+    ],
+    "when": "Building keystone micro-habits.",
+    "short": "Higher consistency if cue is truly stable.",
+    "long": "Habit formation depends heavily on repetition in stable contexts; stack type (routine vs time) may matter less than consistent repetition (RCT evidence).",
+    "mechanism": "Cue\u2013behavior association; reduces prospective memory load.",
+    "evidence": "C",
+    "research": "Popular science (Atomic Habits). Underlying science: implementation intentions; Wood/Neal habit research; RCTs on routine- vs time-based cue planning.",
+    "risks": "Stacking onto unstable cues; ego inflation from reading without practicing.",
+    "avoid": "Relying on books alone for clinical behavior change needs.",
+    "sources": "Habit formation RCTs; Gollwitzer II literature; Clear as popularizer.",
+    "creator": "Popularized by James Clear; related ideas in behavior analysis and BJ Fogg Tiny Habits."
+  },
+  {
+    "id": "process-visualization",
+    "cats": [
+      "goals"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min"
+    ],
+    "name": "Process Visualization (vs Outcome-Only Fantasy)",
+    "purpose": "Mentally rehearse steps and obstacle handling\u2014not only the trophy moment.",
+    "problem": "Motivational fantasy without planning; manifestation confusion.",
+    "typical": "5\u201310 minutes",
+    "minimum": "2\u20133 minutes process imagery + one if\u2013then",
+    "steps": [
+      "Visualize the process: starting, mid-friction, completing the key action.",
+      "Include realistic obstacles and your coping response.",
+      "Avoid only imagining applause/outcome (can reduce effort\u2014mental contrasting literature).",
+      "End by writing one if\u2013then for today's obstacle.",
+      "Separate layers: (1) psych mechanisms\u2014planning, motivation, arousal; (2) traditional/spiritual meaning-making if personally valued; (3) do NOT treat supernatural causation as scientific."
+    ],
+    "when": "Skill goals, training adherence, interview prep.",
+    "short": "Increased preparedness and intention clarity.",
+    "long": "Process imagery and mental contrasting outperform pure positive fantasy for attainment in research programs.",
+    "mechanism": "Cognitive simulation supports planning and self-efficacy; outcome fantasy alone may satiate motivation (Oettingen).",
+    "evidence": "B",
+    "research": "Oettingen mental contrasting vs indulging; sport imagery literature; contrast with unsupported Law of Attraction claims.",
+    "risks": "Confusing visualization with evidence of future events.",
+    "avoid": "Presenting supernatural manifestation as science\u2014see Unsupported Claims file.",
+    "sources": "Oettingen research program; imagery reviews.",
+    "creator": "Synthesis of Oettingen + sport/clinical imagery practices."
+  },
+  {
+    "id": "values-compass",
+    "cats": [
+      "goals",
+      "emotional"
+    ],
+    "buckets": [
+      "10-12min",
+      "20min"
+    ],
+    "name": "Values Compass (Brief ACT/Values Clarification)",
+    "purpose": "Clarify valued directions to guide goals when motivation is chaotic.",
+    "problem": "Goal conflict, borrowed goals, emptiness after achievement.",
+    "typical": "15\u201330 minutes",
+    "minimum": "10 minutes picking top 3 values + one action each",
+    "steps": [
+      "List candidate values (connection, growth, courage, health, creativity, etc.).",
+      "Pick 3 that feel chosen (not only imposed).",
+      "For each, write one 10-minute action this week that expresses it.",
+      "Use values as compass when emotions pull off course."
+    ],
+    "when": "Quarterly reset; career confusion; emotion-driven goal churn.",
+    "short": "Increased sense of meaning/choice.",
+    "long": "Values work is central in ACT; evidence mainly at package level.",
+    "mechanism": "Motivated behavior via chosen meaning; reduces pliance-only goals.",
+    "evidence": "C",
+    "research": "ACT values components; meaning/values psychological research.",
+    "risks": "Intellectual values without action.",
+    "avoid": "Using values talk to avoid concrete help for clinical depression.",
+    "sources": "ACT values exercises (Hayes/Wilson); values clarification literature.",
+    "creator": "ACT community / values clarification traditions."
+  },
+  {
+    "id": "tipp",
+    "cats": [
+      "emotional",
+      "stress"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min",
+      "extremely-stressed"
+    ],
+    "name": "TIPP (DBT Crisis Survival Skill)",
+    "purpose": "Rapidly change body chemistry to reduce extreme emotional arousal.",
+    "problem": "Emotional crisis, urge surfing need, acute overwhelm.",
+    "typical": "5\u201315 minutes",
+    "minimum": "1 TIPP element for 30\u201360 seconds (e.g., cold water)",
+    "steps": [
+      "Temperature: cold water on face / cold pack / brief cold shower (dive-reflex informed); caution with heart conditions.",
+      "Intense exercise: short burst (e.g., 20\u201360 sec jumping jacks) if safe.",
+      "Paced breathing: slow exhale-emphasized breathing.",
+      "Progressive relaxation: paired muscle relaxation.",
+      "Use as bridge to later problem-solving\u2014not as only long-term strategy."
+    ],
+    "when": "Emotional intensity 8\u201310/10; before destructive impulses.",
+    "short": "Often reduced peak arousal within minutes.",
+    "long": "DBT skills training packages have evidence for emotion dysregulation populations; isolated TIPP RCTs limited\u2014clinically established within DBT.",
+    "mechanism": "Cold face stimulation can trigger mammalian dive reflex (parasympathetic); exercise metabolizes arousal; breathing/PMR reduce somatic tension.",
+    "evidence": "C",
+    "research": "Linehan DBT manuals; evidence strongest for DBT programs overall, not each micro-skill in isolation. Physiological rationale for cold/dive reflex is plausible.",
+    "risks": "Cold water + cardiac issues; intense exercise injury; misuse as chronic avoidance of therapy.",
+    "avoid": "Cardiovascular disease\u2014modify Temperature; eating disorders\u2014careful with exercise; seek emergency care for safety risk.",
+    "sources": "DBT skills training handouts (Linehan); clinical DBT outcome literature.",
+    "creator": "Marsha Linehan / DBT skills framework."
+  },
+  {
+    "id": "opposite-action",
+    "cats": [
+      "emotional"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min"
+    ],
+    "name": "Opposite Action (DBT Skill \u2014 Not Full Therapy)",
+    "purpose": "Act opposite to emotion-driven urges when emotion is unjustified or unhelpful in intensity/duration.",
+    "problem": "Emotion-consistent actions that worsen problems (avoid when fear unjustified; isolate when sad).",
+    "typical": "Minutes to hours depending on action",
+    "minimum": "One small opposite action in the next 10 minutes",
+    "steps": [
+      "Name the emotion and the urge.",
+      "Check the facts: is the emotion justified by evidence? Is intensity matching?",
+      "If emotion/urge is not justified or not effective, choose opposite action (e.g., approach when fear unjustified; gentle activity when sadness urges withdrawal).",
+      "Do opposite action all the way (posture, expression, thoughts aligned).",
+      "This is a skill excerpt\u2014not delivery of full DBT therapy."
+    ],
+    "when": "When emotions drive ineffective behavior and facts do not fully support the urge.",
+    "short": "Reduced emotion intensity after opposite action for many.",
+    "long": "Component of DBT emotion regulation; package evidence > isolated skill trials.",
+    "mechanism": "Breaks emotion\u2013action feedback loops; behavioral exposure-like effects when approaching avoided cues.",
+    "evidence": "C",
+    "research": "DBT skills manuals; emotion regulation research on behavioral opposite strategies.",
+    "risks": "Opposite action can be wrong if emotion is justified (e.g., fear of real danger)\u2014always check facts first.",
+    "avoid": "Safety threats, abuse situations, or medical danger\u2014do not opposite-action away from real risk.",
+    "sources": "Linehan DBT Emotion Regulation skills.",
+    "creator": "Marsha Linehan (DBT)."
+  },
+  {
+    "id": "cognitive-reappraisal",
+    "cats": [
+      "emotional",
+      "cognitive"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min",
+      "mind-wont-stop"
+    ],
+    "name": "Cognitive Reappraisal",
+    "purpose": "Change emotional impact by changing interpretation of a situation.",
+    "problem": "Catastrophic appraisals, anger/anxiety amplification via meaning-making.",
+    "typical": "3\u201310 minutes",
+    "minimum": "One alternative appraisal written down",
+    "steps": [
+      "Identify the situation and automatic appraisal (This means I am doomed).",
+      "Generate alternative appraisals that are realistic (not toxic positivity).",
+      "Ask: evidence for/against? Other explanations? What would I tell a friend?",
+      "Choose a balanced reappraisal and note how body emotion shifts.",
+      "If stuck in deep belief structures, use full CBT with a clinician."
+    ],
+    "when": "Anxiety/anger spikes driven by interpretation; post-event processing.",
+    "short": "Reduced negative emotion intensity when reappraisal succeeds.",
+    "long": "Core CBT/emotion regulation strategy with substantial laboratory and clinical support (Gross process model; CBT trials).",
+    "mechanism": "Prefrontal modulation of limbic responses via meaning change (proposed); reduces secondary elaborative processing.",
+    "evidence": "A",
+    "research": "James Gross emotion regulation framework; CBT outcome literature; experimental reappraisal studies.",
+    "risks": "Intellectualization avoiding needed action; invalidating real injustice with forced reappraisal.",
+    "avoid": "Acute trauma processing needs specialized care; psychosis\u2014reality testing with professionals.",
+    "sources": "Gross emotion regulation reviews; CBT clinical guidelines.",
+    "creator": "Formalized in emotion regulation science by James Gross; clinical roots in CBT (Beck et al.)."
+  },
+  {
+    "id": "affect-labeling",
+    "cats": [
+      "emotional",
+      "cognitive"
+    ],
+    "buckets": [
+      "2min",
+      "5min"
+    ],
+    "name": "Affect Labeling (Putting Feelings into Words)",
+    "purpose": "Reduce emotional reactivity by specifically naming felt emotions.",
+    "problem": "Diffuse distress, amygdala-driven reactivity, alexithymic vagueness.",
+    "typical": "1\u20133 minutes",
+    "minimum": "One precise label (I feel angry and ashamed)",
+    "steps": [
+      "Pause; notice body cues.",
+      "Choose specific emotion words (not just bad/fine).",
+      "Say or write: I am noticing anxiety/sadness/anger\u2026",
+      "Optionally rate intensity 0\u201310.",
+      "Then choose a follow-up skill (breath, reappraisal, opposite action) if needed."
+    ],
+    "when": "Rising emotion; conflict; journaling; panic early signs.",
+    "short": "Often dampened limbic reactivity; subjective relief varies.",
+    "long": "Supports emotional granularity associated with better regulation in observational/experimental work.",
+    "mechanism": "Lieberman et al.: affect labeling increases right vlPFC activity and reduces amygdala responses\u2014implicit emotion regulation.",
+    "evidence": "B",
+    "research": "Lieberman et al. 2007 Psychological Science Putting Feelings Into Words (PubMed 17576282); Torre & Lieberman reviews on affect labeling.",
+    "risks": "In some high-reactivity contexts labeling alone may be insufficient or inconsistently helpful.",
+    "avoid": "Not a standalone treatment for PTSD/clinical depression.",
+    "sources": "https://pubmed.ncbi.nlm.nih.gov/17576282/",
+    "creator": "Research program associated with Matthew Lieberman and colleagues."
+  },
+  {
+    "id": "cold-face",
+    "cats": [
+      "emotional",
+      "stress"
+    ],
+    "buckets": [
+      "2min",
+      "extremely-stressed"
+    ],
+    "name": "Cold Face Stimulation (Dive-Reflex Informed)",
+    "purpose": "Acutely increase parasympathetic tone via cold stimulus to face.",
+    "problem": "Peak emotional arousal, anger/panic spike (TIPP Temperature element).",
+    "typical": "30\u201360 seconds",
+    "minimum": "15\u201330 seconds",
+    "steps": [
+      "Bend forward; apply cold water or cold pack to face especially forehead/eyes/cheeks.",
+      "Or hold breath briefly while face in cold water bowl (only if safe/healthy).",
+      "Breathe slowly after.",
+      "Stop if pain or cardiac symptoms."
+    ],
+    "when": "Emotional crisis skill; not a required daily biohack.",
+    "short": "Heart rate often drops; subjective intensity may fall.",
+    "long": "Useful crisis tool within DBT; not a chronic anxiety cure.",
+    "mechanism": "Trigeminal/cold-triggered mammalian dive reflex \u2192 vagal bradycardia.",
+    "evidence": "C",
+    "research": "Dive reflex physiology; DBT TIPP rationale. Clinical skill evidence mostly package-level.",
+    "risks": "Arrhythmia risk in susceptible; cold shock; unsafe if epilepsy/heart disease.",
+    "avoid": "Cardiac disease, eating disorders with cold purging patterns, unsupervised breath-hold in water.",
+    "sources": "DBT TIPP; dive reflex physiology references.",
+    "creator": "DBT TIPP Temperature skill; dive reflex science older."
+  },
+  {
+    "id": "gratitude-brief",
+    "cats": [
+      "emotional",
+      "goals"
+    ],
+    "buckets": [
+      "2min",
+      "5min"
+    ],
+    "name": "Brief Gratitude Listing",
+    "purpose": "Shift attention toward valued positives without denying problems.",
+    "problem": "Negativity bias load, mild low mood, relationship taking-for-granted.",
+    "typical": "2\u20135 minutes",
+    "minimum": "Write 3 specific specifics",
+    "steps": [
+      "Write 3 specific things you are grateful for today (details beat generics).",
+      "Include why it mattered or who helped.",
+      "Optionally share one with a person (gratitude expression).",
+      "Do not use to gaslight yourself out of real problems."
+    ],
+    "when": "Mild low mood, relationship maintenance, journaling.",
+    "short": "Small mood bump for some.",
+    "long": "Positive psychology interventions show small average wellbeing effects; heterogeneity high; not depression monotherapy.",
+    "mechanism": "Attentional deployment toward positives; social bonding when expressed.",
+    "evidence": "C",
+    "research": "Emmons & McCullough gratitude experiments; positive psychology meta-analyses (small effects).",
+    "risks": "Spiritual bypassing; shame if forced during grief.",
+    "avoid": "Acute grief/trauma\u2014permission to not be grateful; clinical depression needs proper care.",
+    "sources": "Gratitude intervention literature (Emmons et al.).",
+    "creator": "Research popularized by Robert Emmons & Michael McCullough."
+  },
+  {
+    "id": "self-distancing",
+    "cats": [
+      "emotional",
+      "cognitive"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min",
+      "mind-wont-stop"
+    ],
+    "name": "Self-Distancing Reflection",
+    "purpose": "Reduce emotional entanglement by reflecting in third person or fly-on-wall perspective.",
+    "problem": "Immersive rumination about interpersonal stress.",
+    "typical": "5\u201310 minutes",
+    "minimum": "2\u20133 minutes writing in third person",
+    "steps": [
+      "Recall a stressful social event briefly.",
+      "Rewrite or silently narrate using your name / third person or observer perspective.",
+      "Ask what advice you would give from that distance.",
+      "Extract one learning + one next behavior."
+    ],
+    "when": "Post-conflict processing; journal rumination interrupt.",
+    "short": "Lower emotional reactivity; more constructive insight often.",
+    "long": "Experimental work (Kross & Ayduk) supports self-distancing for adaptive reflection.",
+    "mechanism": "Psychological distance reduces immersion; enables reconstrual.",
+    "evidence": "B",
+    "research": "Kross & Ayduk self-distancing research program.",
+    "risks": "Avoidance if used to never feel emotions; intellectualization.",
+    "avoid": "Processing severe trauma alone\u2014use therapist.",
+    "sources": "Kross/Ayduk self-distancing papers.",
+    "creator": "Ethan Kross, Ozlem Ayduk and colleagues."
+  },
+  {
+    "id": "act-defusion",
+    "cats": [
+      "emotional",
+      "cognitive"
+    ],
+    "buckets": [
+      "2min",
+      "5min",
+      "mind-wont-stop"
+    ],
+    "name": "Cognitive Defusion (Brief ACT Skill)",
+    "purpose": "Reduce literal believability of thoughts by seeing them as mental events.",
+    "problem": "Fusion with unhelpful thoughts (I am a failure experienced as fact).",
+    "typical": "2\u20135 minutes",
+    "minimum": "30\u201360 seconds (I am having the thought that\u2026)",
+    "steps": [
+      "Notice the sticky thought.",
+      "Preface: I am having the thought that\u2026 or sing the thought silly / imagine it on leaves.",
+      "Return to valued action while thought may still be present.",
+      "This is a skill excerpt\u2014not full ACT therapy delivery."
+    ],
+    "when": "Rumination, perfectionism thoughts, anxiety cognitions.",
+    "short": "Less struggle with thoughts; more wiggle room to act.",
+    "long": "ACT packages have evidence for various problems; micro-defusion exercises are components.",
+    "mechanism": "Changes relationship to cognition rather than content; reduces experiential avoidance.",
+    "evidence": "C",
+    "research": "ACT RCTs/meta-analyses for package; defusion experimental tasks in ACT literature (Hayes et al.).",
+    "risks": "Invalidating need for cognitive restructuring when thoughts are distorted and restructuring helps.",
+    "avoid": "Acute psychosis; use clinician-guided ACT for clinical disorders.",
+    "sources": "Hayes ACT literature; Twohig/Levin ACT reviews.",
+    "creator": "Steven C. Hayes and ACT co-developers."
+  },
+  {
+    "id": "art-brief",
+    "cats": [
+      "cognitive",
+      "stress"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min",
+      "20min",
+      "mind-wont-stop"
+    ],
+    "name": "Brief Attention Restoration (Soft Fascination Break)",
+    "purpose": "Restore directed attention fatigue via brief soft-fascination environments.",
+    "problem": "Mental fatigue after prolonged focus, irritability, error-proneness.",
+    "typical": "10\u201320 minutes",
+    "minimum": "5 minutes looking at nature / window greenery / sky",
+    "steps": [
+      "Stop effortful work.",
+      "Expose yourself to a restorative setting: trees, sky, aquarium, nature video if outdoor impossible.",
+      "Allow soft fascination\u2014gentle interest without hard focus.",
+      "Avoid filling the break with email/social feeds (those demand directed attention).",
+      "Return to task with one defined next step."
+    ],
+    "when": "Ultradian dips, after deep work blocks, exam study breaks.",
+    "short": "Subjective refreshed attention; some studies show executive attention benefits after nature exposure.",
+    "long": "Attention Restoration Theory (Kaplan) supported by mixed but promising evidence; effect sizes and mechanisms debated.",
+    "mechanism": "ART: being away, extent, soft fascination, compatibility allow recovery of directed attention capacity.",
+    "evidence": "C",
+    "research": "Kaplan ART; nature exposure cognitive studies (heterogeneous).",
+    "risks": "Breaks that become avoidance; urban access barriers.",
+    "avoid": "Using as only treatment for ADHD clinical impairment\u2014seek evidence-based ADHD care.",
+    "sources": "Kaplan Attention Restoration Theory literature; environmental psychology reviews.",
+    "creator": "Rachel & Stephen Kaplan (Attention Restoration Theory)."
+  },
+  {
+    "id": "task-switch-buffer",
+    "cats": [
+      "cognitive",
+      "performance"
+    ],
+    "buckets": [
+      "2min",
+      "5min"
+    ],
+    "name": "Task-Switching Buffer",
+    "purpose": "Reduce switch costs by inserting a brief closure/setup ritual between tasks.",
+    "problem": "Multitasking residue, errors after abrupt context switches.",
+    "typical": "1\u20133 minutes",
+    "minimum": "30\u201360 seconds",
+    "steps": [
+      "Write a one-line parked note: next action for the old task.",
+      "Close unrelated tabs/notifications for the new task.",
+      "Take 3 slow breaths or one physiological sigh.",
+      "State the new task goal in one sentence.",
+      "Start with a 2-minute ignition action."
+    ],
+    "when": "Knowledge work, meetings back-to-back, parenting/work switches.",
+    "short": "Less cognitive residue; cleaner attentional set.",
+    "long": "Aligned with task-switching cost research\u2014buffers are practical applications rather than a branded evidence-based therapy.",
+    "mechanism": "Reduces attention residue (Leroy); prepares goal representation for new task.",
+    "evidence": "C",
+    "research": "Cognitive psychology of task switching; Sophie Leroy attention residue research. Buffer ritual is applied synthesis.",
+    "risks": "Over-ritualizing; procrastination disguised as buffering.",
+    "avoid": "Emergency contexts requiring instant switch.",
+    "sources": "Task-switching literature; attention residue research.",
+    "creator": "Applied synthesis from cognitive psychology findings."
+  },
+  {
+    "id": "behavioral-activation-tiny",
+    "cats": [
+      "emotional",
+      "cognitive",
+      "goals"
+    ],
+    "buckets": [
+      "5min",
+      "10-12min",
+      "20min",
+      "mind-wont-stop"
+    ],
+    "name": "Tiny Behavioral Activation Step",
+    "purpose": "Counter rumination/withdrawal by scheduling valued activity in small doses.",
+    "problem": "Depressive inactivity loops, rumination, anhedonia spirals.",
+    "typical": "5\u201320 minutes activity",
+    "minimum": "2 minutes of the smallest valued action",
+    "steps": [
+      "Pick a valued domain (connection, mastery, service, body).",
+      "Define a 2\u201310 minute action (walk to mailbox, text a friend, wash one dish).",
+      "Schedule it; do it regardless of motivation (action first).",
+      "Note mood 0\u201310 before/after without judgment.",
+      "Build upward; for clinical depression use full BA with clinician."
+    ],
+    "when": "Low mood, rumination, stuckness; as CBT/BA skill excerpt.",
+    "short": "Often small mood lift; interrupts brooding.",
+    "long": "Behavioral activation has strong evidence for depression as a therapy package.",
+    "mechanism": "Increases response-contingent positive reinforcement; breaks avoidance\u2013rumination cycles.",
+    "evidence": "A",
+    "research": "Behavioral activation RCTs and meta-analyses for depression; BA as efficacious psychotherapy.",
+    "risks": "Pushing manic overactivity; ignoring medical fatigue causes.",
+    "avoid": "If suicidal or severe depression\u2014urgent professional care. Bipolar: structure with clinician.",
+    "sources": "BA clinical trial literature; CBT/BA treatment guidelines.",
+    "creator": "Behavioral activation traditions (e.g., Martell, Dimidjian, Jacobson lineages)."
+  },
+  {
+    "id": "pomodoro-ultradian",
+    "cats": [
+      "cognitive",
+      "performance"
+    ],
+    "buckets": [
+      "20min",
+      "30-60min"
+    ],
+    "name": "Focused Work Block + Break (Pomodoro-style)",
+    "purpose": "Protect deep focus with time-boxed work and deliberate recovery breaks.",
+    "problem": "Distractibility, burnout from unbroken screen time.",
+    "typical": "25 min work / 5 min break (classic) or 50/10",
+    "minimum": "15 focused minutes + 2-minute break",
+    "steps": [
+      "Choose one task; set timer (25 or personalized).",
+      "Work until timer; park distractions on a notepad.",
+      "Break: stand, eyes off near screens, brief walk/breath\u2014no new rabbit holes.",
+      "After 3\u20134 cycles, take a longer break (15\u201330 min).",
+      "Adjust lengths to your ultradian rhythm."
+    ],
+    "when": "Knowledge work, studying, creative execution.",
+    "short": "Improved subjective focus and completion cadence.",
+    "long": "Popular productivity method; empirical literature mixed/limited vs strong marketing\u2014useful as structure, not magic.",
+    "mechanism": "Reduces decision fatigue; creates implementation cue from timer; breaks restore attention.",
+    "evidence": "C",
+    "research": "Limited rigorous trials of classic Pomodoro; related evidence from break/attention and timeboxing practices.",
+    "risks": "Timer anxiety; interrupting flow states inappropriately\u2014flex when in deep flow.",
+    "avoid": "Tasks needing long uninterrupted immersion\u2014use longer blocks.",
+    "sources": "Francesco Cirillo Pomodoro Technique materials; attention/break research adjacency.",
+    "creator": "Francesco Cirillo (Pomodoro Technique)."
+  }
+]
