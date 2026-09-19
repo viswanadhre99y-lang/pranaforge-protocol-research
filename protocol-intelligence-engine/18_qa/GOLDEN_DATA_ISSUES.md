@@ -74,3 +74,17 @@ After systemic EVENT/preference fixes on `pie/golden-tc007-residual-c`, soft = 1
 
 - Not silent-edited.
 - Further gains would require either catalog/moment coverage for those narrative IDs or human golden review — not GOAL_PROTOCOL_BOOST expansion.
+
+## 10. TC025 / TC028 residual C review (2026-09-19) — human_review, not silent edit
+
+### TC025 — cyclic-sighing vs cyclic-hyperventilation-caution
+- **Author intent:** under `safety screen` + “prefer safer; caution not automation_ok”, default to safer automation_ok breath rather than caution HV card.
+- **Engine gap:** `automation_ok=false` was unpaid in ranking; only HV carries `activation_up` need tag.
+- **Proposed correction (human):** none to golden selected. Optional future note clarifying safer-substitute policy when users *ask* for HV. Catalog already says prefer cyclic sighing in HV `selection_notes`.
+- **Status:** human_review = optional prose clarification only; **no silent golden edit**.
+
+### TC028 — if-then-gollwitzer vs affect-labeling
+- **Author intent:** primary = implementation intention to **delay send**; label is secondary sequencing in the message (“wait 30 min + label feeling first”).
+- **Engine gap:** emotion need stack + `/\blabel\b/` preference overweighted secondary step; delay-send / blast-email not mapped to event/preference for if-then.
+- **Proposed correction (human):** optional message split “primary: if-then delay; optional: label” — **not required** if engine pays delay-send vocabulary.
+- **Status:** human_review = optional; **no silent golden edit**.
