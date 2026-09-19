@@ -88,3 +88,16 @@ After systemic EVENT/preference fixes on `pie/golden-tc007-residual-c`, soft = 1
 - **Engine gap:** emotion need stack + `/\blabel\b/` preference overweighted secondary step; delay-send / blast-email not mapped to event/preference for if-then.
 - **Proposed correction (human):** optional message split “primary: if-then delay; optional: label” — **not required** if engine pays delay-send vocabulary.
 - **Status:** human_review = optional; **no silent golden edit**.
+
+## 11. TC004 residual C — GOLDEN_AMBIGUITY (2026-09-19) — human_review=yes; STOP without forcing exact
+
+| Field | Value |
+|-------|-------|
+| **case_id** | `TC004` |
+| **issue** | Author `selected=stimulus-control` ranks #4 (C ranked_too_low) while soft passes because top1 `worry-postpone` ∈ `candidates`. Message + expected measure endorse **both** leave-bed and postpone-worry. Twin `TC034` (`goal=insomnia_behavior`) already exact on stimulus-control. |
+| **evidence** | Live cold rank: worry-postpone 1.136 → pmr 0.968 → mbsr-breath-anchor 0.930 → stimulus-control 0.889. Soft 110/110; only residual C after PR #6. Expected text: “leaves bed **or** postpone note”. No hard-exclusion (not B). Full write-up: `18_qa/TC004_ANALYSIS.md`. |
+| **proposed correction** | Human pick one: (A) set `ambiguous: true`; (B) keep selected and accept soft-only / residual C as educational preference; (C) align goal to `insomnia_behavior` like TC034 if bed≠sleep is primary; (D) change selected to `worry-postpone` if rumination/postpone is primary. **Do not** expand `GOAL_PROTOCOL_BOOST` or force exact in ranker. |
+| **human_review** | **yes** |
+| **engine change this pass** | **none** (deferral) |
+
+Optional future engine hygiene (not used to force TC004 exact): `prescription_briefing` already skips feasibility complexity shrink, but score still applies `complexity_high` (−0.08) to stimulus-control — the only high-complexity prescription-like sleep card. Document only; deferred.
