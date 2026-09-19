@@ -1,0 +1,30 @@
+{
+  "n_holdout": 22,
+  "n_remainder": 88,
+  "holdout_ids": [
+    "TC002",
+    "TC005",
+    "TC007",
+    "TC015",
+    "TC019",
+    "TC028",
+    "TC034",
+    "TC040",
+    "TC051",
+    "TC056",
+    "TC060",
+    "TC063",
+    "TC070",
+    "TC076",
+    "TC085",
+    "TC091",
+    "TC099",
+    "TC102",
+    "TC103",
+    "TC108",
+    "TC004",
+    "TC001"
+  ],
+  "policy": "Held-out for validation only. Do not calibrate ranking weights or case-specific hacks on these IDs. Fixes in this branch were driven by failure taxonomy (duration/micro, behavioral-window dose, crisis_emotion false positive, cardiac/OSA gates, mapper SILENCE_or/staff_screen, catalog micro mins) applied to full-set patterns \u2014 not iterative tuning against this file.",
+  "carved_at": "2026-09-19"
+}

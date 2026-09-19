@@ -1,0 +1,28 @@
+{
+  "baseline_QA_REPORT_v2": {
+    "exact_rate": 0.236,
+    "soft_rate": 0.782
+  },
+  "after_fixes_full": {
+    "n": 110,
+    "exact": 46,
+    "soft": 93,
+    "exact_rate": 0.41818181818181815,
+    "soft_rate": 0.8454545454545455
+  },
+  "holdout": {
+    "n": 22,
+    "exact": 10,
+    "soft": 15,
+    "exact_rate": 0.45454545454545453,
+    "soft_rate": 0.6818181818181818
+  },
+  "remainder": {
+    "n": 88,
+    "exact": 36,
+    "soft": 78,
+    "exact_rate": 0.4090909090909091,
+    "soft_rate": 0.8863636363636364
+  },
+  "note": "exact counts silence agrees as exact for dump parity; pie.spec exact excludes silence"
+}

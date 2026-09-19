@@ -10,7 +10,7 @@
   <div class="shell">
     <header>
       <div class="brand">PranaForge <span>PIE</span></div>
-      <span class="tag">Staff Top-3 Picker · Phase 1 CSI</span>
+      <span class="tag">Staff Top-3 Picker · Phase 2 Delivery</span>
       <span class="tag" id="health-tag">health…</span>
       <span class="tag" id="auth-tag">auth…</span>
     </header>
@@ -176,6 +176,12 @@
         </div>
       </div>
 
+      <div class="copilot-block" id="history-block" hidden>
+        <h3>CLIENT HISTORY</h3>
+        <p class="meta" id="history-disclaimer">Historical observations only — not predictions.</p>
+        <div id="client-history" class="meta history-panel">Set client_id and recommend to load history.</div>
+      </div>
+
       <h2 style="margin-top:16px">Exclusions</h2>
       <div id="exclusions" class="exclusions"></div>
     </section>
@@ -194,6 +200,16 @@
         <div>
           <label for="outcome_context">context_key</label>
           <input id="outcome_context" type="text" placeholder="optional" autocomplete="off" />
+        </div>
+        <div>
+          <label for="outcome_modality">delivery_modality</label>
+          <select id="outcome_modality">
+            <option value="">(unset)</option>
+            <option value="staff_led">staff_led</option>
+            <option value="audio">audio</option>
+            <option value="text">text</option>
+            <option value="self_guided">self_guided</option>
+          </select>
         </div>
         <div>
           <label for="after_stress">after.stress (opt)</label>

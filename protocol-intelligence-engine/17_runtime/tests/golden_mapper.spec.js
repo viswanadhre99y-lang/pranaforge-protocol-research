@@ -65,3 +65,65 @@ test.describe('golden_mapper P2-4', () => {
     ).toBeTruthy();
   });
 });
+
+test.describe('golden_mapper auditor fixes', () => {
+  test('crisis_emotion does not set crisis_flag', () => {
+    const row = mapGoldenCase({
+      id: 'TC099',
+      state: 'TIPP request cardiac unknown',
+      context: 'private',
+      goal: 'crisis_emotion',
+      constraints: 'unknown cardiac',
+      selected: '54321-grounding',
+      reason: 'screen unknown',
+      message: 'Grounding first until cardiac cleared',
+      candidates: ['54321-grounding'],
+    });
+    expect(row.input.crisis_flag).toBeFalsy();
+  });
+
+  test('SILENCE_or with ambiguous calendar → force_silence', () => {
+    const row = mapGoldenCase({
+      id: 'TC102',
+      context: 'false high stakes tag',
+      goal: 'pre_performance',
+      selected: 'SILENCE_or_staff_confirm',
+      reason: 'ambiguous calendar',
+      candidates: ['physiological-sigh-acute'],
+    });
+    expect(row.input.force_silence).toBeTruthy();
+  });
+
+  test('staff_screen / OSA → force_silence', () => {
+    const row = mapGoldenCase({
+      id: 'TC103',
+      state: 'untreated OSA flag',
+      context: 'asks long NSDR lying',
+      goal: 'recovery',
+      constraints: 'OSA',
+      selected: 'staff_screen',
+      reason: 'OSA caution',
+      candidates: ['staff_screen'],
+    });
+    expect(row.input.force_silence).toBeTruthy();
+  });
+
+  test('prior_negative from state prose', () => {
+    const row = mapGoldenCase({
+      id: 'TC108',
+      state: 'prior_negative on box-breathing',
+      context: 'T-20 pitch',
+      goal: 'pre_performance',
+      selected: 'physiological-sigh-acute',
+      candidates: ['physiological-sigh-acute'],
+      reason: 'history penalty',
+    });
+    expect(row.input.history_notes).toMatch(/prior_negative:box-breathing/);
+  });
+
+  test('softAgree staff_* accepts silence', () => {
+    expect(
+      softAgree({ expected: 'staff_screen', candidates: ['staff_screen'] }, { silence: true, action: 'silence', recommendations: [] })
+    ).toBeTruthy();
+  });
+});

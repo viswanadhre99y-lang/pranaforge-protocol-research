@@ -135,3 +135,20 @@ h2 { margin: 0 0 10px; font-size: 1rem; }
 @media (max-width: 720px) {
   .copilot-grid { grid-template-columns: 1fr; }
 }
+
+/* Phase 2 */
+.dose-row, .modality-row {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-family: var(--mono);
+}
+.dose-row strong, .modality-row strong { color: var(--text); }
+.dose-preferred { color: var(--accent); font-weight: 600; }
+.history-panel {
+  max-height: 220px;
+  overflow: auto;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+#history-block { border: 1px solid rgba(61, 190, 165, 0.25); }

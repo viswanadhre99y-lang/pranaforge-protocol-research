@@ -1,12 +1,6 @@
 {
   "url": "http://127.0.0.1:8787",
-  "panels": [
-    "Today",
-    "Kitchen",
-    "Floor",
-    "Claims|Alias"
-  ],
-  "pie_decision_ui_present": false,
-  "note": "Concierge is staff ops (Today/Kitchen/Floor/Claims). Floor accepts a protocol_id string for run-of-show — not a PIE Top-3 ranker. Webhook-backed Today/Kitchen paths are empty in this smoke (no live webhooks configured) — panels still render.",
-  "webhooks": "empty_or_unconfigured"
+  "skipped": true,
+  "reason": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8787/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8787/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+  "note": "Concierge not reachable in this environment; PIE runtime tests still green."
 }

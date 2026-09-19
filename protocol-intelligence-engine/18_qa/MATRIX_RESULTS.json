@@ -1,7 +1,7 @@
 {
   "count": 120,
-  "suggest": 114,
-  "silence": 6,
+  "suggest": 120,
+  "silence": 0,
   "escalate": 0,
   "infeasible_recommendations": [],
   "infeasible_count": 0

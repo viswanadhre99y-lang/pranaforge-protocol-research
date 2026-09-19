@@ -129,8 +129,17 @@ function render(result) {
       const expl = r.explanation || {};
       const positives = (expl.positives || []).slice(0, 6).join(' · ') || (r.why || []).join(' · ');
       const penalties = (expl.penalties || []).length ? (expl.penalties || []).join(' · ') : '';
+      const dose = r.dose || {};
+      const pref = r.preferred_dose || '';
+      const doseLine = dose.micro != null
+        ? `dose micro=${dose.micro}s · min=${dose.minimum}s · rec=${dose.recommended}s · ext=${dose.extended}s`
+        : '';
+      const prefLine = pref ? `preferred_dose=<span class="dose-preferred">${pref}</span>` : '';
+      const modLine = r.delivery_modality ? `delivery_modality=<strong>${r.delivery_modality}</strong>` : '';
       el.innerHTML = `<h3>#${i + 1} ${r.name}${isBelow ? ' <span class="below-label">(below τ)</span>' : ''}</h3>
         <div class="meta">${r.protocol_id} · score ${r.score} · conf ${r.confidence != null ? r.confidence : '—'} · evidence ${r.evidence} (${r.evidence_class || '—'}) · v${r.protocol_version || '1.0.0'} · ≤${Math.round((r.recommended_duration_sec || r.max_duration_sec) / 60)}m · public_discrete=${r.public_discrete}</div>
+        <div class="meta dose-row">${doseLine}${prefLine ? ' · ' + prefLine : ''}</div>
+        <div class="meta modality-row">${modLine || ''}</div>
         <div class="meta why-pos"><strong>WHY+</strong> ${positives || '—'}</div>
         <div class="meta why-pen">${penalties ? '<strong>WHY−</strong> ' + penalties : ''}</div>
         <div class="meta" style="margin-top:6px">${r.purpose || ''}</div>`;
@@ -191,6 +200,7 @@ async function recommend() {
     }
     render(j);
     status.textContent = r.ok ? 'ok' : 'error ' + r.status;
+    await loadClientHistory();
   } catch (e) {
     status.textContent = String(e);
   }
@@ -244,6 +254,8 @@ document.getElementById('btn-outcome').addEventListener('click', async () => {
       rating_1_to_10: Number(document.getElementById('outcome_rating').value),
       context_key: document.getElementById('outcome_context').value || '',
     };
+    const mod = document.getElementById('outcome_modality');
+    if (mod && mod.value) body.delivery_modality = mod.value;
     if (Object.keys(after).length) body.after = after;
     const r = await fetch('/api/outcome', {
       method: 'POST',
@@ -252,9 +264,71 @@ document.getElementById('btn-outcome').addEventListener('click', async () => {
     });
     const j = await r.json();
     status.textContent = r.ok ? 'stored' : JSON.stringify(j);
+    if (r.ok) await loadClientHistory();
   } catch (e) {
     status.textContent = String(e);
   }
 });
+
+async function loadClientHistory() {
+  const block = document.getElementById('history-block');
+  const el = document.getElementById('client-history');
+  if (!block || !el) return;
+  const clientId = document.getElementById('client_id').value;
+  if (!clientId) {
+    block.hidden = true;
+    return;
+  }
+  block.hidden = false;
+  el.textContent = 'loading history…';
+  try {
+    const r = await fetch('/api/client/' + encodeURIComponent(clientId) + '/history?limit=12', {
+      headers: authHeaders(),
+    });
+    const j = await r.json();
+    if (!r.ok) {
+      el.textContent = 'history error: ' + (j.error || r.status);
+      return;
+    }
+    const lines = [];
+    lines.push(j.disclaimer || 'Historical observations only — not predictions.');
+    const rg = j.response_graph || {};
+    if (rg.observations && rg.observations.length) {
+      lines.push('');
+      lines.push('Response graph observations:');
+      for (const o of rg.observations.slice(0, 6)) lines.push('• ' + o);
+    } else if (rg.protocols && rg.protocols.length) {
+      lines.push('');
+      lines.push('Logged protocol means:');
+      for (const p of rg.protocols.slice(0, 6)) {
+        lines.push(`• ${p.protocol_id}: mean ${p.mean_rating}/10 (n=${p.n})`);
+      }
+    } else {
+      lines.push('');
+      lines.push('No response-graph entries yet for this client.');
+    }
+    if (j.outcomes && j.outcomes.length) {
+      lines.push('');
+      lines.push(`Recent outcomes (${j.outcomes.length}):`);
+      for (const o of j.outcomes.slice(0, 5)) {
+        lines.push(
+          `• ${o.ts || ''} ${o.protocol_id} rating=${o.rating_1_to_10}` +
+            (o.delivery_modality ? ` mod=${o.delivery_modality}` : '')
+        );
+      }
+    }
+    if (j.decisions && j.decisions.length) {
+      lines.push('');
+      lines.push(`Recent decisions (${j.decisions.length}):`);
+      for (const d of j.decisions.slice(0, 5)) {
+        const top = (d.top3 || []).map((x) => x.protocol_id).filter(Boolean).slice(0, 3).join(',');
+        lines.push(`• ${d.ts || ''} ${d.action || d.kind}${top ? ' top=' + top : ''}`);
+      }
+    }
+    el.textContent = lines.join('\n');
+  } catch (e) {
+    el.textContent = String(e);
+  }
+}
 
 health();

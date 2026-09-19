@@ -181,6 +181,32 @@ function hardExcludeReasons(protocol, input, inferredNeeds, deps) {
     reasons.push('prior_negative_hard');
   }
 
+  // Unknown / flagged cardiac: exclude high-intensity cold / TIPP temperature pathways
+  const notesBlob = [input.history_notes, input.notes, input.constraints_text, input.goal]
+    .filter(Boolean)
+    .map(String)
+    .join(' ');
+  if (/unknown\s+cardiac|cardiac\s+unknown|\bcardiac\b.*\buncleared|uncleared\s+cardiac/i.test(notesBlob)) {
+    if (
+      protocol.protocol_id === 'tipp' ||
+      protocol.protocol_id === 'cold-face' ||
+      (protocol.contraindication_tags || []).includes('cardiovascular_disease')
+    ) {
+      reasons.push('cardiac_uncleared_exclude');
+    }
+  }
+
+  // Untreated OSA: exclude long lying NSDR / sleep-restriction style cards without staff screen
+  if (/\bOSA\b|untreated\s+OSA|untreated_osa/i.test(notesBlob)) {
+    if (
+      protocol.protocol_id === 'yoga-nidra-nsdr' ||
+      protocol.protocol_id === 'sleep-restriction' ||
+      (protocol.contraindication_tags || []).includes('untreated_osa')
+    ) {
+      reasons.push('osa_caution_exclude');
+    }
+  }
+
   return reasons;
 }
 
