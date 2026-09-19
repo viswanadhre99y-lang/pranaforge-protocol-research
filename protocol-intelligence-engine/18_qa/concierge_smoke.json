@@ -1,0 +1,11 @@
+{
+  "url": "http://127.0.0.1:8787",
+  "panels": [
+    "Today",
+    "Kitchen",
+    "Floor",
+    "Claims"
+  ],
+  "pie_decision_ui_present": false,
+  "note": "Concierge is staff ops (Today/Kitchen/Floor/Claims). Floor accepts a protocol_id string for run-of-show — not a PIE Top-3 ranker."
+}

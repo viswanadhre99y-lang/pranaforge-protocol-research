@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PIE — Staff Top-3 Picker</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand">PranaForge <span>PIE</span></div>
+      <span class="tag">Staff Top-3 Picker · V1 MVP</span>
+      <span class="tag" id="health-tag">health…</span>
+    </header>
+
+    <section class="panel" id="form-panel">
+      <p class="lede">Explainable protocol selection from the public catalog. Silence is a first-class action. Vault IP never expands into steps.</p>
+      <div class="grid">
+        <div>
+          <label for="client_type">client_type</label>
+          <select id="client_type">
+            <option value="startup_founder" selected>startup_founder</option>
+            <option value="startup_ceo">startup_ceo</option>
+            <option value="corporate_ceo">corporate_ceo</option>
+            <option value="management_consultant">management_consultant</option>
+            <option value="frequent_international_traveler">frequent_international_traveler</option>
+            <option value="professional_athlete">professional_athlete</option>
+            <option value="physician_surgeon">physician_surgeon</option>
+            <option value="family_office_uhnw">family_office_uhnw</option>
+            <option value="software_engineer">software_engineer</option>
+          </select>
+        </div>
+        <div>
+          <label for="available_minutes">available_minutes</label>
+          <input id="available_minutes" type="number" min="0" max="180" value="10" />
+        </div>
+        <div>
+          <label for="place_class">place_class</label>
+          <select id="place_class">
+            <option value="office" selected>office</option>
+            <option value="desk">desk</option>
+            <option value="home">home</option>
+            <option value="hotel">hotel</option>
+            <option value="public">public</option>
+            <option value="transit">transit</option>
+            <option value="bedroom">bedroom</option>
+            <option value="outdoors">outdoors</option>
+            <option value="gym">gym</option>
+            <option value="bathroom">bathroom</option>
+            <option value="backstage">backstage</option>
+            <option value="private">private</option>
+          </select>
+        </div>
+        <div>
+          <label for="upcoming_event_tag">upcoming_event_tag</label>
+          <select id="upcoming_event_tag">
+            <option value="none">none</option>
+            <option value="investor_meeting" selected>investor_meeting</option>
+            <option value="pitch">pitch</option>
+            <option value="demo_day">demo_day</option>
+            <option value="board_meeting">board_meeting</option>
+            <option value="hiring_firing">hiring_firing</option>
+            <option value="post_conflict">post_conflict</option>
+            <option value="post_rejection">post_rejection</option>
+            <option value="meeting_streak">meeting_streak</option>
+            <option value="T_sleep">T_sleep</option>
+            <option value="1am_spiral">1am_spiral</option>
+            <option value="pre_flight">pre_flight</option>
+            <option value="post_landing">post_landing</option>
+            <option value="midday_crash">midday_crash</option>
+            <option value="runway_scare">runway_scare</option>
+            <option value="live_blank">live_blank</option>
+            <option value="deep_work">deep_work</option>
+          </select>
+        </div>
+        <div>
+          <label for="stress">stress (1–5)</label>
+          <input id="stress" type="number" min="1" max="5" value="5" />
+        </div>
+        <div>
+          <label for="energy">energy (1–5)</label>
+          <input id="energy" type="number" min="1" max="5" value="3" />
+        </div>
+        <div>
+          <label for="sleep_h">sleep_h (optional)</label>
+          <input id="sleep_h" type="number" min="0" max="24" step="0.5" value="5.5" />
+        </div>
+        <div>
+          <label for="prefers_breath">prefers_breath</label>
+          <select id="prefers_breath">
+            <option value="neutral" selected>neutral</option>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-top:12px">
+        <label for="history_notes">history_notes</label>
+        <textarea id="history_notes" placeholder="e.g. prior_negative:cyclic-sighing; prior_positive:ppr; contra:pregnancy"></textarea>
+      </div>
+      <div class="checks">
+        <label><input type="checkbox" id="clinician_mode" /> clinician_mode</label>
+        <label><input type="checkbox" id="crisis_flag" /> crisis_flag</label>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn-primary" id="btn-recommend">Recommend Top-3</button>
+        <button type="button" class="btn-ghost" id="btn-reset">Reset</button>
+        <span id="status"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="results-panel">
+      <h2>Decision <span id="decision-badge" class="badge silence">—</span></h2>
+      <div id="inferred" class="meta"></div>
+      <div id="message" class="message" hidden></div>
+      <div id="why" class="meta" style="margin-top:8px"></div>
+      <div id="recs" style="margin-top:14px"></div>
+      <h2 style="margin-top:16px">Exclusions (sample)</h2>
+      <div id="exclusions" class="exclusions"></div>
+    </section>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

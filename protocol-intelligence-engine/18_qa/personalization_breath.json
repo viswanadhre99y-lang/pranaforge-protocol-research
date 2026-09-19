@@ -1,0 +1,689 @@
+{
+  "topYes": "box-breathing",
+  "topNo": "process-visualization",
+  "different": true,
+  "note": "Different top pick as expected",
+  "yes": {
+    "action": "suggest",
+    "decision": "RECOMMEND",
+    "silence": false,
+    "inferred_need": "pre_performance",
+    "inferred_needs": [
+      {
+        "need": "pre_performance",
+        "urgency": 0.95,
+        "confidence": 0.6,
+        "source_class": "estimated"
+      },
+      {
+        "need": "stress_acute",
+        "urgency": 0.9,
+        "confidence": 0.6,
+        "source_class": "estimated"
+      },
+      {
+        "need": "arousal_down",
+        "urgency": 0.6,
+        "confidence": 0.6,
+        "source_class": "estimated"
+      }
+    ],
+    "recommendations": [
+      {
+        "protocol_id": "box-breathing",
+        "name": "Box Breathing (Square Breathing)",
+        "evidence": "C",
+        "max_duration_sec": 300,
+        "recommended_duration_sec": 120,
+        "min_duration_sec": 120,
+        "arousal_direction": "down",
+        "need_tags": [
+          "stress_acute",
+          "pre_performance",
+          "focus"
+        ],
+        "categories": [
+          "breathing",
+          "stress",
+          "performance",
+          "cognitive"
+        ],
+        "public_discrete": false,
+        "clinician_only": false,
+        "score": 0.927,
+        "features": {
+          "need_match": 0.84,
+          "context_match": 0.82,
+          "timing": 0.95,
+          "evidence": 0.55,
+          "history": 0.85,
+          "preference": 1,
+          "feasibility": 0.92,
+          "expected_benefit": 0.52,
+          "adherence_prob": 1,
+          "penalties": 0
+        },
+        "why": [
+          "need:pre_performance",
+          "moment:investor_meeting",
+          "evidence:C",
+          "duration:2m",
+          "pref:breath"
+        ],
+        "purpose": "Stabilize attention and arousal with equal inhale–hold–exhale–hold timing.",
+        "is_vault_ip": false
+      },
+      {
+        "protocol_id": "process-visualization",
+        "name": "Process Visualization (vs Outcome-Only Fantasy)",
+        "evidence": "B",
+        "max_duration_sec": 600,
+        "recommended_duration_sec": 300,
+        "min_duration_sec": 180,
+        "arousal_direction": "down",
+        "need_tags": [
+          "pre_performance",
+          "goal_clarity"
+        ],
+        "categories": [
+          "goals"
+        ],
+        "public_discrete": false,
+        "clinician_only": false,
+        "score": 0.896,
+        "features": {
+          "need_match": 0.59,
+          "context_match": 0.25,
+          "timing": 0.95,
+          "evidence": 0.8,
+          "history": 0.5,
+          "preference": 0.35,
+          "feasibility": 0.8,
+          "expected_benefit": 0.8,
+          "adherence_prob": 0.93,
+          "penalties": 0
+        },
+        "why": [
+          "need:pre_performance",
+          "moment:investor_meeting",
+          "evidence:B",
+          "duration:5m"
+        ],
+        "purpose": "Mentally rehearse steps and obstacle handling—not only the trophy moment.",
+        "is_vault_ip": false
+      },
+      {
+        "protocol_id": "ppr",
+        "name": "Pre-Performance Routine (PPR)",
+        "evidence": "B",
+        "max_duration_sec": 120,
+        "recommended_duration_sec": 120,
+        "min_duration_sec": 30,
+        "arousal_direction": "down",
+        "need_tags": [
+          "pre_performance"
+        ],
+        "categories": [
+          "performance"
+        ],
+        "public_discrete": false,
+        "clinician_only": false,
+        "score": 0.892,
+        "features": {
+          "need_match": 0.67,
+          "context_match": 0,
+          "timing": 0.95,
+          "evidence": 0.8,
+          "history": 0.5,
+          "preference": 0.35,
+          "feasibility": 0.92,
+          "expected_benefit": 0.68,
+          "adherence_prob": 1,
+          "penalties": 0
+        },
+        "why": [
+          "need:pre_performance",
+          "moment:investor_meeting",
+          "evidence:B",
+          "duration:2m"
+        ],
+        "purpose": "Stabilize attention and arousal before a skilled performance via a consistent short sequence.",
+        "is_vault_ip": false
+      }
+    ],
+    "exclusions": [
+      {
+        "protocol_id": "pmr",
+        "name": "Progressive Muscle Relaxation (PMR)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "autogenic",
+        "name": "Autogenic Training (AT)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "body-scan",
+        "name": "Body Scan (MBSR Element)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "yoga-nidra-nsdr",
+        "name": "Yoga Nidra / NSDR (Non-Sleep Deep Rest)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "stimulus-control",
+        "name": "Stimulus Control Therapy (CBT-I Component)",
+        "reasons": [
+          "duration_exceeds_gap:3600s>600s"
+        ]
+      },
+      {
+        "protocol_id": "sleep-restriction",
+        "name": "Sleep Restriction Therapy (CBT-I Component)",
+        "reasons": [
+          "clinician_only_without_clinician_mode"
+        ]
+      },
+      {
+        "protocol_id": "wind-down",
+        "name": "Behavioral Wind-Down Routine",
+        "reasons": [
+          "duration_exceeds_gap:1200s>600s"
+        ]
+      },
+      {
+        "protocol_id": "morning-light",
+        "name": "Morning Outdoor Light Timing",
+        "reasons": [
+          "equipment_missing:outdoors_or_bright_light"
+        ]
+      },
+      {
+        "protocol_id": "nap-protocol",
+        "name": "Brief Nap Protocol (10–20 min)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "jetlag-light-melatonin",
+        "name": "Jet Lag Light and Melatonin Timing (Careful Protocol)",
+        "reasons": [
+          "equipment_missing:bright_light_access,melatonin_optional_clinician"
+        ]
+      },
+      {
+        "protocol_id": "evening-light-hygiene",
+        "name": "Evening Light Hygiene (Dim and Warm)",
+        "reasons": [
+          "duration_exceeds_gap:3600s>600s"
+        ]
+      },
+      {
+        "protocol_id": "aerobic-exercise-stress",
+        "name": "Moderate Aerobic Exercise Bout",
+        "reasons": [
+          "duration_exceeds_gap:1200s>600s",
+          "equipment_missing:space_to_move"
+        ]
+      },
+      {
+        "protocol_id": "smart-caveats",
+        "name": "SMART Goals with Evidence Caveats",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "values-compass",
+        "name": "Values Compass (Brief ACT/Values Clarification)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "cold-face",
+        "name": "Cold Face Stimulation (Dive-Reflex Informed)",
+        "reasons": [
+          "equipment_missing:cold_water"
+        ]
+      },
+      {
+        "protocol_id": "pomodoro-ultradian",
+        "name": "Focused Work Block + Break (Pomodoro-style)",
+        "reasons": [
+          "duration_exceeds_gap:1200s>600s"
+        ]
+      }
+    ],
+    "exclusion_count": 16,
+    "personalized_message": "Context: investor meeting · office. Why now: inferred need “pre performance” (stress 4/5, energy 3/5). Action: run “Box Breathing (Square Breathing)” (box-breathing). Duration: ~2 min (fits 10 min gap). Skip/SILENCE is always OK.",
+    "why_selected": [
+      "need:pre_performance",
+      "moment:investor_meeting",
+      "evidence:C",
+      "duration:2m",
+      "pref:breath"
+    ],
+    "tau_select": 0.42,
+    "scores": {
+      "box-breathing": 0.927,
+      "process-visualization": 0.896,
+      "ppr": 0.892,
+      "exhale-emphasized": 0.832,
+      "tactical-breath-reset": 0.828,
+      "centering-ravizza": 0.827,
+      "pettlep": 0.816,
+      "cyclic-sighing": 0.809,
+      "physiological-sigh-acute": 0.781,
+      "brief-pmr-acute": 0.647
+    },
+    "input": {
+      "client_type": "startup_founder",
+      "available_minutes": 10,
+      "place_class": "office",
+      "upcoming_event_tag": "investor_meeting",
+      "stress": 4,
+      "energy": 3,
+      "sleep_h": 6,
+      "prefers_breath": "yes",
+      "history_notes": "prior_positive:cyclic-sighing",
+      "clinician_mode": false,
+      "crisis_flag": false,
+      "hard_exclude_prior_negative": false,
+      "goal": "",
+      "activity": "",
+      "force_silence": false
+    }
+  },
+  "no": {
+    "action": "suggest",
+    "decision": "RECOMMEND",
+    "silence": false,
+    "inferred_need": "pre_performance",
+    "inferred_needs": [
+      {
+        "need": "pre_performance",
+        "urgency": 0.95,
+        "confidence": 0.6,
+        "source_class": "estimated"
+      },
+      {
+        "need": "stress_acute",
+        "urgency": 0.9,
+        "confidence": 0.6,
+        "source_class": "estimated"
+      },
+      {
+        "need": "arousal_down",
+        "urgency": 0.6,
+        "confidence": 0.6,
+        "source_class": "estimated"
+      }
+    ],
+    "recommendations": [
+      {
+        "protocol_id": "process-visualization",
+        "name": "Process Visualization (vs Outcome-Only Fantasy)",
+        "evidence": "B",
+        "max_duration_sec": 600,
+        "recommended_duration_sec": 300,
+        "min_duration_sec": 180,
+        "arousal_direction": "down",
+        "need_tags": [
+          "pre_performance",
+          "goal_clarity"
+        ],
+        "categories": [
+          "goals"
+        ],
+        "public_discrete": false,
+        "clinician_only": false,
+        "score": 0.928,
+        "features": {
+          "need_match": 0.59,
+          "context_match": 0.25,
+          "timing": 0.95,
+          "evidence": 0.8,
+          "history": 0.5,
+          "preference": 0.75,
+          "feasibility": 0.8,
+          "expected_benefit": 0.8,
+          "adherence_prob": 0.93,
+          "penalties": 0
+        },
+        "why": [
+          "need:pre_performance",
+          "moment:investor_meeting",
+          "evidence:B",
+          "duration:5m",
+          "pref:non-breath"
+        ],
+        "purpose": "Mentally rehearse steps and obstacle handling—not only the trophy moment.",
+        "is_vault_ip": false
+      },
+      {
+        "protocol_id": "ppr",
+        "name": "Pre-Performance Routine (PPR)",
+        "evidence": "B",
+        "max_duration_sec": 120,
+        "recommended_duration_sec": 120,
+        "min_duration_sec": 30,
+        "arousal_direction": "down",
+        "need_tags": [
+          "pre_performance"
+        ],
+        "categories": [
+          "performance"
+        ],
+        "public_discrete": false,
+        "clinician_only": false,
+        "score": 0.924,
+        "features": {
+          "need_match": 0.67,
+          "context_match": 0,
+          "timing": 0.95,
+          "evidence": 0.8,
+          "history": 0.5,
+          "preference": 0.75,
+          "feasibility": 0.92,
+          "expected_benefit": 0.68,
+          "adherence_prob": 1,
+          "penalties": 0
+        },
+        "why": [
+          "need:pre_performance",
+          "moment:investor_meeting",
+          "evidence:B",
+          "duration:2m",
+          "pref:non-breath"
+        ],
+        "purpose": "Stabilize attention and arousal before a skilled performance via a consistent short sequence.",
+        "is_vault_ip": false
+      },
+      {
+        "protocol_id": "centering-ravizza",
+        "name": "Centering (Ravizza-Style)",
+        "evidence": "C",
+        "max_duration_sec": 120,
+        "recommended_duration_sec": 120,
+        "min_duration_sec": 120,
+        "arousal_direction": "down",
+        "need_tags": [
+          "pre_performance",
+          "micro_reset"
+        ],
+        "categories": [
+          "performance",
+          "stress"
+        ],
+        "public_discrete": true,
+        "clinician_only": false,
+        "score": 0.859,
+        "features": {
+          "need_match": 0.59,
+          "context_match": 0,
+          "timing": 0.95,
+          "evidence": 0.55,
+          "history": 0.5,
+          "preference": 0.75,
+          "feasibility": 0.92,
+          "expected_benefit": 0.52,
+          "adherence_prob": 1,
+          "penalties": 0
+        },
+        "why": [
+          "need:pre_performance",
+          "moment:investor_meeting",
+          "evidence:C",
+          "duration:2m",
+          "pref:non-breath",
+          "public_discrete"
+        ],
+        "purpose": "Rapidly shift from distracted/tense state to controlled, present, process-focused state.",
+        "is_vault_ip": false
+      }
+    ],
+    "exclusions": [
+      {
+        "protocol_id": "cyclic-sighing",
+        "name": "Cyclic Sighing (Physiological Sigh Pattern)",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "box-breathing",
+        "name": "Box Breathing (Square Breathing)",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "coherent-resonance",
+        "name": "Coherent / Resonance Frequency Breathing (~6 breaths/min)",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "diaphragmatic",
+        "name": "Diaphragmatic (Belly) Breathing",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "478-breathing",
+        "name": "4-7-8 Breathing (as popularized by Weil)",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "nadi-shodhana",
+        "name": "Alternate Nostril Breathing (Nadi Shodhana / Anulom Vilom)",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "exhale-emphasized",
+        "name": "Exhale-Emphasized Paced Breathing (No Holds)",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "cyclic-hyperventilation-caution",
+        "name": "Cyclic Hyperventilation with Retention (Caution Protocol)",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "pmr",
+        "name": "Progressive Muscle Relaxation (PMR)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "autogenic",
+        "name": "Autogenic Training (AT)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "body-scan",
+        "name": "Body Scan (MBSR Element)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "yoga-nidra-nsdr",
+        "name": "Yoga Nidra / NSDR (Non-Sleep Deep Rest)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "stimulus-control",
+        "name": "Stimulus Control Therapy (CBT-I Component)",
+        "reasons": [
+          "duration_exceeds_gap:3600s>600s"
+        ]
+      },
+      {
+        "protocol_id": "sleep-restriction",
+        "name": "Sleep Restriction Therapy (CBT-I Component)",
+        "reasons": [
+          "clinician_only_without_clinician_mode"
+        ]
+      },
+      {
+        "protocol_id": "wind-down",
+        "name": "Behavioral Wind-Down Routine",
+        "reasons": [
+          "duration_exceeds_gap:1200s>600s"
+        ]
+      },
+      {
+        "protocol_id": "morning-light",
+        "name": "Morning Outdoor Light Timing",
+        "reasons": [
+          "equipment_missing:outdoors_or_bright_light"
+        ]
+      },
+      {
+        "protocol_id": "nap-protocol",
+        "name": "Brief Nap Protocol (10–20 min)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "jetlag-light-melatonin",
+        "name": "Jet Lag Light and Melatonin Timing (Careful Protocol)",
+        "reasons": [
+          "equipment_missing:bright_light_access,melatonin_optional_clinician"
+        ]
+      },
+      {
+        "protocol_id": "evening-light-hygiene",
+        "name": "Evening Light Hygiene (Dim and Warm)",
+        "reasons": [
+          "duration_exceeds_gap:3600s>600s"
+        ]
+      },
+      {
+        "protocol_id": "physiological-sigh-acute",
+        "name": "Acute Physiological Sigh (1–3 Cycles)",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "aerobic-exercise-stress",
+        "name": "Moderate Aerobic Exercise Bout",
+        "reasons": [
+          "duration_exceeds_gap:1200s>600s",
+          "equipment_missing:space_to_move"
+        ]
+      },
+      {
+        "protocol_id": "mbsr-breath-anchor",
+        "name": "Mindfulness of Breath (Formal Sitting)",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "tactical-breath-reset",
+        "name": "Tactical Breath Reset (Short Box-like)",
+        "reasons": [
+          "prefers_breath_no"
+        ]
+      },
+      {
+        "protocol_id": "smart-caveats",
+        "name": "SMART Goals with Evidence Caveats",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "values-compass",
+        "name": "Values Compass (Brief ACT/Values Clarification)",
+        "reasons": [
+          "duration_exceeds_gap:720s>600s"
+        ]
+      },
+      {
+        "protocol_id": "cold-face",
+        "name": "Cold Face Stimulation (Dive-Reflex Informed)",
+        "reasons": [
+          "equipment_missing:cold_water"
+        ]
+      },
+      {
+        "protocol_id": "pomodoro-ultradian",
+        "name": "Focused Work Block + Break (Pomodoro-style)",
+        "reasons": [
+          "duration_exceeds_gap:1200s>600s"
+        ]
+      }
+    ],
+    "exclusion_count": 27,
+    "personalized_message": "Context: investor meeting · office. Why now: inferred need “pre performance” (stress 4/5, energy 3/5). Action: run “Process Visualization (vs Outcome-Only Fantasy)” (process-visualization). Duration: ~5 min (fits 10 min gap). Skip/SILENCE is always OK.",
+    "why_selected": [
+      "need:pre_performance",
+      "moment:investor_meeting",
+      "evidence:B",
+      "duration:5m",
+      "pref:non-breath"
+    ],
+    "tau_select": 0.42,
+    "scores": {
+      "process-visualization": 0.928,
+      "ppr": 0.924,
+      "centering-ravizza": 0.859,
+      "pettlep": 0.848,
+      "brief-pmr-acute": 0.679,
+      "cognitive-reappraisal": 0.546,
+      "if-then-gollwitzer": 0.529,
+      "self-distancing": 0.506,
+      "task-switch-buffer": 0.489,
+      "tipp": 0.483
+    },
+    "input": {
+      "client_type": "startup_founder",
+      "available_minutes": 10,
+      "place_class": "office",
+      "upcoming_event_tag": "investor_meeting",
+      "stress": 4,
+      "energy": 3,
+      "sleep_h": 6,
+      "prefers_breath": "no",
+      "history_notes": "prior_negative:cyclic-sighing",
+      "clinician_mode": false,
+      "crisis_flag": false,
+      "hard_exclude_prior_negative": false,
+      "goal": "",
+      "activity": "",
+      "force_silence": false
+    }
+  }
+}

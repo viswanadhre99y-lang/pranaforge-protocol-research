@@ -1,0 +1,1637 @@
+{
+  "total": 110,
+  "comparable": 110,
+  "exact_match": 16,
+  "exact_rate": 0.14545454545454545,
+  "candidate_hits": 30,
+  "silence_agree": 9,
+  "soft_agree": 59,
+  "soft_agreement_rate": 0.5363636363636364,
+  "top3_agree": 52,
+  "top3_agreement_rate": 0.4727272727272727,
+  "note": "Suite does not fail on heuristic disagreement with golden selected; rates recorded only. soft = exact OR top-in-candidates OR expected-in-top3 OR silence-agree.",
+  "rows": [
+    {
+      "id": "TC001",
+      "expected": "process-visualization",
+      "got": "ppr",
+      "top3": [
+        "ppr",
+        "process-visualization",
+        "box-breathing"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.902,
+      "ambiguous": false
+    },
+    {
+      "id": "TC002",
+      "expected": "physiological-sigh-acute",
+      "got": "ppr",
+      "top3": [
+        "ppr",
+        "task-switch-buffer",
+        "tipp"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.522,
+      "ambiguous": false
+    },
+    {
+      "id": "TC003",
+      "expected": "act-defusion",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "social-connection-micro",
+        "self-distancing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.881,
+      "ambiguous": false
+    },
+    {
+      "id": "TC004",
+      "expected": "stimulus-control",
+      "got": "worry-postpone",
+      "top3": [
+        "worry-postpone",
+        "478-breathing",
+        "mbsr-breath-anchor"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": false,
+      "score": 0.79,
+      "ambiguous": false
+    },
+    {
+      "id": "TC005",
+      "expected": "box-breathing",
+      "got": "ppr",
+      "top3": [
+        "ppr",
+        "process-visualization",
+        "box-breathing"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.945,
+      "ambiguous": false
+    },
+    {
+      "id": "TC006",
+      "expected": "art-brief",
+      "got": "worry-postpone",
+      "top3": [
+        "worry-postpone",
+        "physiological-sigh-acute",
+        "act-defusion"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": false,
+      "score": 0.639,
+      "ambiguous": true
+    },
+    {
+      "id": "TC007",
+      "expected": "values-compass",
+      "got": "affect-labeling",
+      "top3": [
+        "affect-labeling",
+        "cognitive-reappraisal",
+        "self-distancing"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": false,
+      "score": 0.804,
+      "ambiguous": false
+    },
+    {
+      "id": "TC008",
+      "expected": "affect-labeling",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "affect-labeling"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.842,
+      "ambiguous": false
+    },
+    {
+      "id": "TC009",
+      "expected": "ppr",
+      "got": "process-visualization",
+      "top3": [
+        "process-visualization",
+        "ppr",
+        "centering-ravizza"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.886,
+      "ambiguous": false
+    },
+    {
+      "id": "TC010",
+      "expected": "worry-postpone",
+      "got": "worry-postpone",
+      "top3": [
+        "worry-postpone",
+        "478-breathing",
+        "exhale-emphasized"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.662,
+      "ambiguous": false
+    },
+    {
+      "id": "TC011",
+      "expected": "task-switch-buffer",
+      "got": "task-switch-buffer",
+      "top3": [
+        "task-switch-buffer",
+        "art-brief",
+        "nadi-shodhana"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.871,
+      "ambiguous": false
+    },
+    {
+      "id": "TC012",
+      "expected": "SILENCE",
+      "got": "SILENCE",
+      "top3": [],
+      "match": true,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": false
+    },
+    {
+      "id": "TC013",
+      "expected": "SILENCE",
+      "got": "SILENCE",
+      "top3": [],
+      "match": true,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": false
+    },
+    {
+      "id": "TC014",
+      "expected": "physiological-sigh-acute",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "physiological-sigh-acute",
+        "brief-pmr-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.782,
+      "ambiguous": false
+    },
+    {
+      "id": "TC015",
+      "expected": "tactical-breath-reset",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.888,
+      "ambiguous": false
+    },
+    {
+      "id": "TC016",
+      "expected": "morning-light",
+      "got": "jetlag-light-melatonin",
+      "top3": [
+        "jetlag-light-melatonin",
+        "morning-light",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.792,
+      "ambiguous": false
+    },
+    {
+      "id": "TC017",
+      "expected": "nap-protocol",
+      "got": "jetlag-light-melatonin",
+      "top3": [
+        "jetlag-light-melatonin",
+        "morning-light",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.656,
+      "ambiguous": true
+    },
+    {
+      "id": "TC018",
+      "expected": "staff_education",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.538,
+      "ambiguous": false
+    },
+    {
+      "id": "TC019",
+      "expected": "evening-light-hygiene",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.585,
+      "ambiguous": false
+    },
+    {
+      "id": "TC020",
+      "expected": "morning-light",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.585,
+      "ambiguous": false
+    },
+    {
+      "id": "TC021",
+      "expected": "ppr",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.888,
+      "ambiguous": false
+    },
+    {
+      "id": "TC022",
+      "expected": "pettlep",
+      "got": "pettlep",
+      "top3": [
+        "pettlep",
+        "exhale-emphasized",
+        "brief-pmr-acute"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.598,
+      "ambiguous": false
+    },
+    {
+      "id": "TC023",
+      "expected": "self-distancing",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "mbsr-breath-anchor"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.746,
+      "ambiguous": false
+    },
+    {
+      "id": "TC024",
+      "expected": "centering-ravizza",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.888,
+      "ambiguous": false
+    },
+    {
+      "id": "TC025",
+      "expected": "cyclic-sighing",
+      "got": "cyclic-hyperventilation-caution",
+      "top3": [
+        "cyclic-hyperventilation-caution",
+        "exhale-emphasized",
+        "brief-pmr-acute"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": false,
+      "score": 0.65,
+      "ambiguous": false
+    },
+    {
+      "id": "TC026",
+      "expected": "physiological-sigh-acute",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "cyclic-sighing",
+        "physiological-sigh-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.789,
+      "ambiguous": false
+    },
+    {
+      "id": "TC027",
+      "expected": "caffeine-cutoff",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.585,
+      "ambiguous": false
+    },
+    {
+      "id": "TC028",
+      "expected": "if-then-gollwitzer",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "affect-labeling"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.746,
+      "ambiguous": false
+    },
+    {
+      "id": "TC029",
+      "expected": "SILENCE",
+      "got": "SILENCE",
+      "top3": [],
+      "match": true,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": true
+    },
+    {
+      "id": "TC030",
+      "expected": "task-switch-buffer",
+      "got": "task-switch-buffer",
+      "top3": [
+        "task-switch-buffer",
+        "art-brief",
+        "nadi-shodhana"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.871,
+      "ambiguous": false
+    },
+    {
+      "id": "TC031",
+      "expected": "morning-light",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.585,
+      "ambiguous": false
+    },
+    {
+      "id": "TC032",
+      "expected": "ESCALATE",
+      "got": "ESCALATE",
+      "top3": [],
+      "match": true,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": false
+    },
+    {
+      "id": "TC033",
+      "expected": "yoga-nidra-nsdr",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "physiological-sigh-acute",
+        "brief-pmr-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.51,
+      "ambiguous": false
+    },
+    {
+      "id": "TC034",
+      "expected": "stimulus-control",
+      "got": "478-breathing",
+      "top3": [
+        "478-breathing",
+        "exhale-emphasized",
+        "physiological-sigh-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.515,
+      "ambiguous": false
+    },
+    {
+      "id": "TC035",
+      "expected": "clinician_referral",
+      "got": "sleep-restriction",
+      "top3": [
+        "sleep-restriction",
+        "exhale-emphasized",
+        "brief-pmr-acute"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": false,
+      "score": 0.691,
+      "ambiguous": false
+    },
+    {
+      "id": "TC036",
+      "expected": "yoga-nidra-nsdr",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "physiological-sigh-acute",
+        "brief-pmr-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.528,
+      "ambiguous": false
+    },
+    {
+      "id": "TC037",
+      "expected": "behavioral-activation-tiny",
+      "got": "behavioral-activation-tiny",
+      "top3": [
+        "behavioral-activation-tiny",
+        "exhale-emphasized",
+        "physiological-sigh-acute"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.658,
+      "ambiguous": false
+    },
+    {
+      "id": "TC038",
+      "expected": "exhale-emphasized",
+      "got": "worry-postpone",
+      "top3": [
+        "worry-postpone",
+        "478-breathing",
+        "exhale-emphasized"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.662,
+      "ambiguous": false
+    },
+    {
+      "id": "TC039",
+      "expected": "54321-grounding",
+      "got": "tipp",
+      "top3": [
+        "tipp",
+        "exhale-emphasized",
+        "brief-pmr-acute"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": false,
+      "score": 0.712,
+      "ambiguous": false
+    },
+    {
+      "id": "TC040",
+      "expected": "SILENCE",
+      "got": "SILENCE",
+      "top3": [],
+      "match": true,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": false
+    },
+    {
+      "id": "TC041",
+      "expected": "process-visualization",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.888,
+      "ambiguous": false
+    },
+    {
+      "id": "TC042",
+      "expected": "if-then-gollwitzer",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.888,
+      "ambiguous": false
+    },
+    {
+      "id": "TC043",
+      "expected": "act-defusion",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "mbsr-breath-anchor"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.746,
+      "ambiguous": false
+    },
+    {
+      "id": "TC044",
+      "expected": "ppr",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.816,
+      "ambiguous": false
+    },
+    {
+      "id": "TC045",
+      "expected": "centering-ravizza",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": false,
+      "score": 0.888,
+      "ambiguous": false
+    },
+    {
+      "id": "TC046",
+      "expected": "nap-protocol",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "cyclic-sighing",
+        "physiological-sigh-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.528,
+      "ambiguous": false
+    },
+    {
+      "id": "TC047",
+      "expected": "physiological-sigh-acute",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "cyclic-sighing",
+        "physiological-sigh-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.789,
+      "ambiguous": false
+    },
+    {
+      "id": "TC048",
+      "expected": "art-brief",
+      "got": "art-brief",
+      "top3": [
+        "art-brief",
+        "exhale-emphasized",
+        "brief-pmr-acute"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.626,
+      "ambiguous": false
+    },
+    {
+      "id": "TC049",
+      "expected": "process-visualization",
+      "got": "if-then-gollwitzer",
+      "top3": [
+        "if-then-gollwitzer",
+        "process-visualization",
+        "woop"
+      ],
+      "match": false,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.729,
+      "ambiguous": false
+    },
+    {
+      "id": "TC050",
+      "expected": "wind-down",
+      "got": "worry-postpone",
+      "top3": [
+        "worry-postpone",
+        "478-breathing",
+        "exhale-emphasized"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.647,
+      "ambiguous": false
+    },
+    {
+      "id": "TC051",
+      "expected": "physiological-sigh-acute",
+      "got": "ppr",
+      "top3": [
+        "ppr",
+        "task-switch-buffer",
+        "tipp"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.442,
+      "ambiguous": false
+    },
+    {
+      "id": "TC052",
+      "expected": "SILENCE",
+      "got": "SILENCE",
+      "top3": [],
+      "match": true,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": false
+    },
+    {
+      "id": "TC053",
+      "expected": "caffeine-cutoff",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.585,
+      "ambiguous": false
+    },
+    {
+      "id": "TC054",
+      "expected": "art-brief",
+      "got": "task-switch-buffer",
+      "top3": [
+        "task-switch-buffer",
+        "art-brief",
+        "nadi-shodhana"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.871,
+      "ambiguous": true
+    },
+    {
+      "id": "TC055",
+      "expected": "worry-postpone",
+      "got": "worry-postpone",
+      "top3": [
+        "worry-postpone",
+        "478-breathing",
+        "exhale-emphasized"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.647,
+      "ambiguous": false
+    },
+    {
+      "id": "TC056",
+      "expected": "pmr",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "affect-labeling"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.746,
+      "ambiguous": false
+    },
+    {
+      "id": "TC057",
+      "expected": "pmr",
+      "got": "478-breathing",
+      "top3": [
+        "478-breathing",
+        "worry-postpone",
+        "exhale-emphasized"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.647,
+      "ambiguous": false
+    },
+    {
+      "id": "TC058",
+      "expected": "physiological-sigh-acute",
+      "got": "physiological-sigh-acute",
+      "top3": [
+        "physiological-sigh-acute",
+        "brief-pmr-acute",
+        "centering-ravizza"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.846,
+      "ambiguous": false
+    },
+    {
+      "id": "TC059",
+      "expected": "cognitive-reappraisal",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "affect-labeling"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.746,
+      "ambiguous": false
+    },
+    {
+      "id": "TC060",
+      "expected": "affect-labeling",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "affect-labeling"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.746,
+      "ambiguous": false
+    },
+    {
+      "id": "TC061",
+      "expected": "staff_queue_ppr",
+      "got": "SILENCE",
+      "top3": [],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": false
+    },
+    {
+      "id": "TC062",
+      "expected": "exhale-emphasized",
+      "got": "task-switch-buffer",
+      "top3": [
+        "task-switch-buffer",
+        "art-brief",
+        "nadi-shodhana"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.871,
+      "ambiguous": false
+    },
+    {
+      "id": "TC063",
+      "expected": "wind-down",
+      "got": "worry-postpone",
+      "top3": [
+        "worry-postpone",
+        "478-breathing",
+        "exhale-emphasized"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.647,
+      "ambiguous": false
+    },
+    {
+      "id": "TC064",
+      "expected": "physiological-sigh-acute",
+      "got": "physiological-sigh-acute",
+      "top3": [
+        "physiological-sigh-acute",
+        "centering-ravizza",
+        "tactical-breath-reset"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.804,
+      "ambiguous": false
+    },
+    {
+      "id": "TC065",
+      "expected": "54321-grounding",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.757,
+      "ambiguous": false
+    },
+    {
+      "id": "TC066",
+      "expected": "exhale-emphasized",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.757,
+      "ambiguous": false
+    },
+    {
+      "id": "TC067",
+      "expected": "ppr",
+      "got": "SILENCE",
+      "top3": [],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": false
+    },
+    {
+      "id": "TC068",
+      "expected": "brief-pmr-acute",
+      "got": "brief-pmr-acute",
+      "top3": [
+        "brief-pmr-acute",
+        "exhale-emphasized",
+        "cyclic-sighing"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.792,
+      "ambiguous": false
+    },
+    {
+      "id": "TC069",
+      "expected": "art-brief",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.585,
+      "ambiguous": false
+    },
+    {
+      "id": "TC070",
+      "expected": "centering-ravizza",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.888,
+      "ambiguous": false
+    },
+    {
+      "id": "TC071",
+      "expected": "tactical-breath-reset",
+      "got": "physiological-sigh-acute",
+      "top3": [
+        "physiological-sigh-acute",
+        "tactical-breath-reset",
+        "centering-ravizza"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.912,
+      "ambiguous": false
+    },
+    {
+      "id": "TC072",
+      "expected": "process-visualization",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.888,
+      "ambiguous": false
+    },
+    {
+      "id": "TC073",
+      "expected": "pmr",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "physiological-sigh-acute",
+        "brief-pmr-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.51,
+      "ambiguous": false
+    },
+    {
+      "id": "TC074",
+      "expected": "behavioral-activation-tiny",
+      "got": "behavioral-activation-tiny",
+      "top3": [
+        "behavioral-activation-tiny",
+        "exhale-emphasized",
+        "brief-pmr-acute"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.612,
+      "ambiguous": false
+    },
+    {
+      "id": "TC075",
+      "expected": "caffeine-cutoff",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "physiological-sigh-acute",
+        "brief-pmr-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.528,
+      "ambiguous": false
+    },
+    {
+      "id": "TC076",
+      "expected": "woop",
+      "got": "if-then-gollwitzer",
+      "top3": [
+        "if-then-gollwitzer",
+        "process-visualization",
+        "woop"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.729,
+      "ambiguous": false
+    },
+    {
+      "id": "TC077",
+      "expected": "habit-stacking",
+      "got": "if-then-gollwitzer",
+      "top3": [
+        "if-then-gollwitzer",
+        "habit-stacking",
+        "woop"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.729,
+      "ambiguous": false
+    },
+    {
+      "id": "TC078",
+      "expected": "coherent-resonance",
+      "got": "coherent-resonance",
+      "top3": [
+        "coherent-resonance",
+        "mbsr-breath-anchor",
+        "exhale-emphasized"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.657,
+      "ambiguous": false
+    },
+    {
+      "id": "TC079",
+      "expected": "opposite-action",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "affect-labeling"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.746,
+      "ambiguous": true
+    },
+    {
+      "id": "TC080",
+      "expected": "social-connection-micro",
+      "got": "cyclic-sighing",
+      "top3": [
+        "cyclic-sighing",
+        "gratitude-brief",
+        "social-connection-micro"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.728,
+      "ambiguous": false
+    },
+    {
+      "id": "TC081",
+      "expected": "SEQUENCE_light_nap_ppr",
+      "got": "jetlag-light-melatonin",
+      "top3": [
+        "jetlag-light-melatonin",
+        "morning-light",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.771,
+      "ambiguous": false
+    },
+    {
+      "id": "TC082",
+      "expected": "SILENCE",
+      "got": "SILENCE",
+      "top3": [],
+      "match": true,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": false
+    },
+    {
+      "id": "TC083",
+      "expected": "54321-grounding",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "tipp"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.757,
+      "ambiguous": false
+    },
+    {
+      "id": "TC084",
+      "expected": "mbsr-breath-anchor",
+      "got": "worry-postpone",
+      "top3": [
+        "worry-postpone",
+        "478-breathing",
+        "exhale-emphasized"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.662,
+      "ambiguous": true
+    },
+    {
+      "id": "TC085",
+      "expected": "smart-caveats",
+      "got": "if-then-gollwitzer",
+      "top3": [
+        "if-then-gollwitzer",
+        "process-visualization",
+        "woop"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.729,
+      "ambiguous": false
+    },
+    {
+      "id": "TC086",
+      "expected": "morning-light",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.538,
+      "ambiguous": false
+    },
+    {
+      "id": "TC087",
+      "expected": "physiological-sigh-acute",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "cyclic-sighing",
+        "physiological-sigh-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.789,
+      "ambiguous": false
+    },
+    {
+      "id": "TC088",
+      "expected": "self-distancing",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "mbsr-breath-anchor"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.746,
+      "ambiguous": false
+    },
+    {
+      "id": "TC089",
+      "expected": "cyclic-sighing",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.757,
+      "ambiguous": false
+    },
+    {
+      "id": "TC090",
+      "expected": "process-visualization",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.888,
+      "ambiguous": false
+    },
+    {
+      "id": "TC091",
+      "expected": "values-compass",
+      "got": "if-then-gollwitzer",
+      "top3": [
+        "if-then-gollwitzer",
+        "process-visualization",
+        "woop"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.729,
+      "ambiguous": false
+    },
+    {
+      "id": "TC092",
+      "expected": "SILENCE",
+      "got": "SILENCE",
+      "top3": [],
+      "match": true,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": false
+    },
+    {
+      "id": "TC093",
+      "expected": "morning-light",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.538,
+      "ambiguous": false
+    },
+    {
+      "id": "TC094",
+      "expected": "pomodoro-ultradian",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "task-switch-buffer",
+        "mbsr-breath-anchor"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.784,
+      "ambiguous": false
+    },
+    {
+      "id": "TC095",
+      "expected": "autogenic",
+      "got": "worry-postpone",
+      "top3": [
+        "worry-postpone",
+        "478-breathing",
+        "exhale-emphasized"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.647,
+      "ambiguous": false
+    },
+    {
+      "id": "TC096",
+      "expected": "affect-labeling",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "affect-labeling"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.746,
+      "ambiguous": false
+    },
+    {
+      "id": "TC097",
+      "expected": "if-then-gollwitzer",
+      "got": "if-then-gollwitzer",
+      "top3": [
+        "if-then-gollwitzer",
+        "habit-stacking",
+        "woop"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.729,
+      "ambiguous": false
+    },
+    {
+      "id": "TC098",
+      "expected": "sleep-consistency",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "physiological-sigh-acute",
+        "brief-pmr-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.528,
+      "ambiguous": false
+    },
+    {
+      "id": "TC099",
+      "expected": "54321-grounding",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.585,
+      "ambiguous": true
+    },
+    {
+      "id": "TC100",
+      "expected": "SILENCE",
+      "got": "SILENCE",
+      "top3": [],
+      "match": true,
+      "candHit": false,
+      "top3Hit": false,
+      "score": null,
+      "ambiguous": false
+    },
+    {
+      "id": "TC101",
+      "expected": "physiological-sigh-acute",
+      "got": "centering-ravizza",
+      "top3": [
+        "centering-ravizza",
+        "physiological-sigh-acute",
+        "brief-pmr-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.85,
+      "ambiguous": false
+    },
+    {
+      "id": "TC102",
+      "expected": "SILENCE_or_staff_confirm",
+      "got": "box-breathing",
+      "top3": [
+        "box-breathing",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.888,
+      "ambiguous": true
+    },
+    {
+      "id": "TC103",
+      "expected": "staff_screen",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.585,
+      "ambiguous": true
+    },
+    {
+      "id": "TC104",
+      "expected": "act-defusion",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.585,
+      "ambiguous": false
+    },
+    {
+      "id": "TC105",
+      "expected": "exhale-emphasized",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "physiological-sigh-acute",
+        "brief-pmr-acute"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "score": 0.528,
+      "ambiguous": false
+    },
+    {
+      "id": "TC106",
+      "expected": "mbsr-breath-anchor",
+      "got": "coherent-resonance",
+      "top3": [
+        "coherent-resonance",
+        "mbsr-breath-anchor",
+        "exhale-emphasized"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.657,
+      "ambiguous": false
+    },
+    {
+      "id": "TC107",
+      "expected": "nap-protocol",
+      "got": "cyclic-sighing",
+      "top3": [
+        "cyclic-sighing",
+        "exhale-emphasized",
+        "physiological-sigh-acute"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.51,
+      "ambiguous": false
+    },
+    {
+      "id": "TC108",
+      "expected": "physiological-sigh-acute",
+      "got": "ppr",
+      "top3": [
+        "ppr",
+        "process-visualization",
+        "box-breathing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.944,
+      "ambiguous": false
+    },
+    {
+      "id": "TC109",
+      "expected": "ESCALATE_or_safety",
+      "got": "exhale-emphasized",
+      "top3": [
+        "exhale-emphasized",
+        "brief-pmr-acute",
+        "cyclic-sighing"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": false,
+      "score": 0.585,
+      "ambiguous": false
+    },
+    {
+      "id": "TC110",
+      "expected": "affect-labeling",
+      "got": "cognitive-reappraisal",
+      "top3": [
+        "cognitive-reappraisal",
+        "self-distancing",
+        "affect-labeling"
+      ],
+      "match": false,
+      "candHit": false,
+      "top3Hit": true,
+      "score": 0.699,
+      "ambiguous": false
+    }
+  ],
+  "matrix": {
+    "count": 120,
+    "suggest": 114,
+    "silence": 6,
+    "escalate": 0,
+    "infeasible_recommendations": [],
+    "infeasible_count": 0
+  },
+  "playwright": {
+    "passed": 10,
+    "failed": 0,
+    "total": 10
+  },
+  "verdict": "Not production-ready; local Top-3 MVP with safety gates works; golden exact 14.5% soft 53.6%",
+  "runtime_listen_port": 8792,
+  "runtime_intended_port": 8790
+}

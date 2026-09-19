@@ -1,0 +1,618 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/node_modules/.bin/playwright",
+      "test",
+      "tests/pie.spec.js"
+    ],
+    "configFile": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/playwright.config.js",
+    "rootDir": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../18_qa/playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "pie.spec.js",
+      "file": "pie.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "1. Open UI and map visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 354,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T08:21:22.633Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-773069587d10519bda49",
+          "file": "pie.spec.js",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "2. Happy path founder investor meeting",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 439,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T08:21:23.122Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-8534a30a9b40dcd716f6",
+          "file": "pie.spec.js",
+          "line": 83,
+          "column": 1
+        },
+        {
+          "title": "3. Conflicting signals A–D",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 305,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T08:21:23.576Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-981bb5880c8dbe2339e1",
+          "file": "pie.spec.js",
+          "line": 130,
+          "column": 1
+        },
+        {
+          "title": "4. Extreme constraints: 1 min, no privacy, dislikes breath",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 288,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T08:21:23.891Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-a6c07545ba4997385e40",
+          "file": "pie.spec.js",
+          "line": 206,
+          "column": 1
+        },
+        {
+          "title": "5. Personalization: breath yes+positive vs no+negative",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T08:21:24.189Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-9a8cda6bd7deedefa2f0",
+          "file": "pie.spec.js",
+          "line": 239,
+          "column": 1
+        },
+        {
+          "title": "6. Safety: crisis_flag → SILENCE/escalate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 340,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T08:21:24.204Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-1fd540c468a79f466165",
+          "file": "pie.spec.js",
+          "line": 288,
+          "column": 1
+        },
+        {
+          "title": "7. Empty/invalid inputs handling",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T08:21:24.554Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-b127ce111196ee08f8be",
+          "file": "pie.spec.js",
+          "line": 309,
+          "column": 1
+        },
+        {
+          "title": "8. Batch golden test_cases.jsonl agreement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "GOLDEN agreement exact=14.5% soft=53.6% top3=47.3% (16/110 exact, 59/110 soft)\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T08:21:24.569Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-1b441fc1afc4e275a4e0",
+          "file": "pie.spec.js",
+          "line": 325,
+          "column": 1
+        },
+        {
+          "title": "9. Synthetic matrix ≥100 combos — flag infeasible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 36,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "MATRIX n=120 suggest=114 silence=6 infeasible=0\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "(node:329201) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-09-19T08:21:24.612Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-d14fa011f12063267cdd",
+          "file": "pie.spec.js",
+          "line": 510,
+          "column": 1
+        },
+        {
+          "title": "10. Concierge UI smoke on :8787",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1699,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T08:21:24.659Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "56d74c9d4d3c90829a42-44ea1bdb8defb14c8478",
+          "file": "pie.spec.js",
+          "line": 605,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-19T08:21:21.742Z",
+    "duration": 4670.6669999999995,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
