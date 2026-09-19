@@ -21,7 +21,7 @@ test.describe('golden_mapper P2-4', () => {
     expect(row.input.activity).toBe('');
   });
 
-  test('force_silence / activity only when expected SILENCE', () => {
+  test('force_silence / activity for SILENCE and staff-channel queue; not for live staff_*', () => {
     const silence = mapGoldenCase({
       id: 'S1',
       context: 'in_meeting; desk',
@@ -33,6 +33,7 @@ test.describe('golden_mapper P2-4', () => {
     expect(silence.input.force_silence).toBeTruthy();
     expect(silence.input.activity).toBe('in_meeting');
 
+    // staff_queue + staff channel + in_meeting → silence (queue for after)
     const queue = mapGoldenCase({
       id: 'TC061',
       context: 'in_meeting; desk',
@@ -40,9 +41,23 @@ test.describe('golden_mapper P2-4', () => {
       reason: 'staff τ; queue for after',
       goal: 'pre_performance',
       candidates: ['ppr'],
+      constraints: 'staff channel',
+      state: 'EA asks during meeting',
     });
-    expect(queue.input.force_silence).toBeFalsy();
-    expect(queue.input.activity).toBe('');
+    expect(queue.input.force_silence).toBeTruthy();
+    expect(queue.input.activity).toBe('in_meeting');
+
+    // Live staff_* education labels still map without force_silence
+    const live = mapGoldenCase({
+      id: 'S2',
+      context: 'desk; gap=10m',
+      selected: 'staff_education',
+      reason: 'teach jetlag light',
+      goal: 'jetlag',
+      candidates: ['jetlag-light-melatonin'],
+    });
+    expect(live.input.force_silence).toBeFalsy();
+    expect(live.input.activity).toBe('');
   });
 
   test('airport / plane / open_office place_class', () => {
