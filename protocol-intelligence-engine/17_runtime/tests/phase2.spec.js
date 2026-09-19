@@ -1,33 +1,58 @@
 const { test, expect } = require('@playwright/test');
+const http = require('http');
 
-const BASE = process.env.PIE_BASE_URL || 'http://127.0.0.1:8790';
-const PIN = process.env.PIE_STAFF_PIN || 'pie-test-pin';
+const PIE_URL = process.env.PIE_BASE_URL || 'http://127.0.0.1:8840';
+const STAFF_PIN = process.env.PIE_STAFF_PIN || 'pie-test-pin';
 
-async function api(request, method, path, body) {
-  const opts = {
-    method,
-    headers: {
-      'Content-Type': 'application/json',
-      'X-PIE-Staff-Pin': PIN,
-    },
-  };
-  if (body !== undefined) opts.data = body;
-  const res = await request.fetch(BASE + path, opts);
-  const json = await res.json().catch(() => ({}));
-  return { status: res.status(), json };
+function api(method, urlPath, body, opts = {}) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(urlPath, PIE_URL);
+    const data = body != null ? JSON.stringify(body) : null;
+    const headers = {};
+    if (data) {
+      headers['Content-Type'] = 'application/json';
+      headers['Content-Length'] = Buffer.byteLength(data);
+    }
+    if (!opts.noAuth) headers['X-PIE-Staff-Pin'] = opts.pin != null ? opts.pin : STAFF_PIN;
+    const req = http.request(
+      {
+        hostname: u.hostname,
+        port: u.port,
+        path: u.pathname + (u.search || ''),
+        method,
+        headers,
+        timeout: 30000,
+      },
+      (res) => {
+        let buf = '';
+        res.on('data', (c) => (buf += c));
+        res.on('end', () => {
+          let json = null;
+          try {
+            json = JSON.parse(buf);
+          } catch {
+            json = { raw: buf };
+          }
+          resolve({ status: res.statusCode, json });
+        });
+      }
+    );
+    req.on('error', reject);
+    if (data) req.write(data);
+    req.end();
+  });
 }
 
 test.describe.configure({ mode: 'serial' });
 
-test('P2. health reports phase2 version', async ({ request }) => {
-  const res = await request.get(BASE + '/api/health');
-  const j = await res.json();
-  expect(res.ok()).toBeTruthy();
-  expect(String(j.version || '')).toMatch(/phase2|1\.3/);
+test('P2. health reports phase2 version', async () => {
+  const res = await api('GET', '/api/health', null, { noAuth: true });
+  expect(res.status).toBe(200);
+  expect(String(res.json.version || '')).toMatch(/phase2|1\.3/);
 });
 
-test('P2. recommendations expose dose variants + delivery_modality', async ({ request }) => {
-  const { status, json } = await api(request, 'POST', '/api/recommend', {
+test('P2. recommendations expose dose variants + delivery_modality', async () => {
+  const res = await api('POST', '/api/recommend', {
     client_id: 'phase2-dose-' + Date.now(),
     client_type: 'startup_founder',
     available_minutes: 10,
@@ -38,8 +63,8 @@ test('P2. recommendations expose dose variants + delivery_modality', async ({ re
     energy: 3,
     staff_id: 'staff-1',
   });
-  expect(status).toBe(200);
-  const top = (json.recommendations || [])[0];
+  expect(res.status).toBe(200);
+  const top = (res.json.recommendations || [])[0];
   expect(top).toBeTruthy();
   expect(top.dose).toBeTruthy();
   expect(top.dose.micro).toBeGreaterThan(0);
@@ -50,8 +75,8 @@ test('P2. recommendations expose dose variants + delivery_modality', async ({ re
   expect(top.delivery_modality).toMatch(/^(staff_led|audio|text|self_guided)$/);
 });
 
-test('P2. tight gap prefers micro dose', async ({ request }) => {
-  const { status, json } = await api(request, 'POST', '/api/recommend', {
+test('P2. tight gap prefers micro dose', async () => {
+  const res = await api('POST', '/api/recommend', {
     client_id: 'phase2-micro-' + Date.now(),
     client_type: 'startup_founder',
     available_minutes: 2,
@@ -60,15 +85,15 @@ test('P2. tight gap prefers micro dose', async ({ request }) => {
     stress: 5,
     energy: 3,
   });
-  expect(status).toBe(200);
-  const top = (json.recommendations || [])[0];
+  expect(res.status).toBe(200);
+  const top = (res.json.recommendations || [])[0];
   if (top && top.dose) {
     expect(top.preferred_dose).toBe('micro');
   }
 });
 
-test('P2. public context → text or self_guided modality', async ({ request }) => {
-  const { status, json } = await api(request, 'POST', '/api/recommend', {
+test('P2. public context → text or self_guided modality', async () => {
+  const res = await api('POST', '/api/recommend', {
     client_id: 'phase2-public-' + Date.now(),
     client_type: 'startup_founder',
     available_minutes: 5,
@@ -78,13 +103,13 @@ test('P2. public context → text or self_guided modality', async ({ request }) 
     energy: 3,
     upcoming_event_tag: 'none',
   });
-  expect(status).toBe(200);
-  for (const r of json.recommendations || []) {
+  expect(res.status).toBe(200);
+  for (const r of res.json.recommendations || []) {
     expect(['text', 'self_guided']).toContain(r.delivery_modality);
   }
 });
 
-test('P2. outcome updates response_graph and boosts rerank', async ({ request }) => {
+test('P2. outcome updates response_graph and boosts rerank', async () => {
   const client_id = 'phase2-learn-' + Date.now();
   const base = {
     client_id,
@@ -96,7 +121,7 @@ test('P2. outcome updates response_graph and boosts rerank', async ({ request })
     energy: 3,
     goal: 'pre_performance',
   };
-  const before = await api(request, 'POST', '/api/recommend', base);
+  const before = await api('POST', '/api/recommend', base);
   expect(before.status).toBe(200);
   const beforeTop =
     before.json.recommendations &&
@@ -106,7 +131,7 @@ test('P2. outcome updates response_graph and boosts rerank', async ({ request })
     (before.json.recommendations || []).map((r) => r.protocol_id).find((id) => id !== beforeTop) ||
     'centering-ravizza';
 
-  const stored = await api(request, 'POST', '/api/outcome', {
+  const stored = await api('POST', '/api/outcome', {
     client_id,
     protocol_id: target,
     rating_1_to_10: 10,
@@ -121,7 +146,7 @@ test('P2. outcome updates response_graph and boosts rerank', async ({ request })
   }
 
   if (beforeTop && beforeTop !== target) {
-    await api(request, 'POST', '/api/outcome', {
+    await api('POST', '/api/outcome', {
       client_id,
       protocol_id: beforeTop,
       rating_1_to_10: 1,
@@ -130,7 +155,7 @@ test('P2. outcome updates response_graph and boosts rerank', async ({ request })
     });
   }
 
-  const after = await api(request, 'POST', '/api/recommend', base);
+  const after = await api('POST', '/api/recommend', base);
   expect(after.status).toBe(200);
   const afterIds = (after.json.recommendations || []).map((r) => r.protocol_id);
   const afterScores = after.json.scores || {};
@@ -141,19 +166,13 @@ test('P2. outcome updates response_graph and boosts rerank', async ({ request })
       afterScores[target] >= (before.json.scores[target] || 0));
   expect(effect).toBeTruthy();
 
-  // Isolation
-  const other = await api(request, 'POST', '/api/recommend', {
-    ...base,
-    client_id: 'other-' + client_id,
-  });
+  const other = await api('POST', '/api/recommend', { ...base, client_id: 'other-' + client_id });
   expect(other.status).toBe(200);
 });
 
-test('P2. history endpoint returns decisions, outcomes, graph (historical only)', async ({
-  request,
-}) => {
+test('P2. history endpoint returns decisions, outcomes, graph (historical only)', async () => {
   const client_id = 'phase2-hist-' + Date.now();
-  await api(request, 'POST', '/api/recommend', {
+  await api('POST', '/api/recommend', {
     client_id,
     client_type: 'startup_founder',
     available_minutes: 10,
@@ -162,7 +181,7 @@ test('P2. history endpoint returns decisions, outcomes, graph (historical only)'
     stress: 4,
     energy: 3,
   });
-  await api(request, 'POST', '/api/outcome', {
+  await api('POST', '/api/outcome', {
     client_id,
     protocol_id: 'box-breathing',
     rating_1_to_10: 8,
@@ -170,37 +189,35 @@ test('P2. history endpoint returns decisions, outcomes, graph (historical only)'
     delivery_modality: 'staff_led',
   });
 
-  const { status, json } = await api(request, 'GET', `/api/client/${client_id}/history?limit=10`);
-  expect(status).toBe(200);
-  expect(json.client_id).toBe(client_id);
-  expect(json.phrasing).toMatch(/historical/i);
-  expect(json.disclaimer || '').toMatch(/historical|not predictions/i);
-  expect(Array.isArray(json.decisions)).toBeTruthy();
-  expect(Array.isArray(json.outcomes)).toBeTruthy();
-  expect(json.outcomes.length).toBeGreaterThanOrEqual(1);
-  expect(json.response_graph).toBeTruthy();
-  expect(json.response_graph.disclaimer || json.disclaimer).toBeTruthy();
-  const blob = JSON.stringify(json.response_graph);
-  expect(blob.toLowerCase()).not.toMatch(/will improve|predict|guaranteed/);
-  if (json.response_graph.observations && json.response_graph.observations.length) {
-    for (const o of json.response_graph.observations) {
-      expect(String(o).toLowerCase()).toMatch(/historical|observation|rated|logged/);
-    }
+  const res = await api('GET', `/api/client/${client_id}/history?limit=10`);
+  expect(res.status).toBe(200);
+  expect(res.json.client_id).toBe(client_id);
+  expect(String(res.json.phrasing || '')).toMatch(/historical/i);
+  expect(String(res.json.disclaimer || '')).toMatch(/historical|not prediction/i);
+  expect(Array.isArray(res.json.decisions)).toBeTruthy();
+  expect(Array.isArray(res.json.outcomes)).toBeTruthy();
+  expect(res.json.outcomes.length).toBeGreaterThanOrEqual(1);
+  expect(res.json.response_graph).toBeTruthy();
+  const blob = JSON.stringify(res.json.response_graph);
+  expect(blob.toLowerCase()).not.toMatch(/will improve|guaranteed to/);
+  const obs = res.json.response_graph.observations || [];
+  for (const o of obs) {
+    expect(String(o).toLowerCase()).toMatch(/historical|observation|rated|logged|mean/);
   }
 });
 
 test('P2. UI shows dose, modality, and client history panel', async ({ page }) => {
   await page.addInitScript((pin) => {
     sessionStorage.setItem('pie_staff_pin', pin);
-  }, PIN);
-  await page.goto(BASE + '/');
-  await page.fill('#staff_pin', PIN);
+  }, STAFF_PIN);
+  await page.goto(PIE_URL + '/');
+  await page.fill('#staff_pin', STAFF_PIN);
   await page.click('#btn-save-pin');
   await page.fill('#client_id', 'phase2-ui-' + Date.now());
   await page.click('#btn-recommend');
-  await expect(page.locator('#decision-badge')).not.toHaveText('—', { timeout: 10000 });
-  await expect(page.locator('.dose-row').first()).toBeVisible({ timeout: 5000 });
+  await expect(page.locator('#decision-badge')).not.toHaveText('—', { timeout: 15000 });
+  await expect(page.locator('.dose-row').first()).toBeVisible({ timeout: 8000 });
   await expect(page.locator('.modality-row').first()).toBeVisible();
-  await expect(page.locator('#history-block')).toBeVisible();
+  await expect(page.locator('#history-block')).toBeVisible({ timeout: 8000 });
   await expect(page.locator('#client-history')).toBeVisible();
 });

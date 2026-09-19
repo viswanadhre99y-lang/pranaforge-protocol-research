@@ -9,15 +9,15 @@
 | Item | Status |
 |------|--------|
 | Personal response graph (file-backed) | Done — `17_runtime/data/response_graph.json` via `response_graph.js` |
-| Graph update on `/api/outcome` | Done — appends `outcomes.jsonl` **and** updates per-client graph |
+| Graph update on `POST /api/outcome` | Done — appends outcomes.jsonl **and** updates per-client graph |
 | Ranker uses graph more strongly than raw outcomes | Done — graph boost −0.25..+0.25; outcomes.jsonl fallback −0.15..+0.15 (simple averages only) |
 | Duration / dose variants on recommendations | Done — `dose: {micro, minimum, recommended, extended}`; `preferred_dose` prefers **micro** when gap is tight |
 | Delivery modality on recommendations | Done — `delivery_modality: staff_led\|audio\|text\|self_guided` with simple context rules |
-| Store modality with outcomes | Done — optional `delivery_modality` on `POST /api/outcome` |
+| Store modality with outcomes | Done — optional `delivery_modality` on outcome payload + graph node |
 | Longitudinal history API | Done — `GET /api/client/:client_id/history` (decisions + outcomes + response_graph summary) |
 | Staff UI: dose, modality, Client history panel | Done — `public/index.html`, `app.js`, `styles.css` |
-| Docs | This file |
-| Tests | `17_runtime/tests/phase2.spec.js` (+ existing suite) |
+| Docs | This file + `17_runtime/README.md` Phase 2 section |
+| Tests | `17_runtime/tests/phase2.spec.js` (7) + full suite green |
 
 ## Response graph schema
 
@@ -48,6 +48,16 @@ Clients are never mixed. Learning remains **rating-primary simple averages** —
 
 Responses include `phrasing: "historical_observations_only"` and a disclaimer. Observation strings are framed as **historical observations** only — no predictions or clinical claims.
 
+## Metrics after Phase 2
+
+| Metric | Value |
+|--------|------:|
+| Soft golden agreement | **84.5%** (93/110) — still ≥70% |
+| Exact golden | 31.8% (35/110) |
+| Playwright | **41 passed / 0 failed / 1 skipped** (concierge :8787 optional) |
+| Phase 2 tests | **7 passed** |
+| Catalog size | 50 |
+
 ## What did **not** land (honest residual)
 
 | Area | Status |
@@ -59,7 +69,8 @@ Responses include `phrasing: "historical_observations_only"` and a disclaimer. O
 | Vault IP expansion | **Never** |
 | Full sequence scheduler | **Not implemented** (suggested_sequence stub remains) |
 | Consumer app / SSO / UHNW ACLs | **Not implemented** |
+| Concierge UI smoke (:8787) | **Skipped** (service not required for Phase 2) |
 
 ## Honesty line
 
-Scores, confidence, dose preference, and modality selection are **engineering heuristics**. The response graph is an observational personalization prior, not causal proof that a protocol “works” for a client.
+Scores, confidence, dose preference, and modality selection are **engineering heuristics**. The response graph is an observational personalization prior, not causal proof that a protocol “works” for a client. Phase 2 does **not** make clinical claims.
