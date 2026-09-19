@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-19T09:43:03.941Z",
+  "generated_at": "2026-09-19T09:45:07.120Z",
   "cases_path": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/13_test_cases/test_cases.jsonl",
   "n": 110,
-  "exact_match": 70,
-  "exact_rate": 0.6363636363636364,
+  "exact_match": 69,
+  "exact_rate": 0.6272727272727273,
   "soft_agree": 110,
   "soft_rate": 1,
   "soft_fails": 0,
@@ -16,7 +16,7 @@
   "failure_category_counts": [
     {
       "category": "exact_miss_soft_ok",
-      "count": 40
+      "count": 41
     },
     {
       "category": "golden_ranked_too_low",
@@ -43,6 +43,7 @@
     "TC030",
     "TC035",
     "TC039",
+    "TC042",
     "TC047",
     "TC048",
     "TC049",

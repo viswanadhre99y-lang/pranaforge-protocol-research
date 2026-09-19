@@ -412,7 +412,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:35:47.763Z",
+        "as_of": "2026-09-19T09:45:16.957Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -540,7 +540,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "startup_founder",
-      "as_of": "2026-09-19T09:35:47.763Z",
+      "as_of": "2026-09-19T09:45:16.957Z",
       "physical": {
         "sleep_h": {
           "value": 6,
@@ -661,16 +661,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_26da55d75a47",
+      "decision_id": "dr_459975e3c4bd",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:35:47.765Z"
+        "decided_at": "2026-09-19T09:45:16.959Z"
       },
       "state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:35:47.763Z",
+        "as_of": "2026-09-19T09:45:16.957Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -1853,7 +1853,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:35:47.768Z",
+        "as_of": "2026-09-19T09:45:16.962Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -1981,7 +1981,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "startup_founder",
-      "as_of": "2026-09-19T09:35:47.768Z",
+      "as_of": "2026-09-19T09:45:16.962Z",
       "physical": {
         "sleep_h": {
           "value": 6,
@@ -2102,16 +2102,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_c9206e7a3549",
+      "decision_id": "dr_7d2f596bd4d8",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:35:47.770Z"
+        "decided_at": "2026-09-19T09:45:16.963Z"
       },
       "state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:35:47.768Z",
+        "as_of": "2026-09-19T09:45:16.962Z",
         "physical": {
           "sleep_h": {
             "value": 6,

@@ -424,7 +424,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:35:46.971Z",
+        "as_of": "2026-09-19T09:45:16.158Z",
         "physical": {
           "sleep_h": {
             "value": 4.5,
@@ -551,7 +551,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "startup_founder",
-      "as_of": "2026-09-19T09:35:46.971Z",
+      "as_of": "2026-09-19T09:45:16.158Z",
       "physical": {
         "sleep_h": {
           "value": 4.5,
@@ -672,16 +672,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_9bbd7900b10f",
+      "decision_id": "dr_e2930c73abc2",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:35:46.973Z"
+        "decided_at": "2026-09-19T09:45:16.159Z"
       },
       "state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:35:46.971Z",
+        "as_of": "2026-09-19T09:45:16.158Z",
         "physical": {
           "sleep_h": {
             "value": 4.5,
@@ -1929,7 +1929,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:35:46.977Z",
+        "as_of": "2026-09-19T09:45:16.162Z",
         "physical": {
           "sleep_h": {
             "value": 4,
@@ -2057,7 +2057,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "startup_founder",
-      "as_of": "2026-09-19T09:35:46.977Z",
+      "as_of": "2026-09-19T09:45:16.162Z",
       "physical": {
         "sleep_h": {
           "value": 4,
@@ -2178,16 +2178,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_b6c22ac3294b",
+      "decision_id": "dr_6c150d1227c0",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:35:46.978Z"
+        "decided_at": "2026-09-19T09:45:16.163Z"
       },
       "state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:35:46.977Z",
+        "as_of": "2026-09-19T09:45:16.162Z",
         "physical": {
           "sleep_h": {
             "value": 4,
@@ -3447,7 +3447,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "sleep_recovery_seekers",
-        "as_of": "2026-09-19T09:35:46.981Z",
+        "as_of": "2026-09-19T09:45:16.166Z",
         "physical": {
           "sleep_h": {
             "value": 3,
@@ -3574,7 +3574,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "sleep_recovery_seekers",
-      "as_of": "2026-09-19T09:35:46.981Z",
+      "as_of": "2026-09-19T09:45:16.166Z",
       "physical": {
         "sleep_h": {
           "value": 3,
@@ -3695,16 +3695,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_cd5026d79b17",
+      "decision_id": "dr_9acfde79888f",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:35:46.983Z"
+        "decided_at": "2026-09-19T09:45:16.167Z"
       },
       "state": {
         "client_id": null,
         "client_type": "sleep_recovery_seekers",
-        "as_of": "2026-09-19T09:35:46.981Z",
+        "as_of": "2026-09-19T09:45:16.166Z",
         "physical": {
           "sleep_h": {
             "value": 3,
@@ -5073,7 +5073,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "corporate_ceo",
-        "as_of": "2026-09-19T09:35:46.986Z",
+        "as_of": "2026-09-19T09:45:16.169Z",
         "physical": {
           "sleep_h": {
             "value": null,
@@ -5199,7 +5199,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "corporate_ceo",
-      "as_of": "2026-09-19T09:35:46.986Z",
+      "as_of": "2026-09-19T09:45:16.169Z",
       "physical": {
         "sleep_h": {
           "value": null,
@@ -5319,16 +5319,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_cc7673741655",
+      "decision_id": "dr_906d878099e2",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:35:46.988Z"
+        "decided_at": "2026-09-19T09:45:16.170Z"
       },
       "state": {
         "client_id": null,
         "client_type": "corporate_ceo",
-        "as_of": "2026-09-19T09:35:46.986Z",
+        "as_of": "2026-09-19T09:45:16.169Z",
         "physical": {
           "sleep_h": {
             "value": null,
