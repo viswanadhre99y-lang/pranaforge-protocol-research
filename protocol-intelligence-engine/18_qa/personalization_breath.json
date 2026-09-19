@@ -412,7 +412,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:45:16.957Z",
+        "as_of": "2026-09-19T10:20:44.000Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -540,7 +540,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "startup_founder",
-      "as_of": "2026-09-19T09:45:16.957Z",
+      "as_of": "2026-09-19T10:20:44.000Z",
       "physical": {
         "sleep_h": {
           "value": 6,
@@ -661,16 +661,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_459975e3c4bd",
+      "decision_id": "dr_26e0f091be19",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:45:16.959Z"
+        "decided_at": "2026-09-19T10:20:44.002Z"
       },
       "state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:45:16.957Z",
+        "as_of": "2026-09-19T10:20:44.000Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -1825,8 +1825,8 @@
       "if-then-gollwitzer": 0.649,
       "physiological-sigh-acute": 0.628,
       "cognitive-reappraisal": 0.546,
-      "tipp": 0.543,
-      "box-breathing": 0.542
+      "box-breathing": 0.542,
+      "pmr": 0.538
     },
     "input": {
       "client_type": "startup_founder",
@@ -1853,7 +1853,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:45:16.962Z",
+        "as_of": "2026-09-19T10:20:44.005Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -1981,7 +1981,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "startup_founder",
-      "as_of": "2026-09-19T09:45:16.962Z",
+      "as_of": "2026-09-19T10:20:44.005Z",
       "physical": {
         "sleep_h": {
           "value": 6,
@@ -2102,16 +2102,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_7d2f596bd4d8",
+      "decision_id": "dr_21a250025b38",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:45:16.963Z"
+        "decided_at": "2026-09-19T10:20:44.006Z"
       },
       "state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:45:16.962Z",
+        "as_of": "2026-09-19T10:20:44.005Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -2562,46 +2562,6 @@
           "clinician_only": false
         },
         {
-          "protocol_id": "tipp",
-          "score": 0.543,
-          "protocol_version": "1.0.0",
-          "evidence_class": "practitioner_derived",
-          "features": {
-            "need_match": 0.2,
-            "context_match": 0.1,
-            "timing": 0.35,
-            "evidence": 0.55,
-            "history": 0.5,
-            "preference": 0.75,
-            "feasibility": 0.8,
-            "expected_benefit": 0.59,
-            "adherence_prob": 0.93,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.2,
-            "state_fit": 0.59,
-            "context_fit": 0.1,
-            "duration_fit": 0.8,
-            "preference_fit": 0.75,
-            "historical_response": 0.5,
-            "event_fit": 0.35,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.543
-          },
-          "why": [
-            "evidence:C",
-            "duration:5m",
-            "pref:non-breath"
-          ],
-          "min_duration_sec": 60,
-          "recommended_duration_sec": 300,
-          "max_duration_sec": 900,
-          "public_discrete": false,
-          "clinician_only": false
-        },
-        {
           "protocol_id": "box-breathing",
           "score": 0.542,
           "protocol_version": "1.0.0",
@@ -2640,6 +2600,46 @@
           "min_duration_sec": 120,
           "recommended_duration_sec": 120,
           "max_duration_sec": 300,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "pmr",
+          "score": 0.538,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.16,
+            "context_match": 0.22,
+            "timing": 0.35,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.6,
+            "expected_benefit": 0.8,
+            "adherence_prob": 0.7,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.16,
+            "state_fit": 0.8,
+            "context_fit": 0.22,
+            "duration_fit": 0.6,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.35,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.538
+          },
+          "why": [
+            "evidence:B",
+            "duration:12m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 600,
+          "recommended_duration_sec": 720,
+          "max_duration_sec": 1200,
           "public_discrete": false,
           "clinician_only": false
         }

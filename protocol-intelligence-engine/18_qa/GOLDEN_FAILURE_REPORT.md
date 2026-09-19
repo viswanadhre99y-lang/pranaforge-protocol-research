@@ -1,13 +1,13 @@
 # GOLDEN_FAILURE_REPORT
 
-**Generated:** 2026-09-19T09:43:33.830Z (convert to Asia/Calcutta for display)
+**Generated:** 2026-09-19T10:19:45.628Z (convert to Asia/Calcutta for display)
 **Suite:** `13_test_cases/test_cases.jsonl` (110 cases)
 
 ## Live metrics (re-measured)
 
 | Metric | Count | Rate |
 |--------|------:|-----:|
-| Exact (pie.spec) | 58/110 | 52.7% |
+| Exact (pie.spec) | 63/110 | 57.3% |
 | Soft agreement | 110/110 | 100.0% |
 
 Baseline claimed (QA_REPORT_v2): exact 23.6% (26/110), soft 78.2% (86/110).
@@ -18,13 +18,13 @@ Baseline claimed (QA_REPORT_v2): exact 23.6% (26/110), soft 78.2% (86/110).
 |-------|---------|------:|
 | A | Never generated (not in catalog / cannot produce) | 0 |
 | B | Incorrectly hard-excluded | 0 |
-| C | Ranked too low (survived filters, outside Top-3) | 2 |
-| (null) | PASS / soft Top-3 / silence-like / meta | 108 |
+| C | Ranked too low (survived filters, outside Top-3) | 1 |
+| (null) | PASS / soft Top-3 / silence-like / meta | 109 |
 
 ## Classification counts
 
-- **PASS**: 58
-- **soft-pass**: 52
+- **PASS**: 63
+- **soft-pass**: 47
 
 ## Taxonomy 1–12 (counts on failing / tagged cases)
 

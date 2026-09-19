@@ -67,6 +67,7 @@ function parseContext(ctx) {
   else if (/hiring|firing/.test(c)) upcoming_event_tag = 'hiring_firing';
   else if (/runway/.test(c)) upcoming_event_tag = 'runway_scare';
   else if (/live.?blank|elevator|blank/.test(c)) upcoming_event_tag = 'live_blank';
+  else if (/blast e-?mail|urge to send|delay send|angry e-?mail|send.*angry/.test(c)) upcoming_event_tag = 'impulse_send';
 
   return { place_class, available_minutes, upcoming_event_tag, privacy, raw_gap_sec };
 }
@@ -127,10 +128,12 @@ function mapGoldenCase(tc) {
 
   // State/reason can carry event cues the short context string missed
   if (cx.upcoming_event_tag === 'none') {
-    const stateReason = String(tc.state || '') + ' ' + reason;
+    const stateReason = String(tc.state || '') + ' ' + reason + ' ' + String(tc.context || '') + ' ' + String(tc.message || '');
     if (/conflict|argument|fight with|partner dispute/i.test(stateReason)) cx.upcoming_event_tag = 'post_conflict';
     else if (/hiring|firing|moral.?load/i.test(stateReason)) cx.upcoming_event_tag = 'hiring_firing';
     else if (/reject|turned down|no from/i.test(stateReason)) cx.upcoming_event_tag = 'post_rejection';
+    else if (/blast e-?mail|urge to send|delay send|angry e-?mail|behavior delay send/i.test(stateReason))
+      cx.upcoming_event_tag = 'impulse_send';
   }
 
   // Goal → event when context thin; prefer micro event when gap is tiny

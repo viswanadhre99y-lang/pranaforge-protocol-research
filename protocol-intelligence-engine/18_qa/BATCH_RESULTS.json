@@ -1,14 +1,14 @@
 {
   "total": 110,
   "comparable": 110,
-  "exact_match": 58,
-  "exact_rate": 0.5272727272727272,
-  "candidate_hits": 75,
+  "exact_match": 63,
+  "exact_rate": 0.5727272727272728,
+  "candidate_hits": 78,
   "silence_agree": 11,
   "soft_agree": 110,
   "soft_agreement_rate": 1,
-  "top3_agree": 103,
-  "top3_agreement_rate": 0.9363636363636364,
+  "top3_agree": 104,
+  "top3_agreement_rate": 0.9454545454545454,
   "note": "Suite does not fail on heuristic disagreement with golden selected; rates recorded only. soft = exact OR top-in-candidates OR expected-in-top3 OR silence-agree OR staff_*/SEQUENCE soft.",
   "rows": [
     {
@@ -65,12 +65,12 @@
       "got": "worry-postpone",
       "top3": [
         "worry-postpone",
-        "stimulus-control",
-        "pmr"
+        "pmr",
+        "mbsr-breath-anchor"
       ],
       "match": false,
       "candHit": true,
-      "top3Hit": true,
+      "top3Hit": false,
       "soft": true,
       "score": 1.136,
       "ambiguous": false
@@ -246,17 +246,17 @@
     {
       "id": "TC016",
       "expected": "morning-light",
-      "got": "jetlag-light-melatonin",
+      "got": "morning-light",
       "top3": [
-        "jetlag-light-melatonin",
         "morning-light",
+        "jetlag-light-melatonin",
         "nap-protocol"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.188,
+      "score": 1.067,
       "ambiguous": false
     },
     {
@@ -314,7 +314,7 @@
       "top3": [
         "morning-light",
         "nap-protocol",
-        "jetlag-light-melatonin"
+        "yoga-nidra-nsdr"
       ],
       "match": true,
       "candHit": true,
@@ -390,17 +390,17 @@
     {
       "id": "TC025",
       "expected": "cyclic-sighing",
-      "got": "cyclic-hyperventilation-caution",
+      "got": "cyclic-sighing",
       "top3": [
-        "cyclic-hyperventilation-caution",
+        "cyclic-sighing",
         "brief-pmr-acute",
         "exhale-emphasized"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
-      "top3Hit": false,
+      "top3Hit": true,
       "soft": true,
-      "score": 0.705,
+      "score": 0.766,
       "ambiguous": false
     },
     {
@@ -438,17 +438,17 @@
     {
       "id": "TC028",
       "expected": "if-then-gollwitzer",
-      "got": "affect-labeling",
+      "got": "if-then-gollwitzer",
       "top3": [
-        "affect-labeling",
+        "if-then-gollwitzer",
         "pmr",
-        "act-defusion"
+        "affect-labeling"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
-      "top3Hit": false,
+      "top3Hit": true,
       "soft": true,
-      "score": 0.937,
+      "score": 1.383,
       "ambiguous": false
     },
     {
@@ -486,7 +486,7 @@
       "top3": [
         "morning-light",
         "nap-protocol",
-        "jetlag-light-melatonin"
+        "yoga-nidra-nsdr"
       ],
       "match": true,
       "candHit": true,
@@ -536,7 +536,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.855,
+      "score": 0.675,
       "ambiguous": false
     },
     {
@@ -616,7 +616,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.805,
+      "score": 0.625,
       "ambiguous": false
     },
     {
@@ -718,7 +718,7 @@
       "top3": [
         "nap-protocol",
         "morning-light",
-        "jetlag-light-melatonin"
+        "yoga-nidra-nsdr"
       ],
       "match": true,
       "candHit": true,
@@ -822,17 +822,17 @@
     {
       "id": "TC053",
       "expected": "caffeine-cutoff",
-      "got": "jetlag-light-melatonin",
+      "got": "morning-light",
       "top3": [
-        "jetlag-light-melatonin",
         "morning-light",
+        "jetlag-light-melatonin",
         "caffeine-cutoff"
       ],
       "match": false,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.88,
+      "score": 0.789,
       "ambiguous": false
     },
     {
@@ -982,7 +982,7 @@
       "top3": [
         "wind-down",
         "pmr",
-        "stimulus-control"
+        "mbsr-breath-anchor"
       ],
       "match": true,
       "candHit": true,
@@ -1266,17 +1266,17 @@
     {
       "id": "TC081",
       "expected": "SEQUENCE_light_nap_ppr",
-      "got": "jetlag-light-melatonin",
+      "got": "morning-light",
       "top3": [
-        "jetlag-light-melatonin",
         "morning-light",
+        "jetlag-light-melatonin",
         "nap-protocol"
       ],
       "match": false,
       "candHit": true,
       "top3Hit": false,
       "soft": true,
-      "score": 1.133,
+      "score": 0.998,
       "ambiguous": false
     },
     {
@@ -1450,17 +1450,17 @@
     {
       "id": "TC093",
       "expected": "morning-light",
-      "got": "jetlag-light-melatonin",
+      "got": "morning-light",
       "top3": [
-        "jetlag-light-melatonin",
         "morning-light",
+        "jetlag-light-melatonin",
         "pmr"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.154,
+      "score": 1.054,
       "ambiguous": false
     },
     {
@@ -1662,17 +1662,17 @@
     {
       "id": "TC107",
       "expected": "nap-protocol",
-      "got": "jetlag-light-melatonin",
+      "got": "nap-protocol",
       "top3": [
-        "jetlag-light-melatonin",
         "nap-protocol",
-        "morning-light"
+        "morning-light",
+        "cyclic-sighing"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.609,
+      "score": 0.575,
       "ambiguous": false
     },
     {

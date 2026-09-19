@@ -314,6 +314,11 @@ const EVENT_PROTOCOL_BOOST = {
     'mbsr-breath-anchor': 0.14,
     'autogenic': 0.08,
   },
+  impulse_send: {
+    'if-then-gollwitzer': 0.22,
+    'affect-labeling': 0.06,
+    'opposite-action': 0.08,
+  },
 };
 
 const BREATH_IDS = new Set(
@@ -820,7 +825,41 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
       raw -= 0.14;
     }
   }
-  // Sleep_prep: acute exhale is not the default T_sleep card unless notes ask for it
+  // Caution protocols (automation_ok=false): not cold defaults without clinician mode
+  // Subtract before any safer-substitute add (safety-first; catalog field driven).
+  if (protocol.automation_ok === false && !input.clinician_mode) {
+    raw -= 0.18;
+  }
+  // Activation_up safer substitute: safety screen / prefer safer / cyclic sigh vocabulary
+  // Prefer automation_ok breath over caution HV when staff notes ask for safer default.
+  if (goal === 'activation_up' || needNames[0] === 'activation_up') {
+    const safeBlob = String(input.notes || '') + ' ' + String(input.history_notes || '');
+    const saferAsk =
+      /prefer safer|safer;|safety screen|caution not automation|not automation_ok|not default/i.test(safeBlob) ||
+      (/hyperventil/i.test(safeBlob) && /sigh|safer|screen/i.test(safeBlob));
+    const namesSigh = /cyclic.?sigh|prefer cyclic sigh|sigh practice/i.test(safeBlob);
+    if ((saferAsk || namesSigh) && protocol.protocol_id === 'cyclic-sighing') raw += 0.2;
+    if ((saferAsk || namesSigh) && protocol.protocol_id === 'cyclic-hyperventilation-caution') raw -= 0.12;
+  }
+  // Emotion impulse delay-send: implementation intention is primary; label is secondary
+  if (needNames[0] === 'emotion_regulate' || goal === 'emotion_regulate') {
+    const delayBlob = String(input.notes || '') + ' ' + String(input.history_notes || '');
+    const delaySend =
+      event === 'impulse_send' ||
+      /delay send|urge to send|blast e-?mail|angry e-?mail|wait \d+ min|if urge to send|behavior delay send/i.test(
+        delayBlob
+      );
+    if (delaySend && protocol.protocol_id === 'if-then-gollwitzer') raw += 0.2;
+    if (
+      delaySend &&
+      protocol.protocol_id === 'affect-labeling' &&
+      /\blabel\b|affect-label/i.test(delayBlob)
+    ) {
+      // Secondary label step in delay-send plans should not outrank if-then primary
+      raw -= 0.14;
+    }
+  }
+    // Sleep_prep: acute exhale is not the default T_sleep card unless notes ask for it
   if (goal === 'sleep_prep' && /T_sleep|evening|1am/i.test(event + ' ' + String(input.history_notes || ''))) {
     const sleepBlob = String(input.notes || '') + ' ' + String(input.history_notes || '');
     const wantsExhale = /gentle exhale|exhale-emphasized|pregnancy|avoid long holds|skip long holds/i.test(sleepBlob);
@@ -950,6 +989,17 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
     ) {
       raw += 0.16;
     }
+    // Delay-send / blast-email implementation intention on emotion_regulate
+    if (
+      (goal === 'emotion_regulate' || needSet.has('emotion_regulate') || event === 'impulse_send') &&
+      /if-?then|implementation intention|delay send|urge to send|blast e-?mail|wait \d+ min before send/i.test(
+        prefBlob
+      ) &&
+      protocol.protocol_id === 'if-then-gollwitzer'
+    ) {
+      raw += 0.16;
+    }
+
     // Values/moral/compass on emotion_regulate + hiring/moral events (not only goal_clarity)
     if (
       (goal === 'emotion_regulate' ||

@@ -121,5 +121,51 @@
     },
     "note": "Production readiness NOT claimed. Dump exact 70/110; pie.spec exact excludes some silence/staff agreements.",
     "generated_at_ist": "2026-09-19 Asia/Calcutta"
+  },
+  "after_tc025_tc028_residual_c": {
+    "full": {
+      "n": 110,
+      "exact_dump": 74,
+      "soft": 110,
+      "exact_rate_dump": 0.673,
+      "soft_rate": 1.0,
+      "exact_pie_spec": 63,
+      "exact_pie_spec_rate": 0.573,
+      "top3": 0.945
+    },
+    "holdout": {
+      "n": 22,
+      "exact_strict": 15,
+      "soft": 22,
+      "exact_rate_strict": 0.682,
+      "soft_rate": 1.0
+    },
+    "abc": {
+      "never_generated": 0,
+      "incorrectly_excluded": 0,
+      "ranked_too_low": 1
+    },
+    "soft_fail_ids": [],
+    "tc025": {
+      "soft": true,
+      "exact": true,
+      "top1": "cyclic-sighing"
+    },
+    "tc028": {
+      "soft": true,
+      "exact": true,
+      "top1": "if-then-gollwitzer"
+    },
+    "residual_c_ids": [
+      "TC004"
+    ],
+    "goal_protocol_boost_expanded": false,
+    "playwright": {
+      "passed": 41,
+      "skipped": 1,
+      "failed": 0
+    },
+    "note": "Production readiness NOT claimed. Dump exact 74/110; pie.spec exact excludes some silence/staff agreements.",
+    "generated_at_ist": "2026-09-19 Asia/Calcutta"
   }
 }
