@@ -1,0 +1,1579 @@
+{
+  "generated_at": "2026-09-19T09:23:59.372Z",
+  "note": "Held-out synthetic scenarios NOT used for GOAL_PROTOCOL_BOOST calibration. Structural health only (no author labels).",
+  "n": 40,
+  "action_counts": {
+    "suggest": 40,
+    "silence": 0,
+    "escalate": 0
+  },
+  "has_recommendation_when_suggest": 40,
+  "score_breakdown_present": 40,
+  "score_breakdown_rate": 1,
+  "compare_to_golden": {
+    "golden_soft_target_reference": "see GOLDEN_FAILURE_REPORT.json metrics.soft_rate",
+    "held_out_metric": "structural: recommend path returns score_breakdown + non-empty top3 when action=suggest"
+  },
+  "rows": [
+    {
+      "id": "HO001",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "investor_meeting",
+        "goal": "stress_acute",
+        "available_minutes": 2,
+        "stress": 3,
+        "energy": 5,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "physiological-sigh-acute",
+        "tactical-breath-reset",
+        "brief-pmr-acute"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.7,
+        "context_fit": 0.35,
+        "duration_fit": 0.9,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.95,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.23
+      },
+      "exclusions_total": 5
+    },
+    {
+      "id": "HO002",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "investor_meeting",
+        "goal": "recovery_rest",
+        "available_minutes": 10,
+        "stress": 4,
+        "energy": 4,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "yoga-nidra-nsdr",
+        "process-visualization",
+        "pettlep"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.61,
+        "context_fit": 0.09,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.98
+      },
+      "exclusions_total": 6
+    },
+    {
+      "id": "HO003",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "T_sleep",
+        "goal": "stress_acute",
+        "available_minutes": 1,
+        "stress": 5,
+        "energy": 3,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "physiological-sigh-acute",
+        "tactical-breath-reset",
+        "brief-pmr-acute"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.7,
+        "context_fit": 0.35,
+        "duration_fit": 0.8,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.5,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.106
+      },
+      "exclusions_total": 8
+    },
+    {
+      "id": "HO004",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "T_sleep",
+        "goal": "recovery_rest",
+        "available_minutes": 5,
+        "stress": 2,
+        "energy": 2,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "art-brief",
+        "cognitive-reappraisal",
+        "brief-pmr-acute"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.17,
+        "state_fit": 0.53,
+        "context_fit": 0,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.7,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.715
+      },
+      "exclusions_total": 16
+    },
+    {
+      "id": "HO005",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "post_landing",
+        "goal": "micro_reset",
+        "available_minutes": 15,
+        "stress": 3,
+        "energy": 5,
+        "prefers_breath": "no",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "affect-labeling",
+        "jetlag-light-melatonin",
+        "brief-pmr-acute"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.74,
+        "state_fit": 0.7,
+        "context_fit": 0,
+        "duration_fit": 0.95,
+        "preference_fit": 0.75,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.9
+      },
+      "exclusions_total": 5
+    },
+    {
+      "id": "HO006",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "post_landing",
+        "goal": "recovery_rest",
+        "available_minutes": 2,
+        "stress": 4,
+        "energy": 4,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "yoga-nidra-nsdr",
+        "nap-protocol",
+        "pmr"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.88,
+        "state_fit": 0.61,
+        "context_fit": 0.09,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.95,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.087
+      },
+      "exclusions_total": 3
+    },
+    {
+      "id": "HO007",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "meeting_streak",
+        "goal": "micro_reset",
+        "available_minutes": 10,
+        "stress": 5,
+        "energy": 3,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "physiological-sigh-acute",
+        "tactical-breath-reset",
+        "affect-labeling"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.7,
+        "context_fit": 0.35,
+        "duration_fit": 0.96,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.064
+      },
+      "exclusions_total": 8
+    },
+    {
+      "id": "HO008",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "meeting_streak",
+        "goal": "recovery_rest",
+        "available_minutes": 1,
+        "stress": 2,
+        "energy": 2,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "task-switch-buffer",
+        "brief-pmr-acute",
+        "affect-labeling"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.28,
+        "state_fit": 0.58,
+        "context_fit": 0.68,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.95,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.64
+      },
+      "exclusions_total": 3
+    },
+    {
+      "id": "HO009",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "live_blank",
+        "goal": "micro_reset",
+        "available_minutes": 5,
+        "stress": 3,
+        "energy": 5,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "physiological-sigh-acute",
+        "centering-ravizza",
+        "tactical-breath-reset"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.7,
+        "context_fit": 0.35,
+        "duration_fit": 0.92,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.95,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.192
+      },
+      "exclusions_total": 17
+    },
+    {
+      "id": "HO010",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "live_blank",
+        "goal": "emotion_regulate",
+        "available_minutes": 15,
+        "stress": 4,
+        "energy": 4,
+        "prefers_breath": "no",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "opposite-action",
+        "affect-labeling",
+        "self-distancing"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.8,
+        "state_fit": 0.61,
+        "context_fit": 0,
+        "duration_fit": 0.73,
+        "preference_fit": 0.75,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.958
+      },
+      "exclusions_total": 8
+    },
+    {
+      "id": "HO011",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "none",
+        "goal": "micro_reset",
+        "available_minutes": 2,
+        "stress": 5,
+        "energy": 3,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "physiological-sigh-acute",
+        "tactical-breath-reset",
+        "affect-labeling"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.7,
+        "context_fit": 0.35,
+        "duration_fit": 0.9,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.5,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.196
+      },
+      "exclusions_total": 5
+    },
+    {
+      "id": "HO012",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "office",
+        "upcoming_event_tag": "none",
+        "goal": "emotion_regulate",
+        "available_minutes": 10,
+        "stress": 2,
+        "energy": 2,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "opposite-action",
+        "self-distancing",
+        "affect-labeling"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.84,
+        "state_fit": 0.53,
+        "context_fit": 0,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.7,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.976
+      },
+      "exclusions_total": 8
+    },
+    {
+      "id": "HO013",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "investor_meeting",
+        "goal": "micro_reset",
+        "available_minutes": 1,
+        "stress": 3,
+        "energy": 5,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "physiological-sigh-acute",
+        "tactical-breath-reset",
+        "centering-ravizza"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.7,
+        "context_fit": 0,
+        "duration_fit": 0.8,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.95,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.258
+      },
+      "exclusions_total": 2
+    },
+    {
+      "id": "HO014",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "investor_meeting",
+        "goal": "emotion_regulate",
+        "available_minutes": 5,
+        "stress": 4,
+        "energy": 4,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "affect-labeling",
+        "process-visualization",
+        "self-distancing"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.76,
+        "state_fit": 0.7,
+        "context_fit": 0,
+        "duration_fit": 0.84,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.859
+      },
+      "exclusions_total": 15
+    },
+    {
+      "id": "HO015",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "T_sleep",
+        "goal": "sleep_prep",
+        "available_minutes": 15,
+        "stress": 5,
+        "energy": 3,
+        "prefers_breath": "no",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "pmr",
+        "stimulus-control",
+        "evening-light-hygiene"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.82,
+        "context_fit": 0.38,
+        "duration_fit": 0.68,
+        "preference_fit": 0.75,
+        "historical_response": 0.5,
+        "event_fit": 0.5,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.066
+      },
+      "exclusions_total": 6
+    },
+    {
+      "id": "HO016",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "T_sleep",
+        "goal": "emotion_regulate",
+        "available_minutes": 2,
+        "stress": 2,
+        "energy": 2,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "affect-labeling",
+        "opposite-action",
+        "self-distancing"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.88,
+        "state_fit": 0.78,
+        "context_fit": 0,
+        "duration_fit": 0.8,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.5,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.024
+      },
+      "exclusions_total": 6
+    },
+    {
+      "id": "HO017",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "post_landing",
+        "goal": "sleep_prep",
+        "available_minutes": 10,
+        "stress": 3,
+        "energy": 5,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "pmr",
+        "stimulus-control",
+        "jetlag-light-melatonin"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.93,
+        "state_fit": 0.7,
+        "context_fit": 0.38,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.95,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.133
+      },
+      "exclusions_total": 6
+    },
+    {
+      "id": "HO018",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "post_landing",
+        "goal": "emotion_regulate",
+        "available_minutes": 1,
+        "stress": 4,
+        "energy": 4,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "affect-labeling",
+        "jetlag-light-melatonin",
+        "act-defusion"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.84,
+        "state_fit": 0.7,
+        "context_fit": 0,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.973
+      },
+      "exclusions_total": 2
+    },
+    {
+      "id": "HO019",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "meeting_streak",
+        "goal": "sleep_prep",
+        "available_minutes": 5,
+        "stress": 5,
+        "energy": 3,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "stimulus-control",
+        "478-breathing",
+        "mbsr-breath-anchor"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.74,
+        "state_fit": 0.98,
+        "context_fit": 0.25,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.817
+      },
+      "exclusions_total": 15
+    },
+    {
+      "id": "HO020",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "meeting_streak",
+        "goal": "jetlag",
+        "available_minutes": 15,
+        "stress": 2,
+        "energy": 2,
+        "prefers_breath": "no",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "jetlag-light-melatonin",
+        "morning-light",
+        "caffeine-cutoff"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.74,
+        "state_fit": 0.7,
+        "context_fit": 0,
+        "duration_fit": 0.97,
+        "preference_fit": 0.75,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.133
+      },
+      "exclusions_total": 5
+    },
+    {
+      "id": "HO021",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "live_blank",
+        "goal": "sleep_prep",
+        "available_minutes": 2,
+        "stress": 3,
+        "energy": 5,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "pmr",
+        "stimulus-control",
+        "worry-postpone"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.7,
+        "context_fit": 0.38,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.016
+      },
+      "exclusions_total": 6
+    },
+    {
+      "id": "HO022",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "live_blank",
+        "goal": "jetlag",
+        "available_minutes": 10,
+        "stress": 4,
+        "energy": 4,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "jetlag-light-melatonin",
+        "morning-light",
+        "process-visualization"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.76,
+        "state_fit": 0.82,
+        "context_fit": 0,
+        "duration_fit": 0.96,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.209
+      },
+      "exclusions_total": 5
+    },
+    {
+      "id": "HO023",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "none",
+        "goal": "sleep_prep",
+        "available_minutes": 1,
+        "stress": 5,
+        "energy": 3,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "stimulus-control",
+        "physiological-sigh-acute",
+        "wind-down"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.76,
+        "state_fit": 0.98,
+        "context_fit": 0.25,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.5,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.84
+      },
+      "exclusions_total": 6
+    },
+    {
+      "id": "HO024",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "home",
+        "upcoming_event_tag": "none",
+        "goal": "jetlag",
+        "available_minutes": 5,
+        "stress": 2,
+        "energy": 2,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "jetlag-light-melatonin",
+        "caffeine-cutoff",
+        "behavioral-activation-tiny"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.8,
+        "state_fit": 0.7,
+        "context_fit": 0,
+        "duration_fit": 0.64,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.5,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.114
+      },
+      "exclusions_total": 15
+    },
+    {
+      "id": "HO025",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "investor_meeting",
+        "goal": "pre_performance",
+        "available_minutes": 15,
+        "stress": 3,
+        "energy": 5,
+        "prefers_breath": "no",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "process-visualization",
+        "centering-ravizza",
+        "ppr"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.93,
+        "state_fit": 0.7,
+        "context_fit": 0.29,
+        "duration_fit": 0.87,
+        "preference_fit": 0.75,
+        "historical_response": 0.5,
+        "event_fit": 0.95,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.437
+      },
+      "exclusions_total": 5
+    },
+    {
+      "id": "HO026",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "investor_meeting",
+        "goal": "jetlag",
+        "available_minutes": 2,
+        "stress": 4,
+        "energy": 4,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "jetlag-light-melatonin",
+        "morning-light",
+        "physiological-sigh-acute"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.76,
+        "state_fit": 0.82,
+        "context_fit": 0.29,
+        "duration_fit": 0.56,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.203
+      },
+      "exclusions_total": 2
+    },
+    {
+      "id": "HO027",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "T_sleep",
+        "goal": "pre_performance",
+        "available_minutes": 10,
+        "stress": 5,
+        "energy": 3,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "process-visualization",
+        "centering-ravizza",
+        "ppr"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.8,
+        "state_fit": 0.82,
+        "context_fit": 0.29,
+        "duration_fit": 0.8,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.7,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.303
+      },
+      "exclusions_total": 6
+    },
+    {
+      "id": "HO028",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "T_sleep",
+        "goal": "jetlag",
+        "available_minutes": 1,
+        "stress": 2,
+        "energy": 2,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "jetlag-light-melatonin",
+        "physiological-sigh-acute",
+        "brief-pmr-acute"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.74,
+        "state_fit": 0.7,
+        "context_fit": 0.29,
+        "duration_fit": 0.42,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.5,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.114
+      },
+      "exclusions_total": 6
+    },
+    {
+      "id": "HO029",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "post_landing",
+        "goal": "pre_performance",
+        "available_minutes": 5,
+        "stress": 3,
+        "energy": 5,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "process-visualization",
+        "centering-ravizza",
+        "ppr"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.76,
+        "state_fit": 0.7,
+        "context_fit": 0.29,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.7,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.268
+      },
+      "exclusions_total": 14
+    },
+    {
+      "id": "HO030",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "post_landing",
+        "goal": "stress_acute",
+        "available_minutes": 15,
+        "stress": 4,
+        "energy": 4,
+        "prefers_breath": "no",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "54321-grounding",
+        "jetlag-light-melatonin",
+        "pmr"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.74,
+        "state_fit": 0.53,
+        "context_fit": 0,
+        "duration_fit": 0.95,
+        "preference_fit": 0.75,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.993
+      },
+      "exclusions_total": 4
+    },
+    {
+      "id": "HO031",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "meeting_streak",
+        "goal": "pre_performance",
+        "available_minutes": 2,
+        "stress": 5,
+        "energy": 3,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "centering-ravizza",
+        "process-visualization",
+        "ppr"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.93,
+        "state_fit": 0.53,
+        "context_fit": 0,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.7,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.066
+      },
+      "exclusions_total": 2
+    },
+    {
+      "id": "HO032",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "meeting_streak",
+        "goal": "stress_acute",
+        "available_minutes": 10,
+        "stress": 2,
+        "energy": 2,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "54321-grounding",
+        "physiological-sigh-acute",
+        "cyclic-sighing"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.72,
+        "state_fit": 0.58,
+        "context_fit": 0,
+        "duration_fit": 0.92,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.894
+      },
+      "exclusions_total": 5
+    },
+    {
+      "id": "HO033",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "live_blank",
+        "goal": "pre_performance",
+        "available_minutes": 1,
+        "stress": 3,
+        "energy": 5,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "centering-ravizza",
+        "ppr",
+        "tactical-breath-reset"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.53,
+        "context_fit": 0,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.7,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.081
+      },
+      "exclusions_total": 2
+    },
+    {
+      "id": "HO034",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "live_blank",
+        "goal": "stress_acute",
+        "available_minutes": 5,
+        "stress": 4,
+        "energy": 4,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "physiological-sigh-acute",
+        "cyclic-sighing",
+        "exhale-emphasized"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.7,
+        "context_fit": 0,
+        "duration_fit": 0.92,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.95,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.07
+      },
+      "exclusions_total": 15
+    },
+    {
+      "id": "HO035",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "live_blank",
+        "goal": "recovery_rest",
+        "available_minutes": 15,
+        "stress": 5,
+        "energy": 3,
+        "prefers_breath": "no",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "yoga-nidra-nsdr",
+        "nap-protocol",
+        "process-visualization"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.93,
+        "state_fit": 0.61,
+        "context_fit": 0.38,
+        "duration_fit": 0.68,
+        "preference_fit": 0.75,
+        "historical_response": 0.5,
+        "event_fit": 0.35,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.024
+      },
+      "exclusions_total": 5
+    },
+    {
+      "id": "HO036",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "none",
+        "goal": "stress_acute",
+        "available_minutes": 2,
+        "stress": 2,
+        "energy": 2,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "physiological-sigh-acute",
+        "tactical-breath-reset",
+        "54321-grounding"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.93,
+        "state_fit": 0.78,
+        "context_fit": 0,
+        "duration_fit": 0.9,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.5,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.065
+      },
+      "exclusions_total": 2
+    },
+    {
+      "id": "HO037",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "hotel",
+        "upcoming_event_tag": "none",
+        "goal": "recovery_rest",
+        "available_minutes": 10,
+        "stress": 3,
+        "energy": 5,
+        "prefers_breath": "neutral",
+        "privacy": "private",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "yoga-nidra-nsdr",
+        "nap-protocol",
+        "pmr"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.84,
+        "state_fit": 0.53,
+        "context_fit": 0.38,
+        "duration_fit": 0.6,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.5,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.994
+      },
+      "exclusions_total": 5
+    },
+    {
+      "id": "HO038",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "public",
+        "upcoming_event_tag": "investor_meeting",
+        "goal": "stress_acute",
+        "available_minutes": 1,
+        "stress": 4,
+        "energy": 4,
+        "prefers_breath": "neutral",
+        "privacy": "public",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "physiological-sigh-acute",
+        "tactical-breath-reset",
+        "brief-pmr-acute"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.99,
+        "state_fit": 0.7,
+        "context_fit": 0.9,
+        "duration_fit": 0.8,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.95,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.286
+      },
+      "exclusions_total": 34
+    },
+    {
+      "id": "HO039",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "public",
+        "upcoming_event_tag": "investor_meeting",
+        "goal": "recovery_rest",
+        "available_minutes": 5,
+        "stress": 5,
+        "energy": 3,
+        "prefers_breath": "neutral",
+        "privacy": "public",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "centering-ravizza",
+        "brief-pmr-acute",
+        "physiological-sigh-acute"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.2,
+        "state_fit": 0.53,
+        "context_fit": 0.57,
+        "duration_fit": 0.84,
+        "preference_fit": 0.55,
+        "historical_response": 0.5,
+        "event_fit": 0.95,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 0.768
+      },
+      "exclusions_total": 36
+    },
+    {
+      "id": "HO040",
+      "input": {
+        "client_type": "startup_founder",
+        "client_id": "heldout_startup_founder",
+        "place_class": "public",
+        "upcoming_event_tag": "T_sleep",
+        "goal": "micro_reset",
+        "available_minutes": 15,
+        "stress": 2,
+        "energy": 2,
+        "prefers_breath": "no",
+        "privacy": "public",
+        "force_silence": false,
+        "crisis_flag": false,
+        "history_notes": ""
+      },
+      "action": "suggest",
+      "silence": false,
+      "below_threshold": false,
+      "top3": [
+        "affect-labeling",
+        "centering-ravizza",
+        "brief-pmr-acute"
+      ],
+      "top_score_breakdown": {
+        "goal_fit": 0.74,
+        "state_fit": 0.78,
+        "context_fit": 0.73,
+        "duration_fit": 0.95,
+        "preference_fit": 0.75,
+        "historical_response": 0.5,
+        "event_fit": 0.5,
+        "sequence_fit": null,
+        "safety_status": "ok",
+        "final_score": 1.012
+      },
+      "exclusions_total": 35
+    }
+  ]
+}

@@ -11,6 +11,8 @@ const {
   inputSummary,
   DATA_DIR,
   OUTCOMES_PATH,
+  loadOutcomes,
+  responseGraph,
 } = require('./ranker');
 
 const INTENDED_PORT = Number(process.env.PORT || 8790);
@@ -28,19 +30,20 @@ app.set('trust proxy', true);
 app.use(express.json({ limit: '2mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-/** Simple in-memory rate limit: 60 req/min per IP on /api/recommend */
+/** Simple in-memory rate limit: PIE_RATE_LIMIT_PER_MIN (default 60) req/min per IP on /api/recommend */
+const RATE_LIMIT_PER_MIN = Math.max(1, Number(process.env.PIE_RATE_LIMIT_PER_MIN || 60));
 const rateBuckets = new Map();
 function rateLimitRecommend(req, res, next) {
-  const ip = req.ip || req.connection.remoteAddress || 'unknown';
+  const ip = req.ip || req.socket.remoteAddress || 'local';
   const now = Date.now();
   let bucket = rateBuckets.get(ip);
-  if (!bucket || now - bucket.windowStart >= 60000) {
-    bucket = { windowStart: now, count: 0 };
+  if (!bucket || now - bucket.start > 60000) {
+    bucket = { start: now, count: 0 };
     rateBuckets.set(ip, bucket);
   }
-  bucket.count += 1;
-  if (bucket.count > 60) {
-    return res.status(429).json({ error: 'rate_limit', message: '60 requests per minute per IP' });
+  bucket.count++;
+  if (bucket.count > RATE_LIMIT_PER_MIN) {
+    return res.status(429).json({ error: 'rate_limit', message: RATE_LIMIT_PER_MIN + ' requests per minute per IP' });
   }
   next();
 }
@@ -91,7 +94,7 @@ app.get('/api/health', (_req, res) => {
   res.json({
     ok: true,
     service: 'pranaforge-pie-runtime',
-    version: '1.2.0-phase1',
+    version: '1.3.0-phase2',
     catalog_size: CATALOG.length,
     tau_select: SPEC.thresholds.tau_select,
     intended_port: INTENDED_PORT,
@@ -169,12 +172,19 @@ app.post('/api/outcome', requireStaffPin, (req, res) => {
     const protocol_id = body.protocol_id;
     const rating = Number(body.rating_1_to_10);
     const context_key = body.context_key || '';
+    const delivery_modality = body.delivery_modality || null;
+    const ALLOWED_MODALITIES = new Set(['staff_led', 'audio', 'text', 'self_guided']);
     if (!client_id || typeof client_id !== 'string') {
       return res.status(400).json({ error: 'client_id required' });
     }
     if (!protocol_id) return res.status(400).json({ error: 'protocol_id required' });
     if (Number.isNaN(rating) || rating < 1 || rating > 10) {
       return res.status(400).json({ error: 'rating_1_to_10 must be 1–10' });
+    }
+    if (delivery_modality && !ALLOWED_MODALITIES.has(delivery_modality)) {
+      return res.status(400).json({
+        error: 'delivery_modality must be staff_led|audio|text|self_guided',
+      });
     }
     const entry = {
       ts: new Date().toISOString(),
@@ -183,13 +193,78 @@ app.post('/api/outcome', requireStaffPin, (req, res) => {
       rating_1_to_10: rating,
       context_key,
     };
+    if (delivery_modality) entry.delivery_modality = delivery_modality;
     const before = normalizeSubjective(body.before);
     const after = normalizeSubjective(body.after);
     if (before) entry.before = before;
     if (after) entry.after = after;
-    // Learning still uses rating_1_to_10 primarily (see outcomeBoostMap)
+    // Learning: append outcomes.jsonl AND update personal response_graph (Phase 2)
     fs.appendFileSync(OUTCOMES_PATH, JSON.stringify(entry) + '\n');
-    res.json({ ok: true, stored: entry });
+    const graph_node = responseGraph.updateFromOutcome({
+      client_id,
+      protocol_id,
+      rating_1_to_10: rating,
+      context_key,
+      delivery_modality,
+      ts: entry.ts,
+    });
+    res.json({ ok: true, stored: entry, graph_node });
+  } catch (err) {
+    res.status(500).json({ error: String(err.message || err) });
+  }
+});
+
+
+/** Phase 2: longitudinal history — historical observations only (no predictions). */
+app.get('/api/client/:client_id/history', requireStaffPin, (req, res) => {
+  try {
+    const client_id = req.params.client_id;
+    if (!client_id) return res.status(400).json({ error: 'client_id required' });
+    const limit = Math.min(100, Math.max(1, Number(req.query.limit) || 20));
+
+    let decisions = [];
+    if (fs.existsSync(AUDIT_PATH)) {
+      const lines = fs.readFileSync(AUDIT_PATH, 'utf8').split('\n').filter(Boolean);
+      for (let i = lines.length - 1; i >= 0 && decisions.length < limit; i--) {
+        try {
+          const e = JSON.parse(lines[i]);
+          if (e.client_id === client_id && (e.kind === 'recommend' || e.kind === 'batch')) {
+            decisions.push({
+              ts: e.ts,
+              kind: e.kind,
+              action: e.action,
+              silence: e.silence,
+              top3: e.top3 || [],
+              confidence: e.confidence,
+              inputs_summary: e.inputs_summary || null,
+              decision_id:
+                e.decision_record && e.decision_record.decision_id
+                  ? e.decision_record.decision_id
+                  : null,
+            });
+          }
+        } catch {
+          /* skip bad line */
+        }
+      }
+    }
+
+    const outcomes = loadOutcomes(5000)
+      .filter((o) => o.client_id === client_id)
+      .slice(-limit)
+      .reverse();
+
+    const response_graph = responseGraph.summarizeClient(client_id);
+
+    res.json({
+      client_id,
+      decisions,
+      outcomes,
+      response_graph,
+      phrasing: 'historical_observations_only',
+      disclaimer:
+        'Patterns below are historical observations from logged decisions/outcomes only — not predictions or clinical advice.',
+    });
   } catch (err) {
     res.status(500).json({ error: String(err.message || err) });
   }
@@ -213,6 +288,13 @@ app.get('/api/catalog', requireStaffPin, (_req, res) => {
       evidence_class: p.evidence_class || null,
       modality: p.modality || null,
       duration: p.duration || null,
+      dose: {
+        micro: (p.duration && p.duration.micro_sec) || Math.min(p.min_duration_sec || 60, 120),
+        minimum: p.min_duration_sec,
+        recommended: p.recommended_duration_sec,
+        extended: p.max_duration_sec,
+      },
+      delivery_channels: p.delivery_channels || [],
     })),
   });
 });

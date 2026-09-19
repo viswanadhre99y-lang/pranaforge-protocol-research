@@ -1,14 +1,14 @@
 {
   "total": 110,
   "comparable": 110,
-  "exact_match": 26,
-  "exact_rate": 0.23636363636363636,
-  "candidate_hits": 41,
-  "silence_agree": 10,
-  "soft_agree": 86,
-  "soft_agreement_rate": 0.7818181818181819,
-  "top3_agree": 75,
-  "top3_agreement_rate": 0.6818181818181818,
+  "exact_match": 35,
+  "exact_rate": 0.3181818181818182,
+  "candidate_hits": 49,
+  "silence_agree": 11,
+  "soft_agree": 93,
+  "soft_agreement_rate": 0.8454545454545455,
+  "top3_agree": 82,
+  "top3_agreement_rate": 0.7454545454545455,
   "note": "Suite does not fail on heuristic disagreement with golden selected; rates recorded only. soft = exact OR top-in-candidates OR expected-in-top3 OR silence-agree OR staff_*/SEQUENCE soft.",
   "rows": [
     {
@@ -30,48 +30,49 @@
     {
       "id": "TC002",
       "expected": "physiological-sigh-acute",
-      "got": "SILENCE",
+      "got": "physiological-sigh-acute",
       "top3": [
-        "act-defusion",
-        "caffeine-cutoff"
+        "physiological-sigh-acute",
+        "tactical-breath-reset",
+        "affect-labeling"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 0.308,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.366,
       "ambiguous": false
     },
     {
       "id": "TC003",
       "expected": "act-defusion",
-      "got": "cognitive-reappraisal",
+      "got": "act-defusion",
       "top3": [
+        "act-defusion",
         "cognitive-reappraisal",
-        "self-distancing",
-        "opposite-action"
+        "self-distancing"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 1.049,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.106,
       "ambiguous": false
     },
     {
       "id": "TC004",
       "expected": "stimulus-control",
-      "got": "pmr",
+      "got": "stimulus-control",
       "top3": [
+        "stimulus-control",
         "pmr",
-        "worry-postpone",
-        "478-breathing"
+        "worry-postpone"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 1.073,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.219,
       "ambiguous": false
     },
     {
@@ -125,17 +126,17 @@
     {
       "id": "TC008",
       "expected": "affect-labeling",
-      "got": "self-distancing",
+      "got": "affect-labeling",
       "top3": [
+        "affect-labeling",
         "self-distancing",
-        "cognitive-reappraisal",
-        "affect-labeling"
+        "cognitive-reappraisal"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.03,
+      "score": 1.146,
       "ambiguous": false
     },
     {
@@ -161,13 +162,13 @@
       "top3": [
         "pmr",
         "worry-postpone",
-        "478-breathing"
+        "stimulus-control"
       ],
       "match": false,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.955,
+      "score": 1.015,
       "ambiguous": false
     },
     {
@@ -223,7 +224,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.049,
+      "score": 1.053,
       "ambiguous": false
     },
     {
@@ -271,7 +272,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.03,
+      "score": 1.09,
       "ambiguous": true
     },
     {
@@ -293,17 +294,17 @@
     {
       "id": "TC019",
       "expected": "evening-light-hygiene",
-      "got": "morning-light",
+      "got": "evening-light-hygiene",
       "top3": [
-        "morning-light",
+        "evening-light-hygiene",
         "jetlag-light-melatonin",
-        "nap-protocol"
+        "sleep-consistency"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 1.124,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.044,
       "ambiguous": false
     },
     {
@@ -319,7 +320,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.062,
+      "score": 1.122,
       "ambiguous": false
     },
     {
@@ -415,7 +416,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.998,
+      "score": 1.002,
       "ambiguous": false
     },
     {
@@ -424,8 +425,8 @@
       "got": "caffeine-cutoff",
       "top3": [
         "caffeine-cutoff",
-        "sleep-consistency",
-        "brief-pmr-acute"
+        "evening-light-hygiene",
+        "sleep-consistency"
       ],
       "match": true,
       "candHit": true,
@@ -491,7 +492,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.099,
+      "score": 1.159,
       "ambiguous": false
     },
     {
@@ -519,23 +520,23 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.918,
+      "score": 0.978,
       "ambiguous": false
     },
     {
       "id": "TC034",
       "expected": "stimulus-control",
-      "got": "worry-postpone",
+      "got": "stimulus-control",
       "top3": [
+        "stimulus-control",
         "worry-postpone",
-        "478-breathing",
-        "exhale-emphasized"
+        "pmr"
       ],
-      "match": false,
+      "match": true,
       "candHit": true,
-      "top3Hit": false,
+      "top3Hit": true,
       "soft": true,
-      "score": 0.618,
+      "score": 1.005,
       "ambiguous": false
     },
     {
@@ -544,8 +545,8 @@
       "got": "sleep-restriction",
       "top3": [
         "sleep-restriction",
-        "exhale-emphasized",
-        "worry-postpone"
+        "stimulus-control",
+        "exhale-emphasized"
       ],
       "match": false,
       "candHit": true,
@@ -567,7 +568,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.061,
+      "score": 1.121,
       "ambiguous": false
     },
     {
@@ -593,13 +594,13 @@
       "top3": [
         "pmr",
         "worry-postpone",
-        "478-breathing"
+        "stimulus-control"
       ],
       "match": false,
       "candHit": false,
       "top3Hit": false,
       "soft": false,
-      "score": 0.955,
+      "score": 1.015,
       "ambiguous": false
     },
     {
@@ -723,7 +724,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.133,
+      "score": 1.193,
       "ambiguous": false
     },
     {
@@ -748,14 +749,14 @@
       "got": "nap-protocol",
       "top3": [
         "nap-protocol",
-        "art-brief",
-        "yoga-nidra-nsdr"
+        "yoga-nidra-nsdr",
+        "pomodoro-ultradian"
       ],
       "match": false,
-      "candHit": true,
-      "top3Hit": true,
-      "soft": true,
-      "score": 0.785,
+      "candHit": false,
+      "top3Hit": false,
+      "soft": false,
+      "score": 0.845,
       "ambiguous": false
     },
     {
@@ -764,8 +765,8 @@
       "got": "if-then-gollwitzer",
       "top3": [
         "if-then-gollwitzer",
-        "process-visualization",
-        "woop"
+        "smart-caveats",
+        "process-visualization"
       ],
       "match": false,
       "candHit": true,
@@ -780,30 +781,30 @@
       "got": "pmr",
       "top3": [
         "pmr",
-        "worry-postpone",
-        "478-breathing"
+        "stimulus-control",
+        "evening-light-hygiene"
       ],
       "match": false,
       "candHit": true,
       "top3Hit": false,
       "soft": true,
-      "score": 0.974,
+      "score": 1.034,
       "ambiguous": false
     },
     {
       "id": "TC051",
       "expected": "physiological-sigh-acute",
-      "got": "tipp",
+      "got": "physiological-sigh-acute",
       "top3": [
-        "tipp",
-        "task-switch-buffer",
-        "ppr"
+        "physiological-sigh-acute",
+        "tactical-breath-reset",
+        "affect-labeling"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 0.461,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.366,
       "ambiguous": false
     },
     {
@@ -856,14 +857,14 @@
       "got": "pmr",
       "top3": [
         "pmr",
-        "worry-postpone",
-        "478-breathing"
+        "stimulus-control",
+        "evening-light-hygiene"
       ],
       "match": false,
-      "candHit": true,
-      "top3Hit": true,
-      "soft": true,
-      "score": 0.974,
+      "candHit": false,
+      "top3Hit": false,
+      "soft": false,
+      "score": 1.034,
       "ambiguous": false
     },
     {
@@ -888,14 +889,14 @@
       "got": "pmr",
       "top3": [
         "pmr",
-        "478-breathing",
-        "worry-postpone"
+        "stimulus-control",
+        "evening-light-hygiene"
       ],
       "match": true,
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.98,
+      "score": 1.04,
       "ambiguous": false
     },
     {
@@ -911,7 +912,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.192,
+      "score": 1.196,
       "ambiguous": false
     },
     {
@@ -981,17 +982,17 @@
     {
       "id": "TC063",
       "expected": "wind-down",
-      "got": "pmr",
+      "got": "wind-down",
       "top3": [
+        "wind-down",
         "pmr",
-        "worry-postpone",
-        "478-breathing"
+        "stimulus-control"
       ],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": 0.974,
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 1.068,
       "ambiguous": false
     },
     {
@@ -1007,7 +1008,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.258,
+      "score": 1.262,
       "ambiguous": false
     },
     {
@@ -1023,7 +1024,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.983,
+      "score": 0.987,
       "ambiguous": false
     },
     {
@@ -1039,7 +1040,7 @@
       "candHit": false,
       "top3Hit": false,
       "soft": false,
-      "score": 0.983,
+      "score": 0.987,
       "ambiguous": false
     },
     {
@@ -1087,7 +1088,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.032,
+      "score": 1.092,
       "ambiguous": false
     },
     {
@@ -1119,7 +1120,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.258,
+      "score": 1.262,
       "ambiguous": false
     },
     {
@@ -1151,7 +1152,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.918,
+      "score": 0.978,
       "ambiguous": false
     },
     {
@@ -1176,8 +1177,8 @@
       "got": "caffeine-cutoff",
       "top3": [
         "caffeine-cutoff",
-        "sleep-consistency",
-        "pmr"
+        "evening-light-hygiene",
+        "sleep-consistency"
       ],
       "match": true,
       "candHit": true,
@@ -1192,13 +1193,13 @@
       "got": "if-then-gollwitzer",
       "top3": [
         "if-then-gollwitzer",
-        "process-visualization",
-        "woop"
+        "smart-caveats",
+        "process-visualization"
       ],
       "match": false,
-      "candHit": true,
-      "top3Hit": true,
-      "soft": true,
+      "candHit": false,
+      "top3Hit": false,
+      "soft": false,
       "score": 1.027,
       "ambiguous": false
     },
@@ -1317,13 +1318,13 @@
       "top3": [
         "pmr",
         "worry-postpone",
-        "478-breathing"
+        "stimulus-control"
       ],
       "match": false,
       "candHit": false,
       "top3Hit": false,
       "soft": false,
-      "score": 0.955,
+      "score": 1.015,
       "ambiguous": true
     },
     {
@@ -1332,13 +1333,13 @@
       "got": "if-then-gollwitzer",
       "top3": [
         "if-then-gollwitzer",
-        "process-visualization",
-        "woop"
+        "smart-caveats",
+        "process-visualization"
       ],
       "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
       "score": 1.027,
       "ambiguous": false
     },
@@ -1403,7 +1404,7 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 0.983,
+      "score": 0.987,
       "ambiguous": false
     },
     {
@@ -1428,8 +1429,8 @@
       "got": "if-then-gollwitzer",
       "top3": [
         "if-then-gollwitzer",
-        "process-visualization",
-        "woop"
+        "smart-caveats",
+        "process-visualization"
       ],
       "match": false,
       "candHit": false,
@@ -1488,14 +1489,14 @@
       "got": "pmr",
       "top3": [
         "pmr",
-        "worry-postpone",
-        "478-breathing"
+        "stimulus-control",
+        "evening-light-hygiene"
       ],
       "match": false,
       "candHit": false,
       "top3Hit": false,
       "soft": false,
-      "score": 0.974,
+      "score": 1.034,
       "ambiguous": false
     },
     {
@@ -1536,8 +1537,8 @@
       "got": "caffeine-cutoff",
       "top3": [
         "caffeine-cutoff",
-        "sleep-consistency",
-        "pmr"
+        "evening-light-hygiene",
+        "sleep-consistency"
       ],
       "match": false,
       "candHit": true,
@@ -1549,13 +1550,17 @@
     {
       "id": "TC099",
       "expected": "54321-grounding",
-      "got": "ESCALATE",
-      "top3": [],
-      "match": false,
-      "candHit": false,
-      "top3Hit": false,
-      "soft": false,
-      "score": null,
+      "got": "54321-grounding",
+      "top3": [
+        "54321-grounding",
+        "exhale-emphasized",
+        "affect-labeling"
+      ],
+      "match": true,
+      "candHit": true,
+      "top3Hit": true,
+      "soft": true,
+      "score": 0.801,
       "ambiguous": true
     },
     {
@@ -1583,39 +1588,31 @@
       "candHit": true,
       "top3Hit": true,
       "soft": true,
-      "score": 1.192,
+      "score": 1.196,
       "ambiguous": false
     },
     {
       "id": "TC102",
       "expected": "SILENCE_or_staff_confirm",
-      "got": "process-visualization",
-      "top3": [
-        "process-visualization",
-        "centering-ravizza",
-        "ppr"
-      ],
-      "match": false,
+      "got": "SILENCE",
+      "top3": [],
+      "match": true,
       "candHit": false,
       "top3Hit": false,
-      "soft": false,
-      "score": 1.171,
+      "soft": true,
+      "score": null,
       "ambiguous": true
     },
     {
       "id": "TC103",
       "expected": "staff_screen",
-      "got": "nap-protocol",
-      "top3": [
-        "nap-protocol",
-        "yoga-nidra-nsdr",
-        "brief-pmr-acute"
-      ],
+      "got": "SILENCE",
+      "top3": [],
       "match": false,
-      "candHit": false,
+      "candHit": true,
       "top3Hit": false,
-      "soft": false,
-      "score": 0.728,
+      "soft": true,
+      "score": null,
       "ambiguous": true
     },
     {
@@ -1672,8 +1669,8 @@
       "got": "jetlag-light-melatonin",
       "top3": [
         "jetlag-light-melatonin",
-        "morning-light",
-        "nap-protocol"
+        "nap-protocol",
+        "morning-light"
       ],
       "match": false,
       "candHit": true,
@@ -1695,7 +1692,7 @@
       "candHit": false,
       "top3Hit": false,
       "soft": false,
-      "score": 1.41,
+      "score": 1.47,
       "ambiguous": false
     },
     {
@@ -1729,8 +1726,8 @@
   ],
   "matrix": {
     "count": 120,
-    "suggest": 114,
-    "silence": 6,
+    "suggest": 120,
+    "silence": 0,
     "escalate": 0,
     "infeasible_recommendations": [],
     "infeasible_count": 0

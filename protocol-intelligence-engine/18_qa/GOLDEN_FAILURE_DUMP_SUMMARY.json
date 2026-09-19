@@ -1,0 +1,142 @@
+{
+  "generated_at": "2026-09-19T09:23:59.151Z",
+  "cases_path": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/13_test_cases/test_cases.jsonl",
+  "n": 110,
+  "exact_match": 46,
+  "exact_rate": 0.41818181818181815,
+  "soft_agree": 93,
+  "soft_rate": 0.8454545454545455,
+  "soft_fails": 17,
+  "missing_golden_ABC_counts": {
+    "never_generated": 0,
+    "incorrectly_excluded": 0,
+    "ranked_too_low": 23,
+    "null": 87
+  },
+  "failure_category_counts": [
+    {
+      "category": "exact_miss_soft_ok",
+      "count": 47
+    },
+    {
+      "category": "golden_ranked_too_low",
+      "count": 23
+    },
+    {
+      "category": "wrong_family_top1",
+      "count": 17
+    },
+    {
+      "category": "no_history_signal",
+      "count": 17
+    },
+    {
+      "category": "goal:sleep_prep",
+      "count": 4
+    },
+    {
+      "category": "goal:pre_performance",
+      "count": 3
+    },
+    {
+      "category": "goal:emotion_regulate",
+      "count": 3
+    },
+    {
+      "category": "goal:goal_clarity",
+      "count": 2
+    },
+    {
+      "category": "goal:rumination",
+      "count": 1
+    },
+    {
+      "category": "goal:cognitive_fatigue",
+      "count": 1
+    },
+    {
+      "category": "goal:stress_acute",
+      "count": 1
+    },
+    {
+      "category": "goal:focus",
+      "count": 1
+    },
+    {
+      "category": "policy_gate_silence",
+      "count": 1
+    },
+    {
+      "category": "goal:mood",
+      "count": 1
+    }
+  ],
+  "soft_fail_ids": [
+    "TC005",
+    "TC006",
+    "TC015",
+    "TC038",
+    "TC048",
+    "TC055",
+    "TC056",
+    "TC060",
+    "TC066",
+    "TC076",
+    "TC084",
+    "TC091",
+    "TC094",
+    "TC095",
+    "TC096",
+    "TC104",
+    "TC108"
+  ],
+  "exact_fail_soft_ok_ids": [
+    "TC007",
+    "TC009",
+    "TC010",
+    "TC016",
+    "TC017",
+    "TC018",
+    "TC020",
+    "TC021",
+    "TC023",
+    "TC024",
+    "TC025",
+    "TC028",
+    "TC031",
+    "TC035",
+    "TC039",
+    "TC042",
+    "TC044",
+    "TC045",
+    "TC047",
+    "TC049",
+    "TC050",
+    "TC053",
+    "TC054",
+    "TC059",
+    "TC061",
+    "TC062",
+    "TC065",
+    "TC067",
+    "TC069",
+    "TC070",
+    "TC071",
+    "TC073",
+    "TC077",
+    "TC078",
+    "TC080",
+    "TC081",
+    "TC085",
+    "TC086",
+    "TC087",
+    "TC088",
+    "TC089",
+    "TC090",
+    "TC093",
+    "TC098",
+    "TC103",
+    "TC107",
+    "TC110"
+  ]
+}

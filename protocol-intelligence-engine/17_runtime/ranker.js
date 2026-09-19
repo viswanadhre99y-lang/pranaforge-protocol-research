@@ -2,9 +2,13 @@
  * PIE ranker — hard filters + weighted score from score_spec.json
  * Catalog: public protocol IDs only. Never expands vault IP steps.
  *
- * Duration (product decision, P1-4):
+ * Duration (product decision, P1-4 / Phase 2):
  *   Dose for gap-fit = recommended_duration_sec, with fallback to min_duration_sec
  *   under micro/acute gaps (≤120s). Never recommend a dose > available_minutes*60.
+ *   Recommendations expose dose {micro,minimum,recommended,extended}; prefer micro when gap is tight.
+ *
+ * Phase 2 learning: personal response_graph averages boost stronger than raw outcomes.jsonl.
+ * Still simple averages — NOT bandits. No ranker rewrite.
  */
 'use strict';
 
@@ -23,6 +27,7 @@ const { upgradeCatalog, mapEvidenceClass } = require('./schemas/protocol_card');
 const { buildExplanation } = require('./schemas/explanation');
 const { computeConfidence } = require('./schemas/confidence');
 const { buildDecisionRecord } = require('./schemas/decision_record');
+const responseGraph = require('./response_graph');
 
 const ROOT = path.join(__dirname, '..');
 const CATALOG_PATH = path.join(ROOT, '02_protocol_catalog', 'catalog.jsonl');
@@ -266,7 +271,10 @@ const GOAL_PROTOCOL_BOOST = {
     'cold-face': 0.18,
   },
   crisis_emotion: {
-    tipp: 0.2,
+    '54321-grounding': 0.36,
+    tipp: 0.12,
+    'affect-labeling': 0.14,
+    'exhale-emphasized': 0.1,
   },
   'fatigue+perform': {
     ppr: 0.14,
@@ -276,6 +284,28 @@ const GOAL_PROTOCOL_BOOST = {
   stress: {
     'cyclic-sighing': 0.14,
     'exhale-emphasized': 0.12,
+  },
+};
+
+/** Event → protocol affinity (candidate-gen; not SPEC.weights) */
+const EVENT_PROTOCOL_BOOST = {
+  post_rejection: {
+    'act-defusion': 0.22,
+    'affect-labeling': 0.1,
+    'behavioral-activation-tiny': 0.12,
+  },
+  post_conflict: {
+    'affect-labeling': 0.14,
+    'cognitive-reappraisal': 0.1,
+    'self-distancing': 0.1,
+  },
+  '1am_spiral': {
+    'stimulus-control': 0.2,
+    'worry-postpone': 0.12,
+  },
+  T_sleep: {
+    'wind-down': 0.28,
+    'evening-light-hygiene': 0.12,
   },
 };
 
@@ -320,10 +350,17 @@ function loadOutcomes(limit = 500) {
   }
 }
 
-/** Per client_id → protocol_id → mean centered rating boost (−0.15..+0.15) */
+/** Per client_id → protocol_id → mean centered rating boost.
+ * Phase 2: prefer response_graph (stronger −0.25..+0.25); fall back to outcomes.jsonl (−0.15..+0.15).
+ * Simple averages only — NOT bandits.
+ */
 function outcomeBoostMap(clientId) {
   const map = new Map();
   if (!clientId) return map;
+  // Stronger path: file-backed personal response graph
+  const fromGraph = responseGraph.graphBoostMap(clientId);
+  for (const [pid, boost] of fromGraph) map.set(pid, boost);
+  // Fill gaps from raw outcomes.jsonl (weaker) if graph missing that protocol
   const rows = loadOutcomes().filter((o) => o.client_id === clientId);
   const byProto = new Map();
   for (const o of rows) {
@@ -332,6 +369,7 @@ function outcomeBoostMap(clientId) {
     byProto.get(o.protocol_id).push(Number(o.rating_1_to_10));
   }
   for (const [pid, ratings] of byProto) {
+    if (map.has(pid)) continue; // graph wins
     const avg = ratings.reduce((a, b) => a + b, 0) / ratings.length;
     // 1–10 → −0.15..+0.15 around 5.5
     const boost = Math.max(-0.15, Math.min(0.15, ((avg - 5.5) / 4.5) * 0.15));
@@ -354,6 +392,12 @@ function inferNeeds(input) {
     for (const g of goal.split(/[+|,/]/)) {
       const gg = g.trim();
       if (gg) add(gg, 0.98);
+    }
+    // crisis_emotion is regulation (not escalate); bridge to acute/panic needs only
+    if (goal === 'crisis_emotion') {
+      add('stress_acute', 0.85);
+      add('panic_spike', 0.7);
+      add('emotion_regulate', 0.6);
     }
   }
 
@@ -427,22 +471,52 @@ function isPublicContext(input) {
 function doseSecForGap(protocol, input, inferredNeeds) {
   const gapSec = Math.max(0, Number(input.available_minutes) || 0) * 60;
   const needNames = new Set(inferredNeeds.map((n) => n.need));
+  const goal = String(input.goal || '').toLowerCase();
   // P1-4 product rule:
   //   Preferred dose = recommended_duration_sec.
   //   If recommended > gap but min_duration_sec <= gap, shrink dose to fit gap
   //   (never below catalog min; never exceed available_minutes*60).
   //   Micro/acute gaps (≤120s) prefer min when tagged micro/acute.
-  const recSec = protocol.recommended_duration_sec || protocol.max_duration_sec || 99999;
-  const minSec = protocol.min_duration_sec || Math.min(60, recSec);
+  //   Behavior-prescription cards (multi-hour sleep/hygiene windows) use a short
+  //   staff briefing dose when goal/need overlaps — not hard-excluded as in-session.
+  const doseBands = doseVariants(protocol);
+  const recSec = doseBands.recommended || protocol.recommended_duration_sec || protocol.max_duration_sec || 99999;
+  const minSec = doseBands.minimum || protocol.min_duration_sec || Math.min(60, recSec);
+  const microSec = doseBands.micro != null ? doseBands.micro : Math.min(minSec, 120);
+  const tightGap = gapSec > 0 && gapSec < recSec && gapSec <= 180;
   const microPrefer =
-    gapSec <= 120 &&
+    (gapSec <= 120 || tightGap) &&
     (needNames.has('micro_reset') ||
       needNames.has('stress_acute') ||
       needNames.has('pre_performance') ||
+      tightGap ||
       (protocol.need_tags || []).includes('micro_reset'));
+  const pNeeds = protocol.need_tags || [];
+  const prescriptionLike =
+    minSec >= 900 &&
+    ((protocol.categories || []).some((c) => /sleep|goals|circadian/i.test(c)) ||
+      pNeeds.some((n) =>
+        /sleep|circadian|insomnia|hygiene|jetlag|goal_clarity/i.test(String(n))
+      ));
+  const goalOverlaps =
+    pNeeds.some((n) => needNames.has(n) || (goal && goal.includes(String(n)))) ||
+    (goal && pNeeds.some((n) => String(n).includes(goal.split(/[+|,/]/)[0])));
   let doseSec;
-  if (microPrefer) {
-    doseSec = minSec;
+  if (prescriptionLike && goalOverlaps && gapSec > 0) {
+    // Briefing / education dose fits the available staff gap
+    doseSec = Math.min(gapSec, Math.max(60, Math.min(300, gapSec)));
+  } else if (microPrefer) {
+    // Phase 2: prefer micro band when available_minutes is tight.
+    // Ultra-micro: if catalog min still exceeds tiny gap but protocol is micro-tagged,
+    // shrink to gap when gap >= 30s (physiological sighs / tactical breaths).
+    if (minSec > gapSec && gapSec >= 30 && pNeeds.includes('micro_reset')) {
+      // Only true micro-tagged protocols may shrink below catalog min
+      doseSec = gapSec;
+    } else if (microSec <= gapSec) {
+      doseSec = microSec;
+    } else {
+      doseSec = minSec;
+    }
   } else if (recSec <= gapSec) {
     doseSec = recSec;
   } else if (minSec <= gapSec) {
@@ -450,7 +524,14 @@ function doseSecForGap(protocol, input, inferredNeeds) {
   } else {
     doseSec = recSec; // will hard-exclude
   }
-  return { doseSec, gapSec, recSec, minSec, allowMin: microPrefer || (recSec > gapSec && minSec <= gapSec) };
+  return {
+    doseSec,
+    gapSec,
+    recSec,
+    minSec,
+    allowMin: microPrefer || (recSec > gapSec && minSec <= gapSec) || (prescriptionLike && goalOverlaps),
+    prescription_briefing: !!(prescriptionLike && goalOverlaps),
+  };
 }
 
 function hardExclude(protocol, input, inferredNeeds) {
@@ -545,9 +626,12 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
     pref = 0.55;
   }
 
-  const fit = dur <= gapSec ? 1 - 0.4 * (dur / gapSec) : 0;
+  // Duration fit uses effective dose (incl. prescription briefing / micro shrink), not raw catalog rec alone
+  const doseInfo = doseSecForGap(protocol, input, inferredNeeds);
+  const doseForFit = doseInfo.doseSec;
+  const fit = doseForFit <= gapSec ? 1 - 0.4 * (doseForFit / gapSec) : 0;
   let feasibility = Math.max(0, Math.min(1, fit));
-  if (protocol.complexity === 'high' && gapSec < 600) feasibility *= 0.7;
+  if (protocol.complexity === 'high' && gapSec < 600 && !doseInfo.prescription_briefing) feasibility *= 0.7;
   if (isPublicContext(input) && !protocol.public_discrete) feasibility *= 0.3;
 
   const intensity = protocol.intensity || 'moderate';
@@ -580,6 +664,39 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
   for (const g of goals) {
     const table = GOAL_PROTOCOL_BOOST[g];
     if (table && table[protocol.protocol_id] != null) raw += table[protocol.protocol_id];
+  }
+
+  const evTable = EVENT_PROTOCOL_BOOST[event];
+  if (evTable && evTable[protocol.protocol_id] != null) raw += evTable[protocol.protocol_id];
+
+  // Evening circadian: prefer evening-light hygiene over morning light
+  if (
+    (goal === 'circadian_align' || goal === 'sleep_hygiene' || goal === 'sleep_prep') &&
+    /evening|night|T_sleep|landed evening/i.test(String(input.upcoming_event_tag || '') + ' ' + String(input.history_notes || '') + ' ' + String(input.notes || ''))
+  ) {
+    if (protocol.protocol_id === 'evening-light-hygiene') raw += 0.28;
+    if (protocol.protocol_id === 'morning-light') raw -= 0.22;
+  }
+
+  // Shift / day-sleep: protect sleep opportunity — wind-down over morning light
+  if (
+    goal === 'sleep_prep' &&
+    /day sleep|post night|night shift|blackout|shift_adjacent|irregular_schedule/i.test(
+      String(input.notes || '') + ' ' + String(input.history_notes || '') + ' ' + String(input.client_type || '')
+    )
+  ) {
+    if (protocol.protocol_id === 'wind-down') raw += 0.35;
+    if (protocol.protocol_id === 'morning-light') raw -= 0.3;
+    if (protocol.protocol_id === 'stimulus-control') raw += 0.08;
+  }
+
+  // History alternative: after prior_negative, boost siblings sharing a need tag
+  for (const negId of history.prior_negative) {
+    if (protocol.protocol_id === negId) continue;
+    const negP = CATALOG.find((p) => p.protocol_id === negId);
+    if (!negP) continue;
+    const shared = (protocol.need_tags || []).filter((t) => (negP.need_tags || []).includes(t));
+    if (shared.length) raw += Math.min(0.18, 0.06 * shared.length);
   }
 
   // CPI priors (engineering)
@@ -657,20 +774,36 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
   if (protocol.public_discrete && isPublicContext(input)) why.push('public_discrete');
   if (outcomeBoosts && outcomeBoosts.has(protocol.protocol_id)) why.push('outcome_boost');
 
+  const features = {
+    need_match: round2(needScore),
+    context_match: round2(contextScore),
+    timing: round2(timing),
+    evidence: round2(ev),
+    history: round2(historyFeat),
+    preference: round2(pref),
+    feasibility: round2(feasibility),
+    expected_benefit: round2(expected_benefit),
+    adherence_prob: round2(adherence_prob),
+    penalties: round2(penalties),
+  };
+  const finalScore = Math.round(score * 1000) / 1000;
+  // Interpretable breakdown (Step 4) — systemic mapping from score features
+  const score_breakdown = {
+    goal_fit: features.need_match,
+    state_fit: features.expected_benefit,
+    context_fit: features.context_match,
+    duration_fit: features.feasibility,
+    preference_fit: features.preference,
+    historical_response: features.history,
+    event_fit: features.timing,
+    sequence_fit: null, // sequence is post-rank suggestSequence; not in score
+    safety_status: 'ok',
+    final_score: finalScore,
+  };
   return {
-    score: Math.round(score * 1000) / 1000,
-    features: {
-      need_match: round2(needScore),
-      context_match: round2(contextScore),
-      timing: round2(timing),
-      evidence: round2(ev),
-      history: round2(historyFeat),
-      preference: round2(pref),
-      feasibility: round2(feasibility),
-      expected_benefit: round2(expected_benefit),
-      adherence_prob: round2(adherence_prob),
-      penalties: round2(penalties),
-    },
+    score: finalScore,
+    features,
+    score_breakdown,
     why,
   };
 }
@@ -781,7 +914,68 @@ function suggestSequence(primary, input, inferred) {
 
 function historyDepthForClient(clientId) {
   if (!clientId) return 0;
-  return loadOutcomes().filter((o) => o.client_id === clientId).length;
+  const fromOutcomes = loadOutcomes().filter((o) => o.client_id === clientId).length;
+  const graph = responseGraph.getClientGraph(clientId);
+  const fromGraph = Object.values(graph).reduce((s, n) => s + (n && n.n ? n.n : 0), 0);
+  return Math.max(fromOutcomes, fromGraph);
+}
+
+
+/** Phase 2 dose bands from protocol duration fields (synthesize micro/extended if absent). */
+function doseVariants(protocol) {
+  const d = protocol.duration || {};
+  const minSec = protocol.min_duration_sec != null ? protocol.min_duration_sec : (d.min_sec != null ? d.min_sec : 60);
+  const recSec = protocol.recommended_duration_sec != null
+    ? protocol.recommended_duration_sec
+    : (d.optimal_sec != null ? d.optimal_sec : minSec);
+  const maxSec = protocol.max_duration_sec != null ? protocol.max_duration_sec : (d.extended_sec != null ? d.extended_sec : recSec);
+  const microSec = d.micro_sec != null ? d.micro_sec : Math.min(minSec, 120);
+  return {
+    micro: microSec,
+    minimum: minSec,
+    recommended: recSec,
+    extended: maxSec,
+  };
+}
+
+/**
+ * Phase 2 delivery modality rules (engineering heuristic):
+ *   public → text if public_discrete else self_guided
+ *   private + staff_id → staff_led
+ *   short gap (≤3 min) → text
+ *   else prefer protocol.delivery_channels audio if present, else self_guided
+ */
+function chooseDeliveryModality(protocol, input) {
+  const minutes = Number(input.available_minutes) || 0;
+  const publicCtx = isPublicContext(input);
+  const channels = protocol.delivery_channels || [];
+  if (publicCtx) {
+    if (protocol.public_discrete) return 'text';
+    return 'self_guided';
+  }
+  if (minutes > 0 && minutes <= 3) return 'text';
+  if ((input.privacy === 'private' || !publicCtx) && input.staff_id) return 'staff_led';
+  if (channels.includes('audio')) return 'audio';
+  if (channels.includes('staff_prompt') && input.staff_id) return 'staff_led';
+  if (channels.includes('text')) return 'text';
+  return 'self_guided';
+}
+
+/** Prefer micro dose label when available_minutes is tight relative to recommended. */
+function preferredDoseKey(dose, availableMinutes) {
+  const gapSec = Math.max(0, Number(availableMinutes) || 0) * 60;
+  if (gapSec <= 0) return 'recommended';
+  // Phase 2: when available_minutes is tight, prefer micro (then minimum).
+  const tight = gapSec <= 180 || gapSec < dose.recommended;
+  if (tight) {
+    if (dose.micro <= gapSec) return 'micro';
+    if (dose.minimum <= gapSec) return 'minimum';
+    return 'micro';
+  }
+  if (gapSec >= dose.extended && dose.extended > dose.recommended) return 'extended';
+  if (gapSec >= dose.recommended) return 'recommended';
+  if (gapSec >= dose.minimum) return 'minimum';
+  return 'micro';
 }
 
 function enrichRecommendation(rec, input, opts = {}) {
@@ -804,14 +998,42 @@ function enrichRecommendation(rec, input, opts = {}) {
     why: rec.why || [],
     confidence,
   });
+  const score_breakdown = rec.score_breakdown || {
+    goal_fit: (rec.features && rec.features.need_match) != null ? rec.features.need_match : null,
+    state_fit: (rec.features && rec.features.expected_benefit) != null ? rec.features.expected_benefit : null,
+    context_fit: (rec.features && rec.features.context_match) != null ? rec.features.context_match : null,
+    duration_fit: (rec.features && rec.features.feasibility) != null ? rec.features.feasibility : null,
+    preference_fit: (rec.features && rec.features.preference) != null ? rec.features.preference : null,
+    historical_response: (rec.features && rec.features.history) != null ? rec.features.history : null,
+    event_fit: (rec.features && rec.features.timing) != null ? rec.features.timing : null,
+    sequence_fit: null,
+    safety_status: 'ok',
+    final_score: rec.score != null ? rec.score : null,
+  };
+  const dose = doseVariants(protocol);
+  const preferred_dose = preferredDoseKey(dose, input.available_minutes);
+  const delivery_modality = chooseDeliveryModality(protocol, input);
+  let dose_for_gap_sec = rec.dose_for_gap_sec;
+  try {
+    const inferred = opts.inferredNeeds || [];
+    const di = doseSecForGap(protocol, input, inferred);
+    dose_for_gap_sec = di.doseSec;
+  } catch (_e) {
+    /* keep prior */
+  }
   return {
     ...rec,
     protocol_version,
     evidence_class,
     confidence,
     explanation,
+    score_breakdown,
     modality: protocol.modality || rec.modality,
     duration: protocol.duration || rec.duration,
+    dose,
+    preferred_dose,
+    delivery_modality,
+    dose_for_gap_sec,
   };
 }
 
@@ -987,6 +1209,8 @@ function recommend(rawInput) {
       incompatible_ids: p.incompatible_ids || [],
       score: s.score,
       features: s.features,
+      score_breakdown: s.score_breakdown,
+      dose_for_gap_sec: doseSecForGap(p, input, inferred).doseSec,
       why: s.why,
       purpose: p.purpose,
       is_vault_ip: !!p.is_vault_ip,
@@ -996,7 +1220,7 @@ function recommend(rawInput) {
   scored.sort((a, b) => b.score - a.score);
   const tau = SPEC.thresholds.tau_select;
   const topRaw = scored.slice(0, 3);
-  const top = topRaw.map((r) => enrichRecommendation(r, input, { unknownCount, historyDepth: histDepth }));
+  const top = topRaw.map((r) => enrichRecommendation(r, input, { unknownCount, historyDepth: histDepth, inferredNeeds: inferred }));
 
   const exclPayload = {
     exclusions,
@@ -1025,7 +1249,7 @@ function recommend(rawInput) {
         suggested_sequence: undefined,
       },
       input,
-      { candidates: scored.slice(0, 10).map((r) => enrichRecommendation(r, input, { unknownCount, historyDepth: histDepth })) }
+      { candidates: scored.slice(0, 10).map((r) => enrichRecommendation(r, input, { unknownCount, historyDepth: histDepth, inferredNeeds: inferred })) }
     );
   }
 
@@ -1050,7 +1274,7 @@ function recommend(rawInput) {
       suggested_sequence,
     },
     input,
-    { candidates: scored.slice(0, 10).map((r) => enrichRecommendation(r, input, { unknownCount, historyDepth: histDepth })) }
+    { candidates: scored.slice(0, 10).map((r) => enrichRecommendation(r, input, { unknownCount, historyDepth: histDepth, inferredNeeds: inferred })) }
   );
 }
 
@@ -1222,4 +1446,8 @@ module.exports = {
   safety,
   enrichRecommendation,
   attachPhase1Meta,
+  doseVariants,
+  chooseDeliveryModality,
+  preferredDoseKey,
+  responseGraph,
 };

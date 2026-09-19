@@ -33,9 +33,18 @@
         "protocol_id": "process-visualization",
         "name": "Process Visualization (vs Outcome-Only Fantasy)",
         "evidence": "B",
+        "evidence_class": "evidence_supported",
+        "protocol_version": "1.0.0",
         "max_duration_sec": 600,
         "recommended_duration_sec": 300,
         "min_duration_sec": 180,
+        "duration": {
+          "micro_sec": 120,
+          "min_sec": 180,
+          "optimal_sec": 300,
+          "extended_sec": 600
+        },
+        "modality": "goals",
         "arousal_direction": "down",
         "need_tags": [
           "pre_performance",
@@ -46,6 +55,8 @@
         ],
         "public_discrete": false,
         "clinician_only": false,
+        "compatible_ids": [],
+        "incompatible_ids": [],
         "score": 1.326,
         "features": {
           "need_match": 0.59,
@@ -59,6 +70,19 @@
           "adherence_prob": 0.93,
           "penalties": 0
         },
+        "score_breakdown": {
+          "goal_fit": 0.59,
+          "state_fit": 0.8,
+          "context_fit": 0.25,
+          "duration_fit": 0.8,
+          "preference_fit": 0.35,
+          "historical_response": 0.5,
+          "event_fit": 0.95,
+          "sequence_fit": null,
+          "safety_status": "ok",
+          "final_score": 1.326
+        },
+        "dose_for_gap_sec": 300,
         "why": [
           "need:pre_performance",
           "moment:investor_meeting",
@@ -66,15 +90,48 @@
           "duration:5m"
         ],
         "purpose": "Mentally rehearse steps and obstacle handling—not only the trophy moment.",
-        "is_vault_ip": false
+        "is_vault_ip": false,
+        "confidence": 0.498,
+        "explanation": {
+          "selected_id": "process-visualization",
+          "positives": [
+            "need_match=0.59",
+            "timing=0.95",
+            "evidence=0.8",
+            "feasibility=0.8",
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:5m"
+          ],
+          "penalties": [],
+          "confidence": 0.498
+        },
+        "dose": {
+          "micro": 120,
+          "minimum": 180,
+          "recommended": 300,
+          "extended": 600
+        },
+        "preferred_dose": "extended",
+        "delivery_modality": "audio"
       },
       {
         "protocol_id": "centering-ravizza",
         "name": "Centering (Ravizza-Style)",
         "evidence": "C",
+        "evidence_class": "practitioner_derived",
+        "protocol_version": "1.0.0",
         "max_duration_sec": 120,
         "recommended_duration_sec": 120,
         "min_duration_sec": 120,
+        "duration": {
+          "micro_sec": 120,
+          "min_sec": 120,
+          "optimal_sec": 120,
+          "extended_sec": 120
+        },
+        "modality": "performance",
         "arousal_direction": "down",
         "need_tags": [
           "pre_performance",
@@ -86,6 +143,8 @@
         ],
         "public_discrete": true,
         "clinician_only": false,
+        "compatible_ids": [],
+        "incompatible_ids": [],
         "score": 1.117,
         "features": {
           "need_match": 0.59,
@@ -99,6 +158,19 @@
           "adherence_prob": 1,
           "penalties": 0
         },
+        "score_breakdown": {
+          "goal_fit": 0.59,
+          "state_fit": 0.52,
+          "context_fit": 0,
+          "duration_fit": 0.92,
+          "preference_fit": 0.35,
+          "historical_response": 0.5,
+          "event_fit": 0.95,
+          "sequence_fit": null,
+          "safety_status": "ok",
+          "final_score": 1.117
+        },
+        "dose_for_gap_sec": 120,
         "why": [
           "need:pre_performance",
           "moment:investor_meeting",
@@ -106,15 +178,48 @@
           "duration:2m"
         ],
         "purpose": "Rapidly shift from distracted/tense state to controlled, present, process-focused state.",
-        "is_vault_ip": false
+        "is_vault_ip": false,
+        "confidence": 0.416,
+        "explanation": {
+          "selected_id": "centering-ravizza",
+          "positives": [
+            "need_match=0.59",
+            "timing=0.95",
+            "evidence=0.55",
+            "feasibility=0.92",
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:C",
+            "duration:2m"
+          ],
+          "penalties": [],
+          "confidence": 0.416
+        },
+        "dose": {
+          "micro": 120,
+          "minimum": 120,
+          "recommended": 120,
+          "extended": 120
+        },
+        "preferred_dose": "recommended",
+        "delivery_modality": "audio"
       },
       {
         "protocol_id": "ppr",
         "name": "Pre-Performance Routine (PPR)",
         "evidence": "B",
+        "evidence_class": "evidence_supported",
+        "protocol_version": "1.0.0",
         "max_duration_sec": 120,
         "recommended_duration_sec": 120,
         "min_duration_sec": 30,
+        "duration": {
+          "micro_sec": 30,
+          "min_sec": 30,
+          "optimal_sec": 120,
+          "extended_sec": 120
+        },
+        "modality": "performance",
         "arousal_direction": "down",
         "need_tags": [
           "pre_performance"
@@ -124,6 +229,8 @@
         ],
         "public_discrete": false,
         "clinician_only": false,
+        "compatible_ids": [],
+        "incompatible_ids": [],
         "score": 1.102,
         "features": {
           "need_match": 0.67,
@@ -137,6 +244,19 @@
           "adherence_prob": 1,
           "penalties": 0
         },
+        "score_breakdown": {
+          "goal_fit": 0.67,
+          "state_fit": 0.68,
+          "context_fit": 0,
+          "duration_fit": 0.92,
+          "preference_fit": 0.35,
+          "historical_response": 0.5,
+          "event_fit": 0.95,
+          "sequence_fit": null,
+          "safety_status": "ok",
+          "final_score": 1.102
+        },
+        "dose_for_gap_sec": 120,
         "why": [
           "need:pre_performance",
           "moment:investor_meeting",
@@ -144,7 +264,31 @@
           "duration:2m"
         ],
         "purpose": "Stabilize attention and arousal before a skilled performance via a consistent short sequence.",
-        "is_vault_ip": false
+        "is_vault_ip": false,
+        "confidence": 0.483,
+        "explanation": {
+          "selected_id": "ppr",
+          "positives": [
+            "need_match=0.67",
+            "timing=0.95",
+            "evidence=0.8",
+            "feasibility=0.92",
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:2m"
+          ],
+          "penalties": [],
+          "confidence": 0.483
+        },
+        "dose": {
+          "micro": 30,
+          "minimum": 30,
+          "recommended": 120,
+          "extended": 120
+        },
+        "preferred_dose": "recommended",
+        "delivery_modality": "audio"
       }
     ],
     "exclusions": [
@@ -199,13 +343,6 @@
         ]
       },
       {
-        "protocol_id": "smart-caveats",
-        "name": "SMART Goals with Evidence Caveats",
-        "reasons": [
-          "duration_exceeds_gap:720s>600s"
-        ]
-      },
-      {
         "protocol_id": "cold-face",
         "name": "Cold Face Stimulation (Dive-Reflex Informed)",
         "reasons": [
@@ -213,7 +350,7 @@
         ]
       }
     ],
-    "exclusions_total": 9,
+    "exclusions_total": 8,
     "exclusions_truncated": false,
     "personalized_message": "Context: investor / high-stakes meeting soon · office. Why now: settle arousal and rehearse the open (need “pre performance”; stress 4/5). Action: run “Process Visualization (vs Outcome-Only Fantasy)” (process-visualization). Duration: ~5 min (fits 10 min gap; dose ≤ gap). Skip/SILENCE is always OK.",
     "why_selected": [
@@ -232,12 +369,13 @@
       "tactical-breath-reset": 0.858,
       "exhale-emphasized": 0.842,
       "cyclic-sighing": 0.819,
-      "physiological-sigh-acute": 0.791,
+      "physiological-sigh-acute": 0.795,
       "brief-pmr-acute": 0.657
     },
     "input": {
       "client_type": "startup_founder",
       "client_id": null,
+      "staff_id": null,
       "available_minutes": 10,
       "place_class": "office",
       "privacy": null,
@@ -253,12 +391,1047 @@
       "hard_exclude_prior_negative": false,
       "goal": "",
       "activity": "",
-      "force_silence": false
+      "force_silence": false,
+      "timezone": null,
+      "moment_phase": null,
+      "client_state": {
+        "client_id": null,
+        "client_type": "startup_founder",
+        "as_of": "2026-09-19T09:25:16.917Z",
+        "physical": {
+          "sleep_h": {
+            "value": 6,
+            "source": "self_reported",
+            "confidence": 0.7
+          },
+          "energy": {
+            "value": 3,
+            "source": "self_reported",
+            "confidence": 0.7
+          },
+          "notes_tags": {
+            "value": [],
+            "source": "unknown"
+          }
+        },
+        "cognitive": {
+          "focus": {
+            "value": null,
+            "source": "unknown"
+          },
+          "load_est": {
+            "value": null,
+            "source": "inferred"
+          }
+        },
+        "emotional": {
+          "stress": {
+            "value": 4,
+            "source": "self_reported",
+            "confidence": 0.75
+          },
+          "mood": {
+            "value": null,
+            "source": "unknown"
+          }
+        },
+        "behavioral": {
+          "prefers_breath": {
+            "value": "yes",
+            "source": "self_reported",
+            "confidence": 0.8
+          },
+          "history_notes": {
+            "value": "prior_positive:cyclic-sighing",
+            "source": "observed"
+          },
+          "prior_outcomes_depth": {
+            "value": 0,
+            "source": "unknown"
+          }
+        },
+        "temporal": {
+          "available_minutes": {
+            "value": 10,
+            "source": "observed",
+            "confidence": 0.9
+          },
+          "local_time_bucket": {
+            "value": null,
+            "source": "unknown"
+          }
+        },
+        "constraints": {
+          "clinician_mode": {
+            "value": false,
+            "source": "observed"
+          },
+          "crisis_flag": {
+            "value": false,
+            "source": "observed"
+          },
+          "force_silence": {
+            "value": false,
+            "source": "observed"
+          }
+        }
+      },
+      "context": {
+        "who": {
+          "client_type": "startup_founder",
+          "staff_id": null
+        },
+        "where": {
+          "place_class": "office",
+          "privacy": null
+        },
+        "when": {
+          "timezone": null,
+          "time_available_min": 10,
+          "time_bucket": null
+        },
+        "activity": {
+          "label": null
+        },
+        "travel": {
+          "in_transit": null,
+          "jetlag_hint": null
+        },
+        "event": {
+          "upcoming_tag": "investor_meeting",
+          "phase": null
+        },
+        "upcoming": {
+          "tag": "investor_meeting",
+          "stakes": null
+        },
+        "time_available": {
+          "minutes": 10
+        },
+        "timezone": null,
+        "privacy": null
+      },
+      "moment": {
+        "type": "investor_meeting",
+        "phase": null,
+        "stakes": null,
+        "label": null
+      }
     },
     "suggested_sequence": [
       "physiological-sigh-acute",
       "task-switch-buffer"
-    ]
+    ],
+    "client_state": {
+      "client_id": null,
+      "client_type": "startup_founder",
+      "as_of": "2026-09-19T09:25:16.917Z",
+      "physical": {
+        "sleep_h": {
+          "value": 6,
+          "source": "self_reported",
+          "confidence": 0.7
+        },
+        "energy": {
+          "value": 3,
+          "source": "self_reported",
+          "confidence": 0.7
+        },
+        "notes_tags": {
+          "value": [],
+          "source": "unknown"
+        }
+      },
+      "cognitive": {
+        "focus": {
+          "value": null,
+          "source": "unknown"
+        },
+        "load_est": {
+          "value": null,
+          "source": "inferred"
+        }
+      },
+      "emotional": {
+        "stress": {
+          "value": 4,
+          "source": "self_reported",
+          "confidence": 0.75
+        },
+        "mood": {
+          "value": null,
+          "source": "unknown"
+        }
+      },
+      "behavioral": {
+        "prefers_breath": {
+          "value": "yes",
+          "source": "self_reported",
+          "confidence": 0.8
+        },
+        "history_notes": {
+          "value": "prior_positive:cyclic-sighing",
+          "source": "observed"
+        },
+        "prior_outcomes_depth": {
+          "value": 0,
+          "source": "unknown"
+        }
+      },
+      "temporal": {
+        "available_minutes": {
+          "value": 10,
+          "source": "observed",
+          "confidence": 0.9
+        },
+        "local_time_bucket": {
+          "value": null,
+          "source": "unknown"
+        }
+      },
+      "constraints": {
+        "clinician_mode": {
+          "value": false,
+          "source": "observed"
+        },
+        "crisis_flag": {
+          "value": false,
+          "source": "observed"
+        },
+        "force_silence": {
+          "value": false,
+          "source": "observed"
+        }
+      }
+    },
+    "context": {
+      "who": {
+        "client_type": "startup_founder",
+        "staff_id": null
+      },
+      "where": {
+        "place_class": "office",
+        "privacy": null
+      },
+      "when": {
+        "timezone": null,
+        "time_available_min": 10,
+        "time_bucket": null
+      },
+      "activity": {
+        "label": null
+      },
+      "travel": {
+        "in_transit": null,
+        "jetlag_hint": null
+      },
+      "event": {
+        "upcoming_tag": "investor_meeting",
+        "phase": null
+      },
+      "upcoming": {
+        "tag": "investor_meeting",
+        "stakes": null
+      },
+      "time_available": {
+        "minutes": 10
+      },
+      "timezone": null,
+      "privacy": null
+    },
+    "moment": {
+      "type": "investor_meeting",
+      "phase": null,
+      "stakes": null,
+      "label": null
+    },
+    "decision_record": {
+      "decision_id": "dr_6894fcb9b168",
+      "client_id": null,
+      "staff_id": null,
+      "timestamps": {
+        "decided_at": "2026-09-19T09:25:16.919Z"
+      },
+      "state": {
+        "client_id": null,
+        "client_type": "startup_founder",
+        "as_of": "2026-09-19T09:25:16.917Z",
+        "physical": {
+          "sleep_h": {
+            "value": 6,
+            "source": "self_reported",
+            "confidence": 0.7
+          },
+          "energy": {
+            "value": 3,
+            "source": "self_reported",
+            "confidence": 0.7
+          },
+          "notes_tags": {
+            "value": [],
+            "source": "unknown"
+          }
+        },
+        "cognitive": {
+          "focus": {
+            "value": null,
+            "source": "unknown"
+          },
+          "load_est": {
+            "value": null,
+            "source": "inferred"
+          }
+        },
+        "emotional": {
+          "stress": {
+            "value": 4,
+            "source": "self_reported",
+            "confidence": 0.75
+          },
+          "mood": {
+            "value": null,
+            "source": "unknown"
+          }
+        },
+        "behavioral": {
+          "prefers_breath": {
+            "value": "yes",
+            "source": "self_reported",
+            "confidence": 0.8
+          },
+          "history_notes": {
+            "value": "prior_positive:cyclic-sighing",
+            "source": "observed"
+          },
+          "prior_outcomes_depth": {
+            "value": 0,
+            "source": "unknown"
+          }
+        },
+        "temporal": {
+          "available_minutes": {
+            "value": 10,
+            "source": "observed",
+            "confidence": 0.9
+          },
+          "local_time_bucket": {
+            "value": null,
+            "source": "unknown"
+          }
+        },
+        "constraints": {
+          "clinician_mode": {
+            "value": false,
+            "source": "observed"
+          },
+          "crisis_flag": {
+            "value": false,
+            "source": "observed"
+          },
+          "force_silence": {
+            "value": false,
+            "source": "observed"
+          }
+        }
+      },
+      "context": {
+        "who": {
+          "client_type": "startup_founder",
+          "staff_id": null
+        },
+        "where": {
+          "place_class": "office",
+          "privacy": null
+        },
+        "when": {
+          "timezone": null,
+          "time_available_min": 10,
+          "time_bucket": null
+        },
+        "activity": {
+          "label": null
+        },
+        "travel": {
+          "in_transit": null,
+          "jetlag_hint": null
+        },
+        "event": {
+          "upcoming_tag": "investor_meeting",
+          "phase": null
+        },
+        "upcoming": {
+          "tag": "investor_meeting",
+          "stakes": null
+        },
+        "time_available": {
+          "minutes": 10
+        },
+        "timezone": null,
+        "privacy": null
+      },
+      "goal": null,
+      "duration": {
+        "available_minutes": 10
+      },
+      "candidates": [
+        {
+          "protocol_id": "process-visualization",
+          "score": 1.326,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0.25,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.8,
+            "expected_benefit": 0.8,
+            "adherence_prob": 0.93,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.8,
+            "context_fit": 0.25,
+            "duration_fit": 0.8,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.326
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:5m"
+          ],
+          "min_duration_sec": 180,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 600,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "centering-ravizza",
+          "score": 1.117,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.55,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.92,
+            "expected_benefit": 0.52,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.52,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.117
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:C",
+            "duration:2m"
+          ],
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 120,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "ppr",
+          "score": 1.102,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.67,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.92,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.67,
+            "state_fit": 0.68,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.102
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:2m"
+          ],
+          "min_duration_sec": 30,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 120,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "pettlep",
+          "score": 1.006,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0.25,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.8,
+            "expected_benefit": 0.8,
+            "adherence_prob": 0.93,
+            "penalties": 0.08
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.8,
+            "context_fit": 0.25,
+            "duration_fit": 0.8,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.006
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:5m"
+          ],
+          "min_duration_sec": 300,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 900,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "box-breathing",
+          "score": 0.977,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.84,
+            "context_match": 0.82,
+            "timing": 0.95,
+            "evidence": 0.55,
+            "history": 0.85,
+            "preference": 1,
+            "feasibility": 0.92,
+            "expected_benefit": 0.52,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.84,
+            "state_fit": 0.52,
+            "context_fit": 0.82,
+            "duration_fit": 0.92,
+            "preference_fit": 1,
+            "historical_response": 0.85,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.977
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:C",
+            "duration:2m",
+            "pref:breath"
+          ],
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 300,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "tactical-breath-reset",
+          "score": 0.858,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.84,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.55,
+            "history": 0.85,
+            "preference": 1,
+            "feasibility": 0.92,
+            "expected_benefit": 0.52,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.84,
+            "state_fit": 0.52,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 1,
+            "historical_response": 0.85,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.858
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:C",
+            "duration:2m",
+            "pref:breath"
+          ],
+          "min_duration_sec": 45,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 180,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "exhale-emphasized",
+          "score": 0.842,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.66,
+            "context_match": 0.47,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.85,
+            "preference": 1,
+            "feasibility": 0.92,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.66,
+            "state_fit": 0.68,
+            "context_fit": 0.47,
+            "duration_fit": 0.92,
+            "preference_fit": 1,
+            "historical_response": 0.85,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.842
+          },
+          "why": [
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:2m",
+            "pref:breath"
+          ],
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 300,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "cyclic-sighing",
+          "score": 0.819,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.49,
+            "context_match": 0.58,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 1,
+            "preference": 1,
+            "feasibility": 0.8,
+            "expected_benefit": 0.68,
+            "adherence_prob": 0.93,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.49,
+            "state_fit": 0.68,
+            "context_fit": 0.58,
+            "duration_fit": 0.8,
+            "preference_fit": 1,
+            "historical_response": 1,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.819
+          },
+          "why": [
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:5m",
+            "pref:breath",
+            "history:positive"
+          ],
+          "min_duration_sec": 300,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 300,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "physiological-sigh-acute",
+          "score": 0.795,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.49,
+            "context_match": 0.35,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.85,
+            "preference": 1,
+            "feasibility": 0.96,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.49,
+            "state_fit": 0.68,
+            "context_fit": 0.35,
+            "duration_fit": 0.96,
+            "preference_fit": 1,
+            "historical_response": 0.85,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.795
+          },
+          "why": [
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:1m",
+            "pref:breath"
+          ],
+          "min_duration_sec": 30,
+          "recommended_duration_sec": 60,
+          "max_duration_sec": 120,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "brief-pmr-acute",
+          "score": 0.657,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.2,
+            "context_match": 0.5,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.92,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.2,
+            "state_fit": 0.68,
+            "context_fit": 0.5,
+            "duration_fit": 0.92,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.657
+          },
+          "why": [
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:2m"
+          ],
+          "min_duration_sec": 90,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 300,
+          "public_discrete": true,
+          "clinician_only": false
+        }
+      ],
+      "exclusions": [
+        {
+          "protocol_id": "stimulus-control",
+          "reasons": [
+            "duration_exceeds_gap:3600s>600s"
+          ]
+        },
+        {
+          "protocol_id": "sleep-restriction",
+          "reasons": [
+            "clinician_only_without_clinician_mode"
+          ]
+        },
+        {
+          "protocol_id": "wind-down",
+          "reasons": [
+            "duration_exceeds_gap:1200s>600s"
+          ]
+        },
+        {
+          "protocol_id": "morning-light",
+          "reasons": [
+            "equipment_missing:outdoors_or_bright_light"
+          ]
+        },
+        {
+          "protocol_id": "jetlag-light-melatonin",
+          "reasons": [
+            "equipment_missing:bright_light_access,melatonin_optional_clinician"
+          ]
+        },
+        {
+          "protocol_id": "evening-light-hygiene",
+          "reasons": [
+            "duration_exceeds_gap:3600s>600s"
+          ]
+        },
+        {
+          "protocol_id": "aerobic-exercise-stress",
+          "reasons": [
+            "duration_exceeds_gap:1200s>600s",
+            "equipment_missing:space_to_move"
+          ]
+        },
+        {
+          "protocol_id": "cold-face",
+          "reasons": [
+            "equipment_missing:cold_water"
+          ]
+        }
+      ],
+      "ranking_features": {
+        "need_match": 0.59,
+        "context_match": 0.25,
+        "timing": 0.95,
+        "evidence": 0.8,
+        "history": 0.5,
+        "preference": 0.35,
+        "feasibility": 0.8,
+        "expected_benefit": 0.8,
+        "adherence_prob": 0.93,
+        "penalties": 0
+      },
+      "top": [
+        {
+          "protocol_id": "process-visualization",
+          "score": 1.326,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0.25,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.8,
+            "expected_benefit": 0.8,
+            "adherence_prob": 0.93,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.8,
+            "context_fit": 0.25,
+            "duration_fit": 0.8,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.326
+          }
+        },
+        {
+          "protocol_id": "centering-ravizza",
+          "score": 1.117,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.55,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.92,
+            "expected_benefit": 0.52,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.52,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.117
+          }
+        },
+        {
+          "protocol_id": "ppr",
+          "score": 1.102,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.67,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.92,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.67,
+            "state_fit": 0.68,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.102
+          }
+        }
+      ],
+      "confidence": 0.498,
+      "explanation": {
+        "selected_id": "process-visualization",
+        "positives": [
+          "need_match=0.59",
+          "timing=0.95",
+          "evidence=0.8",
+          "feasibility=0.8",
+          "need:pre_performance",
+          "moment:investor_meeting",
+          "evidence:B",
+          "duration:5m"
+        ],
+        "penalties": [],
+        "confidence": 0.498
+      },
+      "protocol_versions": {
+        "cyclic-sighing": "1.0.0",
+        "box-breathing": "1.0.0",
+        "coherent-resonance": "1.0.0",
+        "diaphragmatic": "1.0.0",
+        "478-breathing": "1.0.0",
+        "nadi-shodhana": "1.0.0",
+        "exhale-emphasized": "1.0.0",
+        "cyclic-hyperventilation-caution": "1.0.0",
+        "pmr": "1.0.0",
+        "autogenic": "1.0.0",
+        "body-scan": "1.0.0",
+        "yoga-nidra-nsdr": "1.0.0",
+        "stimulus-control": "1.0.0",
+        "sleep-restriction": "1.0.0",
+        "wind-down": "1.0.0",
+        "caffeine-cutoff": "1.0.0",
+        "morning-light": "1.0.0",
+        "nap-protocol": "1.0.0",
+        "jetlag-light-melatonin": "1.0.0",
+        "sleep-consistency": "1.0.0",
+        "evening-light-hygiene": "1.0.0",
+        "physiological-sigh-acute": "1.0.0",
+        "54321-grounding": "1.0.0",
+        "brief-pmr-acute": "1.0.0",
+        "aerobic-exercise-stress": "1.0.0",
+        "worry-postpone": "1.0.0",
+        "mbsr-breath-anchor": "1.0.0",
+        "social-connection-micro": "1.0.0",
+        "ppr": "1.0.0",
+        "centering-ravizza": "1.0.0",
+        "pettlep": "1.0.0",
+        "if-then-gollwitzer": "1.0.0",
+        "tactical-breath-reset": "1.0.0",
+        "woop": "1.0.0",
+        "smart-caveats": "1.0.0",
+        "habit-stacking": "1.0.0",
+        "process-visualization": "1.0.0",
+        "values-compass": "1.0.0",
+        "tipp": "1.0.0",
+        "opposite-action": "1.0.0",
+        "cognitive-reappraisal": "1.0.0",
+        "affect-labeling": "1.0.0",
+        "cold-face": "1.0.0",
+        "gratitude-brief": "1.0.0",
+        "self-distancing": "1.0.0",
+        "act-defusion": "1.0.0",
+        "art-brief": "1.0.0",
+        "task-switch-buffer": "1.0.0",
+        "behavioral-activation-tiny": "1.0.0",
+        "pomodoro-ultradian": "1.0.0"
+      },
+      "action": "suggest",
+      "silence": false,
+      "inferred_need": "pre_performance",
+      "input_hash": "92aae4a340c20be1",
+      "schema_version": "1.0.0"
+    },
+    "confidence": 0.498,
+    "explanation": {
+      "selected_id": "process-visualization",
+      "positives": [
+        "need_match=0.59",
+        "timing=0.95",
+        "evidence=0.8",
+        "feasibility=0.8",
+        "need:pre_performance",
+        "moment:investor_meeting",
+        "evidence:B",
+        "duration:5m"
+      ],
+      "penalties": [],
+      "confidence": 0.498
+    }
   },
   "no": {
     "action": "suggest",
@@ -290,9 +1463,18 @@
         "protocol_id": "process-visualization",
         "name": "Process Visualization (vs Outcome-Only Fantasy)",
         "evidence": "B",
+        "evidence_class": "evidence_supported",
+        "protocol_version": "1.0.0",
         "max_duration_sec": 600,
         "recommended_duration_sec": 300,
         "min_duration_sec": 180,
+        "duration": {
+          "micro_sec": 120,
+          "min_sec": 180,
+          "optimal_sec": 300,
+          "extended_sec": 600
+        },
+        "modality": "goals",
         "arousal_direction": "down",
         "need_tags": [
           "pre_performance",
@@ -303,6 +1485,8 @@
         ],
         "public_discrete": false,
         "clinician_only": false,
+        "compatible_ids": [],
+        "incompatible_ids": [],
         "score": 1.358,
         "features": {
           "need_match": 0.59,
@@ -316,6 +1500,19 @@
           "adherence_prob": 0.93,
           "penalties": 0
         },
+        "score_breakdown": {
+          "goal_fit": 0.59,
+          "state_fit": 0.8,
+          "context_fit": 0.25,
+          "duration_fit": 0.8,
+          "preference_fit": 0.75,
+          "historical_response": 0.5,
+          "event_fit": 0.95,
+          "sequence_fit": null,
+          "safety_status": "ok",
+          "final_score": 1.358
+        },
+        "dose_for_gap_sec": 300,
         "why": [
           "need:pre_performance",
           "moment:investor_meeting",
@@ -324,15 +1521,50 @@
           "pref:non-breath"
         ],
         "purpose": "Mentally rehearse steps and obstacle handling—not only the trophy moment.",
-        "is_vault_ip": false
+        "is_vault_ip": false,
+        "confidence": 0.498,
+        "explanation": {
+          "selected_id": "process-visualization",
+          "positives": [
+            "need_match=0.59",
+            "timing=0.95",
+            "evidence=0.8",
+            "preference=0.75",
+            "feasibility=0.8",
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:5m",
+            "pref:non-breath"
+          ],
+          "penalties": [],
+          "confidence": 0.498
+        },
+        "dose": {
+          "micro": 120,
+          "minimum": 180,
+          "recommended": 300,
+          "extended": 600
+        },
+        "preferred_dose": "extended",
+        "delivery_modality": "audio"
       },
       {
         "protocol_id": "centering-ravizza",
         "name": "Centering (Ravizza-Style)",
         "evidence": "C",
+        "evidence_class": "practitioner_derived",
+        "protocol_version": "1.0.0",
         "max_duration_sec": 120,
         "recommended_duration_sec": 120,
         "min_duration_sec": 120,
+        "duration": {
+          "micro_sec": 120,
+          "min_sec": 120,
+          "optimal_sec": 120,
+          "extended_sec": 120
+        },
+        "modality": "performance",
         "arousal_direction": "down",
         "need_tags": [
           "pre_performance",
@@ -344,6 +1576,8 @@
         ],
         "public_discrete": true,
         "clinician_only": false,
+        "compatible_ids": [],
+        "incompatible_ids": [],
         "score": 1.149,
         "features": {
           "need_match": 0.59,
@@ -357,6 +1591,19 @@
           "adherence_prob": 1,
           "penalties": 0
         },
+        "score_breakdown": {
+          "goal_fit": 0.59,
+          "state_fit": 0.52,
+          "context_fit": 0,
+          "duration_fit": 0.92,
+          "preference_fit": 0.75,
+          "historical_response": 0.5,
+          "event_fit": 0.95,
+          "sequence_fit": null,
+          "safety_status": "ok",
+          "final_score": 1.149
+        },
+        "dose_for_gap_sec": 120,
         "why": [
           "need:pre_performance",
           "moment:investor_meeting",
@@ -365,15 +1612,50 @@
           "pref:non-breath"
         ],
         "purpose": "Rapidly shift from distracted/tense state to controlled, present, process-focused state.",
-        "is_vault_ip": false
+        "is_vault_ip": false,
+        "confidence": 0.416,
+        "explanation": {
+          "selected_id": "centering-ravizza",
+          "positives": [
+            "need_match=0.59",
+            "timing=0.95",
+            "evidence=0.55",
+            "preference=0.75",
+            "feasibility=0.92",
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:C",
+            "duration:2m",
+            "pref:non-breath"
+          ],
+          "penalties": [],
+          "confidence": 0.416
+        },
+        "dose": {
+          "micro": 120,
+          "minimum": 120,
+          "recommended": 120,
+          "extended": 120
+        },
+        "preferred_dose": "recommended",
+        "delivery_modality": "audio"
       },
       {
         "protocol_id": "ppr",
         "name": "Pre-Performance Routine (PPR)",
         "evidence": "B",
+        "evidence_class": "evidence_supported",
+        "protocol_version": "1.0.0",
         "max_duration_sec": 120,
         "recommended_duration_sec": 120,
         "min_duration_sec": 30,
+        "duration": {
+          "micro_sec": 30,
+          "min_sec": 30,
+          "optimal_sec": 120,
+          "extended_sec": 120
+        },
+        "modality": "performance",
         "arousal_direction": "down",
         "need_tags": [
           "pre_performance"
@@ -383,6 +1665,8 @@
         ],
         "public_discrete": false,
         "clinician_only": false,
+        "compatible_ids": [],
+        "incompatible_ids": [],
         "score": 1.134,
         "features": {
           "need_match": 0.67,
@@ -396,6 +1680,19 @@
           "adherence_prob": 1,
           "penalties": 0
         },
+        "score_breakdown": {
+          "goal_fit": 0.67,
+          "state_fit": 0.68,
+          "context_fit": 0,
+          "duration_fit": 0.92,
+          "preference_fit": 0.75,
+          "historical_response": 0.5,
+          "event_fit": 0.95,
+          "sequence_fit": null,
+          "safety_status": "ok",
+          "final_score": 1.134
+        },
+        "dose_for_gap_sec": 120,
         "why": [
           "need:pre_performance",
           "moment:investor_meeting",
@@ -404,7 +1701,33 @@
           "pref:non-breath"
         ],
         "purpose": "Stabilize attention and arousal before a skilled performance via a consistent short sequence.",
-        "is_vault_ip": false
+        "is_vault_ip": false,
+        "confidence": 0.483,
+        "explanation": {
+          "selected_id": "ppr",
+          "positives": [
+            "need_match=0.67",
+            "timing=0.95",
+            "evidence=0.8",
+            "preference=0.75",
+            "feasibility=0.92",
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:2m",
+            "pref:non-breath"
+          ],
+          "penalties": [],
+          "confidence": 0.483
+        },
+        "dose": {
+          "micro": 30,
+          "minimum": 30,
+          "recommended": 120,
+          "extended": 120
+        },
+        "preferred_dose": "recommended",
+        "delivery_modality": "audio"
       }
     ],
     "exclusions": [
@@ -459,13 +1782,6 @@
         ]
       },
       {
-        "protocol_id": "smart-caveats",
-        "name": "SMART Goals with Evidence Caveats",
-        "reasons": [
-          "duration_exceeds_gap:720s>600s"
-        ]
-      },
-      {
         "protocol_id": "cold-face",
         "name": "Cold Face Stimulation (Dive-Reflex Informed)",
         "reasons": [
@@ -473,7 +1789,7 @@
         ]
       }
     ],
-    "exclusions_total": 9,
+    "exclusions_total": 8,
     "exclusions_truncated": false,
     "personalized_message": "Context: investor / high-stakes meeting soon · office. Why now: settle arousal and rehearse the open (need “pre performance”; stress 4/5). Action: run “Process Visualization (vs Outcome-Only Fantasy)” (process-visualization). Duration: ~5 min (fits 10 min gap; dose ≤ gap). Skip/SILENCE is always OK.",
     "why_selected": [
@@ -489,16 +1805,17 @@
       "centering-ravizza": 1.149,
       "ppr": 1.134,
       "pettlep": 1.038,
-      "brief-pmr-acute": 0.689,
+      "brief-pmr-acute": 0.749,
       "if-then-gollwitzer": 0.649,
       "cognitive-reappraisal": 0.546,
-      "self-distancing": 0.506,
-      "task-switch-buffer": 0.489,
-      "tipp": 0.483
+      "pmr": 0.545,
+      "tipp": 0.543,
+      "autogenic": 0.506
     },
     "input": {
       "client_type": "startup_founder",
       "client_id": null,
+      "staff_id": null,
       "available_minutes": 10,
       "place_class": "office",
       "privacy": null,
@@ -514,11 +1831,1047 @@
       "hard_exclude_prior_negative": false,
       "goal": "",
       "activity": "",
-      "force_silence": false
+      "force_silence": false,
+      "timezone": null,
+      "moment_phase": null,
+      "client_state": {
+        "client_id": null,
+        "client_type": "startup_founder",
+        "as_of": "2026-09-19T09:25:16.922Z",
+        "physical": {
+          "sleep_h": {
+            "value": 6,
+            "source": "self_reported",
+            "confidence": 0.7
+          },
+          "energy": {
+            "value": 3,
+            "source": "self_reported",
+            "confidence": 0.7
+          },
+          "notes_tags": {
+            "value": [],
+            "source": "unknown"
+          }
+        },
+        "cognitive": {
+          "focus": {
+            "value": null,
+            "source": "unknown"
+          },
+          "load_est": {
+            "value": null,
+            "source": "inferred"
+          }
+        },
+        "emotional": {
+          "stress": {
+            "value": 4,
+            "source": "self_reported",
+            "confidence": 0.75
+          },
+          "mood": {
+            "value": null,
+            "source": "unknown"
+          }
+        },
+        "behavioral": {
+          "prefers_breath": {
+            "value": "no",
+            "source": "self_reported",
+            "confidence": 0.8
+          },
+          "history_notes": {
+            "value": "prior_negative:cyclic-sighing",
+            "source": "observed"
+          },
+          "prior_outcomes_depth": {
+            "value": 0,
+            "source": "unknown"
+          }
+        },
+        "temporal": {
+          "available_minutes": {
+            "value": 10,
+            "source": "observed",
+            "confidence": 0.9
+          },
+          "local_time_bucket": {
+            "value": null,
+            "source": "unknown"
+          }
+        },
+        "constraints": {
+          "clinician_mode": {
+            "value": false,
+            "source": "observed"
+          },
+          "crisis_flag": {
+            "value": false,
+            "source": "observed"
+          },
+          "force_silence": {
+            "value": false,
+            "source": "observed"
+          }
+        }
+      },
+      "context": {
+        "who": {
+          "client_type": "startup_founder",
+          "staff_id": null
+        },
+        "where": {
+          "place_class": "office",
+          "privacy": null
+        },
+        "when": {
+          "timezone": null,
+          "time_available_min": 10,
+          "time_bucket": null
+        },
+        "activity": {
+          "label": null
+        },
+        "travel": {
+          "in_transit": null,
+          "jetlag_hint": null
+        },
+        "event": {
+          "upcoming_tag": "investor_meeting",
+          "phase": null
+        },
+        "upcoming": {
+          "tag": "investor_meeting",
+          "stakes": null
+        },
+        "time_available": {
+          "minutes": 10
+        },
+        "timezone": null,
+        "privacy": null
+      },
+      "moment": {
+        "type": "investor_meeting",
+        "phase": null,
+        "stakes": null,
+        "label": null
+      }
     },
     "suggested_sequence": [
       "physiological-sigh-acute",
       "task-switch-buffer"
-    ]
+    ],
+    "client_state": {
+      "client_id": null,
+      "client_type": "startup_founder",
+      "as_of": "2026-09-19T09:25:16.922Z",
+      "physical": {
+        "sleep_h": {
+          "value": 6,
+          "source": "self_reported",
+          "confidence": 0.7
+        },
+        "energy": {
+          "value": 3,
+          "source": "self_reported",
+          "confidence": 0.7
+        },
+        "notes_tags": {
+          "value": [],
+          "source": "unknown"
+        }
+      },
+      "cognitive": {
+        "focus": {
+          "value": null,
+          "source": "unknown"
+        },
+        "load_est": {
+          "value": null,
+          "source": "inferred"
+        }
+      },
+      "emotional": {
+        "stress": {
+          "value": 4,
+          "source": "self_reported",
+          "confidence": 0.75
+        },
+        "mood": {
+          "value": null,
+          "source": "unknown"
+        }
+      },
+      "behavioral": {
+        "prefers_breath": {
+          "value": "no",
+          "source": "self_reported",
+          "confidence": 0.8
+        },
+        "history_notes": {
+          "value": "prior_negative:cyclic-sighing",
+          "source": "observed"
+        },
+        "prior_outcomes_depth": {
+          "value": 0,
+          "source": "unknown"
+        }
+      },
+      "temporal": {
+        "available_minutes": {
+          "value": 10,
+          "source": "observed",
+          "confidence": 0.9
+        },
+        "local_time_bucket": {
+          "value": null,
+          "source": "unknown"
+        }
+      },
+      "constraints": {
+        "clinician_mode": {
+          "value": false,
+          "source": "observed"
+        },
+        "crisis_flag": {
+          "value": false,
+          "source": "observed"
+        },
+        "force_silence": {
+          "value": false,
+          "source": "observed"
+        }
+      }
+    },
+    "context": {
+      "who": {
+        "client_type": "startup_founder",
+        "staff_id": null
+      },
+      "where": {
+        "place_class": "office",
+        "privacy": null
+      },
+      "when": {
+        "timezone": null,
+        "time_available_min": 10,
+        "time_bucket": null
+      },
+      "activity": {
+        "label": null
+      },
+      "travel": {
+        "in_transit": null,
+        "jetlag_hint": null
+      },
+      "event": {
+        "upcoming_tag": "investor_meeting",
+        "phase": null
+      },
+      "upcoming": {
+        "tag": "investor_meeting",
+        "stakes": null
+      },
+      "time_available": {
+        "minutes": 10
+      },
+      "timezone": null,
+      "privacy": null
+    },
+    "moment": {
+      "type": "investor_meeting",
+      "phase": null,
+      "stakes": null,
+      "label": null
+    },
+    "decision_record": {
+      "decision_id": "dr_5a437fb0aac6",
+      "client_id": null,
+      "staff_id": null,
+      "timestamps": {
+        "decided_at": "2026-09-19T09:25:16.923Z"
+      },
+      "state": {
+        "client_id": null,
+        "client_type": "startup_founder",
+        "as_of": "2026-09-19T09:25:16.922Z",
+        "physical": {
+          "sleep_h": {
+            "value": 6,
+            "source": "self_reported",
+            "confidence": 0.7
+          },
+          "energy": {
+            "value": 3,
+            "source": "self_reported",
+            "confidence": 0.7
+          },
+          "notes_tags": {
+            "value": [],
+            "source": "unknown"
+          }
+        },
+        "cognitive": {
+          "focus": {
+            "value": null,
+            "source": "unknown"
+          },
+          "load_est": {
+            "value": null,
+            "source": "inferred"
+          }
+        },
+        "emotional": {
+          "stress": {
+            "value": 4,
+            "source": "self_reported",
+            "confidence": 0.75
+          },
+          "mood": {
+            "value": null,
+            "source": "unknown"
+          }
+        },
+        "behavioral": {
+          "prefers_breath": {
+            "value": "no",
+            "source": "self_reported",
+            "confidence": 0.8
+          },
+          "history_notes": {
+            "value": "prior_negative:cyclic-sighing",
+            "source": "observed"
+          },
+          "prior_outcomes_depth": {
+            "value": 0,
+            "source": "unknown"
+          }
+        },
+        "temporal": {
+          "available_minutes": {
+            "value": 10,
+            "source": "observed",
+            "confidence": 0.9
+          },
+          "local_time_bucket": {
+            "value": null,
+            "source": "unknown"
+          }
+        },
+        "constraints": {
+          "clinician_mode": {
+            "value": false,
+            "source": "observed"
+          },
+          "crisis_flag": {
+            "value": false,
+            "source": "observed"
+          },
+          "force_silence": {
+            "value": false,
+            "source": "observed"
+          }
+        }
+      },
+      "context": {
+        "who": {
+          "client_type": "startup_founder",
+          "staff_id": null
+        },
+        "where": {
+          "place_class": "office",
+          "privacy": null
+        },
+        "when": {
+          "timezone": null,
+          "time_available_min": 10,
+          "time_bucket": null
+        },
+        "activity": {
+          "label": null
+        },
+        "travel": {
+          "in_transit": null,
+          "jetlag_hint": null
+        },
+        "event": {
+          "upcoming_tag": "investor_meeting",
+          "phase": null
+        },
+        "upcoming": {
+          "tag": "investor_meeting",
+          "stakes": null
+        },
+        "time_available": {
+          "minutes": 10
+        },
+        "timezone": null,
+        "privacy": null
+      },
+      "goal": null,
+      "duration": {
+        "available_minutes": 10
+      },
+      "candidates": [
+        {
+          "protocol_id": "process-visualization",
+          "score": 1.358,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0.25,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.8,
+            "expected_benefit": 0.8,
+            "adherence_prob": 0.93,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.8,
+            "context_fit": 0.25,
+            "duration_fit": 0.8,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.358
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:5m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 180,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 600,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "centering-ravizza",
+          "score": 1.149,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.55,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.92,
+            "expected_benefit": 0.52,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.52,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.149
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:C",
+            "duration:2m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 120,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "ppr",
+          "score": 1.134,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.67,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.92,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.67,
+            "state_fit": 0.68,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.134
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:2m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 30,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 120,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "pettlep",
+          "score": 1.038,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0.25,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.8,
+            "expected_benefit": 0.8,
+            "adherence_prob": 0.93,
+            "penalties": 0.08
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.8,
+            "context_fit": 0.25,
+            "duration_fit": 0.8,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.038
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:5m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 300,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 900,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "brief-pmr-acute",
+          "score": 0.749,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.2,
+            "context_match": 0.5,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.92,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.2,
+            "state_fit": 0.68,
+            "context_fit": 0.5,
+            "duration_fit": 0.92,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.749
+          },
+          "why": [
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:2m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 90,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 300,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "if-then-gollwitzer",
+          "score": 0.649,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0,
+            "context_match": 0.36,
+            "timing": 0.35,
+            "evidence": 1,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.8,
+            "expected_benefit": 0.96,
+            "adherence_prob": 0.93,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0,
+            "state_fit": 0.96,
+            "context_fit": 0.36,
+            "duration_fit": 0.8,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.35,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.649
+          },
+          "why": [
+            "evidence:A",
+            "duration:5m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 300,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 600,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "cognitive-reappraisal",
+          "score": 0.546,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0,
+            "context_match": 0.5,
+            "timing": 0.35,
+            "evidence": 1,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.8,
+            "expected_benefit": 0.96,
+            "adherence_prob": 0.93,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0,
+            "state_fit": 0.96,
+            "context_fit": 0.5,
+            "duration_fit": 0.8,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.35,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.546
+          },
+          "why": [
+            "evidence:A",
+            "duration:5m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 300,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 600,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "pmr",
+          "score": 0.545,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.2,
+            "context_match": 0.22,
+            "timing": 0.35,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.6,
+            "expected_benefit": 0.8,
+            "adherence_prob": 0.7,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.2,
+            "state_fit": 0.8,
+            "context_fit": 0.22,
+            "duration_fit": 0.6,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.35,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.545
+          },
+          "why": [
+            "evidence:B",
+            "duration:12m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 600,
+          "recommended_duration_sec": 720,
+          "max_duration_sec": 1200,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "tipp",
+          "score": 0.543,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.2,
+            "context_match": 0.1,
+            "timing": 0.35,
+            "evidence": 0.55,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.8,
+            "expected_benefit": 0.59,
+            "adherence_prob": 0.93,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.2,
+            "state_fit": 0.59,
+            "context_fit": 0.1,
+            "duration_fit": 0.8,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.35,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.543
+          },
+          "why": [
+            "evidence:C",
+            "duration:5m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 60,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 900,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "autogenic",
+          "score": 0.506,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.25,
+            "context_match": 0.22,
+            "timing": 0.35,
+            "evidence": 0.55,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.6,
+            "expected_benefit": 0.59,
+            "adherence_prob": 0.7,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.25,
+            "state_fit": 0.59,
+            "context_fit": 0.22,
+            "duration_fit": 0.6,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.35,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.506
+          },
+          "why": [
+            "evidence:C",
+            "duration:12m",
+            "pref:non-breath"
+          ],
+          "min_duration_sec": 600,
+          "recommended_duration_sec": 720,
+          "max_duration_sec": 1200,
+          "public_discrete": false,
+          "clinician_only": false
+        }
+      ],
+      "exclusions": [
+        {
+          "protocol_id": "stimulus-control",
+          "reasons": [
+            "duration_exceeds_gap:3600s>600s"
+          ]
+        },
+        {
+          "protocol_id": "sleep-restriction",
+          "reasons": [
+            "clinician_only_without_clinician_mode"
+          ]
+        },
+        {
+          "protocol_id": "wind-down",
+          "reasons": [
+            "duration_exceeds_gap:1200s>600s"
+          ]
+        },
+        {
+          "protocol_id": "morning-light",
+          "reasons": [
+            "equipment_missing:outdoors_or_bright_light"
+          ]
+        },
+        {
+          "protocol_id": "jetlag-light-melatonin",
+          "reasons": [
+            "equipment_missing:bright_light_access,melatonin_optional_clinician"
+          ]
+        },
+        {
+          "protocol_id": "evening-light-hygiene",
+          "reasons": [
+            "duration_exceeds_gap:3600s>600s"
+          ]
+        },
+        {
+          "protocol_id": "aerobic-exercise-stress",
+          "reasons": [
+            "duration_exceeds_gap:1200s>600s",
+            "equipment_missing:space_to_move"
+          ]
+        },
+        {
+          "protocol_id": "cold-face",
+          "reasons": [
+            "equipment_missing:cold_water"
+          ]
+        }
+      ],
+      "ranking_features": {
+        "need_match": 0.59,
+        "context_match": 0.25,
+        "timing": 0.95,
+        "evidence": 0.8,
+        "history": 0.5,
+        "preference": 0.75,
+        "feasibility": 0.8,
+        "expected_benefit": 0.8,
+        "adherence_prob": 0.93,
+        "penalties": 0
+      },
+      "top": [
+        {
+          "protocol_id": "process-visualization",
+          "score": 1.358,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0.25,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.8,
+            "expected_benefit": 0.8,
+            "adherence_prob": 0.93,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.8,
+            "context_fit": 0.25,
+            "duration_fit": 0.8,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.358
+          }
+        },
+        {
+          "protocol_id": "centering-ravizza",
+          "score": 1.149,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.55,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.92,
+            "expected_benefit": 0.52,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.52,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.149
+          }
+        },
+        {
+          "protocol_id": "ppr",
+          "score": 1.134,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.67,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.75,
+            "feasibility": 0.92,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.67,
+            "state_fit": 0.68,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 0.75,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 1.134
+          }
+        }
+      ],
+      "confidence": 0.498,
+      "explanation": {
+        "selected_id": "process-visualization",
+        "positives": [
+          "need_match=0.59",
+          "timing=0.95",
+          "evidence=0.8",
+          "preference=0.75",
+          "feasibility=0.8",
+          "need:pre_performance",
+          "moment:investor_meeting",
+          "evidence:B",
+          "duration:5m",
+          "pref:non-breath"
+        ],
+        "penalties": [],
+        "confidence": 0.498
+      },
+      "protocol_versions": {
+        "cyclic-sighing": "1.0.0",
+        "box-breathing": "1.0.0",
+        "coherent-resonance": "1.0.0",
+        "diaphragmatic": "1.0.0",
+        "478-breathing": "1.0.0",
+        "nadi-shodhana": "1.0.0",
+        "exhale-emphasized": "1.0.0",
+        "cyclic-hyperventilation-caution": "1.0.0",
+        "pmr": "1.0.0",
+        "autogenic": "1.0.0",
+        "body-scan": "1.0.0",
+        "yoga-nidra-nsdr": "1.0.0",
+        "stimulus-control": "1.0.0",
+        "sleep-restriction": "1.0.0",
+        "wind-down": "1.0.0",
+        "caffeine-cutoff": "1.0.0",
+        "morning-light": "1.0.0",
+        "nap-protocol": "1.0.0",
+        "jetlag-light-melatonin": "1.0.0",
+        "sleep-consistency": "1.0.0",
+        "evening-light-hygiene": "1.0.0",
+        "physiological-sigh-acute": "1.0.0",
+        "54321-grounding": "1.0.0",
+        "brief-pmr-acute": "1.0.0",
+        "aerobic-exercise-stress": "1.0.0",
+        "worry-postpone": "1.0.0",
+        "mbsr-breath-anchor": "1.0.0",
+        "social-connection-micro": "1.0.0",
+        "ppr": "1.0.0",
+        "centering-ravizza": "1.0.0",
+        "pettlep": "1.0.0",
+        "if-then-gollwitzer": "1.0.0",
+        "tactical-breath-reset": "1.0.0",
+        "woop": "1.0.0",
+        "smart-caveats": "1.0.0",
+        "habit-stacking": "1.0.0",
+        "process-visualization": "1.0.0",
+        "values-compass": "1.0.0",
+        "tipp": "1.0.0",
+        "opposite-action": "1.0.0",
+        "cognitive-reappraisal": "1.0.0",
+        "affect-labeling": "1.0.0",
+        "cold-face": "1.0.0",
+        "gratitude-brief": "1.0.0",
+        "self-distancing": "1.0.0",
+        "act-defusion": "1.0.0",
+        "art-brief": "1.0.0",
+        "task-switch-buffer": "1.0.0",
+        "behavioral-activation-tiny": "1.0.0",
+        "pomodoro-ultradian": "1.0.0"
+      },
+      "action": "suggest",
+      "silence": false,
+      "inferred_need": "pre_performance",
+      "input_hash": "cdf50d0f5e1095ee",
+      "schema_version": "1.0.0"
+    },
+    "confidence": 0.498,
+    "explanation": {
+      "selected_id": "process-visualization",
+      "positives": [
+        "need_match=0.59",
+        "timing=0.95",
+        "evidence=0.8",
+        "preference=0.75",
+        "feasibility=0.8",
+        "need:pre_performance",
+        "moment:investor_meeting",
+        "evidence:B",
+        "duration:5m",
+        "pref:non-breath"
+      ],
+      "penalties": [],
+      "confidence": 0.498
+    }
   }
 }
