@@ -46,7 +46,8 @@ Default weights (`score_spec.json`): sum of positive w ≈ 1.0 before penalties.
 - automation_ok=false on fully-auto channel
 - arousal incompatible (activation when sleep_prep)
 - evidence E on evidence-claiming path
-- max_duration_sec > available_gap_sec
+- duration / dose vs gap (runtime product rule): prefer `recommended_duration_sec`; if it exceeds gap but `min_duration_sec` ≤ gap, shrink dose to ≤ `available_minutes*60` (never below min). Micro/acute gaps (≤120s) prefer min when need is micro/stress/pre-performance. Do **not** use raw `max_duration_sec` as the staff default dose.
+- public_discrete===false when place_class ∈ {public,airport,plane,open_office} or privacy=public
 - crisis path (no protocol ranking)
 
 ## Thresholds
