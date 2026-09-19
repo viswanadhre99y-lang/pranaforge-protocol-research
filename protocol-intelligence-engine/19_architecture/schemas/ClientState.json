@@ -1,0 +1,40 @@
+{
+  "$id": "ClientState",
+  "type": "object",
+  "properties": {
+    "client_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "client_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "as_of": {
+      "type": "string"
+    },
+    "physical": {
+      "type": "object"
+    },
+    "cognitive": {
+      "type": "object"
+    },
+    "emotional": {
+      "type": "object"
+    },
+    "behavioral": {
+      "type": "object"
+    },
+    "temporal": {
+      "type": "object"
+    },
+    "constraints": {
+      "type": "object"
+    }
+  },
+  "description": "Each dimension field is {value, source: observed|self_reported|inferred|unknown, confidence?}. Never invent medical diagnoses."
+}

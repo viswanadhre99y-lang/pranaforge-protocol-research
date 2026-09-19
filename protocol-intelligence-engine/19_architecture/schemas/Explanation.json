@@ -1,0 +1,30 @@
+{
+  "$id": "Explanation",
+  "type": "object",
+  "required": [
+    "selected_id",
+    "positives",
+    "penalties"
+  ],
+  "properties": {
+    "selected_id": {},
+    "positives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "penalties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

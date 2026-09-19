@@ -1,0 +1,61 @@
+{
+  "$id": "ProtocolCardUpgrade",
+  "description": "Non-breaking upgrade fields on catalog cards",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "object",
+      "properties": {
+        "micro_sec": {
+          "type": "integer"
+        },
+        "min_sec": {
+          "type": "integer"
+        },
+        "optimal_sec": {
+          "type": "integer"
+        },
+        "extended_sec": {
+          "type": "integer"
+        }
+      }
+    },
+    "public_discrete": {
+      "type": "boolean"
+    },
+    "modality": {
+      "type": "string"
+    },
+    "evidence_class": {
+      "type": "string",
+      "enum": [
+        "evidence_supported",
+        "practitioner_derived",
+        "client_observed",
+        "experimental",
+        "unknown"
+      ]
+    },
+    "compatible_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "incompatible_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "follow_up_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

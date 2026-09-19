@@ -1,0 +1,7 @@
+{
+  "$id": "Confidence",
+  "description": "Engineering heuristic 0-1 from history depth, feature strength, unknown state count, evidence_class. NOT clinical.",
+  "type": "number",
+  "minimum": 0,
+  "maximum": 1
+}

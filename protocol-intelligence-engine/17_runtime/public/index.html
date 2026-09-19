@@ -10,7 +10,7 @@
   <div class="shell">
     <header>
       <div class="brand">PranaForge <span>PIE</span></div>
-      <span class="tag">Staff Top-3 Picker · V1.1</span>
+      <span class="tag">Staff Top-3 Picker · Phase 1 CSI</span>
       <span class="tag" id="health-tag">health…</span>
       <span class="tag" id="auth-tag">auth…</span>
     </header>
@@ -149,7 +149,33 @@
       <div id="message" class="message" hidden></div>
       <div id="why" class="meta" style="margin-top:8px"></div>
       <div id="sequence" class="meta" style="margin-top:8px"></div>
-      <div id="recs" style="margin-top:14px"></div>
+
+      <div class="copilot" id="copilot-panel">
+        <h2>Copilot</h2>
+        <div class="copilot-grid">
+          <div class="copilot-block" id="state-block">
+            <h3>CURRENT STATE</h3>
+            <div id="current-state" class="meta">—</div>
+          </div>
+          <div class="copilot-block" id="confidence-block">
+            <h3>CONFIDENCE</h3>
+            <div id="confidence-summary" class="meta">—</div>
+          </div>
+        </div>
+        <div class="copilot-block" id="options-block">
+          <h3>TOP OPTIONS · WHY</h3>
+          <div id="recs" style="margin-top:8px"></div>
+        </div>
+        <div class="copilot-block" id="avoid-block">
+          <h3>AVOID</h3>
+          <div id="avoid-list" class="exclusions meta">—</div>
+        </div>
+        <div class="copilot-block next-block" id="next-block">
+          <h3>NEXT</h3>
+          <div id="next-reminder" class="meta">After delivery, log outcome (rating + optional before/after subjective fields).</div>
+        </div>
+      </div>
+
       <h2 style="margin-top:16px">Exclusions</h2>
       <div id="exclusions" class="exclusions"></div>
     </section>
@@ -168,6 +194,26 @@
         <div>
           <label for="outcome_context">context_key</label>
           <input id="outcome_context" type="text" placeholder="optional" autocomplete="off" />
+        </div>
+        <div>
+          <label for="after_stress">after.stress (opt)</label>
+          <input id="after_stress" type="number" min="1" max="5" placeholder="1–5" />
+        </div>
+        <div>
+          <label for="after_energy">after.energy (opt)</label>
+          <input id="after_energy" type="number" min="1" max="5" placeholder="1–5" />
+        </div>
+        <div>
+          <label for="after_focus">after.focus (opt)</label>
+          <input id="after_focus" type="number" min="1" max="5" placeholder="1–5" />
+        </div>
+        <div>
+          <label for="after_adherence">after.adherence (opt)</label>
+          <input id="after_adherence" type="number" min="1" max="5" placeholder="1–5" />
+        </div>
+        <div>
+          <label for="after_satisfaction">after.satisfaction (opt)</label>
+          <input id="after_satisfaction" type="number" min="1" max="10" placeholder="1–10" />
         </div>
       </div>
       <div class="actions">

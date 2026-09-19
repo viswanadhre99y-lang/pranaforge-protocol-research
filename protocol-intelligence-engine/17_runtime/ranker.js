@@ -11,6 +11,18 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const safety = require('./safety_gateway');
+const {
+  fromFlatInput: clientStateFromFlat,
+  countUnknown,
+  buildClientState,
+} = require('./schemas/client_state');
+const { fromFlatInput: contextFromFlat, buildContext } = require('./schemas/context');
+const { fromFlatInput: momentFromFlat } = require('./schemas/moment');
+const { upgradeCatalog, mapEvidenceClass } = require('./schemas/protocol_card');
+const { buildExplanation } = require('./schemas/explanation');
+const { computeConfidence } = require('./schemas/confidence');
+const { buildDecisionRecord } = require('./schemas/decision_record');
 
 const ROOT = path.join(__dirname, '..');
 const CATALOG_PATH = path.join(ROOT, '02_protocol_catalog', 'catalog.jsonl');
@@ -20,7 +32,9 @@ const OUTCOMES_PATH = path.join(DATA_DIR, 'outcomes.jsonl');
 
 function loadCatalog() {
   const lines = fs.readFileSync(CATALOG_PATH, 'utf8').split('\n').filter(Boolean);
-  return lines.map((l) => JSON.parse(l));
+  const raw = lines.map((l) => JSON.parse(l));
+  // Protocol versioning: default 1.0.0 if missing; attach upgrade fields
+  return upgradeCatalog(raw.map((p) => ({ ...p, version: p.version || '1.0.0' })));
 }
 
 function loadSpec() {
@@ -57,7 +71,7 @@ const PLACE_MAP = {
   anywhere: ['anywhere', 'anywhere_standing', 'public_discrete'],
 };
 
-const PUBLIC_PLACE_CLASSES = new Set(['public', 'airport', 'plane', 'open_office']);
+const PUBLIC_PLACE_CLASSES = safety.PUBLIC_PLACE_CLASSES;
 
 const EVENT_NEED = {
   investor_meeting: ['pre_performance', 'stress_acute'],
@@ -273,56 +287,18 @@ const BREATH_IDS = new Set(
   ).map((p) => p.protocol_id)
 );
 
-const CRISIS_PATTERNS = [
-  /\bsuicid/i,
-  /\bkill\s+my\s*self\b/i,
-  /\bkill\s+myself\b/i,
-  /\bself[-\s]?harm\b/i,
-  /\bwant\s+to\s+die\b/i,
-  /\bend\s+my\s+life\b/i,
-  /\bhurt\s+myself\b/i,
-  /\bnot\s+worth\s+living\b/i,
-  /\bno\s+reason\s+to\s+live\b/i,
-  /\btake\s+my\s+(own\s+)?life\b/i,
-];
+const CRISIS_PATTERNS = safety.CRISIS_PATTERNS;
 
 function detectCrisisText(input) {
-  const fields = [input.history_notes, input.goal, input.notes, input.free_text]
-    .filter(Boolean)
-    .map(String)
-    .join('\n');
-  if (!fields) return false;
-  return CRISIS_PATTERNS.some((re) => re.test(fields));
+  return safety.detectCrisisText(input);
 }
 
 function parseHistoryNotes(notes) {
-  const out = { prior_negative: [], prior_positive: [], disliked_modalities: [], contra: [] };
-  if (!notes || typeof notes !== 'string') return out;
-  const parts = notes.split(/[,;\n]+/).map((s) => s.trim()).filter(Boolean);
-  for (const part of parts) {
-    const mNeg = part.match(/prior_negative\s*:\s*([\w-]+)/i);
-    const mPos = part.match(/prior_positive\s*:\s*([\w-]+)/i);
-    const mDis = part.match(/dislike\s*:\s*([\w-]+)/i);
-    const mContra = part.match(/contra(?:indication)?s?\s*:\s*([\w-]+)/i);
-    if (mNeg) out.prior_negative.push(mNeg[1].toLowerCase());
-    if (mPos) out.prior_positive.push(mPos[1].toLowerCase());
-    if (mDis) out.disliked_modalities.push(mDis[1].toLowerCase());
-    if (mContra) out.contra.push(mContra[1].toLowerCase());
-  }
-  return out;
+  return safety.parseHistoryNotes(notes);
 }
 
 function hasBreathMedicalContra(input) {
-  const history = parseHistoryNotes(input.history_notes);
-  if (history.contra.includes('breath') || history.contra.includes('breathing')) return true;
-  if (history.disliked_modalities.includes('breath') || history.disliked_modalities.includes('breathing')) {
-    // dislike alone is NOT medical — only explicit contra:breath
-  }
-  const notes = String(input.history_notes || '');
-  if (/contra(?:indication)?s?\s*:\s*breath/i.test(notes)) return true;
-  if (/medical\s+contra.*breath|breath.*medical\s+contra/i.test(notes)) return true;
-  if (/panic.?breath.?intoler|breath.?intolerance/i.test(notes)) return true;
-  return false;
+  return safety.hasBreathMedicalContra(input);
 }
 
 function loadOutcomes(limit = 500) {
@@ -445,9 +421,7 @@ function jaccard(a, b) {
 }
 
 function isPublicContext(input) {
-  const place = (input.place_class || '').toLowerCase();
-  const privacy = (input.privacy || '').toLowerCase();
-  return PUBLIC_PLACE_CLASSES.has(place) || privacy === 'public';
+  return safety.isPublicContext(input);
 }
 
 function doseSecForGap(protocol, input, inferredNeeds) {
@@ -480,77 +454,12 @@ function doseSecForGap(protocol, input, inferredNeeds) {
 }
 
 function hardExclude(protocol, input, inferredNeeds) {
-  const reasons = [];
-  const needNames = new Set(inferredNeeds.map((n) => n.need));
-  const history = parseHistoryNotes(input.history_notes);
-  const place = (input.place_class || 'office').toLowerCase();
-
-  const { doseSec, gapSec } = doseSecForGap(protocol, input, inferredNeeds);
-  if (doseSec > gapSec) {
-    reasons.push(`duration_exceeds_gap:${doseSec}s>${gapSec}s`);
-  }
-
-  const clientContra = new Set(history.contra);
-  if (input.history_notes) {
-    for (const m of String(input.history_notes).matchAll(/contra(?:indication)?s?\s*:\s*([\w-]+)/gi)) {
-      clientContra.add(m[1].toLowerCase());
-    }
-    if (/panic.?breath|breath.?intoler/i.test(input.history_notes)) {
-      clientContra.add('panic_breath_intolerance');
-    }
-  }
-  const pContra = protocol.contraindication_tags || [];
-  const hit = pContra.filter((t) => clientContra.has(String(t).toLowerCase()));
-  if (hit.length) reasons.push(`contraindication:${hit.join(',')}`);
-
-  if (protocol.clinician_only && !input.clinician_mode) {
-    reasons.push('clinician_only_without_clinician_mode');
-  }
-
-  if (String(protocol.evidence_A_to_E).toUpperCase() === 'E') {
-    reasons.push('evidence_E');
-  }
-
-  const arousal = protocol.arousal_direction || '';
-  if (needNames.has('sleep_prep') && /^(up|activate|activation_up|focus)$/i.test(arousal)) {
-    reasons.push('arousal_up_when_need_sleep_prep');
-  }
-  if (needNames.has('sleep_prep') && /up_then_down|activate/i.test(arousal) && primaryNeed(inferredNeeds) === 'sleep_prep') {
-    if (!reasons.includes('arousal_up_when_need_sleep_prep')) reasons.push('arousal_up_when_need_sleep_prep');
-  }
-
-  // P1-3: hard-exclude non-discrete protocols in public contexts
-  if (isPublicContext(input) && protocol.public_discrete === false) {
-    reasons.push(`public_discrete_false:${place || input.privacy || 'public'}`);
-  }
-
-  // equipment hard check (light/jetlag protocols OK when goal implies travel/circadian)
-  const equip = protocol.equipment || [];
-  const needsEquip = equip.filter((e) => e && e !== 'none');
-  if (needsEquip.length) {
-    const goal = String(input.goal || '').toLowerCase();
-    const lightGoal = /jetlag|circadian|sleep_debt|travel|recovery/.test(goal) ||
-      /landing|flight|travel/i.test(String(input.upcoming_event_tag || ''));
-    const placeOk =
-      (needsEquip.includes('cold_water') && (place === 'bathroom' || place === 'home' || place === 'hotel')) ||
-      (needsEquip.some((e) => /outdoors|bright_light|light|melatonin/i.test(e)) &&
-        (place === 'outdoors' || place === 'home' || place === 'hotel' || lightGoal)) ||
-      (needsEquip.some((e) => /space_to_move|gym/i.test(e)) && (place === 'gym' || place === 'outdoors'));
-    if (!placeOk) {
-      reasons.push(`equipment_missing:${needsEquip.join(',')}`);
-    }
-  }
-
-  // P1-2: prefers_breath=no is strong penalty unless medical contra → hard exclude
-  if (input.prefers_breath === 'no' && BREATH_IDS.has(protocol.protocol_id) && hasBreathMedicalContra(input)) {
-    reasons.push('prefers_breath_no_medical_contra');
-  }
-
-  if (history.prior_negative.includes(protocol.protocol_id) && input.hard_exclude_prior_negative) {
-    reasons.push('prior_negative_hard');
-  }
-
-  return reasons;
+  // Centralized in safety_gateway — keep thin wrapper for ranker call sites
+  return safety.hardExcludeReasons(protocol, input, inferredNeeds, {
+    doseSecForGap,
+    primaryNeed,
+    BREATH_IDS,
+  });
 }
 
 function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
@@ -870,8 +779,89 @@ function suggestSequence(primary, input, inferred) {
   return out.length ? out : undefined;
 }
 
-function escalateResult(input, reason) {
+function historyDepthForClient(clientId) {
+  if (!clientId) return 0;
+  return loadOutcomes().filter((o) => o.client_id === clientId).length;
+}
+
+function enrichRecommendation(rec, input, opts = {}) {
+  const protocol = CATALOG.find((p) => p.protocol_id === rec.protocol_id) || {};
+  const evidence_class = rec.evidence_class || protocol.evidence_class || mapEvidenceClass(rec.evidence || protocol.evidence_A_to_E);
+  const protocol_version = rec.protocol_version || protocol.version || '1.0.0';
+  const unknownCount = opts.unknownCount != null ? opts.unknownCount : 0;
+  const histDepth = opts.historyDepth != null ? opts.historyDepth : historyDepthForClient(input.client_id);
+  const confidence = computeConfidence({
+    historyDepth: histDepth,
+    features: rec.features || {},
+    unknownCount,
+    evidenceClass: evidence_class,
+    topScore: rec.score,
+    tau: SPEC.thresholds.tau_select,
+  });
+  const explanation = buildExplanation({
+    selected_id: rec.protocol_id,
+    features: rec.features || {},
+    why: rec.why || [],
+    confidence,
+  });
   return {
+    ...rec,
+    protocol_version,
+    evidence_class,
+    confidence,
+    explanation,
+    modality: protocol.modality || rec.modality,
+    duration: protocol.duration || rec.duration,
+  };
+}
+
+function attachPhase1Meta(result, input, extras = {}) {
+  const client_state = input.client_state || clientStateFromFlat(input);
+  const context = input.context || contextFromFlat(input);
+  const moment = input.moment || momentFromFlat(input);
+  const top = result.recommendations || [];
+  const protocol_versions = {};
+  for (const p of CATALOG) protocol_versions[p.protocol_id] = p.version || '1.0.0';
+  for (const r of top) {
+    if (r.protocol_version) protocol_versions[r.protocol_id] = r.protocol_version;
+  }
+  const primary = top[0];
+  const confidence = primary && primary.confidence != null ? primary.confidence : extras.confidence;
+  const explanation = primary && primary.explanation ? primary.explanation : extras.explanation || null;
+  const { hash } = inputSummary(input);
+  const decision_record = buildDecisionRecord({
+    client_id: input.client_id || null,
+    staff_id: input.staff_id || null,
+    state: client_state,
+    context,
+    goal: input.goal || null,
+    duration: { available_minutes: input.available_minutes },
+    candidates: extras.candidates || top,
+    exclusions: result.exclusions || [],
+    ranking_features: primary && primary.features,
+    top,
+    confidence: confidence != null ? confidence : null,
+    explanation,
+    protocol_versions,
+    action: result.action,
+    silence: !!result.silence,
+    inferred_need: result.inferred_need,
+    input_hash: hash,
+  });
+  return {
+    ...result,
+    client_state,
+    context,
+    moment,
+    decision_record,
+    confidence: confidence != null ? confidence : null,
+    explanation,
+    input: { ...input, client_state, context, moment },
+  };
+}
+
+function escalateResult(input, reason, crisisMeta = {}) {
+  const base = {
     action: 'escalate',
     decision: 'SILENCE',
     silence: true,
@@ -886,16 +876,33 @@ function escalateResult(input, reason) {
     tau_select: SPEC.thresholds.tau_select,
     scores: {},
     input,
-    crisis_nlp: reason === 'crisis_nlp_keyword',
+    crisis_nlp: reason === 'crisis_nlp_keyword' || !!crisisMeta.crisis_nlp,
+    safety: {
+      severity: crisisMeta.severity || 'high',
+      confidence: crisisMeta.confidence != null ? crisisMeta.confidence : 0.9,
+      escalate: true,
+    },
   };
+  return attachPhase1Meta(base, input, {
+    confidence: crisisMeta.confidence != null ? crisisMeta.confidence : 0.9,
+    explanation: {
+      selected_id: null,
+      positives: [],
+      penalties: [reason],
+      confidence: crisisMeta.confidence != null ? crisisMeta.confidence : 0.9,
+    },
+  });
 }
 
 function recommend(rawInput) {
   const input = normalizeInput(rawInput);
+  const unknownCount = countUnknown(input.client_state || clientStateFromFlat(input));
+  const histDepth = historyDepthForClient(input.client_id);
 
-  // P0-3: crisis NLP on free-text (same path as crisis_flag)
-  if (input.crisis_flag || detectCrisisText(input)) {
-    return escalateResult(input, input.crisis_flag ? 'crisis_flag → no protocol ranking' : 'crisis_nlp_keyword');
+  // Pipeline: Input → Safety (crisis) → … Hard exclude → Candidates → Rank
+  const safetyResult = safety.runSafety(input);
+  if (!safetyResult.ok) {
+    return escalateResult(input, safetyResult.crisis.reason, safetyResult.crisis);
   }
 
   const activity = String(input.activity || '').toLowerCase();
@@ -907,38 +914,44 @@ function recommend(rawInput) {
     activity === 'sleeping' ||
     /\bdnd\b|do not disturb|orthosomnia|flow_protect|activity_gate|receptivity_gate|daily_cap/i.test(notes)
   ) {
-    return {
-      action: 'silence',
-      decision: 'SILENCE',
-      silence: true,
-      inferred_need: 'policy_silence',
-      recommendations: [],
-      exclusions: [{ protocol_id: '*', reasons: ['activity_or_policy_gate'] }],
-      exclusions_total: 1,
-      exclusions_truncated: false,
-      personalized_message: 'SILENCE: activity/receptivity/policy gate. No protocol push.',
-      why_selected: ['activity_or_policy_gate'],
-      tau_select: SPEC.thresholds.tau_select,
-      scores: {},
-      input,
-    };
+    return attachPhase1Meta(
+      {
+        action: 'silence',
+        decision: 'SILENCE',
+        silence: true,
+        inferred_need: 'policy_silence',
+        recommendations: [],
+        exclusions: [{ protocol_id: '*', reasons: ['activity_or_policy_gate'] }],
+        exclusions_total: 1,
+        exclusions_truncated: false,
+        personalized_message: 'SILENCE: activity/receptivity/policy gate. No protocol push.',
+        why_selected: ['activity_or_policy_gate'],
+        tau_select: SPEC.thresholds.tau_select,
+        scores: {},
+        input,
+      },
+      input
+    );
   }
 
   const errors = validateInput(input);
   if (errors.length) {
-    return {
-      action: 'error',
-      decision: 'INVALID',
-      silence: true,
-      errors,
-      recommendations: [],
-      exclusions: [],
-      exclusions_total: 0,
-      exclusions_truncated: false,
-      personalized_message: 'Invalid input: ' + errors.join('; '),
-      why_selected: ['validation_failed'],
-      input,
-    };
+    return attachPhase1Meta(
+      {
+        action: 'error',
+        decision: 'INVALID',
+        silence: true,
+        errors,
+        recommendations: [],
+        exclusions: [],
+        exclusions_total: 0,
+        exclusions_truncated: false,
+        personalized_message: 'Invalid input: ' + errors.join('; '),
+        why_selected: ['validation_failed'],
+        input,
+      },
+      input
+    );
   }
 
   const inferred = inferNeeds(input);
@@ -957,15 +970,21 @@ function recommend(rawInput) {
       protocol_id: p.protocol_id,
       name: p.name,
       evidence: p.evidence_A_to_E,
+      evidence_class: p.evidence_class || mapEvidenceClass(p.evidence_A_to_E),
+      protocol_version: p.version || '1.0.0',
       max_duration_sec: p.max_duration_sec,
       recommended_duration_sec: p.recommended_duration_sec,
       min_duration_sec: p.min_duration_sec,
+      duration: p.duration,
+      modality: p.modality,
       arousal_direction: p.arousal_direction,
       need_tags: p.need_tags,
       categories: p.categories,
       public_discrete: p.public_discrete,
       clinician_only: p.clinician_only,
-      follow_up_ids: p.follow_up_ids || undefined,
+      follow_up_ids: (p.follow_up_ids && p.follow_up_ids.length) ? p.follow_up_ids : undefined,
+      compatible_ids: p.compatible_ids || [],
+      incompatible_ids: p.incompatible_ids || [],
       score: s.score,
       features: s.features,
       why: s.why,
@@ -976,9 +995,9 @@ function recommend(rawInput) {
 
   scored.sort((a, b) => b.score - a.score);
   const tau = SPEC.thresholds.tau_select;
-  const top = scored.slice(0, 3);
+  const topRaw = scored.slice(0, 3);
+  const top = topRaw.map((r) => enrichRecommendation(r, input, { unknownCount, historyDepth: histDepth }));
 
-  // P2-2: return full exclusions + totals (no silent truncate)
   const exclPayload = {
     exclusions,
     exclusions_total: exclusions.length,
@@ -986,52 +1005,125 @@ function recommend(rawInput) {
   };
 
   if (!top.length || top[0].score < tau) {
-    return {
-      action: 'silence',
-      decision: 'SILENCE',
-      silence: true,
-      inferred_need: primaryNeed(inferred),
-      inferred_needs: inferred,
-      recommendations: top,
-      below_threshold: true,
-      ...exclPayload,
-      personalized_message: `SILENCE: best score ${top[0] ? top[0].score : 0} < τ_select ${tau}. Prefer no protocol push; staff may still coach manually.`,
-      why_selected: top[0]
-        ? [`best:${top[0].protocol_id}@${top[0].score}<tau`, ...((top[0] && top[0].why) || [])]
-        : ['no_candidates_after_filters'],
-      tau_select: tau,
-      scores: Object.fromEntries(scored.slice(0, 10).map((x) => [x.protocol_id, x.score])),
+    return attachPhase1Meta(
+      {
+        action: 'silence',
+        decision: 'SILENCE',
+        silence: true,
+        inferred_need: primaryNeed(inferred),
+        inferred_needs: inferred,
+        recommendations: top,
+        below_threshold: true,
+        ...exclPayload,
+        personalized_message: `SILENCE: best score ${top[0] ? top[0].score : 0} < τ_select ${tau}. Prefer no protocol push; staff may still coach manually.`,
+        why_selected: top[0]
+          ? [`best:${top[0].protocol_id}@${top[0].score}<tau`, ...((top[0] && top[0].why) || [])]
+          : ['no_candidates_after_filters'],
+        tau_select: tau,
+        scores: Object.fromEntries(scored.slice(0, 10).map((x) => [x.protocol_id, x.score])),
+        input,
+        suggested_sequence: undefined,
+      },
       input,
-      suggested_sequence: undefined,
-    };
+      { candidates: scored.slice(0, 10).map((r) => enrichRecommendation(r, input, { unknownCount, historyDepth: histDepth })) }
+    );
   }
 
   const primary = top[0];
   const full = CATALOG.find((p) => p.protocol_id === primary.protocol_id);
   const suggested_sequence = suggestSequence(full || primary, input, inferred);
 
-  return {
-    action: 'suggest',
-    decision: 'RECOMMEND',
-    silence: false,
-    inferred_need: primaryNeed(inferred),
-    inferred_needs: inferred,
-    recommendations: top,
-    ...exclPayload,
-    personalized_message: buildMessage(input, full || primary, inferred),
-    why_selected: primary.why,
-    tau_select: tau,
-    scores: Object.fromEntries(scored.slice(0, 10).map((x) => [x.protocol_id, x.score])),
+  return attachPhase1Meta(
+    {
+      action: 'suggest',
+      decision: 'RECOMMEND',
+      silence: false,
+      inferred_need: primaryNeed(inferred),
+      inferred_needs: inferred,
+      recommendations: top,
+      ...exclPayload,
+      personalized_message: buildMessage(input, full || primary, inferred),
+      why_selected: primary.why,
+      tau_select: tau,
+      scores: Object.fromEntries(scored.slice(0, 10).map((x) => [x.protocol_id, x.score])),
+      input,
+      suggested_sequence,
+    },
     input,
-    suggested_sequence,
+    { candidates: scored.slice(0, 10).map((r) => enrichRecommendation(r, input, { unknownCount, historyDepth: histDepth })) }
+  );
+}
+
+function flattenNested(raw) {
+  const r = raw || {};
+  const cs = r.client_state || {};
+  const ctx = r.context || {};
+  const constraints = r.constraints || cs.constraints || {};
+  const val = (dim, fallback) => {
+    if (dim && typeof dim === 'object' && 'value' in dim) return dim.value;
+    if (dim != null && typeof dim !== 'object') return dim;
+    return fallback;
+  };
+  const nestedPresent = !!(r.client_state || r.context);
+  if (!nestedPresent) return null;
+
+  const stress = val(cs.emotional && cs.emotional.stress, r.stress);
+  const energy = val(cs.physical && cs.physical.energy, r.energy);
+  const sleep_h = val(cs.physical && cs.physical.sleep_h, r.sleep_h);
+  const prefers_breath = val(cs.behavioral && cs.behavioral.prefers_breath, r.prefers_breath);
+  const history_notes = val(cs.behavioral && cs.behavioral.history_notes, r.history_notes);
+  const available_minutes = val(
+    (ctx.time_available && ctx.time_available.minutes) != null
+      ? { value: ctx.time_available.minutes }
+      : cs.temporal && cs.temporal.available_minutes,
+    r.available_minutes
+  );
+  const place_class = (ctx.where && ctx.where.place_class) || r.place_class;
+  const privacy = (ctx.where && ctx.where.privacy) || ctx.privacy || r.privacy;
+  const upcoming_event_tag =
+    (ctx.event && ctx.event.upcoming_tag) || (ctx.upcoming && ctx.upcoming.tag) || r.upcoming_event_tag;
+  const activity =
+    (ctx.activity && ctx.activity.label) || (typeof r.activity === 'string' ? r.activity : '') || '';
+  const clinician_mode = val(constraints.clinician_mode, r.clinician_mode);
+  const crisis_flag = val(constraints.crisis_flag, r.crisis_flag);
+  const force_silence = val(constraints.force_silence, r.force_silence);
+  const goal = r.goal != null ? r.goal : (typeof constraints.goal === 'string' ? constraints.goal : '');
+
+  return {
+    client_type: cs.client_type || (ctx.who && ctx.who.client_type) || r.client_type,
+    client_id: cs.client_id || r.client_id || null,
+    staff_id: (ctx.who && ctx.who.staff_id) || r.staff_id || null,
+    available_minutes,
+    place_class,
+    privacy,
+    upcoming_event_tag,
+    stress,
+    energy,
+    sleep_h,
+    prefers_breath,
+    history_notes,
+    notes: r.notes || '',
+    clinician_mode: !!clinician_mode,
+    crisis_flag: !!crisis_flag,
+    hard_exclude_prior_negative: !!r.hard_exclude_prior_negative,
+    goal: goal || '',
+    activity,
+    force_silence: !!force_silence,
+    timezone: ctx.timezone || (ctx.when && ctx.when.timezone) || r.timezone || null,
+    moment_phase: (ctx.event && ctx.event.phase) || r.moment_phase || null,
+    _from_nested: true,
+    _raw_client_state: cs,
+    _raw_context: ctx,
   };
 }
 
 function normalizeInput(raw) {
-  const r = raw || {};
-  return {
+  const nestedFlat = flattenNested(raw);
+  const r = nestedFlat || raw || {};
+  const flat = {
     client_type: r.client_type || 'startup_founder',
     client_id: r.client_id || null,
+    staff_id: r.staff_id || null,
     available_minutes: r.available_minutes != null ? Number(r.available_minutes) : 10,
     place_class: r.place_class || 'office',
     privacy: r.privacy || null,
@@ -1048,7 +1140,18 @@ function normalizeInput(raw) {
     goal: r.goal || '',
     activity: r.activity || '',
     force_silence: !!r.force_silence,
+    timezone: r.timezone || null,
+    moment_phase: r.moment_phase || null,
   };
+  // Prefer provided nested objects when present; else build from flat
+  const client_state = raw && raw.client_state
+    ? buildClientState({ ...raw.client_state, client_id: flat.client_id, client_type: flat.client_type })
+    : clientStateFromFlat(flat);
+  const context = raw && raw.context
+    ? buildContext({ ...raw.context, client_type: flat.client_type, place_class: flat.place_class, privacy: flat.privacy, available_minutes: flat.available_minutes, upcoming_event_tag: flat.upcoming_event_tag, activity: flat.activity, staff_id: flat.staff_id, timezone: flat.timezone })
+    : contextFromFlat(flat);
+  const moment = momentFromFlat({ ...flat, ...(raw && raw.moment ? raw.moment : {}) });
+  return { ...flat, client_state, context, moment };
 }
 
 function validateInput(input) {
@@ -1114,4 +1217,9 @@ module.exports = {
   CPI_PRIORS,
   DATA_DIR,
   OUTCOMES_PATH,
+  normalizeInput,
+  hardExclude,
+  safety,
+  enrichRecommendation,
+  attachPhase1Meta,
 };

@@ -1,0 +1,33 @@
+{
+  "$id": "Context",
+  "type": "object",
+  "properties": {
+    "who": {
+      "type": "object"
+    },
+    "where": {
+      "type": "object"
+    },
+    "when": {
+      "type": "object"
+    },
+    "activity": {
+      "type": "object"
+    },
+    "travel": {
+      "type": "object"
+    },
+    "event": {
+      "type": "object"
+    },
+    "upcoming": {
+      "type": "object"
+    },
+    "time_available": {
+      "type": "object"
+    },
+    "timezone": {},
+    "privacy": {}
+  },
+  "description": "Abstractions only; calendar integration not connected in Phase 1."
+}

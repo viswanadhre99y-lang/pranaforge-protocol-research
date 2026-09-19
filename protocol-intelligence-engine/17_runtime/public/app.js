@@ -46,6 +46,35 @@ function readForm() {
   };
 }
 
+function dimVal(d) {
+  if (d == null) return '—';
+  if (typeof d === 'object' && 'value' in d) {
+    const v = d.value == null || d.value === '' ? '—' : d.value;
+    return `${v} (${d.source || 'unknown'})`;
+  }
+  return String(d);
+}
+
+function renderCurrentState(result) {
+  const el = document.getElementById('current-state');
+  const cs = result.client_state || (result.input && result.input.client_state);
+  const ctx = result.context || (result.input && result.input.context);
+  const inp = result.input || {};
+  if (!cs && !ctx) {
+    el.textContent =
+      `stress ${inp.stress}/5 · energy ${inp.energy}/5 · place ${inp.place_class || '—'} · event ${inp.upcoming_event_tag || '—'} · gap ${inp.available_minutes}m`;
+    return;
+  }
+  const stress = cs && cs.emotional ? dimVal(cs.emotional.stress) : inp.stress;
+  const energy = cs && cs.physical ? dimVal(cs.physical.energy) : inp.energy;
+  const sleep = cs && cs.physical ? dimVal(cs.physical.sleep_h) : inp.sleep_h;
+  const place = (ctx && ctx.where && ctx.where.place_class) || inp.place_class;
+  const event = (ctx && ctx.event && ctx.event.upcoming_tag) || inp.upcoming_event_tag;
+  const phase = ctx && ctx.event && ctx.event.phase ? ` · phase ${ctx.event.phase}` : '';
+  const mins = (ctx && ctx.time_available && ctx.time_available.minutes) || inp.available_minutes;
+  el.textContent = `stress ${stress} · energy ${energy} · sleep_h ${sleep} · place ${place} · event ${event}${phase} · gap ${mins}m · type ${inp.client_type || (cs && cs.client_type) || '—'}`;
+}
+
 function render(result) {
   const badge = document.getElementById('decision-badge');
   const action = result.action || result.decision;
@@ -78,6 +107,11 @@ function render(result) {
     seqEl.textContent = '';
   }
 
+  renderCurrentState(result);
+  const confEl = document.getElementById('confidence-summary');
+  const conf = result.confidence != null ? result.confidence : (result.recommendations && result.recommendations[0] && result.recommendations[0].confidence);
+  confEl.textContent = conf != null ? `decision confidence ${conf} (engineering heuristic)` : '—';
+
   const recs = document.getElementById('recs');
   recs.innerHTML = '';
   const list = result.recommendations || [];
@@ -92,17 +126,48 @@ function render(result) {
       const isTop = !result.silence && !isBelow && i < 3;
       el.className = 'card' + (i === 0 && isTop ? ' rank-1' : '') + (isBelow ? ' below-tau' : '');
       el.setAttribute('data-below-tau', isBelow ? 'true' : 'false');
+      const expl = r.explanation || {};
+      const positives = (expl.positives || []).slice(0, 6).join(' · ') || (r.why || []).join(' · ');
+      const penalties = (expl.penalties || []).length ? (expl.penalties || []).join(' · ') : '';
       el.innerHTML = `<h3>#${i + 1} ${r.name}${isBelow ? ' <span class="below-label">(below τ)</span>' : ''}</h3>
-        <div class="meta">${r.protocol_id} · score ${r.score} · evidence ${r.evidence} · ≤${Math.round((r.recommended_duration_sec || r.max_duration_sec) / 60)}m · public_discrete=${r.public_discrete}</div>
-        <div class="meta">${(r.why || []).join(' · ')}</div>
+        <div class="meta">${r.protocol_id} · score ${r.score} · conf ${r.confidence != null ? r.confidence : '—'} · evidence ${r.evidence} (${r.evidence_class || '—'}) · v${r.protocol_version || '1.0.0'} · ≤${Math.round((r.recommended_duration_sec || r.max_duration_sec) / 60)}m · public_discrete=${r.public_discrete}</div>
+        <div class="meta why-pos"><strong>WHY+</strong> ${positives || '—'}</div>
+        <div class="meta why-pen">${penalties ? '<strong>WHY−</strong> ' + penalties : ''}</div>
         <div class="meta" style="margin-top:6px">${r.purpose || ''}</div>`;
       recs.appendChild(el);
       if (i === 0) document.getElementById('outcome_protocol').value = r.protocol_id;
     });
   }
 
-  const ex = document.getElementById('exclusions');
+  // AVOID — top hard-exclusion reasons (summarized)
+  const avoidEl = document.getElementById('avoid-list');
   const excl = result.exclusions || [];
+  const reasonCounts = new Map();
+  for (const e of excl) {
+    for (const reason of e.reasons || []) {
+      const key = String(reason).split(':')[0];
+      reasonCounts.set(key, (reasonCounts.get(key) || 0) + 1);
+    }
+  }
+  const topReasons = [...reasonCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
+  if (!topReasons.length) {
+    avoidEl.innerHTML = '<div>none (or escalate/silence gate)</div>';
+  } else {
+    avoidEl.innerHTML = topReasons
+      .map(([r, n]) => `<div>${r} ×${n}</div>`)
+      .join('');
+  }
+
+  const nextEl = document.getElementById('next-reminder');
+  if (result.action === 'escalate') {
+    nextEl.textContent = 'NEXT: human support / emergency resources — do not log protocol outcomes for crisis escalate.';
+  } else if (result.silence) {
+    nextEl.textContent = 'NEXT: prefer silence; if staff still coaches manually, optional outcome log is fine.';
+  } else {
+    nextEl.textContent = 'NEXT: deliver top card → collect outcome (rating required; optional after.* subjective fields).';
+  }
+
+  const ex = document.getElementById('exclusions');
   const total = result.exclusions_total != null ? result.exclusions_total : excl.length;
   ex.innerHTML = excl.length
     ? excl.map((e) => `<div>${e.protocol_id}: ${(e.reasons || []).join(', ')}</div>`).join('')
@@ -161,15 +226,29 @@ document.getElementById('btn-outcome').addEventListener('click', async () => {
   const status = document.getElementById('outcome-status');
   status.textContent = 'saving…';
   try {
+    const after = {};
+    const map = [
+      ['after_stress', 'stress'],
+      ['after_energy', 'energy'],
+      ['after_focus', 'focus'],
+      ['after_adherence', 'adherence'],
+      ['after_satisfaction', 'satisfaction'],
+    ];
+    for (const [id, key] of map) {
+      const el = document.getElementById(id);
+      if (el && el.value !== '') after[key] = { value: Number(el.value), source: 'self_reported' };
+    }
+    const body = {
+      client_id: document.getElementById('client_id').value || 'demo-client',
+      protocol_id: document.getElementById('outcome_protocol').value,
+      rating_1_to_10: Number(document.getElementById('outcome_rating').value),
+      context_key: document.getElementById('outcome_context').value || '',
+    };
+    if (Object.keys(after).length) body.after = after;
     const r = await fetch('/api/outcome', {
       method: 'POST',
       headers: authHeaders(),
-      body: JSON.stringify({
-        client_id: document.getElementById('client_id').value || 'demo-client',
-        protocol_id: document.getElementById('outcome_protocol').value,
-        rating_1_to_10: Number(document.getElementById('outcome_rating').value),
-        context_key: document.getElementById('outcome_context').value || '',
-      }),
+      body: JSON.stringify(body),
     });
     const j = await r.json();
     status.textContent = r.ok ? 'stored' : JSON.stringify(j);

@@ -102,3 +102,36 @@ h2 { margin: 0 0 10px; font-size: 1rem; }
 .exclusions div { padding: 4px 0; border-bottom: 1px solid #1c2630; }
 .lede { color: var(--muted); font-size: 0.92rem; margin: 0 0 12px; }
 #status, #outcome-status { font-size: 0.85rem; color: var(--muted); }
+
+/* Phase 1 copilot panel */
+.copilot {
+  margin-top: 14px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.copilot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.copilot-block {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-top: 10px;
+}
+.copilot-block h3 {
+  margin: 0 0 6px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+.why-pos { color: #b8e0c2; }
+.why-pen { color: #e0b8b8; min-height: 1em; }
+.next-block {
+  border: 1px dashed rgba(180, 200, 255, 0.35);
+}
+@media (max-width: 720px) {
+  .copilot-grid { grid-template-columns: 1fr; }
+}

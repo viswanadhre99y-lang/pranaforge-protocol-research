@@ -68,6 +68,8 @@ function auditDecision(kind, req, result) {
   const top3 = (result.recommendations || []).slice(0, 3).map((r) => ({
     protocol_id: r.protocol_id,
     score: r.score,
+    protocol_version: r.protocol_version || null,
+    evidence_class: r.evidence_class || null,
   }));
   appendAudit({
     ts: new Date().toISOString(),
@@ -80,6 +82,8 @@ function auditDecision(kind, req, result) {
     top3,
     exclusions_count: result.exclusions_total != null ? result.exclusions_total : (result.exclusions || []).length,
     suggested_sequence: result.suggested_sequence || null,
+    confidence: result.confidence != null ? result.confidence : null,
+    decision_record: result.decision_record || null,
   });
 }
 
@@ -87,7 +91,7 @@ app.get('/api/health', (_req, res) => {
   res.json({
     ok: true,
     service: 'pranaforge-pie-runtime',
-    version: '1.1.0',
+    version: '1.2.0-phase1',
     catalog_size: CATALOG.length,
     tau_select: SPEC.thresholds.tau_select,
     intended_port: INTENDED_PORT,
@@ -141,6 +145,23 @@ app.get('/api/audit', requireStaffPin, (req, res) => {
 });
 
 /** Learning loop MVP: store outcome keyed by client_id (never mix clients) */
+function normalizeSubjective(block) {
+  if (!block || typeof block !== 'object') return undefined;
+  const out = {};
+  for (const key of ['stress', 'energy', 'focus', 'adherence', 'satisfaction']) {
+    if (block[key] == null) continue;
+    if (typeof block[key] === 'object' && 'value' in block[key]) {
+      out[key] = {
+        value: block[key].value,
+        source: block[key].source || 'self_reported',
+      };
+    } else {
+      out[key] = { value: block[key], source: block.source || 'self_reported' };
+    }
+  }
+  return Object.keys(out).length ? out : undefined;
+}
+
 app.post('/api/outcome', requireStaffPin, (req, res) => {
   try {
     const body = req.body || {};
@@ -162,6 +183,11 @@ app.post('/api/outcome', requireStaffPin, (req, res) => {
       rating_1_to_10: rating,
       context_key,
     };
+    const before = normalizeSubjective(body.before);
+    const after = normalizeSubjective(body.after);
+    if (before) entry.before = before;
+    if (after) entry.after = after;
+    // Learning still uses rating_1_to_10 primarily (see outcomeBoostMap)
     fs.appendFileSync(OUTCOMES_PATH, JSON.stringify(entry) + '\n');
     res.json({ ok: true, stored: entry });
   } catch (err) {
@@ -183,6 +209,10 @@ app.get('/api/catalog', requireStaffPin, (_req, res) => {
       clinician_only: p.clinician_only,
       categories: p.categories,
       public_discrete: p.public_discrete,
+      version: p.version || '1.0.0',
+      evidence_class: p.evidence_class || null,
+      modality: p.modality || null,
+      duration: p.duration || null,
     })),
   });
 });

@@ -1,0 +1,51 @@
+{
+  "$id": "DecisionRecord",
+  "type": "object",
+  "properties": {
+    "decision_id": {
+      "type": "string"
+    },
+    "client_id": {},
+    "staff_id": {},
+    "timestamps": {
+      "type": "object"
+    },
+    "state": {
+      "type": "object"
+    },
+    "context": {
+      "type": "object"
+    },
+    "goal": {},
+    "duration": {},
+    "candidates": {
+      "type": "array"
+    },
+    "exclusions": {
+      "type": "array"
+    },
+    "ranking_features": {},
+    "top": {
+      "type": "array"
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "explanation": {
+      "type": "object"
+    },
+    "protocol_versions": {
+      "type": "object"
+    },
+    "action": {},
+    "silence": {
+      "type": "boolean"
+    },
+    "schema_version": {
+      "type": "string"
+    }
+  }
+}

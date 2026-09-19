@@ -1,56 +1,78 @@
-# PIE Runtime V1.1 — Staff Top-3 Picker
+# PIE Runtime — Staff Top-3 Picker (V1.1 + Client State Intelligence Phase 1)
 
-Local MVP implementing the founder “build first” slice from `12_mvp/` + `05_ranking/score_spec.json` + `02_protocol_catalog/catalog.jsonl`.
+Local MVP implementing the founder “build first” slice from `12_mvp/` + `05_ranking/score_spec.json` + `02_protocol_catalog/catalog.jsonl`, extended with nested ClientState/Context, safety gateway, decision records, and structured explanations.
 
 ## Run
 
 ```bash
 npm install
 npx playwright install chromium   # once
-PORT=8790 node server.js          # falls back to 8791+ if busy
+PIE_STAFF_PIN=pie-test-pin PORT=8790 node server.js
 # UI: http://127.0.0.1:<port>/
-PIE_BASE_URL=http://127.0.0.1:<port> npx playwright test
-```
-
-Optional staff PIN:
-
-```bash
-PIE_STAFF_PIN=secret PORT=8790 node server.js
-# Clients must send header X-PIE-Staff-Pin: secret (UI stores PIN in sessionStorage)
-# If unset, /api/health reports auth: open_dev
+PIE_BASE_URL=http://127.0.0.1:<port> PIE_STAFF_PIN=pie-test-pin npx playwright test
 ```
 
 ## API
 
-- `GET /api/health` — `{intended_port, listen_port, auth_mode, auth, catalog_size, tau_select}`
-- `POST /api/recommend` — single scenario → top-3 or SILENCE/escalate (rate-limited 60/min/IP; audited)
-- `POST /api/batch` — array of scenarios (audited)
-- `GET /api/audit?limit=50` — decision audit log (auth-gated when PIN set)
-- `POST /api/outcome` — `{client_id, protocol_id, rating_1_to_10, context_key}` → `data/outcomes.jsonl` (client-isolated learning MVP)
-- `GET /api/catalog` — public IDs only
+- `GET /api/health` — `{version, intended_port, listen_port, auth_mode, catalog_size, tau_select}`
+- `POST /api/recommend` — **legacy flat** body **or** nested `{client_state, context, goal, constraints}`
+- `POST /api/batch` — array of scenarios
+- `GET /api/audit?limit=50` — audit log (includes `decision_record` when present)
+- `POST /api/outcome` — rating (+ optional `before`/`after` subjective fields); learning still uses rating
+- `GET /api/catalog` — public IDs + version / evidence_class / modality / duration bands
+
+### Nested recommend body (Phase 1)
+
+```json
+{
+  "client_state": {
+    "client_id": "c1",
+    "client_type": "startup_founder",
+    "emotional": { "stress": { "value": 5, "source": "self_reported", "confidence": 0.8 } },
+    "physical": { "energy": { "value": 3, "source": "self_reported" } },
+    "temporal": { "available_minutes": { "value": 10, "source": "observed" } }
+  },
+  "context": {
+    "where": { "place_class": "office" },
+    "event": { "upcoming_tag": "investor_meeting", "phase": "before_event" },
+    "time_available": { "minutes": 10 }
+  },
+  "goal": "pre_performance"
+}
+```
+
+Sources: `observed | self_reported | inferred | unknown`. **Never invent medical diagnoses.**
+
+### Response additions (non-breaking)
+
+Each recommendation may include: `explanation`, `confidence`, `protocol_version`, `evidence_class`.  
+Top-level: `client_state`, `context`, `moment`, `decision_record`, `confidence`, `explanation`.
+
+### Safety gateway
+
+`safety_gateway.js` centralizes crisis NLP → severity/confidence/escalate and hard exclusions.  
+Pipeline: **Input → Safety → Hard exclude → Candidates → Rank**.
 
 ### Duration / dose (P1-4)
 
-Gap-fit uses **`recommended_duration_sec`** as the preferred dose. If recommended exceeds the available gap but **`min_duration_sec` ≤ gap**, dose **shrinks to fit** `available_minutes*60` (never below catalog min). Under micro/acute gaps (≤120s) the ranker prefers `min_duration_sec` when the need is micro/stress/pre-performance. **Never** recommend a dose above `available_minutes*60`.
+Gap-fit uses **`recommended_duration_sec`**. If recommended exceeds gap but **`min_duration_sec` ≤ gap**, dose shrinks to fit. Never recommend above `available_minutes*60`.
 
-### Crisis NLP (P0-3)
+### Crisis NLP
 
-Free-text fields `history_notes`, `goal`, and `notes` are scanned for crisis keywords (`suicid*`, `kill myself`, `self-harm`, `want to die`, etc.). Matches force the same escalate/SILENCE path as `crisis_flag`.
+Free-text `history_notes` / `goal` / `notes` scanned for crisis keywords. False-positive risk remains — not a clinical instrument.
 
-**False-positive risk:** metaphorical or clinical-discussion language (e.g. quoting a patient, song lyrics, research notes) can trigger escalate. Staff should treat NLP escalate as a safety interrupt, confirm context, and clear the free-text or use an explicit non-crisis note if it was a false positive. Keyword lists are not a clinical instrument.
+### Auth
 
-### Auth (P0-1)
+When `PIE_STAFF_PIN` set → `X-PIE-Staff-Pin` required (wrong/missing → **401**). Unset → `auth: open_dev`.
 
-When `PIE_STAFF_PIN` is set, protected routes require header `X-PIE-Staff-Pin`. Wrong/missing → **401**. When unset, health reports `auth: open_dev` / `auth_mode: open_dev`.
+### Integrations
 
-### Preferences (P1-2)
+`integrations/` stubs (`calendar`, `travel`, `wearable`, `messaging`, `concierge`) export `status: 'not_connected'` only — **no fake data**.
 
-`prefers_breath=no` applies a **strong penalty (−0.35)** to breathing protocols rather than hard-excluding the whole breath set (avoids empty candidate sets). Hard-exclude only when history has explicit `contra:breath` / breath medical intolerance.
+### Schemas
 
-### Public place (P1-3)
-
-If `place_class` ∈ {public, airport, plane, open_office} **or** `privacy=public`, protocols with `public_discrete===false` are **hard-excluded**.
+Builders in `schemas/`; docs in `../19_architecture/schemas/`.
 
 ## Honesty
 
-Ranking score is an **engineering heuristic**, not a clinical instrument. Vault IP is never expanded into steps. CPI priors (founder/CEO/athlete/traveler) are engineering priors, not validated Client Protocol Intelligence.
+Ranking score and confidence are **engineering heuristics**, not clinical instruments. Vault IP never expands into steps. CPI priors are engineering priors. Phase 1 is **not** production-ready / clinically validated.
