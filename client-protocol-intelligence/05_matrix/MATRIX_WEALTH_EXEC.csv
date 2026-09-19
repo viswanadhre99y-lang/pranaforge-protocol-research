@@ -1,0 +1,39 @@
+CLIENT,PROBLEM,MOMENT,PROTOCOL,DURATION,EVIDENCE,PURPOSE
+startup_founders,Sleep debt / judgment impairment,Nightly + post-bad-sleep,Founder Sleep Opportunity Guard,ongoing rails,A/B,Circadian + stimulus-control sleep opportunity
+startup_founders,Pre-pitch arousal,T-30 pitch,Pitch-Week Sigh + Label + If–Then,3–6 min,B+A,Acute downshift + coping automation
+startup_founders,Entrepreneurial exhaustion,Weekly prevention,3Rs Micro-Dose,10–40 min elements,B conceptual,Respite–reappraisal–regimen
+startup_founders,Post-rejection shame spiral,Within 2h of pass,Defusion + Tiny BA,10–20 min,A/C,Interrupt rumination/withdrawal
+startup_founders,Decision thrash,Morning plan,Decision Batch + Peak-Hour Protect,5–10 min + structure,C,Attention conservation
+startup_ceos,Board hyperarousal/rumination,Board cycle,Board-Week EA Cue Card Stack,2–8 min cues,C,Staff-mediated PPR + sleep
+startup_ceos,No strategic altitude,2–4×/week,Strategic Block + Soft Fascination,50–90 min,C,Deep work + ART break
+startup_ceos,All-hands anxiety,T-20 talk,Process Imagery PPR,8–12 min,B/C,Pre-performance routine
+startup_ceos,Post-board insomnia,Same night,Postpone-Worry + Wind-Down,15–25 min,A/B,CBT worry postpone + SC
+entrepreneurs_sme_owners,Always-on chat / no detachment,Evenings,Owner Detachment Alarm,ongoing,B/C,Psychological detachment + II
+entrepreneurs_sme_owners,Negotiation irritability,T-15 meeting,Calm-Anger PMR+Reappraisal,8–12 min,A/B,Emotion regulation
+entrepreneurs_sme_owners,No weekly reset,Sunday,3Rs Sunday Regimen Block,90–150 min,B+A,Entrepreneurial recovery framework
+entrepreneurs_sme_owners,Cash rumination insomnia,Bedtime,Receivables Worry Postpone + SC,10 min + rules,A/B,CBT-I components
+corporate_ceos_c_suite,Jet lag / travel cognition,Long-haul arcs,Directional Light + Melatonin (CDC/AASM),multi-day,A/B,Circadian phase shifting
+corporate_ceos_c_suite,Earnings/board morning load,Event morning,Earnings Activation Stack,25–45 min,A/B package C,Alertness without jitter
+corporate_ceos_c_suite,Hotel sleep failure,Travel nights,Hotel Wind-Down Card,20–35 min,B/A,Staff-executable sleep opportunity
+corporate_ceos_c_suite,Post-crisis residue,Same evening,Post-Crisis Downshift,12–20 min,B/C,Affect label + values + breath
+senior_executives,QBR/promo evaluative anxiety,T-10,Pre-Meeting Centering,5–8 min,C,PPR centering
+senior_executives,Global TZ mild restriction,Ongoing,Fixed Wake + Light + Nap Rules,rails,A/B,Sleep homeostasis/circadian
+senior_executives,Back-to-back attention residue,Between meetings,Meeting-Obesity Micro-Break,2–5 min,C,Attention residue reset
+senior_executives,Early burnout withdrawal,When signs appear,BA Nudge (+ escalate if severe),10–20 min,A + RTW caveat,Behavioral activation; OH if needed
+venture_capitalists_pe,Fatigued IC judgment,IC day,IC Judgment Hygiene,rails + 5 min,B/C,Sleep-decision science packaging
+venture_capitalists_pe,Portfolio emotional contagion,Post crisis call,Contagion Reset,8–15 min,C,Defusion + delay II
+venture_capitalists_pe,Conference cumulative debt,Conference week,Conference Gauntlet Survival,daily rails,B/C,Sleep/alcohol harm reduction
+venture_capitalists_pe,LP roadshow micro jet lag,Roadshow,Non-Adapt vs Adapt Mini,trip plan,A/B,CDC jet-lag strategy
+family_office_uhnw,Multi-home sleep chaos,Every residence,Residence Sleep Standard Card,staff setup,A/B,Staff-operable stimulus control
+family_office_uhnw,Family council conflict arousal,T-20 council,Family Council Pre-Regulation,10–15 min,B/C,Emotion regulation + II
+family_office_uhnw,Post-liquidity aimlessness,Weeks post-exit,WOOP Meaning (psych not LoA),15–25 min,A vs E labeled,MCII goal pursuit
+family_office_uhnw,PJ micro jet lag,Each hop,Private Aviation Micro Jet-Lag,trip plan,A/B,CDC-aligned
+family_office_uhnw,Midday escalation,On cue,Principal–Staff 2-Min Cue Drill,2 min,B/C,Staff-cued downshift
+investment_bankers_ma,Live-deal sympathetic thrash,Hourly on deal,90-Second Live-Deal Reset,90 sec,C,Harm reduction only
+investment_bankers_ma,Post-close crash/binge,72h post-close,Post-Close Recovery Arc,3 days,C,Sleep rebound + BA + alcohol cap
+investment_bankers_ma,Client meeting presence (MD+),T-10,Client Meeting PPR,5–8 min,C,Pre-performance
+investment_bankers_ma,Roadshow sleep smash,Roadshow weeks,Roadshow Sleep Opportunity,daily,A/B,Circadian + harm reduction
+wealth_managers,Client emotional contagion,Post hard meeting,Emotional Labor Reset,5–10 min,B/C,Affect label + breath + delay
+wealth_managers,Crash-morning surge,Market open stress days,Market-Open Arousal Gate,3–6 min,C,Arousal gate + checklist
+wealth_managers,Always-on UHNW WhatsApp,Nights/weekends,Boundary If–Then,ongoing,B/C,Detachment + II
+wealth_managers,Annual review anxiety,T-15,Presence Routine,8–12 min,C,PPR

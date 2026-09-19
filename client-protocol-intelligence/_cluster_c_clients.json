@@ -1,0 +1,2301 @@
+{
+  "professional_athletes": {
+    "title": "Professional Athletes",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Contracted pros under fixture, media, and travel pressure; need composure tools that survive team medical gatekeeping.",
+    "who": "Paid professional athletes across individual and team sports (non-Olympic-primary); UHNW subset with private travel and suite recovery.",
+    "constraints": [
+      "Team medical / S&C approval for novel protocols",
+      "Anti-doping optics \u2014 clean wellness language only",
+      "Micro-windows between warm-up and start",
+      "Locker / shared-space privacy limits"
+    ],
+    "stressors": [
+      "Choking / evaluation under pressure",
+      "Fixture congestion + travel fatigue",
+      "Injury return anxiety and identity threat",
+      "Late games / time-zone sleep disruption",
+      "Media scrutiny and social comparison"
+    ],
+    "commercial": "Med\u2013High via sports physio/teams and UHNW athlete concierge overlays; cricket/golf/tennis India-adjacent density.",
+    "privacy": "Locker-room discreet; suite/jet for UHNW; never leak injury or selection narratives.",
+    "avoid": [
+      "Hyperventilation + ice + breath-hold stacks",
+      "Breath practice in water or while driving",
+      "Body-shame framing in ED-risk sports",
+      "NSDR as sleep replacement after red-eyes",
+      "Outcome-only manifestation as performance method (E)",
+      "DIY aggressive CBT-I sleep restriction"
+    ],
+    "rails": [
+      "Sleep opportunity + caffeine timing vs compete clock",
+      "Morning outdoor light when schedule allows",
+      "Team medical clearance for heat/cold",
+      "Hydration / fueling per S&C \u2014 not wellness substitution"
+    ],
+    "jobs": [
+      "Stabilize pre-compete arousal and attention",
+      "Recover between fixtures without residual rumination",
+      "Protect sleep on travel weeks",
+      "Support return-to-play mental reps without replacing rehab"
+    ],
+    "core": [
+      [
+        "ppr",
+        "Meta-analysis support under pressure (Rupprecht 2021) \u2014 primary compete tool"
+      ],
+      [
+        "imagery",
+        "PETTLEP/process imagery adjunct to practice; travel mental reps"
+      ],
+      [
+        "cyclic_sigh",
+        "Acute downshift when over-aroused; discreet"
+      ],
+      [
+        "box",
+        "Tactical structure when need composure without heavy downshift \u2014 C"
+      ],
+      [
+        "centering",
+        "Between-plays / tunnel composure \u2014 C"
+      ],
+      [
+        "morning_light",
+        "Circadian anchor on home and travel days"
+      ],
+      [
+        "jetlag",
+        "Multi-zone fixture weeks \u2014 light primary; melatonin careful"
+      ],
+      [
+        "caffeine",
+        "Timed vs sleep opportunity and late games"
+      ],
+      [
+        "if_then",
+        "Error-recovery and travel rule automation"
+      ],
+      [
+        "reappraisal",
+        "Pressure reinterpretation; presser anxiety"
+      ],
+      [
+        "wake",
+        "Consistency across congested fixtures"
+      ]
+    ],
+    "secondary": [
+      [
+        "resonance",
+        "Daily load regulation off-court/field"
+      ],
+      [
+        "pmr",
+        "Post-game somatic dump"
+      ],
+      [
+        "nap",
+        "10\u201320 min if night sleep protected and medical OK"
+      ],
+      [
+        "nsdr",
+        "Suite rest between loads \u2014 NOT sleep replacement"
+      ],
+      [
+        "evening_light",
+        "Protect post-game wind-down"
+      ],
+      [
+        "wind_down",
+        "Hotel off-ramp after night games"
+      ],
+      [
+        "affect",
+        "Label presser / selection nerves"
+      ],
+      [
+        "aerobic",
+        "Chronic stress substrate when not in heavy load"
+      ],
+      [
+        "woop",
+        "Season goal pursuit with obstacles"
+      ]
+    ],
+    "moments": [
+      [
+        "T\u221260 to T\u221210 pre-compete",
+        "PPR + tactical/sigh breath sized to arousal + external process cue (not win fantasy)"
+      ],
+      [
+        "Between plays / changeovers",
+        "Centering or 1\u20132 physiological sighs + next-play if\u2013then"
+      ],
+      [
+        "Post-game night",
+        "Exhale-biased breath or PMR + wind-down + evening dim; caffeine cutoff"
+      ],
+      [
+        "Travel land day",
+        "Jet-lag light plan + optional early nap + coherent/sigh; protect first local night"
+      ],
+      [
+        "Injury rehab mental",
+        "PETTLEP with medical clearance + if\u2013then rehab cues \u2014 not a substitute for physio"
+      ],
+      [
+        "Media / presser",
+        "Affect label + reappraisal + brief PPR; postpone rumination"
+      ]
+    ],
+    "stacks": {
+      "2 min": "External cue + 1\u20133 sighs or tactical breath + go.",
+      "5 min": "Full micro-PPR rehearsal OR cyclic sighing 5 min.",
+      "10\u201312 min": "Process/PETTLEP block OR resonance breathing.",
+      "20 min": "Timed light walk + brief PMR OR wind-down start.",
+      "30\u201360 min": "Aerobic (off heavy load days) OR full wind-down + sleep opportunity.",
+      "Compete day": "AM light if possible \u2192 warm-up \u2192 PPR lock \u2192 post-game downshift \u2192 sleep rails.",
+      "Travel congestion week": "Jet-lag calculator light \u00b1 careful melatonin \u2192 nap rules \u2192 nightly wind-down \u2192 PPR on game days."
+    },
+    "evidence": "PPR meta-analysis Rupprecht et al. 2021 (B); PETTLEP reviews Appl Sci 2022 / imagery metas (B); Balban cyclic sighing 2023 (B); resonance/HRVB Lehrer (B); morning light (A); jet-lag light\u00b1melatonin careful (B). Outcome manifestation E."
+  },
+  "olympic_elite_athletes": {
+    "title": "Olympic / Elite Athletes",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Quadrennial peaks, selection pressure, village sleep chaos, and judged-sport evaluation \u2014 foundations before exotic breath.",
+    "who": "Olympians, world championship finalists, national training center residents; federation/NOC pathways.",
+    "constraints": [
+      "NOC / federation sport psych channels",
+      "Games village privacy and roommate noise",
+      "Anti-doping education already dense \u2014 claims must stay clean",
+      "Heat policies for outdoor summer sports"
+    ],
+    "stressors": [
+      "Selection / trial evaluation threat",
+      "Taper overthinking",
+      "Weight / body composition pressure in some sports",
+      "Village insomnia and jet lag into peak",
+      "Post-result identity crash"
+    ],
+    "commercial": "Med via federations/camps; UHNW private staging overlays for some; India Olympic adjacent opportunity limited but prestige-high.",
+    "privacy": "Camp/village discreet; no public 'mental weakness' framing; selection confidentiality.",
+    "avoid": [
+      "Heat illness 'breathe through it' advice \u2014 medical first",
+      "RED-S / ED body-shame language",
+      "Hyperventilation + ice viral stacks",
+      "Aggressive DIY sleep restriction in village",
+      "Outcome-only gold-medal fantasy as primary imagery"
+    ],
+    "rails": [
+      "Fixed wake aligned to compete schedule when feasible",
+      "Morning light + evening dim in staging",
+      "Caffeine mapped to event timing",
+      "Sports medicine owns heat/cold/weight"
+    ],
+    "jobs": [
+      "Call-room composure without losing activation",
+      "Protect village sleep opportunity",
+      "Channel selection anxiety into process cues",
+      "Recover after result without identity collapse unsupported"
+    ],
+    "core": [
+      [
+        "ppr",
+        "Trials and finals self-paced moments"
+      ],
+      [
+        "centering",
+        "Call-room / marshalling \u2014 C applied"
+      ],
+      [
+        "imagery",
+        "PETTLEP process imagery updated to current skill level"
+      ],
+      [
+        "reappraisal",
+        "Evaluation threat cognitive skill"
+      ],
+      [
+        "morning_light",
+        "Staging and village circadian"
+      ],
+      [
+        "wake",
+        "Village anchor amid chaos"
+      ],
+      [
+        "jetlag",
+        "Long-haul into Games \u2014 light primary"
+      ],
+      [
+        "cyclic_sigh",
+        "Over-arousal titration"
+      ],
+      [
+        "wind_down",
+        "Village night off-ramp"
+      ],
+      [
+        "evening_light",
+        "Protect melatonin opportunity"
+      ],
+      [
+        "if_then",
+        "If call-room spike \u2192 breath + process cue"
+      ]
+    ],
+    "secondary": [
+      [
+        "stimulus_control",
+        "Chronic village insomnia \u2014 clinician CBT-I framing"
+      ],
+      [
+        "pmr",
+        "Somatic release in room"
+      ],
+      [
+        "nsdr",
+        "Rest if sleepless \u2014 not sleep replacement"
+      ],
+      [
+        "nap",
+        "Strategic only if night protected"
+      ],
+      [
+        "worry",
+        "Taper rumination out of bed"
+      ],
+      [
+        "woop",
+        "Season/Games goal with obstacles"
+      ],
+      [
+        "values",
+        "Identity beyond result \u2014 C"
+      ],
+      [
+        "social",
+        "Trusted micro-connection post-result"
+      ],
+      [
+        "distancing",
+        "Post-result perspective"
+      ],
+      [
+        "aerobic",
+        "As periodization allows"
+      ]
+    ],
+    "moments": [
+      [
+        "Selection / trial day",
+        "PPR + reappraisal + values cue; process imagery of first action only"
+      ],
+      [
+        "Taper week",
+        "Worry-postpone + WOOP + light process visualization \u2014 reduce novelty protocols"
+      ],
+      [
+        "Call-room / marshalling",
+        "Centering + short tactical/sigh breath + external cue (lane/board)"
+      ],
+      [
+        "Village insomnia night",
+        "Stimulus-control spirit + wind-down + dim; NSDR as rest; escalate CBT-I if chronic"
+      ],
+      [
+        "Heat final day",
+        "Sports-med cooling only; gentle nasal/exhale breath \u2014 no WHM-style extremes"
+      ],
+      [
+        "Post-result crash",
+        "Affect label + self-distancing + social micro-connection; clinical if prolonged"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Centering breath + external process cue.",
+      "5 min": "Call-room PPR skeleton OR cyclic sighing.",
+      "10\u201312 min": "PETTLEP process block OR resonance.",
+      "20 min": "Wind-down or timed light walk.",
+      "30\u201360 min": "Sleep opportunity protection + optional PMR.",
+      "Peak week": "AM light \u2192 process imagery \u2192 call-room centering \u2192 night sleep pack.",
+      "Long-haul staging": "Jet-lag light \u00b1 careful melatonin \u2192 nap rules \u2192 coherent daily \u2192 PPR drills."
+    },
+    "evidence": "Same PPR/PETTLEP base (B); CBT/reappraisal A/B; sleep/light A/B; Reinebo 2024 caution on PST effect sizes when low-quality studies removed (mindfulness C for elite packages)."
+  },
+  "combat_motorsport_athletes": {
+    "title": "Combat & Motorsport Athletes",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Extreme arousal, weight-cut and heat risks; composure PPRs must never impair cognition or violate medical cut protocols.",
+    "who": "MMA/boxing/wrestling; F1/Indy/rally/MotoGP and analogs; fight-week and race-week calendars.",
+    "constraints": [
+      "Commission / team medical absolute for heat, cold, weight",
+      "No pre-event tools that impair reaction time",
+      "Helmet/cockpit limits mid-performance tools"
+    ],
+    "stressors": [
+      "Weight-cut physiological + psychological load",
+      "Fear/aggression calibration",
+      "Heat / G / impact anticipation",
+      "Public weigh-ins and face-offs",
+      "Short-notice card/race changes"
+    ],
+    "commercial": "Niche Med; paddock hospitality UHNW adjacency; safety-heavy brand risk if claims slip.",
+    "privacy": "Cut weights and injuries highly sensitive; paddock discreet only.",
+    "avoid": [
+      "CRITICAL: hyperventilation before water, ice, or driving",
+      "Extreme breath-holds as weight-cut aid",
+      "Post-concussion interoceptive breath until cleared",
+      "Heat illness push-through with breathwork",
+      "Wellness protocols substituting for licensed cut/nutrition medical care"
+    ],
+    "rails": [
+      "Medical owns weight cut / rehydration",
+      "Sleep and caffeine mapped to weigh-in and event",
+      "Cooling strategies per sports medicine \u2014 not influencer stacks"
+    ],
+    "jobs": [
+      "Grid/corner composure without rage spillover",
+      "Downshift fight/race week without touching cut protocol",
+      "Post-adrenaline dump recovery and sleep",
+      "Between-round rapid attentional reset"
+    ],
+    "core": [
+      [
+        "ppr",
+        "Grid / corner / walkout composure"
+      ],
+      [
+        "box",
+        "Short tactical breath \u2014 holds optional/short \u2014 C"
+      ],
+      [
+        "cyclic_sigh",
+        "Between rounds / post dump \u2014 if not impairing"
+      ],
+      [
+        "reappraisal",
+        "Face-off social threat"
+      ],
+      [
+        "if_then",
+        "If rage spiral \u2192 external cue + exhale"
+      ],
+      [
+        "pmr",
+        "Jaw/grip/shoulder release post-event"
+      ],
+      [
+        "evening_light",
+        "Fight-week sleep protect"
+      ],
+      [
+        "caffeine",
+        "Timed; never as cut substitute"
+      ],
+      [
+        "wake",
+        "Protect core sleep despite media"
+      ],
+      [
+        "jetlag",
+        "Global calendars"
+      ],
+      [
+        "affect",
+        "Label fear vs useful activation"
+      ]
+    ],
+    "secondary": [
+      [
+        "centering",
+        "Final seconds set"
+      ],
+      [
+        "imagery",
+        "Process tactics \u2014 avoid catastrophe loops; trauma caution"
+      ],
+      [
+        "resonance",
+        "Non-cut evening downshift"
+      ],
+      [
+        "nap",
+        "Only if medical/sleep allow"
+      ],
+      [
+        "nsdr",
+        "Rest framing post-event"
+      ],
+      [
+        "wind_down",
+        "Hotel after fight/race"
+      ],
+      [
+        "cold",
+        "TIPP-adjacent \u2014 C; never with hyperventilation; CVD clearance"
+      ],
+      [
+        "values",
+        "Identity beyond win/loss"
+      ],
+      [
+        "aerobic",
+        "As training allows"
+      ]
+    ],
+    "moments": [
+      [
+        "Weigh-in / face-off",
+        "Tactical breath + reappraisal + values \u2014 separate from medical cut"
+      ],
+      [
+        "Cage / corner / grid",
+        "PPR + external focus (apex/hip/glove) \u2014 not hostile cue words"
+      ],
+      [
+        "Between rounds / stops",
+        "1\u20132 physiological sighs + next-action cue"
+      ],
+      [
+        "Post adrenaline dump",
+        "Exhale pacing + PMR + wind-down + sleep rails"
+      ],
+      [
+        "Heat cockpit / humid venue",
+        "Sports-med cooling first; gentle nasal breathing only"
+      ],
+      [
+        "Travel + media day",
+        "Task buffers + sigh resets between media and training"
+      ]
+    ],
+    "stacks": {
+      "2 min": "PPR lock: set \u2192 short breath \u2192 external cue \u2192 go.",
+      "5 min": "Tactical breath cycles OR cyclic sighing (off-heat, off-cut).",
+      "10\u201312 min": "Evening resonance + jaw/hand PMR (non-cut).",
+      "20 min": "Wind-down start post-event.",
+      "30\u201360 min": "Sleep opportunity + optional NSDR rest.",
+      "Fight/Race day": "AM light \u2192 micro-PPR \u2192 event \u2192 dump pack \u2192 sleep rails."
+    },
+    "evidence": "PPR B; tactical/box C; sigh B; cold-face C package-level; weight-cut myths E. Heat/concussion safety override evidence claims."
+  },
+  "team_sport_athletes": {
+    "title": "Team Sport Athletes",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Role/bench anxiety, set-piece pressure, error contagion, and bus-travel sleep debt \u2014 PPRs and next-play if\u2013thens.",
+    "who": "Football/soccer, basketball, cricket, hockey, rugby and other roster athletes.",
+    "constraints": [
+      "Club sport psych / coach cue monopoly possible",
+      "Shared rooms on road",
+      "Unpredictable substitution timing"
+    ],
+    "stressors": [
+      "Bench / role ambiguity",
+      "Coach evaluation and hierarchy",
+      "Travel congestion",
+      "Collective error contagion",
+      "Derby / rivalry arousal"
+    ],
+    "commercial": "High India cricket adjacency; team partnerships; UHNW star personal overlay vs club bus tension.",
+    "privacy": "Locker culture \u2014 no public individualizing that shames teammates.",
+    "avoid": [
+      "Concussion protocols overridden by wellness tools",
+      "Trauma/abuse history DIY catharsis breathwork",
+      "Conflicting cues vs coach PPR"
+    ],
+    "rails": [
+      "Club warm-up and medical first",
+      "Sleep on travel nights prioritized over late social",
+      "Caffeine vs night fixtures"
+    ],
+    "jobs": [
+      "Set-piece / penalty consistency under social eval",
+      "Next-play recovery after errors",
+      "Cold-start when subbed on",
+      "Halftime emotional contagion management"
+    ],
+    "core": [
+      [
+        "ppr",
+        "Penalties, free throws, serves, conversions"
+      ],
+      [
+        "if_then",
+        "If error \u2192 breath + role cue + eyes up"
+      ],
+      [
+        "centering",
+        "Walk-on / bench entry micro"
+      ],
+      [
+        "cyclic_sigh",
+        "Halftime personal reset"
+      ],
+      [
+        "imagery",
+        "Set-piece PETTLEP with team tactics"
+      ],
+      [
+        "reappraisal",
+        "Bench threat reinterpretation"
+      ],
+      [
+        "nap",
+        "Travel day strategic nap"
+      ],
+      [
+        "jetlag",
+        "International tours"
+      ],
+      [
+        "caffeine",
+        "Fixture timing"
+      ],
+      [
+        "morning_light",
+        "Home training anchor"
+      ],
+      [
+        "social",
+        "Teammate reset language when culture allows"
+      ]
+    ],
+    "secondary": [
+      [
+        "affect",
+        "Label derby arousal"
+      ],
+      [
+        "distancing",
+        "After own-goal / error rumination"
+      ],
+      [
+        "pmr",
+        "Post-match"
+      ],
+      [
+        "wind_down",
+        "Hotel after night match"
+      ],
+      [
+        "evening_light",
+        "Road trip nights"
+      ],
+      [
+        "resonance",
+        "Off-day load"
+      ],
+      [
+        "woop",
+        "Season role goals"
+      ],
+      [
+        "aerobic",
+        "As periodization allows"
+      ],
+      [
+        "nsdr",
+        "Rest between doubles \u2014 not sleep replacement"
+      ]
+    ],
+    "moments": [
+      [
+        "Sudden bench entry",
+        "Micro-PPR + centering on walk-on"
+      ],
+      [
+        "Penalty / set piece",
+        "Full identical PPR + external/quiet-eye-like focus per coaching"
+      ],
+      [
+        "Halftime",
+        "Affect label + team process cue; personal sigh if needed"
+      ],
+      [
+        "Overnight bus/plane",
+        "Nap rules + mask/earplugs + caffeine strategy"
+      ],
+      [
+        "After own error",
+        "Self-distancing + next-play if\u2013then; tactical review later"
+      ],
+      [
+        "Derby week media",
+        "Reappraisal + worry-postpone + sleep rails"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Next-play if\u2013then + one sigh.",
+      "5 min": "Set-piece PPR rehearsal.",
+      "10\u201312 min": "PETTLEP set-piece block OR resonance.",
+      "20 min": "Post-match PMR + wind-down start.",
+      "30\u201360 min": "Sleep opportunity on road.",
+      "Match day": "AM light | set-piece PPR | HT label+cue | night wind-down.",
+      "Congested fixtures": "Nap + caffeine discipline + coherent breathing off-days."
+    },
+    "evidence": "PPR B (Rupprecht 2021); team-sport PETTLEP studies in reviews B; implementation intentions A with sport transfer B."
+  },
+  "coaches_sports_execs": {
+    "title": "Coaches & Sports Executives",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Sideline contagion, board/media scrutiny, and film-marathon cognitive load \u2014 decision composure and shutdown rituals.",
+    "who": "Head coaches, GMs, performance directors, league execs, owners' representatives.",
+    "constraints": [
+      "Must model composure publicly",
+      "Alcohol culture in some sports-biz settings",
+      "Performance-framed language preferred over 'therapy' optics"
+    ],
+    "stressors": [
+      "Sideline emotional contagion",
+      "Media and board evaluation",
+      "Win\u2013loss identity fusion",
+      "Recruiting / trade ethics stress",
+      "Chronic sleep from film + travel"
+    ],
+    "commercial": "Med\u2013High; owner/GM UHNW adjacency; India franchise owners overlap FO.",
+    "privacy": "Roster and board matters confidential; no public breakdown content.",
+    "avoid": [
+      "Stimulant stacking advice",
+      "Ignoring burnout/depression referral needs",
+      "Hesitation rituals when true instant decisions required"
+    ],
+    "rails": [
+      "Fixed wake when calendar allows",
+      "Exercise most days",
+      "Evening device park after film",
+      "Caffeine cutoff relative to sleep"
+    ],
+    "jobs": [
+      "Cooler sideline decisions when seconds exist",
+      "Post-loss presser regulation",
+      "Film-session cognitive endurance",
+      "Nightly cognitive shutdown for sleep"
+    ],
+    "core": [
+      [
+        "reappraisal",
+        "Presser and board threat"
+      ],
+      [
+        "affect",
+        "Sideline label before call when time"
+      ],
+      [
+        "cyclic_sigh",
+        "Micro downshift in timeout"
+      ],
+      [
+        "box",
+        "Tactical structure under crowd noise \u2014 C"
+      ],
+      [
+        "if_then",
+        "If hostile question \u2192 pause + pillar message"
+      ],
+      [
+        "woop",
+        "Season / board goals with obstacles"
+      ],
+      [
+        "worry",
+        "Park film loops out of bed"
+      ],
+      [
+        "morning_light",
+        "Travel and home anchor"
+      ],
+      [
+        "aerobic",
+        "Stress substrate A"
+      ],
+      [
+        "wake",
+        "After late games"
+      ],
+      [
+        "distancing",
+        "Post-loss perspective"
+      ]
+    ],
+    "secondary": [
+      [
+        "pomodoro",
+        "Film session structure \u2014 C"
+      ],
+      [
+        "art",
+        "Attention restoration between meetings \u2014 C"
+      ],
+      [
+        "pmr",
+        "Shutdown somatic"
+      ],
+      [
+        "resonance",
+        "Evening regulation"
+      ],
+      [
+        "evening_light",
+        "Sleep protect"
+      ],
+      [
+        "wind_down",
+        "Post-presser night"
+      ],
+      [
+        "jetlag",
+        "Road trips / international"
+      ],
+      [
+        "nap",
+        "Strategic on travel days"
+      ],
+      [
+        "values",
+        "Identity beyond W\u2013L"
+      ],
+      [
+        "social",
+        "Trusted peer coach check-in"
+      ],
+      [
+        "nsdr",
+        "Rest between double-headers \u2014 not sleep replacement"
+      ]
+    ],
+    "moments": [
+      [
+        "Sideline critical call",
+        "If time: sigh/exhale + affect label + game-model question; skip if no time"
+      ],
+      [
+        "Post-loss presser",
+        "Reappraisal + values + defer deep analysis; if\u2013then talking points"
+      ],
+      [
+        "Film marathon",
+        "Pomodoro/ultradian breaks + ART micro-breaks"
+      ],
+      [
+        "Board confrontation",
+        "WOOP + if\u2013then messages + morning light/exercise same day"
+      ],
+      [
+        "Off-season planning",
+        "Sleep consistency + exercise + coherent breathing"
+      ],
+      [
+        "Travel road trip",
+        "Jet-lag pack + task-switch buffers"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Exhale + label + model cue.",
+      "5 min": "Cyclic sighing or tactical breath + presser if\u2013then.",
+      "10\u201312 min": "Worry-postpone list + resonance OR distancing write.",
+      "20 min": "Aerobic brisk walk OR wind-down.",
+      "30\u201360 min": "Exercise bout OR full shutdown + sleep opportunity.",
+      "Game day coach": "AM light+values | sideline micro | presser reappraisal | shutdown."
+    },
+    "evidence": "Reappraisal A; affect labeling B; exercise A; worry postpone B; sideline-specific packages C; task-switch buffers C."
+  },
+  "actors_performing_artists": {
+    "title": "Actors & Performing Artists",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Audition evaluation, role hangover, night shoots, and premiere social threat \u2014 regulation without flattening affect needed for craft.",
+    "who": "Film/TV/theatre actors; crossover variety performers; India film/OTT UHNW adjacency.",
+    "constraints": [
+      "Set/union time; intimacy coordinator protocols stand",
+      "Makeup/voice constraints on aggressive breath tools",
+      "Publicist optics \u2014 prefer performance framing over clinical"
+    ],
+    "stressors": [
+      "Audition evaluation anxiety",
+      "Emotional recall / role hangover",
+      "Night-shoot circadian smash",
+      "Appearance / body scrutiny",
+      "Premiere and social calendar arousal"
+    ],
+    "commercial": "High India (Bollywood/South) UHNW; festival circuit travel recovery; suite de-role kits whitespace.",
+    "privacy": "Casting and personal crises confidential; closed-set only.",
+    "avoid": [
+      "Hyperventilation for tears as health advice",
+      "Emotional recall treated as DIY exposure therapy",
+      "Trauma flooding via intense body-scan post-scene",
+      "ED/body-shame recovery language",
+      "NSDR as night-shoot sleep replacement"
+    ],
+    "rails": [
+      "Circadian light plan on night shoots",
+      "Caffeine mapped to call sheets",
+      "Sleep opportunity protected after wrap when possible",
+      "Intimacy/safety protocols supersede wellness cues"
+    ],
+    "jobs": [
+      "Holding-room downshift without sedation",
+      "Pre-slate / pre-curtain composure",
+      "De-role after heavy scenes",
+      "Festival / premiere travel sharpness"
+    ],
+    "core": [
+      [
+        "cyclic_sigh",
+        "Holding-room and premiere downshift"
+      ],
+      [
+        "grounding",
+        "Eyes-open 5-4-3-2-1 post-scene / audition \u2014 C"
+      ],
+      [
+        "ppr",
+        "Pre-slate / pre-curtain micro-routine"
+      ],
+      [
+        "reappraisal",
+        "Audition threat \u2192 craft energy"
+      ],
+      [
+        "affect",
+        "Label residue without fusion"
+      ],
+      [
+        "pmr",
+        "Face/jaw/hands release post-role"
+      ],
+      [
+        "jetlag",
+        "Festival / location travel"
+      ],
+      [
+        "morning_light",
+        "When day shoots; careful on nights"
+      ],
+      [
+        "nap",
+        "Strategic between calls if sleep OK"
+      ],
+      [
+        "if_then",
+        "If spiral after scene \u2192 ground + name self"
+      ],
+      [
+        "evening_light",
+        "Protect sleep after wrap"
+      ]
+    ],
+    "secondary": [
+      [
+        "resonance",
+        "Daily load off-set"
+      ],
+      [
+        "nsdr",
+        "Suite rest \u2014 not sleep replacement"
+      ],
+      [
+        "wind_down",
+        "Post-premiere night"
+      ],
+      [
+        "imagery",
+        "Process first beats \u2014 not fantasy booking"
+      ],
+      [
+        "distancing",
+        "Review performance with perspective"
+      ],
+      [
+        "values",
+        "Craft vs outcome identity"
+      ],
+      [
+        "social",
+        "Trusted check-in after heavy material"
+      ],
+      [
+        "caffeine",
+        "Call-sheet timing"
+      ],
+      [
+        "wake",
+        "Stabilize across shoot weeks"
+      ],
+      [
+        "aerobic",
+        "Mood substrate when schedule allows"
+      ],
+      [
+        "body_scan",
+        "Only if not flooding \u2014 short, choice-based"
+      ]
+    ],
+    "moments": [
+      [
+        "Audition holding room",
+        "Exhale pacing or sighs + 5-4-3-2-1 + process intention (listen/truth) \u2014 not 'book it'"
+      ],
+      [
+        "Pre-curtain / slate",
+        "PPR: breath + intention + first-line cue"
+      ],
+      [
+        "After heavy scene",
+        "De-role: name self + eyes-open ground + brief PMR; no cathartic hyperventilation"
+      ],
+      [
+        "Night shoot block",
+        "Circadian strategy + nap rules + caffeine discipline"
+      ],
+      [
+        "Premiere red carpet",
+        "Reappraisal + micro social + sigh"
+      ],
+      [
+        "Festival circuit travel",
+        "Jet-lag light pack + suite NSDR/PMR + media reappraisal"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Sigh + ground + process cue.",
+      "5 min": "Holding-room pack OR cyclic sighing.",
+      "10\u201312 min": "De-role ground + PMR OR resonance.",
+      "20 min": "NSDR rest OR wind-down.",
+      "30\u201360 min": "Sleep opportunity OR aerobic when off.",
+      "Audition day": "AM light | holding-room pack | post de-role | sleep hygiene.",
+      "Location night shoot": "Circadian pack + NSDR rest tool + exercise when possible."
+    },
+    "evidence": "Performer anxiety metas support CBT-family (B); slow breathing B; grounding C; trauma-informed de-role applied C with safety priority."
+  },
+  "musicians_dancers": {
+    "title": "Musicians & Dancers",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Music/dance performance anxiety, tour load, and aesthetic evaluation \u2014 CBT-informed exposure + voice-safe breath + PPR entries.",
+    "who": "Classical/pop/tour musicians; ballet/contemporary/commercial dancers; touring artists.",
+    "constraints": [
+      "Embouchure/voice limits on aggressive breath patterns",
+      "Costume/pointe and company hierarchy constraints",
+      "Tour bus privacy limited"
+    ],
+    "stressors": [
+      "Music performance anxiety (MPA)",
+      "Dance performance anxiety + body surveillance",
+      "Injury fear and perfectionism",
+      "Tour sleep / load mismanagement",
+      "Panel auditions"
+    ],
+    "commercial": "Med; touring UHNW soloists; company partnerships; vocal-safe suite kits whitespace.",
+    "privacy": "Injury and ED concerns highly sensitive \u2014 referral pathways not content.",
+    "avoid": [
+      "Harsh hyperventilation pre-show (voice risk)",
+      "Body-shame framing (dance ED risk high)",
+      "Flooding exposure without hierarchy",
+      "Pain ignored for 'mindset' \u2014 medical/physio first"
+    ],
+    "rails": [
+      "Load management with physio/teacher",
+      "Sleep on tour prioritized",
+      "Caffeine/voice hydration per medical/voice coach",
+      "Warm-up protocols stand \u2014 wellness does not replace"
+    ],
+    "jobs": [
+      "Green-room somatic anxiety down without deadening performance",
+      "Graded practice exposure for feared passages",
+      "Tour recovery between shows",
+      "Audition panel composure"
+    ],
+    "core": [
+      [
+        "resonance",
+        "Voice-safe ~6bpm pre-show when time \u2014 B"
+      ],
+      [
+        "cyclic_sigh",
+        "Shorter alternative if time tight"
+      ],
+      [
+        "ppr",
+        "Entry/first phrase/step routine"
+      ],
+      [
+        "pmr",
+        "Shoulders/hands or hips/ankles release"
+      ],
+      [
+        "reappraisal",
+        "Energy not danger framing"
+      ],
+      [
+        "imagery",
+        "Passage imagery + PETTLEP-like motor"
+      ],
+      [
+        "if_then",
+        "If panic cue \u2192 exhale \u00d73 \u2192 next bar/step"
+      ],
+      [
+        "jetlag",
+        "Tour legs"
+      ],
+      [
+        "nap",
+        "Tour bus / hotel strategic"
+      ],
+      [
+        "caffeine",
+        "Show timing + voice considerations"
+      ],
+      [
+        "morning_light",
+        "Tour circadian when possible"
+      ]
+    ],
+    "secondary": [
+      [
+        "woop",
+        "Season/audition goals"
+      ],
+      [
+        "grounding",
+        "Backstage if dissociative spike \u2014 C"
+      ],
+      [
+        "nsdr",
+        "Between shows rest"
+      ],
+      [
+        "wind_down",
+        "Post-show"
+      ],
+      [
+        "evening_light",
+        "Tour nights"
+      ],
+      [
+        "worry",
+        "Perfection rumination out of bed"
+      ],
+      [
+        "ba",
+        "Injury layoff tiny activation"
+      ],
+      [
+        "values",
+        "Craft identity"
+      ],
+      [
+        "aerobic",
+        "As allowed"
+      ],
+      [
+        "mindfulness",
+        "Optional \u2014 C package; not if flooding"
+      ],
+      [
+        "box",
+        "Short structure if preferred \u2014 C; voice-safe holds"
+      ]
+    ],
+    "moments": [
+      [
+        "Green room / wing",
+        "Coherent or exhale breath + PPR entry cue"
+      ],
+      [
+        "Feared passage practice",
+        "Exposure ladder mid-low \u2192 coping breath + PPR \u2192 progress by SUDS"
+      ],
+      [
+        "Tour bus overnight",
+        "Nap protocol + earplugs + caffeine cutoff"
+      ],
+      [
+        "Injury layoff",
+        "Process imagery cleared + BA tiny + values; physio owns return"
+      ],
+      [
+        "Panel audition",
+        "Reappraisal + grounding + short PPR"
+      ],
+      [
+        "Post-show comedown",
+        "PMR + wind-down + sleep rails"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Exhale \u00d73 + entry cue.",
+      "5 min": "Pre-show regulation micro OR cyclic sighing.",
+      "10\u201312 min": "Resonance + brief PMR OR imagery passage block.",
+      "20 min": "Exposure ladder block OR NSDR rest.",
+      "30\u201360 min": "Sleep opportunity on tour.",
+      "Show night": "Warm-up (medical-safe) | pre-show regulation | post PMR/NSDR.",
+      "Tour week": "Sleep protect + nap rules + coherent daily + load w/ physio."
+    },
+    "evidence": "MPA CBT reviews/metas B (PMC11851691; 2025 musician PA metas); slow diaphragmatic/~6bpm B; dance psych interventions C (small samples); PPR transfer B."
+  },
+  "public_speakers_creators": {
+    "title": "Public Speakers & Creators",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Keynote and livestream arousal plus metrics addiction \u2014 PPRs for stage and if\u2013thens for analytics compulsivity.",
+    "who": "Keynote speakers, influencers, YouTubers, course creators, hosts/MCs.",
+    "constraints": [
+      "Live mics pick up loud breath",
+      "Platform addiction loops",
+      "Authenticity optics vs regulation tools"
+    ],
+    "stressors": [
+      "Audience and metrics anxiety",
+      "On-camera imposter spikes",
+      "Parasocial always-on load",
+      "Travel keynote circuits",
+      "Comparison feeds"
+    ],
+    "commercial": "Med; UHNW creator/speaker circuit; boardroom pitch variants.",
+    "privacy": "Analytics and brand crises private; no leaking drafts.",
+    "avoid": [
+      "Breath alone as treatment for compulsive social media use",
+      "Outcome-only visualization of viral fame (E-adjacent)",
+      "Stimulant pile-on for launches"
+    ],
+    "rails": [
+      "Scheduled metrics windows",
+      "Sleep before launch weeks",
+      "Morning light + exercise",
+      "Caffeine cutoff evening before keynotes"
+    ],
+    "jobs": [
+      "Pre-stage composure with voice preserved",
+      "Go-live countdown regulation",
+      "Break metrics check loops",
+      "Airport-to-stage same-day sharpness"
+    ],
+    "core": [
+      [
+        "ppr",
+        "Keynote walk-on routine"
+      ],
+      [
+        "cyclic_sigh",
+        "Backstage downshift \u2014 quiet enough for mics"
+      ],
+      [
+        "reappraisal",
+        "Audience as serve not threat"
+      ],
+      [
+        "if_then",
+        "If urge to check analytics \u2192 exhales + draft task"
+      ],
+      [
+        "woop",
+        "Launch goals with obstacles"
+      ],
+      [
+        "imagery",
+        "Process first 60s of talk"
+      ],
+      [
+        "morning_light",
+        "Talk day anchor"
+      ],
+      [
+        "jetlag",
+        "Multi-city circuits"
+      ],
+      [
+        "caffeine",
+        "Pre-talk timing"
+      ],
+      [
+        "aerobic",
+        "Chronic anxiety substrate"
+      ],
+      [
+        "affect",
+        "Label pile-on emotion before reply"
+      ]
+    ],
+    "secondary": [
+      [
+        "box",
+        "Countdown structure \u2014 C"
+      ],
+      [
+        "distancing",
+        "Post-viral perspective"
+      ],
+      [
+        "pomodoro",
+        "Editing marathons \u2014 C"
+      ],
+      [
+        "art",
+        "Breaks from screen \u2014 C"
+      ],
+      [
+        "resonance",
+        "Daily regulation"
+      ],
+      [
+        "nsdr",
+        "Between shoots rest"
+      ],
+      [
+        "wind_down",
+        "Post-keynote"
+      ],
+      [
+        "evening_light",
+        "Launch week sleep"
+      ],
+      [
+        "values",
+        "Why create weekly"
+      ],
+      [
+        "social",
+        "Trusted peer vs metrics"
+      ],
+      [
+        "nap",
+        "Travel day"
+      ]
+    ],
+    "moments": [
+      [
+        "Backstage keynote",
+        "PPR + quiet sigh/tactical breath + first-line cue"
+      ],
+      [
+        "Go-live countdown",
+        "Short box/tactical + audience-serve cue"
+      ],
+      [
+        "Post-viral pile-on",
+        "Affect label + distancing + postpone-reply if\u2013then"
+      ],
+      [
+        "Editing marathon",
+        "Ultradian/Pomodoro + ART + exercise"
+      ],
+      [
+        "Airport \u2192 stage same day",
+        "Light timing + 10m coherent/sigh + micro-PPR"
+      ],
+      [
+        "Launch week",
+        "WOOP + metrics if\u2013then + coherent daily"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Sigh + cue word + walk on.",
+      "5 min": "Keynote PPR OR cyclic sighing.",
+      "10\u201312 min": "Process imagery + breath OR resonance.",
+      "20 min": "NSDR rest OR exercise brisk.",
+      "30\u201360 min": "Aerobic OR full wind-down + sleep.",
+      "Keynote day": "AM light | pre-stage PPR | post downshift | sleep.",
+      "UHNW circuit": "Jet-lag pack + suite NSDR + keynote PPR."
+    },
+    "evidence": "Reappraisal A; PPR transfer B; cyclic sighing B; WOOP/if\u2013then A; Pomodoro C."
+  },
+  "political_public_officials": {
+    "title": "Political & Public Officials",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Debate and ambush-media arousal under sleep-deprived calendars \u2014 discreet composure tools that preserve on-camera clarity.",
+    "who": "Elected officials, candidates, senior political staff (unclassified performance psych).",
+    "constraints": [
+      "Optics of wellness \u2014 secrecy preferred",
+      "Security details interrupt routines",
+      "Must not appear impaired on duty"
+    ],
+    "stressors": [
+      "Public attack / reputation threat",
+      "Debate arousal",
+      "Crisis decision load",
+      "Ethics conflicts",
+      "Chronic sleep restriction on campaign"
+    ],
+    "commercial": "Low\u2013Med GTM (optics risk); high discretion product; staff dual packs whitespace.",
+    "privacy": "Absolute \u2014 no itineraries, no recordings, no staff gossip.",
+    "avoid": [
+      "Substance advice",
+      "Breath tools that slur or gasps on camera",
+      "Ignoring suicidality/threat pathways (security + clinical)",
+      "NSDR marketed as replacing overnight sleep on campaign"
+    ],
+    "rails": [
+      "Protect non-negotiable sleep windows when possible",
+      "Caffeine strategy for late sessions",
+      "Morning light on home days",
+      "Alcohol restraint before debate days"
+    ],
+    "jobs": [
+      "Debate green-room composure",
+      "Ambush media response regulation",
+      "Attack-cycle rumination containment for sleep",
+      "Red-eye campaign travel recovery"
+    ],
+    "core": [
+      [
+        "reappraisal",
+        "Threat \u2192 clarity activation"
+      ],
+      [
+        "cyclic_sigh",
+        "Quiet green-room downshift"
+      ],
+      [
+        "ppr",
+        "First-answer pillar routine"
+      ],
+      [
+        "if_then",
+        "If ambush \u2192 pause + bridge line"
+      ],
+      [
+        "worry",
+        "Attack-cycle out of bed"
+      ],
+      [
+        "distancing",
+        "News-cycle perspective"
+      ],
+      [
+        "morning_light",
+        "When schedule allows"
+      ],
+      [
+        "jetlag",
+        "Campaign red-eyes / multi-city"
+      ],
+      [
+        "caffeine",
+        "Late session strategy \u2014 not chaos"
+      ],
+      [
+        "affect",
+        "Label before reactive quote"
+      ],
+      [
+        "wake",
+        "Protect core wake when possible"
+      ]
+    ],
+    "secondary": [
+      [
+        "box",
+        "Short structure off-camera \u2014 C"
+      ],
+      [
+        "resonance",
+        "Evening regulation"
+      ],
+      [
+        "pmr",
+        "Jaw/shoulder before cameras"
+      ],
+      [
+        "values",
+        "Public service compass \u2014 C"
+      ],
+      [
+        "woop",
+        "Campaign goals with obstacles"
+      ],
+      [
+        "nap",
+        "If security/rest allow"
+      ],
+      [
+        "nsdr",
+        "Rest between events \u2014 not sleep replacement"
+      ],
+      [
+        "wind_down",
+        "Post-debate night"
+      ],
+      [
+        "evening_light",
+        "Sleep protect"
+      ],
+      [
+        "aerobic",
+        "Stress substrate"
+      ],
+      [
+        "social",
+        "Trusted advisor check-in \u2014 not pile-on"
+      ]
+    ],
+    "moments": [
+      [
+        "Pre-debate green room",
+        "Exhale pacing + PPR first-answer cue + values"
+      ],
+      [
+        "Ambush media",
+        "Label + one quiet breath + bridge if\u2013then"
+      ],
+      [
+        "Late-night session/vote",
+        "Caffeine strategy + micro-walk; no long holds"
+      ],
+      [
+        "Post-attack news cycle",
+        "Worry-postpone with staff review window + distancing + light hygiene"
+      ],
+      [
+        "Campaign red-eye",
+        "Jet-lag pack careful + nap rules"
+      ],
+      [
+        "Ethics stress peak",
+        "Values + EAP/clinical referral if needed \u2014 not protocol theater"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Quiet exhale + label + bridge line.",
+      "5 min": "Green-room composure pack.",
+      "10\u201312 min": "Worry-postpone + resonance OR distancing write.",
+      "20 min": "Wind-down or light walk.",
+      "30\u201360 min": "Sleep opportunity protected.",
+      "Debate day": "AM light+exercise | green-room pack | post downshift."
+    },
+    "evidence": "Reappraisal/self-distancing A/B; worry postpone B; tactical breath C; sleep/light A/B; if\u2013then A."
+  },
+  "diplomats": {
+    "title": "Diplomats",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Jet lag as job feature, negotiation self-control, and protocol social load \u2014 circadian packs and micro-resets under extreme discretion.",
+    "who": "Ambassadors, FSOs, attach\u00e9s, international organization negotiators (unclassified performance psych only).",
+    "constraints": [
+      "Extreme discretion",
+      "Hosting / banquet fatigue",
+      "Security residence rules",
+      "No classified operational content in protocols"
+    ],
+    "stressors": [
+      "Chronic jet lag",
+      "Negotiation poker-face cognitive load",
+      "Protocol dinner alcohol vs sleep",
+      "Family separation / hardship posts",
+      "Political winds and identity strain"
+    ],
+    "commercial": "Med; residence suite kits; spouse re-entry packs; prestige discreet.",
+    "privacy": "Maximum \u2014 no social posting of practice; staff need-to-know only.",
+    "avoid": [
+      "Any classified stress-ops framing",
+      "Alcohol-as-sleep-aid normalization claims",
+      "Wrong-timed light/melatonin",
+      "Driving while circadian-impaired"
+    ],
+    "rails": [
+      "Timed light per east/west shift",
+      "Familiar meals early post-landing",
+      "Alcohol restraint night 0",
+      "Protect sleep opportunity after banquets when possible"
+    ],
+    "jobs": [
+      "Landing-to-meeting readiness <12h",
+      "Between-round negotiation reset",
+      "Banquet-late sleep protect",
+      "Hardship-tour steady regulation + EAP awareness"
+    ],
+    "core": [
+      [
+        "jetlag",
+        "Core job tool \u2014 light primary; melatonin careful/clinician"
+      ],
+      [
+        "morning_light",
+        "Destination-appropriate window"
+      ],
+      [
+        "evening_light",
+        "Local night protect"
+      ],
+      [
+        "wake",
+        "Toward local when adapting"
+      ],
+      [
+        "caffeine",
+        "Local morning after light"
+      ],
+      [
+        "cyclic_sigh",
+        "Negotiation micro-reset"
+      ],
+      [
+        "nap",
+        "10\u201320 early local afternoon if night protected"
+      ],
+      [
+        "resonance",
+        "Daily when \u226510 min"
+      ],
+      [
+        "if_then",
+        "Travel and alcohol rules"
+      ],
+      [
+        "reappraisal",
+        "Cultural/cognitive flexibility under provocation"
+      ],
+      [
+        "pmr",
+        "Post-banquet somatic"
+      ]
+    ],
+    "secondary": [
+      [
+        "affect",
+        "Label reactivity before speaking"
+      ],
+      [
+        "ppr",
+        "Pre-bilateral micro-routine"
+      ],
+      [
+        "nsdr",
+        "Residence rest \u2014 not sleep replacement"
+      ],
+      [
+        "wind_down",
+        "After late protocol"
+      ],
+      [
+        "worry",
+        "Cable anxiety out of bed"
+      ],
+      [
+        "distancing",
+        "After hard rounds"
+      ],
+      [
+        "values",
+        "Mission compass"
+      ],
+      [
+        "social",
+        "Family/trusted connection on re-entry"
+      ],
+      [
+        "ba",
+        "Home-leave re-entry tiny steps"
+      ],
+      [
+        "aerobic",
+        "Outdoor = light + exercise"
+      ],
+      [
+        "art",
+        "Garden/soft fascination between sessions \u2014 C"
+      ]
+    ],
+    "moments": [
+      [
+        "Land \u2192 meeting <12h",
+        "Light timing + nap strategy + 10m coherent/sigh; mission transport if impaired"
+      ],
+      [
+        "Hard negotiation block",
+        "Micro sigh + interest-based aim cue + ART break if protocol allows"
+      ],
+      [
+        "Protocol banquet late",
+        "Earlier caffeine cutoff; exit strategies; wind-down after"
+      ],
+      [
+        "Crisis cable night",
+        "Tactical breath + if\u2013then triage; later shutdown \u2014 EAP if trauma"
+      ],
+      [
+        "Home leave re-entry",
+        "BA tiny + social connection + sleep consistency"
+      ],
+      [
+        "Hardship tour steady week",
+        "Daily coherent + exercise + worry postpone + EAP awareness"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Sigh + label + interest cue.",
+      "5 min": "Negotiation micro-reset OR cyclic sighing.",
+      "10\u201312 min": "Resonance OR short NSDR rest.",
+      "20 min": "Correctly timed light walk + PMR.",
+      "30\u201360 min": "Sleep opportunity OR aerobic in light window.",
+      "Summit week": "Landing pack | negotiation micros | banquet sleep protect | daily light.",
+      "Arrival 72h": "Same chronobiology as frequent travelers \u2014 light first; low-dose timed melatonin only if plan allows."
+    },
+    "evidence": "Jet-lag light\u00b1melatonin B (CDC/AASM/Frontiers); morning light A; coherent breathing B; reappraisal A/B; negotiation micro-reset package C."
+  },
+  "military_special_ops_adjacent": {
+    "title": "Military / Special Ops Adjacent (Public OSINT Only)",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Public resilience psychology only (MMFT/MBSR/MBAT literature) \u2014 attention and recovery tools; never tactics or classified content.",
+    "who": "Service members and veterans in high-demand roles seeking public resilience/performance psych tools; trainers delivering authorized public curricula.",
+    "constraints": [
+      "ONLY public open-source programs and published studies",
+      "No tactics, CQC, SERE, targeting, or classified material",
+      "Unit medical / chaplain / EAP first for clinical issues"
+    ],
+    "stressors": [
+      "Pre-deployment anticipation",
+      "Sleep restriction culture",
+      "Hypervigilance carryover",
+      "Reintegration family stress",
+      "Moral injury themes (clinical domain)"
+    ],
+    "commercial": "Low\u2013Med direct GTM; channel-specific; ethics-first. Family reintegration and sleep-culture education whitespace.",
+    "privacy": "OPSEC \u2014 no unit details; no geotags; no operational schedules in notes.",
+    "avoid": [
+      "Any classified or tactical instruction",
+      "Breath extremes as 'selection folklore' medical advice",
+      "Mindfulness marketed as replacement for trauma-focused PTSD care",
+      "Intense interoception if dissociating \u2014 stop and refer",
+      "Suicidality handled by protocol theater \u2014 use crisis/veteran lines"
+    ],
+    "rails": [
+      "Sleep opportunity protection whenever policy allows",
+      "Exercise as permitted",
+      "Alcohol not primary downshift",
+      "EAP/chaplain/medical pathways visible"
+    ],
+    "jobs": [
+      "Train attention under load via public MT themes",
+      "After-action hyperarousal downshift in garrison",
+      "Pre-deployment stress-recovery capacity (public evidence)",
+      "Reintegration family transition support cues"
+    ],
+    "core": [
+      [
+        "mindfulness",
+        "Public MBSR/MBAT/MMFT-style attention themes via authorized instructors \u2014 B/C"
+      ],
+      [
+        "body_scan",
+        "Interoceptive tolerance per public curricula \u2014 modify if trauma triggers"
+      ],
+      [
+        "cyclic_sigh",
+        "Garrison downshift"
+      ],
+      [
+        "box",
+        "Popular tactical breath structure \u2014 C; not magic"
+      ],
+      [
+        "resonance",
+        "Daily regulation when available"
+      ],
+      [
+        "pmr",
+        "Post-ex somatic"
+      ],
+      [
+        "wake",
+        "Protect core sleep"
+      ],
+      [
+        "caffeine",
+        "Per regs / fitness for duty"
+      ],
+      [
+        "if_then",
+        "If rumination off-duty \u2192 postpone to debrief window"
+      ],
+      [
+        "reappraisal",
+        "Non-operational cognitive skill"
+      ],
+      [
+        "aerobic",
+        "Resilience substrate A"
+      ]
+    ],
+    "secondary": [
+      [
+        "nap",
+        "If authorized \u2014 fitness for duty first"
+      ],
+      [
+        "nsdr",
+        "Rest framing only"
+      ],
+      [
+        "wind_down",
+        "Garrison nights"
+      ],
+      [
+        "evening_light",
+        "Sleep protect"
+      ],
+      [
+        "morning_light",
+        "When schedule allows"
+      ],
+      [
+        "worry",
+        "Park non-duty loops"
+      ],
+      [
+        "values",
+        "Service/family compass"
+      ],
+      [
+        "social",
+        "Unit/family micro-connection"
+      ],
+      [
+        "ba",
+        "Reintegration tiny steps"
+      ],
+      [
+        "distancing",
+        "After hard training days"
+      ],
+      [
+        "grounding",
+        "Eyes-open if hyperarousal \u2014 C"
+      ]
+    ],
+    "moments": [
+      [
+        "SCOPE CHECK",
+        "Public performance psych only \u2014 no tactics/classified. If request crosses line \u2192 refuse and redirect to official channels."
+      ],
+      [
+        "Pre-deployment ramp",
+        "Authorized public MT course themes + sleep protect + exercise + EAP awareness"
+      ],
+      [
+        "High-demand training day (garrison)",
+        "Tactical breath micro + task focus cues \u2014 no novel extreme protocols"
+      ],
+      [
+        "Post-ex hyperarousal",
+        "Exhale pacing + PMR + wind-down; schedule debrief; no alcohol-first"
+      ],
+      [
+        "Reintegration week",
+        "Values + BA tiny + social connection; clinical path if PTSD symptoms"
+      ],
+      [
+        "Sleep-deprived duty night",
+        "Caffeine per regs; nap if authorized; report unfit per policy \u2014 never breathe away microsleep risk"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Box/tactical micro OR sigh + task cue.",
+      "5 min": "Cyclic sighing OR brief grounding eyes-open.",
+      "10\u201312 min": "Public MT homework theme OR resonance.",
+      "20 min": "PMR + wind-down start OR authorized MT practice block.",
+      "30\u201360 min": "Exercise OR sleep opportunity.",
+      "Pre-deployment public": "Authorized MT + sleep + exercise + EAP awareness.",
+      "Garrison steady": "Daily coherent/tactical micro + shutdown + social connection."
+    },
+    "evidence": "Johnson et al. 2014 MMFT Marines (PMC4458258) B; VA MBSR PTSD RCTs/metas B/C adjunct not replacement for trauma-focused care; MBAT public trial frameworks C; box breathing C; sleep/circadian A/B. SCOPE: public OSINT only."
+  },
+  "emergency_responders": {
+    "title": "Emergency Responders",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "Critical incidents and shiftwork \u2014 trauma-informed grounding first; EAP/CISM over cathartic breathwork; circadian sleep anchors.",
+    "who": "Fire, EMS, police, dispatch, SAR \u2014 performance/recovery psych with trauma-informed caveats.",
+    "constraints": [
+      "Must remain duty-fit",
+      "Agency EAP/CISM pathways",
+      "Cannot be sedated on shift"
+    ],
+    "stressors": [
+      "Critical incident stress",
+      "Shiftwork circadian disruption",
+      "Off-duty hypervigilance",
+      "Moral distress",
+      "Sleep fragmentation"
+    ],
+    "commercial": "Low\u2013Med luxury concierge; stronger occupational/EAP channel. Station reset-room whitespace.",
+    "privacy": "Incidents and personal crises confidential; HIPAA/agency rules.",
+    "avoid": [
+      "DIY catharsis hyperventilation post-call",
+      "Intense body-scan if dissociating/flooding",
+      "Replacing CISM/EAP with wellness workshop",
+      "Breath holds on duty",
+      "Substance as primary post-call downshift"
+    ],
+    "rails": [
+      "Protect longest dark sleep opportunity post-shift",
+      "Caffeine early in shift not late",
+      "Peer support / EAP visible",
+      "Fitness-for-duty policies supersede preference"
+    ],
+    "jobs": [
+      "En-route channel arousal into task",
+      "Post-call stabilize without flooding",
+      "Night-shift sleep anchor",
+      "Off-duty hypervigilance downshift"
+    ],
+    "core": [
+      [
+        "grounding",
+        "Eyes-open 5-4-3-2-1 post-call \u2014 C; trauma-informed first line"
+      ],
+      [
+        "cyclic_sigh",
+        "Gentle only \u2014 stop if dissociating"
+      ],
+      [
+        "box",
+        "Short en-route structure if trained \u2014 C; stay sharp"
+      ],
+      [
+        "affect",
+        "Light label \u2014 not forced processing"
+      ],
+      [
+        "nap",
+        "Pre-night if policy allows"
+      ],
+      [
+        "caffeine",
+        "Shift timing"
+      ],
+      [
+        "wake",
+        "Protect core sleep opportunity"
+      ],
+      [
+        "evening_light",
+        "Adapt for day sleepers carefully"
+      ],
+      [
+        "aerobic",
+        "Off-duty mood/stress A"
+      ],
+      [
+        "if_then",
+        "If flooding \u2192 stop interoception \u2192 ground \u2192 EAP"
+      ],
+      [
+        "social",
+        "Peer support micro-connection"
+      ]
+    ],
+    "secondary": [
+      [
+        "pmr",
+        "Off-duty somatic \u2014 not if flooding"
+      ],
+      [
+        "resonance",
+        "Off-duty daily"
+      ],
+      [
+        "worry",
+        "Court/rumination out of sleep window"
+      ],
+      [
+        "reappraisal",
+        "Testimony day"
+      ],
+      [
+        "ppr",
+        "Court/testimony composure"
+      ],
+      [
+        "art",
+        "Nature off-duty \u2014 C"
+      ],
+      [
+        "nsdr",
+        "Off-duty rest \u2014 not sleep replacement"
+      ],
+      [
+        "wind_down",
+        "Pre-day-sleep wind-down for nights"
+      ],
+      [
+        "morning_light",
+        "For day shifts; night workers need tailored light plans"
+      ],
+      [
+        "values",
+        "Service meaning \u2014 C"
+      ],
+      [
+        "ba",
+        "Off-duty tiny activation if withdrawn"
+      ]
+    ],
+    "moments": [
+      [
+        "En route to call",
+        "Short tactical breath + task cue \u2014 stay sharp; SOPs first"
+      ],
+      [
+        "After critical incident",
+        "Eyes-open grounding; gentle exhales optional; defer intense interoception; follow EAP/CISM"
+      ],
+      [
+        "End of night shift",
+        "Light/sleep strategy home; caffeine stop; protect sleep opportunity"
+      ],
+      [
+        "Court / testimony day",
+        "PPR + reappraisal"
+      ],
+      [
+        "Off-duty hypervigilance",
+        "Nature ART + exercise + family values cue"
+      ],
+      [
+        "Post-critical week",
+        "EAP engagement | gentle exercise | social connection | skip intense breath workshops"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Eyes-open ground OR one gentle exhale + task cue.",
+      "5 min": "Trauma-informed post-call reset (no catharsis).",
+      "10\u201312 min": "Off-duty resonance or PMR if stable.",
+      "20 min": "Wind-down before day sleep OR exercise off-duty.",
+      "30\u201360 min": "Protected sleep opportunity.",
+      "Night tour": "Pre-shift nap if allowed | on-duty tactical micro | post-call trauma-informed reset | sleep anchor."
+    },
+    "evidence": "Shiftwork sleep medicine B; grounding C; TIPP package-level C; first-responder mindfulness heterogeneous C; exercise A; trauma-focused care first-line for PTSD \u2014 breath/mindfulness adjunct with caveats."
+  },
+  "pilots_aviation": {
+    "title": "Pilots & Aviation Professionals",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "FTL/FRMS and CRM dominate \u2014 layover circadian recovery and off-duty downshifts; never wellness over fitness-for-duty.",
+    "who": "Commercial and business-jet pilots, cabin crew leads, aviation ops using public ICAO/EASA fatigue concepts.",
+    "constraints": [
+      "FTL / FRMS regulatory limits",
+      "Controlled rest only per approved ops manual",
+      "Medical certification / AME pathways",
+      "No impairment \u2014 report unfit when needed"
+    ],
+    "stressors": [
+      "Fatigue and circadian misalignment",
+      "Vigilance under monotony + spike",
+      "Chronic jet lag",
+      "CRM interpersonal load",
+      "Layover sleep quality / owner pressure (bizav)"
+    ],
+    "commercial": "Low direct luxury (regulated); bizav UHNW owner-education adjacency High ethics value.",
+    "privacy": "Rosters and medical cert sensitive; no public fatigue admissions coerced.",
+    "avoid": [
+      "Breathing away microsleep risk",
+      "Experimental breath holds in cockpit",
+      "Unapproved controlled rest",
+      "Alcohol as layover sleep aid",
+      "Violating FTL because owner wants wheels-up",
+      "NSDR as FDP recovery substitute for sleep"
+    ],
+    "rails": [
+      "Comply with FTL/FRMS / ops manual",
+      "Protect uninterrupted sleep opportunity on layover",
+      "Light timing for next FDP direction",
+      "Caffeine strategy early in duty not late"
+    ],
+    "jobs": [
+      "Maximize layover recovery sleep",
+      "Off-duty autonomic downshift without substituting for sleep",
+      "Assert fitness-for-duty / FTL boundaries (esp. bizav)",
+      "Support CRM clarity when fatigued risk rises \u2014 via policy not heroics"
+    ],
+    "core": [
+      [
+        "jetlag",
+        "Layover chronobiology \u2014 light primary; melatonin per AME/clinician"
+      ],
+      [
+        "morning_light",
+        "Timed to next duty / destination"
+      ],
+      [
+        "evening_light",
+        "Protect layover sleep"
+      ],
+      [
+        "nap",
+        "10\u201320 if it won't ruin main sleep; controlled rest only if approved"
+      ],
+      [
+        "caffeine",
+        "Early duty; stop before planned sleep"
+      ],
+      [
+        "wake",
+        "Protect report fitness"
+      ],
+      [
+        "cyclic_sigh",
+        "OFF-DUTY only downshift"
+      ],
+      [
+        "pmr",
+        "OFF-DUTY neck/shoulder cockpit tension"
+      ],
+      [
+        "if_then",
+        "If pressured beyond FTL \u2192 cite regs + Ops"
+      ],
+      [
+        "resonance",
+        "OFF-DUTY hotel practice"
+      ],
+      [
+        "wind_down",
+        "Layover night off-ramp"
+      ]
+    ],
+    "secondary": [
+      [
+        "nsdr",
+        "OFF-DUTY rest \u2014 never FDP substitute"
+      ],
+      [
+        "worry",
+        "Life admin out of sleep opportunity"
+      ],
+      [
+        "affect",
+        "CRM friction label off-duty or appropriate brief"
+      ],
+      [
+        "reappraisal",
+        "Owner pressure cognitive skill \u2014 still follow regs"
+      ],
+      [
+        "aerobic",
+        "Layover walk = light + movement when timing OK"
+      ],
+      [
+        "box",
+        "OFF-DUTY only \u2014 C"
+      ],
+      [
+        "ppr",
+        "Pre-brief personal composure off safety-critical path"
+      ],
+      [
+        "social",
+        "Crew trust micro-connection"
+      ],
+      [
+        "stimulus_control",
+        "If layover insomnia chronic \u2014 clinician"
+      ]
+    ],
+    "moments": [
+      [
+        "Report fatigued",
+        "Honest report per policy \u2014 no heroics; wellness does not override"
+      ],
+      [
+        "Ultra-long-haul cruise",
+        "Approved controlled rest if any; caffeine strategy; CRM \u2014 SOPs first"
+      ],
+      [
+        "Short layover",
+        "Dark cool sleep priority; light plan; no alcohol-as-sleep; off-duty sigh/PMR after sleep secured"
+      ],
+      [
+        "Go-around / abnormal",
+        "Trained SOP first; off-duty downshift later"
+      ],
+      [
+        "Bizav owner pressure",
+        "If\u2013then: cite FTL/ops; protect cert and safety"
+      ],
+      [
+        "Home base recovery night",
+        "Wind-down + dim + fixed wake toward next roster"
+      ]
+    ],
+    "stacks": {
+      "2 min": "OFF-DUTY: sigh + next recovery action.",
+      "5 min": "OFF-DUTY cyclic sighing or PMR brief.",
+      "10\u201312 min": "OFF-DUTY resonance OR NSDR rest after sleep plan set.",
+      "20 min": "Timed light walk on layover if circadian-appropriate.",
+      "30\u201360 min": "Protected sleep opportunity (priority).",
+      "Long-haul pairing": "FTL/FRMS compliance | layover pack | off-duty downshift | report unfit if needed.",
+      "Bizav owner circuit": "FTL boundary if\u2013then | circadian pack | discreet hotel recovery."
+    },
+    "evidence": "ICAO Doc 9966 / EASA FTL-FRM frameworks A (regulatory science); naps/controlled rest B operational; jet-lag light B; off-duty coherent breathing B \u2014 never in lieu of sleep or fitness-for-duty."
+  },
+  "hospital_executives": {
+    "title": "Hospital Executives",
+    "cluster": "C \u2014 Sport / Performance / Duty",
+    "one_liner": "24/7 crisis culture and moral distress \u2014 boundary rituals, shutdown for sleep, and EAP-linked ethical support without clinical overclaim.",
+    "who": "CEO/COO/CNO/CMO, service-line VPs, ambulatory network leads; hospital chain owners (India-relevant UHNW).",
+    "constraints": [
+      "Model professionalism always-on",
+      "HIPAA / optics",
+      "Cannot give clinical care advice outside scope in product"
+    ],
+    "stressors": [
+      "Never-off crisis culture",
+      "Moral distress (staffing/safety tradeoffs)",
+      "Board/regulator scrutiny",
+      "Compassion fatigue adjacency",
+      "On-call culture sleep disruption"
+    ],
+    "commercial": "High India private hospital / chain-owner UHNW; C-suite multi-site travel recovery.",
+    "privacy": "Sentinel events and workforce issues confidential; no PHI in notes.",
+    "avoid": [
+      "DIY treatment of clinical PTSD after sentinel events",
+      "Ignoring depression/burnout physician-health pathways",
+      "NSDR as replacement for nights destroyed by census crises"
+    ],
+    "rails": [
+      "Fixed wake most days",
+      "Exercise most days",
+      "Device park outside bedroom when possible",
+      "Caffeine cutoff relative to sleep"
+    ],
+    "jobs": [
+      "Contain moral distress after hard decisions",
+      "Board-meeting composure",
+      "Nightly cognitive shutdown",
+      "Multi-site travel sharpness"
+    ],
+    "core": [
+      [
+        "reappraisal",
+        "Board and regulator threat"
+      ],
+      [
+        "distancing",
+        "Moral distress perspective without denying accountability"
+      ],
+      [
+        "worry",
+        "Admin loops out of bed"
+      ],
+      [
+        "cyclic_sigh",
+        "Between crises micro"
+      ],
+      [
+        "resonance",
+        "Evening shutdown engine"
+      ],
+      [
+        "if_then",
+        "If pinged off-hours non-urgent \u2192 park to morning list"
+      ],
+      [
+        "woop",
+        "Board season goals"
+      ],
+      [
+        "morning_light",
+        "Multi-site mornings"
+      ],
+      [
+        "aerobic",
+        "Burnout-adjacent substrate A"
+      ],
+      [
+        "wake",
+        "After crisis nights \u2014 still anchor when possible"
+      ],
+      [
+        "pmr",
+        "Shutdown somatic"
+      ]
+    ],
+    "secondary": [
+      [
+        "ppr",
+        "Hostile board open"
+      ],
+      [
+        "affect",
+        "Label before reactive email"
+      ],
+      [
+        "jetlag",
+        "Conference / multi-site"
+      ],
+      [
+        "nap",
+        "Strategic if night destroyed \u2014 careful"
+      ],
+      [
+        "nsdr",
+        "Rest between sites \u2014 not sleep replacement"
+      ],
+      [
+        "wind_down",
+        "Nightly off-ramp"
+      ],
+      [
+        "evening_light",
+        "Sleep protect"
+      ],
+      [
+        "caffeine",
+        "Crisis week timing"
+      ],
+      [
+        "social",
+        "Peer exec check-in"
+      ],
+      [
+        "values",
+        "Mission compass"
+      ],
+      [
+        "ba",
+        "If withdrawn after sentinel \u2014 tiny steps + EAP"
+      ],
+      [
+        "art",
+        "Micro restoration \u2014 C"
+      ],
+      [
+        "pomodoro",
+        "Inbox/census admin blocks \u2014 C"
+      ]
+    ],
+    "moments": [
+      [
+        "Code/crisis command",
+        "SOP/command first; after: labeled downshift + EAP path if needed"
+      ],
+      [
+        "Hostile board meeting",
+        "WOOP + PPR open + reappraisal"
+      ],
+      [
+        "After sentinel event",
+        "EAP/peer; grounding; not alone rumination; formal review paths remain"
+      ],
+      [
+        "Multi-site tour day",
+        "Ultradian breaks + ART + travel circadian pack"
+      ],
+      [
+        "Weekend still pinged",
+        "Device boundary if\u2013then + family values"
+      ],
+      [
+        "Board season week",
+        "Exercise + sleep protect + reappraisal daily"
+      ]
+    ],
+    "stacks": {
+      "2 min": "Sigh + label + next governance action.",
+      "5 min": "Cyclic sighing OR worry-postpone note.",
+      "10\u201312 min": "Moral-distress distancing write + resonance.",
+      "20 min": "Wind-down OR brisk walk.",
+      "30\u201360 min": "Exercise OR full shutdown + sleep opportunity.",
+      "Crisis week": "SOP/command | post-event EAP | micro breath offs | shutdown when possible.",
+      "UHNW multi-site": "Travel circadian + suite recovery + boundary if\u2013thens."
+    },
+    "evidence": "Exercise/sleep A/B; reappraisal/distancing A/B; coherent breathing B; worry postpone B; healthcare burnout literature applied; clinical PTSD/depression \u2192 professional care."
+  }
+}
