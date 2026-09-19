@@ -3,7 +3,13 @@
     "argv": [
       "/usr/bin/node",
       "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/node_modules/.bin/playwright",
-      "test"
+      "test",
+      "tests/golden_mapper.spec.js",
+      "tests/phase1.spec.js",
+      "tests/phase2.spec.js",
+      "tests/pie.spec.js",
+      "--grep-invert",
+      "Concierge"
     ],
     "configFile": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/playwright.config.js",
     "rootDir": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests",
@@ -93,12 +99,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 11,
+                      "duration": 12,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T08:42:29.320Z",
+                      "startTime": "2026-09-19T09:35:44.795Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -127,12 +133,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5,
+                      "duration": 7,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T08:42:29.365Z",
+                      "startTime": "2026-09-19T09:35:44.853Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -161,12 +167,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3,
+                      "duration": 4,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T08:42:29.386Z",
+                      "startTime": "2026-09-19T09:35:44.879Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -200,7 +206,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T08:42:29.405Z",
+                      "startTime": "2026-09-19T09:35:44.903Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -234,7 +240,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-19T08:42:29.414Z",
+                      "startTime": "2026-09-19T09:35:44.913Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -248,6 +254,1032 @@
               "column": 3
             }
           ]
+        },
+        {
+          "title": "golden_mapper auditor fixes",
+          "file": "golden_mapper.spec.js",
+          "line": 69,
+          "column": 6,
+          "specs": [
+            {
+              "title": "crisis_emotion does not set crisis_flag",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-19T09:35:44.924Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cb88cce12b7ee6a04a68-cef51d5f522a6cd47c09",
+              "file": "golden_mapper.spec.js",
+              "line": 70,
+              "column": 3
+            },
+            {
+              "title": "SILENCE_or with ambiguous calendar → force_silence",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-19T09:35:44.934Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cb88cce12b7ee6a04a68-85e43c94dc614250d351",
+              "file": "golden_mapper.spec.js",
+              "line": 85,
+              "column": 3
+            },
+            {
+              "title": "staff_screen / OSA → force_silence",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-19T09:35:44.947Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cb88cce12b7ee6a04a68-d86a695f278e23d361cd",
+              "file": "golden_mapper.spec.js",
+              "line": 97,
+              "column": 3
+            },
+            {
+              "title": "prior_negative from state prose",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-19T09:35:44.956Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cb88cce12b7ee6a04a68-c0f9029d27b0fe5273aa",
+              "file": "golden_mapper.spec.js",
+              "line": 111,
+              "column": 3
+            },
+            {
+              "title": "softAgree staff_* accepts silence",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-19T09:35:44.967Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cb88cce12b7ee6a04a68-c930a7bcd5064b5cf5bb",
+              "file": "golden_mapper.spec.js",
+              "line": 124,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "phase1.spec.js",
+      "file": "phase1.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P1. nested ClientState API works",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 48,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:44.791Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61533eb7f4fb9fda5467-05f1288f12e46355180a",
+          "file": "phase1.spec.js",
+          "line": 48,
+          "column": 1
+        },
+        {
+          "title": "P1. explanation and confidence present on recommendations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 14,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:44.887Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61533eb7f4fb9fda5467-9a59aab2a0fd7bd83e6f",
+          "file": "phase1.spec.js",
+          "line": 74,
+          "column": 1
+        },
+        {
+          "title": "P1. decision_record fields",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 14,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:44.918Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61533eb7f4fb9fda5467-818993e3969071708b3c",
+          "file": "phase1.spec.js",
+          "line": 97,
+          "column": 1
+        },
+        {
+          "title": "P1. safety gateway: crisis before rank (escalate, empty recs)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:44.947Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61533eb7f4fb9fda5467-24e8af63c365bea12163",
+          "file": "phase1.spec.js",
+          "line": 121,
+          "column": 1
+        },
+        {
+          "title": "P1. public hard-exclude still works",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 9,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:44.965Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61533eb7f4fb9fda5467-9dd10e86b98ccc501801",
+          "file": "phase1.spec.js",
+          "line": 136,
+          "column": 1
+        },
+        {
+          "title": "P1. outcome expanded before/after fields",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:44.985Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61533eb7f4fb9fda5467-472ae28f70106b9a61a5",
+          "file": "phase1.spec.js",
+          "line": 155,
+          "column": 1
+        },
+        {
+          "title": "P1. legacy flat input still works",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:45.000Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61533eb7f4fb9fda5467-e7237350e343e54192fd",
+          "file": "phase1.spec.js",
+          "line": 177,
+          "column": 1
+        },
+        {
+          "title": "P1. wrong PIN → 401",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:45.016Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61533eb7f4fb9fda5467-fb18e4f6eff5bd843e45",
+          "file": "phase1.spec.js",
+          "line": 194,
+          "column": 1
+        },
+        {
+          "title": "P1. UI shows CURRENT STATE and AVOID",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 575,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:45.034Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase1.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "61533eb7f4fb9fda5467-a71ea239d565977450b3",
+          "file": "phase1.spec.js",
+          "line": 206,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "phase2.spec.js",
+      "file": "phase2.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P2. health reports phase2 version",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:44.984Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1083ebbd49ebb2973910-182a471d8d55e0e424a7",
+          "file": "phase2.spec.js",
+          "line": 48,
+          "column": 1
+        },
+        {
+          "title": "P2. recommendations expose dose variants + delivery_modality",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:45.007Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1083ebbd49ebb2973910-5c970001b6d586427946",
+          "file": "phase2.spec.js",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "P2. tight gap prefers micro dose",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:45.028Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1083ebbd49ebb2973910-a2029b86b632fde10f16",
+          "file": "phase2.spec.js",
+          "line": 78,
+          "column": 1
+        },
+        {
+          "title": "P2. public context → text or self_guided modality",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:45.047Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1083ebbd49ebb2973910-d86327c8cb3fd3e346bd",
+          "file": "phase2.spec.js",
+          "line": 95,
+          "column": 1
+        },
+        {
+          "title": "P2. outcome updates response_graph and boosts rerank",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:45.063Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1083ebbd49ebb2973910-6de0798a8c6ed0f4c4f3",
+          "file": "phase2.spec.js",
+          "line": 112,
+          "column": 1
+        },
+        {
+          "title": "P2. history endpoint returns decisions, outcomes, graph (historical only)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 284,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:45.096Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1083ebbd49ebb2973910-c8e67e5bce30b89e3da6",
+          "file": "phase2.spec.js",
+          "line": 173,
+          "column": 1
+        },
+        {
+          "title": "P2. UI shows dose, modality, and client history panel",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "serial",
+                  "location": {
+                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                    "line": 0,
+                    "column": 0
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-19T09:35:45.389Z",
+                  "annotations": [
+                    {
+                      "type": "serial",
+                      "location": {
+                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/phase2.spec.js",
+                        "line": 0,
+                        "column": 0
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1083ebbd49ebb2973910-7915acc2002058c498f0",
+          "file": "phase2.spec.js",
+          "line": 209,
+          "column": 1
         }
       ]
     },
@@ -282,12 +1314,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 411,
+                  "duration": 574,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:29.328Z",
+                  "startTime": "2026-09-19T09:35:45.758Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -334,12 +1366,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 447,
+                  "duration": 565,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:29.857Z",
+                  "startTime": "2026-09-19T09:35:46.346Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -386,12 +1418,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 350,
+                  "duration": 396,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:30.318Z",
+                  "startTime": "2026-09-19T09:35:46.928Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -438,12 +1470,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 344,
+                  "duration": 375,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:30.682Z",
+                  "startTime": "2026-09-19T09:35:47.336Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -490,12 +1522,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 76,
+                  "duration": 81,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:31.036Z",
+                  "startTime": "2026-09-19T09:35:47.723Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -514,7 +1546,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-9a8cda6bd7deedefa2f0",
           "file": "pie.spec.js",
-          "line": 269,
+          "line": 272,
           "column": 1
         },
         {
@@ -542,12 +1574,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 386,
+                  "duration": 415,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:31.125Z",
+                  "startTime": "2026-09-19T09:35:47.815Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -566,7 +1598,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-1fd540c468a79f466165",
           "file": "pie.spec.js",
-          "line": 318,
+          "line": 321,
           "column": 1
         },
         {
@@ -599,7 +1631,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:31.522Z",
+                  "startTime": "2026-09-19T09:35:48.243Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -618,7 +1650,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-b127ce111196ee08f8be",
           "file": "pie.spec.js",
-          "line": 339,
+          "line": 342,
           "column": 1
         },
         {
@@ -646,20 +1678,20 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 128,
+                  "duration": 306,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "GOLDEN agreement exact=23.6% soft=78.2% top3=68.2% (26/110 exact, 86/110 soft)\n"
+                      "text": "GOLDEN agreement exact=45.5% soft=91.8% top3=85.5% (50/110 exact, 101/110 soft)\n"
                     }
                   ],
                   "stderr": [
                     {
-                      "text": "(node:339704) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+                      "text": "(node:390743) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
                     }
                   ],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:31.610Z",
+                  "startTime": "2026-09-19T09:35:48.331Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -678,7 +1710,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-1b441fc1afc4e275a4e0",
           "file": "pie.spec.js",
-          "line": 355,
+          "line": 358,
           "column": 1
         },
         {
@@ -706,16 +1738,16 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 102,
+                  "duration": 242,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "MATRIX n=120 suggest=114 silence=6 infeasible=0\n"
+                      "text": "MATRIX n=120 suggest=120 silence=0 infeasible=0\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:31.750Z",
+                  "startTime": "2026-09-19T09:35:48.648Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -734,59 +1766,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-d14fa011f12063267cdd",
           "file": "pie.spec.js",
-          "line": 459,
-          "column": 1
-        },
-        {
-          "title": "10. Concierge UI smoke on :8787",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [
-                {
-                  "type": "serial",
-                  "location": {
-                    "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                    "line": 0,
-                    "column": 0
-                  }
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 1873,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-09-19T08:42:31.863Z",
-                  "annotations": [
-                    {
-                      "type": "serial",
-                      "location": {
-                        "file": "/workspace/pranaforge-protocol-research/protocol-intelligence-engine/17_runtime/tests/pie.spec.js",
-                        "line": 0,
-                        "column": 0
-                      }
-                    }
-                  ],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "56d74c9d4d3c90829a42-44ea1bdb8defb14c8478",
-          "file": "pie.spec.js",
-          "line": 554,
+          "line": 462,
           "column": 1
         },
         {
@@ -814,12 +1794,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 98,
+                  "duration": 174,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:33.750Z",
+                  "startTime": "2026-09-19T09:35:48.901Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -838,7 +1818,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-4d345d4f5000f8e9e37a",
           "file": "pie.spec.js",
-          "line": 612,
+          "line": 638,
           "column": 1
         },
         {
@@ -866,12 +1846,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 385,
+                  "duration": 405,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:33.860Z",
+                  "startTime": "2026-09-19T09:35:49.089Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -890,7 +1870,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-10ec22c54102bbe58672",
           "file": "pie.spec.js",
-          "line": 645,
+          "line": 671,
           "column": 1
         },
         {
@@ -918,12 +1898,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 73,
+                  "duration": 79,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:34.256Z",
+                  "startTime": "2026-09-19T09:35:49.509Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -942,7 +1922,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-f28484894563a7e5c68d",
           "file": "pie.spec.js",
-          "line": 677,
+          "line": 703,
           "column": 1
         },
         {
@@ -970,12 +1950,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 90,
+                  "duration": 87,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:34.340Z",
+                  "startTime": "2026-09-19T09:35:49.599Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -994,7 +1974,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-9bb305aeff2022bf7e5c",
           "file": "pie.spec.js",
-          "line": 700,
+          "line": 726,
           "column": 1
         },
         {
@@ -1022,12 +2002,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 439,
+                  "duration": 480,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:34.440Z",
+                  "startTime": "2026-09-19T09:35:49.697Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -1046,7 +2026,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-c0b49903bc997f5e4436",
           "file": "pie.spec.js",
-          "line": 754,
+          "line": 780,
           "column": 1
         },
         {
@@ -1074,12 +2054,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 72,
+                  "duration": 81,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-19T08:42:34.890Z",
+                  "startTime": "2026-09-19T09:35:50.189Z",
                   "annotations": [
                     {
                       "type": "serial",
@@ -1098,7 +2078,7 @@
           ],
           "id": "56d74c9d4d3c90829a42-05d56c8b8dcd343c72ca",
           "file": "pie.spec.js",
-          "line": 781,
+          "line": 807,
           "column": 1
         }
       ]
@@ -1106,9 +2086,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-19T08:42:28.527Z",
-    "duration": 6481.129,
-    "expected": 21,
+    "startTime": "2026-09-19T09:35:43.951Z",
+    "duration": 6367.9839999999995,
+    "expected": 41,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

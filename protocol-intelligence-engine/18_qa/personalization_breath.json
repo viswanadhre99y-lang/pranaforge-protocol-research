@@ -57,7 +57,7 @@
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 1.326,
+        "score": 1.012,
         "features": {
           "need_match": 0.59,
           "context_match": 0.25,
@@ -80,7 +80,7 @@
           "event_fit": 0.95,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 1.326
+          "final_score": 1.012
         },
         "dose_for_gap_sec": 300,
         "why": [
@@ -91,7 +91,7 @@
         ],
         "purpose": "Mentally rehearse steps and obstacle handling—not only the trophy moment.",
         "is_vault_ip": false,
-        "confidence": 0.498,
+        "confidence": 0.496,
         "explanation": {
           "selected_id": "process-visualization",
           "positives": [
@@ -105,7 +105,7 @@
             "duration:5m"
           ],
           "penalties": [],
-          "confidence": 0.498
+          "confidence": 0.496
         },
         "dose": {
           "micro": 120,
@@ -117,177 +117,192 @@
         "delivery_modality": "audio"
       },
       {
-        "protocol_id": "centering-ravizza",
-        "name": "Centering (Ravizza-Style)",
-        "evidence": "C",
-        "evidence_class": "practitioner_derived",
+        "protocol_id": "physiological-sigh-acute",
+        "name": "Acute Physiological Sigh (1–3 Cycles)",
+        "evidence": "B",
+        "evidence_class": "evidence_supported",
         "protocol_version": "1.0.0",
         "max_duration_sec": 120,
-        "recommended_duration_sec": 120,
-        "min_duration_sec": 120,
+        "recommended_duration_sec": 60,
+        "min_duration_sec": 30,
         "duration": {
-          "micro_sec": 120,
-          "min_sec": 120,
-          "optimal_sec": 120,
+          "micro_sec": 30,
+          "min_sec": 30,
+          "optimal_sec": 60,
           "extended_sec": 120
         },
-        "modality": "performance",
+        "modality": "stress",
         "arousal_direction": "down",
         "need_tags": [
-          "pre_performance",
-          "micro_reset"
+          "stress_acute",
+          "arousal_down",
+          "micro_reset",
+          "pre_performance"
         ],
         "categories": [
-          "performance",
           "stress"
         ],
         "public_discrete": true,
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 1.117,
+        "score": 0.983,
         "features": {
-          "need_match": 0.59,
-          "context_match": 0,
+          "need_match": 0.98,
+          "context_match": 0.35,
+          "timing": 0.95,
+          "evidence": 0.8,
+          "history": 0.85,
+          "preference": 1,
+          "feasibility": 0.96,
+          "expected_benefit": 0.68,
+          "adherence_prob": 1,
+          "penalties": 0
+        },
+        "score_breakdown": {
+          "goal_fit": 0.98,
+          "state_fit": 0.68,
+          "context_fit": 0.35,
+          "duration_fit": 0.96,
+          "preference_fit": 1,
+          "historical_response": 0.85,
+          "event_fit": 0.95,
+          "sequence_fit": null,
+          "safety_status": "ok",
+          "final_score": 0.983
+        },
+        "dose_for_gap_sec": 60,
+        "why": [
+          "need:pre_performance",
+          "moment:investor_meeting",
+          "evidence:B",
+          "duration:1m",
+          "pref:breath"
+        ],
+        "purpose": "Fastest practical application of cyclic sigh pattern for spike stress.",
+        "is_vault_ip": false,
+        "confidence": 0.544,
+        "explanation": {
+          "selected_id": "physiological-sigh-acute",
+          "positives": [
+            "need_match=0.98",
+            "timing=0.95",
+            "evidence=0.8",
+            "history=0.85",
+            "preference=1",
+            "feasibility=0.96",
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:1m",
+            "pref:breath"
+          ],
+          "penalties": [],
+          "confidence": 0.544
+        },
+        "dose": {
+          "micro": 30,
+          "minimum": 30,
+          "recommended": 60,
+          "extended": 120
+        },
+        "preferred_dose": "extended",
+        "delivery_modality": "audio"
+      },
+      {
+        "protocol_id": "box-breathing",
+        "name": "Box Breathing (Square Breathing)",
+        "evidence": "C",
+        "evidence_class": "practitioner_derived",
+        "protocol_version": "1.0.0",
+        "max_duration_sec": 300,
+        "recommended_duration_sec": 120,
+        "min_duration_sec": 120,
+        "duration": {
+          "micro_sec": 120,
+          "min_sec": 120,
+          "optimal_sec": 120,
+          "extended_sec": 300
+        },
+        "modality": "breath",
+        "arousal_direction": "down",
+        "need_tags": [
+          "stress_acute",
+          "pre_performance",
+          "focus"
+        ],
+        "categories": [
+          "breathing",
+          "stress",
+          "performance",
+          "cognitive"
+        ],
+        "public_discrete": false,
+        "clinician_only": false,
+        "compatible_ids": [],
+        "incompatible_ids": [],
+        "score": 0.957,
+        "features": {
+          "need_match": 0.84,
+          "context_match": 0.82,
           "timing": 0.95,
           "evidence": 0.55,
-          "history": 0.5,
-          "preference": 0.35,
+          "history": 0.85,
+          "preference": 1,
           "feasibility": 0.92,
           "expected_benefit": 0.52,
           "adherence_prob": 1,
           "penalties": 0
         },
         "score_breakdown": {
-          "goal_fit": 0.59,
+          "goal_fit": 0.84,
           "state_fit": 0.52,
-          "context_fit": 0,
+          "context_fit": 0.82,
           "duration_fit": 0.92,
-          "preference_fit": 0.35,
-          "historical_response": 0.5,
+          "preference_fit": 1,
+          "historical_response": 0.85,
           "event_fit": 0.95,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 1.117
+          "final_score": 0.957
         },
         "dose_for_gap_sec": 120,
         "why": [
           "need:pre_performance",
           "moment:investor_meeting",
           "evidence:C",
-          "duration:2m"
+          "duration:2m",
+          "pref:breath"
         ],
-        "purpose": "Rapidly shift from distracted/tense state to controlled, present, process-focused state.",
+        "purpose": "Stabilize attention and arousal with equal inhale–hold–exhale–hold timing.",
         "is_vault_ip": false,
-        "confidence": 0.416,
+        "confidence": 0.51,
         "explanation": {
-          "selected_id": "centering-ravizza",
+          "selected_id": "box-breathing",
           "positives": [
-            "need_match=0.59",
+            "need_match=0.84",
+            "context_match=0.82",
             "timing=0.95",
             "evidence=0.55",
+            "history=0.85",
+            "preference=1",
             "feasibility=0.92",
             "need:pre_performance",
             "moment:investor_meeting",
             "evidence:C",
-            "duration:2m"
+            "duration:2m",
+            "pref:breath"
           ],
           "penalties": [],
-          "confidence": 0.416
+          "confidence": 0.51
         },
         "dose": {
           "micro": 120,
           "minimum": 120,
           "recommended": 120,
-          "extended": 120
+          "extended": 300
         },
-        "preferred_dose": "recommended",
-        "delivery_modality": "audio"
-      },
-      {
-        "protocol_id": "ppr",
-        "name": "Pre-Performance Routine (PPR)",
-        "evidence": "B",
-        "evidence_class": "evidence_supported",
-        "protocol_version": "1.0.0",
-        "max_duration_sec": 120,
-        "recommended_duration_sec": 120,
-        "min_duration_sec": 30,
-        "duration": {
-          "micro_sec": 30,
-          "min_sec": 30,
-          "optimal_sec": 120,
-          "extended_sec": 120
-        },
-        "modality": "performance",
-        "arousal_direction": "down",
-        "need_tags": [
-          "pre_performance"
-        ],
-        "categories": [
-          "performance"
-        ],
-        "public_discrete": false,
-        "clinician_only": false,
-        "compatible_ids": [],
-        "incompatible_ids": [],
-        "score": 1.102,
-        "features": {
-          "need_match": 0.67,
-          "context_match": 0,
-          "timing": 0.95,
-          "evidence": 0.8,
-          "history": 0.5,
-          "preference": 0.35,
-          "feasibility": 0.92,
-          "expected_benefit": 0.68,
-          "adherence_prob": 1,
-          "penalties": 0
-        },
-        "score_breakdown": {
-          "goal_fit": 0.67,
-          "state_fit": 0.68,
-          "context_fit": 0,
-          "duration_fit": 0.92,
-          "preference_fit": 0.35,
-          "historical_response": 0.5,
-          "event_fit": 0.95,
-          "sequence_fit": null,
-          "safety_status": "ok",
-          "final_score": 1.102
-        },
-        "dose_for_gap_sec": 120,
-        "why": [
-          "need:pre_performance",
-          "moment:investor_meeting",
-          "evidence:B",
-          "duration:2m"
-        ],
-        "purpose": "Stabilize attention and arousal before a skilled performance via a consistent short sequence.",
-        "is_vault_ip": false,
-        "confidence": 0.483,
-        "explanation": {
-          "selected_id": "ppr",
-          "positives": [
-            "need_match=0.67",
-            "timing=0.95",
-            "evidence=0.8",
-            "feasibility=0.92",
-            "need:pre_performance",
-            "moment:investor_meeting",
-            "evidence:B",
-            "duration:2m"
-          ],
-          "penalties": [],
-          "confidence": 0.483
-        },
-        "dose": {
-          "micro": 30,
-          "minimum": 30,
-          "recommended": 120,
-          "extended": 120
-        },
-        "preferred_dose": "recommended",
+        "preferred_dose": "extended",
         "delivery_modality": "audio"
       }
     ],
@@ -361,15 +376,15 @@
     ],
     "tau_select": 0.42,
     "scores": {
-      "process-visualization": 1.326,
-      "centering-ravizza": 1.117,
-      "ppr": 1.102,
-      "pettlep": 1.006,
-      "box-breathing": 0.977,
+      "process-visualization": 1.012,
+      "physiological-sigh-acute": 0.983,
+      "box-breathing": 0.957,
+      "centering-ravizza": 0.883,
+      "ppr": 0.868,
       "tactical-breath-reset": 0.858,
-      "exhale-emphasized": 0.842,
       "cyclic-sighing": 0.819,
-      "physiological-sigh-acute": 0.795,
+      "exhale-emphasized": 0.806,
+      "pettlep": 0.772,
       "brief-pmr-acute": 0.657
     },
     "input": {
@@ -397,7 +412,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:27:51.032Z",
+        "as_of": "2026-09-19T09:35:47.763Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -525,7 +540,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "startup_founder",
-      "as_of": "2026-09-19T09:27:51.032Z",
+      "as_of": "2026-09-19T09:35:47.763Z",
       "physical": {
         "sleep_h": {
           "value": 6,
@@ -646,16 +661,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_bbca3e75676c",
+      "decision_id": "dr_26da55d75a47",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:27:51.034Z"
+        "decided_at": "2026-09-19T09:35:47.765Z"
       },
       "state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:27:51.032Z",
+        "as_of": "2026-09-19T09:35:47.763Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -776,7 +791,7 @@
       "candidates": [
         {
           "protocol_id": "process-visualization",
-          "score": 1.326,
+          "score": 1.012,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -801,7 +816,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.326
+            "final_score": 1.012
           },
           "why": [
             "need:pre_performance",
@@ -816,131 +831,50 @@
           "clinician_only": false
         },
         {
-          "protocol_id": "centering-ravizza",
-          "score": 1.117,
-          "protocol_version": "1.0.0",
-          "evidence_class": "practitioner_derived",
-          "features": {
-            "need_match": 0.59,
-            "context_match": 0,
-            "timing": 0.95,
-            "evidence": 0.55,
-            "history": 0.5,
-            "preference": 0.35,
-            "feasibility": 0.92,
-            "expected_benefit": 0.52,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.59,
-            "state_fit": 0.52,
-            "context_fit": 0,
-            "duration_fit": 0.92,
-            "preference_fit": 0.35,
-            "historical_response": 0.5,
-            "event_fit": 0.95,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 1.117
-          },
-          "why": [
-            "need:pre_performance",
-            "moment:investor_meeting",
-            "evidence:C",
-            "duration:2m"
-          ],
-          "min_duration_sec": 120,
-          "recommended_duration_sec": 120,
-          "max_duration_sec": 120,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
-          "protocol_id": "ppr",
-          "score": 1.102,
+          "protocol_id": "physiological-sigh-acute",
+          "score": 0.983,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
-            "need_match": 0.67,
-            "context_match": 0,
+            "need_match": 0.98,
+            "context_match": 0.35,
             "timing": 0.95,
             "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.35,
-            "feasibility": 0.92,
+            "history": 0.85,
+            "preference": 1,
+            "feasibility": 0.96,
             "expected_benefit": 0.68,
             "adherence_prob": 1,
             "penalties": 0
           },
           "score_breakdown": {
-            "goal_fit": 0.67,
+            "goal_fit": 0.98,
             "state_fit": 0.68,
-            "context_fit": 0,
-            "duration_fit": 0.92,
-            "preference_fit": 0.35,
-            "historical_response": 0.5,
+            "context_fit": 0.35,
+            "duration_fit": 0.96,
+            "preference_fit": 1,
+            "historical_response": 0.85,
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.102
+            "final_score": 0.983
           },
           "why": [
             "need:pre_performance",
             "moment:investor_meeting",
             "evidence:B",
-            "duration:2m"
+            "duration:1m",
+            "pref:breath"
           ],
           "min_duration_sec": 30,
-          "recommended_duration_sec": 120,
+          "recommended_duration_sec": 60,
           "max_duration_sec": 120,
-          "public_discrete": false,
-          "clinician_only": false
-        },
-        {
-          "protocol_id": "pettlep",
-          "score": 1.006,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.59,
-            "context_match": 0.25,
-            "timing": 0.95,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.35,
-            "feasibility": 0.8,
-            "expected_benefit": 0.8,
-            "adherence_prob": 0.93,
-            "penalties": 0.08
-          },
-          "score_breakdown": {
-            "goal_fit": 0.59,
-            "state_fit": 0.8,
-            "context_fit": 0.25,
-            "duration_fit": 0.8,
-            "preference_fit": 0.35,
-            "historical_response": 0.5,
-            "event_fit": 0.95,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 1.006
-          },
-          "why": [
-            "need:pre_performance",
-            "moment:investor_meeting",
-            "evidence:B",
-            "duration:5m"
-          ],
-          "min_duration_sec": 300,
-          "recommended_duration_sec": 300,
-          "max_duration_sec": 900,
-          "public_discrete": false,
+          "public_discrete": true,
           "clinician_only": false
         },
         {
           "protocol_id": "box-breathing",
-          "score": 0.977,
+          "score": 0.957,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -965,7 +899,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.977
+            "final_score": 0.957
           },
           "why": [
             "need:pre_performance",
@@ -977,6 +911,88 @@
           "min_duration_sec": 120,
           "recommended_duration_sec": 120,
           "max_duration_sec": 300,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "centering-ravizza",
+          "score": 0.883,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.55,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.92,
+            "expected_benefit": 0.52,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.52,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.883
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:C",
+            "duration:2m"
+          ],
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 120,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "ppr",
+          "score": 0.868,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.67,
+            "context_match": 0,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.92,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.67,
+            "state_fit": 0.68,
+            "context_fit": 0,
+            "duration_fit": 0.92,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.868
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:2m"
+          ],
+          "min_duration_sec": 30,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 120,
           "public_discrete": false,
           "clinician_only": false
         },
@@ -1023,47 +1039,6 @@
           "clinician_only": false
         },
         {
-          "protocol_id": "exhale-emphasized",
-          "score": 0.842,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.66,
-            "context_match": 0.47,
-            "timing": 0.95,
-            "evidence": 0.8,
-            "history": 0.85,
-            "preference": 1,
-            "feasibility": 0.92,
-            "expected_benefit": 0.68,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.66,
-            "state_fit": 0.68,
-            "context_fit": 0.47,
-            "duration_fit": 0.92,
-            "preference_fit": 1,
-            "historical_response": 0.85,
-            "event_fit": 0.95,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.842
-          },
-          "why": [
-            "moment:investor_meeting",
-            "evidence:B",
-            "duration:2m",
-            "pref:breath"
-          ],
-          "min_duration_sec": 120,
-          "recommended_duration_sec": 120,
-          "max_duration_sec": 300,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
           "protocol_id": "cyclic-sighing",
           "score": 0.819,
           "protocol_version": "1.0.0",
@@ -1106,18 +1081,18 @@
           "clinician_only": false
         },
         {
-          "protocol_id": "physiological-sigh-acute",
-          "score": 0.795,
+          "protocol_id": "exhale-emphasized",
+          "score": 0.806,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
             "need_match": 0.49,
-            "context_match": 0.35,
+            "context_match": 0.47,
             "timing": 0.95,
             "evidence": 0.8,
             "history": 0.85,
             "preference": 1,
-            "feasibility": 0.96,
+            "feasibility": 0.92,
             "expected_benefit": 0.68,
             "adherence_prob": 1,
             "penalties": 0
@@ -1125,25 +1100,66 @@
           "score_breakdown": {
             "goal_fit": 0.49,
             "state_fit": 0.68,
-            "context_fit": 0.35,
-            "duration_fit": 0.96,
+            "context_fit": 0.47,
+            "duration_fit": 0.92,
             "preference_fit": 1,
             "historical_response": 0.85,
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.795
+            "final_score": 0.806
           },
           "why": [
             "moment:investor_meeting",
             "evidence:B",
-            "duration:1m",
+            "duration:2m",
             "pref:breath"
           ],
-          "min_duration_sec": 30,
-          "recommended_duration_sec": 60,
-          "max_duration_sec": 120,
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 300,
           "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "pettlep",
+          "score": 0.772,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.59,
+            "context_match": 0.25,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.35,
+            "feasibility": 0.8,
+            "expected_benefit": 0.8,
+            "adherence_prob": 0.93,
+            "penalties": 0.08
+          },
+          "score_breakdown": {
+            "goal_fit": 0.59,
+            "state_fit": 0.8,
+            "context_fit": 0.25,
+            "duration_fit": 0.8,
+            "preference_fit": 0.35,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.772
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:5m"
+          ],
+          "min_duration_sec": 300,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 900,
+          "public_discrete": false,
           "clinician_only": false
         },
         {
@@ -1253,7 +1269,7 @@
       "top": [
         {
           "protocol_id": "process-visualization",
-          "score": 1.326,
+          "score": 1.012,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -1278,71 +1294,71 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.326
+            "final_score": 1.012
           }
         },
         {
-          "protocol_id": "centering-ravizza",
-          "score": 1.117,
+          "protocol_id": "physiological-sigh-acute",
+          "score": 0.983,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.98,
+            "context_match": 0.35,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.85,
+            "preference": 1,
+            "feasibility": 0.96,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.98,
+            "state_fit": 0.68,
+            "context_fit": 0.35,
+            "duration_fit": 0.96,
+            "preference_fit": 1,
+            "historical_response": 0.85,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.983
+          }
+        },
+        {
+          "protocol_id": "box-breathing",
+          "score": 0.957,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
-            "need_match": 0.59,
-            "context_match": 0,
+            "need_match": 0.84,
+            "context_match": 0.82,
             "timing": 0.95,
             "evidence": 0.55,
-            "history": 0.5,
-            "preference": 0.35,
+            "history": 0.85,
+            "preference": 1,
             "feasibility": 0.92,
             "expected_benefit": 0.52,
             "adherence_prob": 1,
             "penalties": 0
           },
           "score_breakdown": {
-            "goal_fit": 0.59,
+            "goal_fit": 0.84,
             "state_fit": 0.52,
-            "context_fit": 0,
+            "context_fit": 0.82,
             "duration_fit": 0.92,
-            "preference_fit": 0.35,
-            "historical_response": 0.5,
+            "preference_fit": 1,
+            "historical_response": 0.85,
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.117
-          }
-        },
-        {
-          "protocol_id": "ppr",
-          "score": 1.102,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.67,
-            "context_match": 0,
-            "timing": 0.95,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.35,
-            "feasibility": 0.92,
-            "expected_benefit": 0.68,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.67,
-            "state_fit": 0.68,
-            "context_fit": 0,
-            "duration_fit": 0.92,
-            "preference_fit": 0.35,
-            "historical_response": 0.5,
-            "event_fit": 0.95,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 1.102
+            "final_score": 0.957
           }
         }
       ],
-      "confidence": 0.498,
+      "confidence": 0.496,
       "explanation": {
         "selected_id": "process-visualization",
         "positives": [
@@ -1356,7 +1372,7 @@
           "duration:5m"
         ],
         "penalties": [],
-        "confidence": 0.498
+        "confidence": 0.496
       },
       "protocol_versions": {
         "cyclic-sighing": "1.0.0",
@@ -1416,7 +1432,7 @@
       "input_hash": "92aae4a340c20be1",
       "schema_version": "1.0.0"
     },
-    "confidence": 0.498,
+    "confidence": 0.496,
     "explanation": {
       "selected_id": "process-visualization",
       "positives": [
@@ -1430,7 +1446,7 @@
         "duration:5m"
       ],
       "penalties": [],
-      "confidence": 0.498
+      "confidence": 0.496
     }
   },
   "no": {
@@ -1487,7 +1503,7 @@
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 1.358,
+        "score": 1.044,
         "features": {
           "need_match": 0.59,
           "context_match": 0.25,
@@ -1510,7 +1526,7 @@
           "event_fit": 0.95,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 1.358
+          "final_score": 1.044
         },
         "dose_for_gap_sec": 300,
         "why": [
@@ -1578,7 +1594,7 @@
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 1.149,
+        "score": 0.915,
         "features": {
           "need_match": 0.59,
           "context_match": 0,
@@ -1601,7 +1617,7 @@
           "event_fit": 0.95,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 1.149
+          "final_score": 0.915
         },
         "dose_for_gap_sec": 120,
         "why": [
@@ -1613,7 +1629,7 @@
         ],
         "purpose": "Rapidly shift from distracted/tense state to controlled, present, process-focused state.",
         "is_vault_ip": false,
-        "confidence": 0.416,
+        "confidence": 0.395,
         "explanation": {
           "selected_id": "centering-ravizza",
           "positives": [
@@ -1629,7 +1645,7 @@
             "pref:non-breath"
           ],
           "penalties": [],
-          "confidence": 0.416
+          "confidence": 0.395
         },
         "dose": {
           "micro": 120,
@@ -1667,7 +1683,7 @@
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 1.134,
+        "score": 0.9,
         "features": {
           "need_match": 0.67,
           "context_match": 0,
@@ -1690,7 +1706,7 @@
           "event_fit": 0.95,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 1.134
+          "final_score": 0.9
         },
         "dose_for_gap_sec": 120,
         "why": [
@@ -1702,7 +1718,7 @@
         ],
         "purpose": "Stabilize attention and arousal before a skilled performance via a consistent short sequence.",
         "is_vault_ip": false,
-        "confidence": 0.483,
+        "confidence": 0.459,
         "explanation": {
           "selected_id": "ppr",
           "positives": [
@@ -1718,7 +1734,7 @@
             "pref:non-breath"
           ],
           "penalties": [],
-          "confidence": 0.483
+          "confidence": 0.459
         },
         "dose": {
           "micro": 30,
@@ -1801,16 +1817,16 @@
     ],
     "tau_select": 0.42,
     "scores": {
-      "process-visualization": 1.358,
-      "centering-ravizza": 1.149,
-      "ppr": 1.134,
-      "pettlep": 1.038,
+      "process-visualization": 1.044,
+      "centering-ravizza": 0.915,
+      "ppr": 0.9,
+      "pettlep": 0.804,
       "brief-pmr-acute": 0.749,
       "if-then-gollwitzer": 0.649,
+      "physiological-sigh-acute": 0.628,
       "cognitive-reappraisal": 0.546,
-      "pmr": 0.545,
       "tipp": 0.543,
-      "autogenic": 0.506
+      "box-breathing": 0.542
     },
     "input": {
       "client_type": "startup_founder",
@@ -1837,7 +1853,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:27:51.036Z",
+        "as_of": "2026-09-19T09:35:47.768Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -1965,7 +1981,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "startup_founder",
-      "as_of": "2026-09-19T09:27:51.036Z",
+      "as_of": "2026-09-19T09:35:47.768Z",
       "physical": {
         "sleep_h": {
           "value": 6,
@@ -2086,16 +2102,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_da76a5698b86",
+      "decision_id": "dr_c9206e7a3549",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:27:51.038Z"
+        "decided_at": "2026-09-19T09:35:47.770Z"
       },
       "state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:27:51.036Z",
+        "as_of": "2026-09-19T09:35:47.768Z",
         "physical": {
           "sleep_h": {
             "value": 6,
@@ -2216,7 +2232,7 @@
       "candidates": [
         {
           "protocol_id": "process-visualization",
-          "score": 1.358,
+          "score": 1.044,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -2241,7 +2257,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.358
+            "final_score": 1.044
           },
           "why": [
             "need:pre_performance",
@@ -2258,7 +2274,7 @@
         },
         {
           "protocol_id": "centering-ravizza",
-          "score": 1.149,
+          "score": 0.915,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -2283,7 +2299,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.149
+            "final_score": 0.915
           },
           "why": [
             "need:pre_performance",
@@ -2300,7 +2316,7 @@
         },
         {
           "protocol_id": "ppr",
-          "score": 1.134,
+          "score": 0.9,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -2325,7 +2341,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.134
+            "final_score": 0.9
           },
           "why": [
             "need:pre_performance",
@@ -2342,7 +2358,7 @@
         },
         {
           "protocol_id": "pettlep",
-          "score": 1.038,
+          "score": 0.804,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -2367,7 +2383,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.038
+            "final_score": 0.804
           },
           "why": [
             "need:pre_performance",
@@ -2464,6 +2480,48 @@
           "clinician_only": false
         },
         {
+          "protocol_id": "physiological-sigh-acute",
+          "score": 0.628,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.98,
+            "context_match": 0.35,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.2,
+            "preference": 0,
+            "feasibility": 0.96,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0.47
+          },
+          "score_breakdown": {
+            "goal_fit": 0.98,
+            "state_fit": 0.68,
+            "context_fit": 0.35,
+            "duration_fit": 0.96,
+            "preference_fit": 0,
+            "historical_response": 0.2,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.628
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:1m",
+            "pref:breath_penalty"
+          ],
+          "min_duration_sec": 30,
+          "recommended_duration_sec": 60,
+          "max_duration_sec": 120,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
           "protocol_id": "cognitive-reappraisal",
           "score": 0.546,
           "protocol_version": "1.0.0",
@@ -2500,46 +2558,6 @@
           "min_duration_sec": 300,
           "recommended_duration_sec": 300,
           "max_duration_sec": 600,
-          "public_discrete": false,
-          "clinician_only": false
-        },
-        {
-          "protocol_id": "pmr",
-          "score": 0.545,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.2,
-            "context_match": 0.22,
-            "timing": 0.35,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.75,
-            "feasibility": 0.6,
-            "expected_benefit": 0.8,
-            "adherence_prob": 0.7,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.2,
-            "state_fit": 0.8,
-            "context_fit": 0.22,
-            "duration_fit": 0.6,
-            "preference_fit": 0.75,
-            "historical_response": 0.5,
-            "event_fit": 0.35,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.545
-          },
-          "why": [
-            "evidence:B",
-            "duration:12m",
-            "pref:non-breath"
-          ],
-          "min_duration_sec": 600,
-          "recommended_duration_sec": 720,
-          "max_duration_sec": 1200,
           "public_discrete": false,
           "clinician_only": false
         },
@@ -2584,42 +2602,44 @@
           "clinician_only": false
         },
         {
-          "protocol_id": "autogenic",
-          "score": 0.506,
+          "protocol_id": "box-breathing",
+          "score": 0.542,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
-            "need_match": 0.25,
-            "context_match": 0.22,
-            "timing": 0.35,
+            "need_match": 0.84,
+            "context_match": 0.82,
+            "timing": 0.95,
             "evidence": 0.55,
-            "history": 0.5,
-            "preference": 0.75,
-            "feasibility": 0.6,
-            "expected_benefit": 0.59,
-            "adherence_prob": 0.7,
-            "penalties": 0
+            "history": 0.2,
+            "preference": 0,
+            "feasibility": 0.92,
+            "expected_benefit": 0.52,
+            "adherence_prob": 1,
+            "penalties": 0.47
           },
           "score_breakdown": {
-            "goal_fit": 0.25,
-            "state_fit": 0.59,
-            "context_fit": 0.22,
-            "duration_fit": 0.6,
-            "preference_fit": 0.75,
-            "historical_response": 0.5,
-            "event_fit": 0.35,
+            "goal_fit": 0.84,
+            "state_fit": 0.52,
+            "context_fit": 0.82,
+            "duration_fit": 0.92,
+            "preference_fit": 0,
+            "historical_response": 0.2,
+            "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.506
+            "final_score": 0.542
           },
           "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
             "evidence:C",
-            "duration:12m",
-            "pref:non-breath"
+            "duration:2m",
+            "pref:breath_penalty"
           ],
-          "min_duration_sec": 600,
-          "recommended_duration_sec": 720,
-          "max_duration_sec": 1200,
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 300,
           "public_discrete": false,
           "clinician_only": false
         }
@@ -2690,7 +2710,7 @@
       "top": [
         {
           "protocol_id": "process-visualization",
-          "score": 1.358,
+          "score": 1.044,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -2715,12 +2735,12 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.358
+            "final_score": 1.044
           }
         },
         {
           "protocol_id": "centering-ravizza",
-          "score": 1.149,
+          "score": 0.915,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -2745,12 +2765,12 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.149
+            "final_score": 0.915
           }
         },
         {
           "protocol_id": "ppr",
-          "score": 1.134,
+          "score": 0.9,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -2775,7 +2795,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.134
+            "final_score": 0.9
           }
         }
       ],

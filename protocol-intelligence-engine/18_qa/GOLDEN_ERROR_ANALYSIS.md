@@ -173,3 +173,19 @@ This branch improves offline agreement with author labels and staff interpretabi
 | `18_qa/GOLDEN_VALIDATION_METRICS.json` | Full / holdout / remainder |
 | `13_test_cases/validation_holdout.jsonl` | Held-out cases |
 | `17_runtime/scripts/golden_failure_dump.js` | Dump runner |
+
+
+---
+
+## Wrong-family / holdout follow-up (`pie/golden-wrong-family-holdout`)
+
+See `18_qa/HOLDOUT_WRONG_FAMILY_ANALYSIS.md` + `18_qa/PHASE2_RESULTS.md`.
+
+| Metric | Steps 1–7 | After holdout pass |
+|--------|----------:|-------------------:|
+| Full soft | 84.5% | **91.8%** (101/110) |
+| Full exact (pie.spec) | 31.8% | **45.5%** (50/110) |
+| Holdout soft | 68.2% | **95.5%** (21/22) |
+| Holdout exact (dump) | 45.5% | **68.2%** (15/22) |
+
+No `GOAL_PROTOCOL_BOOST` table expansion. Production readiness still **not** claimed.

@@ -306,6 +306,8 @@ const EVENT_PROTOCOL_BOOST = {
   T_sleep: {
     'wind-down': 0.28,
     'evening-light-hygiene': 0.12,
+    'mbsr-breath-anchor': 0.14,
+    'autogenic': 0.08,
   },
 };
 
@@ -492,12 +494,17 @@ function doseSecForGap(protocol, input, inferredNeeds) {
       tightGap ||
       (protocol.need_tags || []).includes('micro_reset'));
   const pNeeds = protocol.need_tags || [];
+  const focusWorkBlock =
+    (goal === 'focus' || needNames.has('focus')) &&
+    protocol.protocol_id === 'pomodoro-ultradian' &&
+    gapSec >= 600;
   const prescriptionLike =
-    minSec >= 900 &&
-    ((protocol.categories || []).some((c) => /sleep|goals|circadian/i.test(c)) ||
-      pNeeds.some((n) =>
-        /sleep|circadian|insomnia|hygiene|jetlag|goal_clarity/i.test(String(n))
-      ));
+    (minSec >= 900 &&
+      ((protocol.categories || []).some((c) => /sleep|goals|circadian/i.test(c)) ||
+        pNeeds.some((n) =>
+          /sleep|circadian|insomnia|hygiene|jetlag|goal_clarity/i.test(String(n))
+        ))) ||
+    focusWorkBlock;
   const goalOverlaps =
     pNeeds.some((n) => needNames.has(n) || (goal && goal.includes(String(n)))) ||
     (goal && pNeeds.some((n) => String(n).includes(goal.split(/[+|,/]/)[0])));
@@ -574,6 +581,10 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
   if (place === 'office' || place === 'desk') {
     if (ctx.includes('desk') || ctx.includes('pre_meeting') || ctx.includes('office')) {
       contextScore = Math.min(1, contextScore + 0.25);
+    }
+    // Desk-window / soft-fascination is available in most offices without leaving floor
+    if (ctx.includes('window') || ctx.includes('nature_access')) {
+      contextScore = Math.min(1, contextScore + 0.22);
     }
   }
 
@@ -658,12 +669,20 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
   if (want.length && moments.some((m) => want.includes(m))) raw += 0.06;
   if (protocol.staff_preferred) raw += 0.03;
 
-  // Goal affinity boosts (calibration)
+  // Goal affinity boosts (calibration) — subtract duplicate need_tag match
+  // before add (no double-count). Keep specialty headroom when boost >> need.
+  // Prefer catalog coverage; do NOT expand GOAL_PROTOCOL_BOOST tables.
   const goals = goal ? goal.split(/[+|,/]/).map((g) => g.trim()).filter(Boolean) : [];
   if (!goals.length && needNames[0]) goals.push(needNames[0]);
+  const pNeedTags = protocol.need_tags || [];
+  const NEED_DUPLICATE_CREDIT = 0.15; // portion already paid by need_tag path
   for (const g of goals) {
     const table = GOAL_PROTOCOL_BOOST[g];
-    if (table && table[protocol.protocol_id] != null) raw += table[protocol.protocol_id];
+    if (table && table[protocol.protocol_id] != null) {
+      let b = table[protocol.protocol_id];
+      if (pNeedTags.includes(g)) b = Math.max(0, b - NEED_DUPLICATE_CREDIT);
+      if (b > 0) raw += b;
+    }
   }
 
   const evTable = EVENT_PROTOCOL_BOOST[event];
@@ -689,6 +708,16 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
     if (protocol.protocol_id === 'morning-light') raw -= 0.3;
     if (protocol.protocol_id === 'stimulus-control') raw += 0.08;
   }
+  // Trauma / long-hold avoid: route to the matching breath family from staff notes
+  if (goal === 'sleep_prep') {
+    const noteBlob = String(input.notes || '') + ' ' + String(input.history_notes || '');
+    const wantsExhale = /gentle exhale|exhale-emphasized|pregnancy|avoid long holds|skip long holds/i.test(noteBlob);
+    const wantsAnchor = /trauma|seated breath|breath anchor|supine scan|skip forced/i.test(noteBlob);
+    if (wantsExhale && protocol.protocol_id === 'exhale-emphasized') raw += 0.18;
+    if (wantsAnchor && !wantsExhale && protocol.protocol_id === 'mbsr-breath-anchor') raw += 0.18;
+    if ((wantsExhale || wantsAnchor) && protocol.protocol_id === 'pmr') raw -= 0.1;
+    if ((wantsExhale || wantsAnchor) && protocol.protocol_id === 'body-scan') raw -= 0.12;
+  }
 
   // History alternative: after prior_negative, boost siblings sharing a need tag
   for (const negId of history.prior_negative) {
@@ -699,15 +728,17 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
     if (shared.length) raw += Math.min(0.18, 0.06 * shared.length);
   }
 
-  // CPI priors (engineering)
+  // CPI priors (engineering) — temper on moderate gaps so arousal-settle
+  // breath/micro cards are not buried under stacked imagery priors.
   const ct = (input.client_type || '').toLowerCase();
   if ((ct.includes('founder') || ct.includes('ceo')) && needSet.has('pre_performance') && gapSec >= 180) {
     const ids = ct.includes('ceo') ? CPI_PRIORS.ceo.pre_performance_boost_ids : CPI_PRIORS.founder.pre_performance_boost_ids;
-    const boost = ct.includes('ceo') ? CPI_PRIORS.ceo.boost : CPI_PRIORS.founder.boost;
+    let boost = ct.includes('ceo') ? CPI_PRIORS.ceo.boost : CPI_PRIORS.founder.boost;
+    if (gapSec < 900) boost *= 0.4; // <15m: lighter CPI; settle first
     if (ids.includes(protocol.protocol_id)) raw += boost;
-    // Prefer imagery over generic box when gap allows process viz
-    if (gapSec >= 300 && protocol.protocol_id === 'box-breathing' && !ct.includes('ceo')) raw -= 0.08;
-    if (gapSec >= 300 && protocol.protocol_id === 'process-visualization') raw += 0.08;
+    // Prefer imagery over generic box only when gap is long enough for rehearsal
+    if (gapSec >= 900 && protocol.protocol_id === 'box-breathing' && !ct.includes('ceo')) raw -= 0.08;
+    if (gapSec >= 900 && protocol.protocol_id === 'process-visualization') raw += 0.08;
   }
   if (ct.includes('athlete') && needSet.has('pre_performance')) {
     if (CPI_PRIORS.athlete.pre_performance_boost_ids.includes(protocol.protocol_id)) raw += CPI_PRIORS.athlete.boost;
@@ -719,12 +750,194 @@ function scoreProtocol(protocol, input, inferredNeeds, outcomeBoosts) {
     raw += CPI_PRIORS.traveler.boost;
   }
 
-  // Micro gap prior — prefer true micro protocols that fit
+  // Micro / moderate-gap prior — prefer true micro protocols that fit
   if (gapSec <= 120 && (protocol.need_tags || []).includes('micro_reset')) raw += 0.12;
   if (gapSec <= 90) {
     // Deprioritize longer pre-performance cards that squeeze in via low min
     if (['process-visualization', 'pettlep', 'woop'].includes(protocol.protocol_id)) raw -= 0.2;
     if (protocol.protocol_id === 'ppr' && needSet.has('micro_reset')) raw -= 0.08;
+  }
+  // Moderate pre-performance gaps: prefer breath only when staff notes ask for
+  // arousal-settle breath; otherwise keep imagery/centering viable.
+  if (goal === 'pre_performance' && gapSec < 900) {
+    const breathAsk = /breath|box|tactical|sigh|arousal|holds if uncomfortable|settle/i.test(
+      String(input.notes || '') + ' ' + String(input.history_notes || '')
+    );
+    if (breathAsk) {
+      if (['process-visualization', 'pettlep'].includes(protocol.protocol_id)) raw -= 0.16;
+      if (
+        ['box-breathing', 'tactical-breath-reset', 'coherent-resonance'].includes(protocol.protocol_id) &&
+        gapSec >= 300
+      ) {
+        raw += 0.14;
+      }
+      // Ultra-micro sigh only when gap short or prior breath failed
+      if (protocol.protocol_id === 'physiological-sigh-acute' && gapSec >= 300) {
+        if (!history.prior_negative.some((id) => BREATH_IDS.has(id))) raw -= 0.18;
+      }
+    } else if (gapSec < 480) {
+      // Very short gaps without breath ask: light temper on long imagery
+      if (['process-visualization', 'pettlep'].includes(protocol.protocol_id)) raw -= 0.08;
+    }
+  }
+  // Micro-reset / live_blank: keep physiological sigh as default acute card
+  if ((goal === 'micro_reset' || needNames[0] === 'micro_reset') && protocol.protocol_id === 'physiological-sigh-acute') {
+    raw += 0.16;
+  }
+  // Emotion: micro labeling on short slots; somatic PMR when evening/tension signal
+  if (needNames[0] === 'emotion_regulate' || goal === 'emotion_regulate') {
+    const emoBlob = String(input.notes || '') + ' ' + String(input.history_notes || '');
+    if (gapSec <= 180 && pNeedTags.includes('micro_reset') && pNeedTags.includes('emotion_regulate')) {
+      raw += 0.12;
+    }
+    if (/\blabel\b|affect-label/i.test(emoBlob) && protocol.protocol_id === 'affect-labeling') raw += 0.16;
+    if (
+      gapSec >= 600 &&
+      protocol.protocol_id === 'pmr' &&
+      /evening|alcohol|tension|muscle|somatic|\bpmr\b/i.test(emoBlob)
+    ) {
+      raw += 0.12;
+    }
+    if (
+      gapSec <= 600 &&
+      protocol.protocol_id === 'opposite-action' &&
+      !(want || []).some((m) => ['avoidance', 'mood_low', 'post_conflict', 'post_rejection'].includes(m)) &&
+      /\blabel\b|affect-label|\bpmr\b|evening|alcohol/i.test(emoBlob)
+    ) {
+      // Competing label/PMR notes → do not let generic opposite-action dominate
+      raw -= 0.14;
+    }
+  }
+  // Sleep_prep: acute exhale is not the default T_sleep card unless notes ask for it
+  if (goal === 'sleep_prep' && /T_sleep|evening|1am/i.test(event + ' ' + String(input.history_notes || ''))) {
+    const sleepBlob = String(input.notes || '') + ' ' + String(input.history_notes || '');
+    const wantsExhale = /gentle exhale|exhale-emphasized|pregnancy|avoid long holds|skip long holds/i.test(sleepBlob);
+    if (protocol.protocol_id === 'exhale-emphasized' && !wantsExhale) raw -= 0.22;
+  }
+  // Focus work-block: when gap ≥10m, do not let ultra-short task-switch beat pomodoro solely on dose fit
+  if ((goal === 'focus' || needSet.has('focus')) && gapSec >= 600) {
+    if (protocol.protocol_id === 'pomodoro-ultradian') raw += 0.16;
+    if (protocol.protocol_id === 'task-switch-buffer' && !/meeting_streak|context_switch/i.test(event)) raw -= 0.1;
+  }
+  // Nap is a poor office-floor default when lying/private recovery context is absent
+  if (
+    protocol.protocol_id === 'nap-protocol' &&
+    ['office', 'desk', 'open_office'].includes(place) &&
+    !(ctx.includes('office') || ctx.includes('desk'))
+  ) {
+    raw -= 0.12;
+  }
+  // Goal clarity with no event: lean on planning/goal_set moments
+  if ((goal === 'goal_clarity' || goal === 'behavior_change') && !event) {
+    if ((moments || []).some((m) => ['planning', 'goal_set', 'habit'].includes(m))) raw += 0.06;
+  }
+  // Staff-note modality preference (vocabulary → catalog id; not case-id)
+  {
+    const prefBlob =
+      String(input.notes || '') + ' ' + String(input.history_notes || '') + ' ' + String(input.goal || '');
+    if ((goal === 'goal_clarity' || goal === 'behavior_change')) {
+      if (/values|moral|boundary|compass|values conflict/i.test(prefBlob) && protocol.protocol_id === 'values-compass') {
+        raw += 0.22;
+      }
+      if (/\bwoop\b|mental contrasting|wish.*outcome|one wish/i.test(prefBlob) && protocol.protocol_id === 'woop') {
+        raw += 0.16;
+      }
+      if (/smart.?caveat|caveats|implementation intention caveats/i.test(prefBlob) && protocol.protocol_id === 'smart-caveats') {
+        raw += 0.2;
+      }
+      if (
+        /values|moral|boundary|compass/i.test(prefBlob) &&
+        protocol.protocol_id === 'if-then-gollwitzer'
+      ) {
+        raw -= 0.12;
+      }
+    }
+    if (
+      (goal === 'rumination' || needSet.has('rumination')) &&
+      /soft-fascination|nature|trees|sky|window walk|art-brief|outdoors walk/i.test(prefBlob) &&
+      protocol.protocol_id === 'art-brief'
+    ) {
+      raw += 0.2;
+    }
+    if (
+      (goal === 'stress_acute' || needSet.has('stress_acute')) &&
+      /54321|grounding|five senses|name 5/i.test(prefBlob) &&
+      protocol.protocol_id === '54321-grounding'
+    ) {
+      raw += 0.2;
+    }
+    if (
+      (goal === 'sleep_hygiene' || goal === 'circadian_align') &&
+      /caffeine|cutoff|no coffee|coffee after/i.test(prefBlob) &&
+      protocol.protocol_id === 'caffeine-cutoff'
+    ) {
+      raw += 0.18;
+    }
+    if (
+      (goal === 'sleep_hygiene' || goal === 'circadian_align') &&
+      /sleep.?consist|same wake|regular schedule/i.test(prefBlob) &&
+      protocol.protocol_id === 'sleep-consistency'
+    ) {
+      raw += 0.18;
+    }
+    if (
+      (goal === 'recovery_rest' || goal === 'recovery') &&
+      /yoga.?nidra|nsdr|nidra/i.test(prefBlob) &&
+      protocol.protocol_id === 'yoga-nidra-nsdr'
+    ) {
+      raw += 0.18;
+    }
+    if (
+      goal === 'pre_performance' &&
+      /process.?viz|visualization|imagery|rehearse|mental rehearsal/i.test(prefBlob) &&
+      protocol.protocol_id === 'process-visualization'
+    ) {
+      raw += 0.16;
+    }
+    if (
+      goal === 'pre_performance' &&
+      /centering|ravizza/i.test(prefBlob) &&
+      protocol.protocol_id === 'centering-ravizza'
+    ) {
+      raw += 0.16;
+    }
+    if (
+      goal === 'pre_performance' &&
+      /if-?then|implementation intention/i.test(prefBlob) &&
+      protocol.protocol_id === 'if-then-gollwitzer'
+    ) {
+      raw += 0.14;
+    }
+    if (
+      goal === 'rumination' &&
+      /defusion|act-defusion|leaves on (a )?stream/i.test(prefBlob) &&
+      protocol.protocol_id === 'act-defusion'
+    ) {
+      raw += 0.16;
+    }
+    if (
+      goal === 'emotion_regulate' &&
+      /opposite.?action/i.test(prefBlob) &&
+      protocol.protocol_id === 'opposite-action'
+    ) {
+      raw += 0.16;
+    }
+    if (goal === 'sleep_prep' || needSet.has('sleep_prep')) {
+      if (/autogenic|heaviness|warmth/i.test(prefBlob) && protocol.protocol_id === 'autogenic') raw += 0.2;
+      if (/park.*worry|worry slot|postpone|worry-postpone/i.test(prefBlob) && protocol.protocol_id === 'worry-postpone') {
+        raw += 0.16;
+      }
+    }
+  }
+
+  // After a failed breath trial, prefer alternate breath micros for same performance need
+  if (
+    history.prior_negative.some((id) => BREATH_IDS.has(id)) &&
+    BREATH_IDS.has(protocol.protocol_id) &&
+    !history.prior_negative.includes(protocol.protocol_id) &&
+    (needSet.has('pre_performance') || needSet.has('stress_acute') || needSet.has('micro_reset'))
+  ) {
+    raw += 0.14;
   }
 
   if (

@@ -1,28 +1,82 @@
 {
-  "baseline_QA_REPORT_v2": {
-    "exact_rate": 0.236,
-    "soft_rate": 0.782
+  "baseline_after_steps_1_7": {
+    "full": {
+      "n": 110,
+      "exact_dump": 46,
+      "soft": 93,
+      "exact_rate_dump": 0.418,
+      "soft_rate": 0.845,
+      "exact_pie_spec": 35,
+      "exact_pie_spec_rate": 0.318
+    },
+    "holdout": {
+      "n": 22,
+      "exact_dump": 10,
+      "soft": 15,
+      "exact_rate_dump": 0.455,
+      "soft_rate": 0.682
+    },
+    "remainder": {
+      "n": 88,
+      "exact_dump": 36,
+      "soft": 78,
+      "exact_rate_dump": 0.409,
+      "soft_rate": 0.886
+    }
   },
-  "after_fixes_full": {
-    "n": 110,
-    "exact": 46,
-    "soft": 93,
-    "exact_rate": 0.41818181818181815,
-    "soft_rate": 0.8454545454545455
+  "after_wrong_family_holdout": {
+    "full": {
+      "n": 110,
+      "exact_dump": 61,
+      "soft": 101,
+      "exact_rate_dump": 0.555,
+      "soft_rate": 0.918,
+      "exact_pie_spec": 50,
+      "exact_pie_spec_rate": 0.455,
+      "top3": 0.855
+    },
+    "holdout": {
+      "n": 22,
+      "exact_dump": 15,
+      "soft": 21,
+      "exact_rate_dump": 0.682,
+      "soft_rate": 0.955
+    },
+    "remainder": {
+      "n": 88,
+      "exact_dump": 46,
+      "soft": 80,
+      "exact_rate_dump": 0.523,
+      "soft_rate": 0.909
+    }
   },
-  "holdout": {
-    "n": 22,
-    "exact": 10,
-    "soft": 15,
-    "exact_rate": 0.45454545454545453,
-    "soft_rate": 0.6818181818181818
+  "soft_fail_ids_after": [
+    "TC007",
+    "TC023",
+    "TC042",
+    "TC050",
+    "TC059",
+    "TC061",
+    "TC066",
+    "TC067",
+    "TC088"
+  ],
+  "abc_after": {
+    "never_generated": 0,
+    "incorrectly_excluded": 0,
+    "ranked_too_low": 11
   },
-  "remainder": {
-    "n": 88,
-    "exact": 36,
-    "soft": 78,
-    "exact_rate": 0.4090909090909091,
-    "soft_rate": 0.8863636363636364
+  "goal_protocol_boost": {
+    "expanded": false,
+    "runtime_dedupe": "subtract NEED_DUPLICATE_CREDIT=0.15 when need_tags includes goal before adding boost",
+    "event_protocol_boost_additions": {
+      "T_sleep": [
+        "mbsr-breath-anchor:0.14",
+        "autogenic:0.08"
+      ]
+    },
+    "note": "No new GOAL_PROTOCOL_BOOST rows/keys. EVENT_PROTOCOL_BOOST T_sleep affinity only."
   },
-  "note": "exact counts silence agrees as exact for dump parity; pie.spec exact excludes silence"
+  "note": "exact_dump counts silence agrees; pie.spec exact excludes silence. Production readiness NOT claimed.",
+  "generated_at_ist": "2026-09-19 Asia/Calcutta"
 }

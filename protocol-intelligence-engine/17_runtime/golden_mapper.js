@@ -148,6 +148,13 @@ function mapGoldenCase(tc) {
   for (const m of stateStr.matchAll(/prior_negative\s*:\s*([\w-]+)/gi)) priorNeg.push(m[1].toLowerCase());
   for (const m of stateStr.matchAll(/prior_positive\s*:\s*([\w-]+)/gi)) priorPos.push(m[1].toLowerCase());
 
+  // Forward preference-bearing state/reason prose (not case-id hacks) so ranker
+  // can apply catalog-aligned modality preference without silent golden edits.
+  const prefProse = [stateStr, reason, String(tc.message || '')]
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 280);
   const notes = [
     tc.constraints || '',
     reason.includes('orthosomnia') ? 'orthosomnia' : '',
@@ -158,6 +165,7 @@ function mapGoldenCase(tc) {
     ...priorPos.map((id) => 'prior_positive:' + id),
     /\bevening\b/i.test(ctx) ? 'evening' : '',
     /\bmorning\b/i.test(ctx) ? 'morning' : '',
+    prefProse,
   ]
     .filter(Boolean)
     .join('; ');

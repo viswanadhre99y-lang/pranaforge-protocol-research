@@ -75,7 +75,8 @@
         "need_tags": [
           "stress_acute",
           "arousal_down",
-          "micro_reset"
+          "micro_reset",
+          "pre_performance"
         ],
         "categories": [
           "stress"
@@ -84,9 +85,9 @@
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 0.862,
+        "score": 0.707,
         "features": {
-          "need_match": 0.56,
+          "need_match": 0.53,
           "context_match": 0,
           "timing": 0.5,
           "evidence": 0.8,
@@ -98,7 +99,7 @@
           "penalties": 0
         },
         "score_breakdown": {
-          "goal_fit": 0.56,
+          "goal_fit": 0.53,
           "state_fit": 0.65,
           "context_fit": 0,
           "duration_fit": 0.98,
@@ -107,7 +108,7 @@
           "event_fit": 0.5,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 0.862
+          "final_score": 0.707
         },
         "dose_for_gap_sec": 60,
         "why": [
@@ -117,11 +118,11 @@
         ],
         "purpose": "Fastest practical application of cyclic sigh pattern for spike stress.",
         "is_vault_ip": false,
-        "confidence": 0.409,
+        "confidence": 0.374,
         "explanation": {
           "selected_id": "physiological-sigh-acute",
           "positives": [
-            "need_match=0.56",
+            "need_match=0.53",
             "timing=0.5",
             "evidence=0.8",
             "feasibility=0.98",
@@ -130,7 +131,7 @@
             "duration:1m"
           ],
           "penalties": [],
-          "confidence": 0.409
+          "confidence": 0.374
         },
         "dose": {
           "micro": 30,
@@ -172,7 +173,7 @@
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 0.848,
+        "score": 0.698,
         "features": {
           "need_match": 0.44,
           "context_match": 0,
@@ -195,7 +196,7 @@
           "event_fit": 0.5,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 0.848
+          "final_score": 0.698
         },
         "dose_for_gap_sec": 120,
         "why": [
@@ -205,7 +206,7 @@
         ],
         "purpose": "Interrupt anxiety spiral by orienting attention to present sensory details.",
         "is_vault_ip": false,
-        "confidence": 0.334,
+        "confidence": 0.304,
         "explanation": {
           "selected_id": "54321-grounding",
           "positives": [
@@ -219,7 +220,7 @@
           "penalties": [
             "feature_penalties=0.08"
           ],
-          "confidence": 0.334
+          "confidence": 0.304
         },
         "dose": {
           "micro": 120,
@@ -231,18 +232,18 @@
         "delivery_modality": "audio"
       },
       {
-        "protocol_id": "cyclic-sighing",
-        "name": "Cyclic Sighing (Physiological Sigh Pattern)",
+        "protocol_id": "exhale-emphasized",
+        "name": "Exhale-Emphasized Paced Breathing (No Holds)",
         "evidence": "B",
         "evidence_class": "evidence_supported",
         "protocol_version": "1.0.0",
         "max_duration_sec": 300,
-        "recommended_duration_sec": 300,
-        "min_duration_sec": 300,
+        "recommended_duration_sec": 120,
+        "min_duration_sec": 120,
         "duration": {
           "micro_sec": 120,
-          "min_sec": 300,
-          "optimal_sec": 300,
+          "min_sec": 120,
+          "optimal_sec": 120,
           "extended_sec": 300
         },
         "modality": "breath",
@@ -250,72 +251,71 @@
         "need_tags": [
           "stress_acute",
           "arousal_down",
-          "mood_lift"
+          "sleep_prep"
         ],
         "categories": [
           "breathing",
-          "stress",
-          "emotional"
+          "stress"
         ],
         "public_discrete": true,
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 0.811,
+        "score": 0.692,
         "features": {
-          "need_match": 0.56,
+          "need_match": 0.7,
           "context_match": 0,
           "timing": 0.5,
           "evidence": 0.8,
           "history": 0.5,
           "preference": 0.55,
-          "feasibility": 0.9,
+          "feasibility": 0.96,
           "expected_benefit": 0.65,
-          "adherence_prob": 0.93,
+          "adherence_prob": 1,
           "penalties": 0
         },
         "score_breakdown": {
-          "goal_fit": 0.56,
+          "goal_fit": 0.7,
           "state_fit": 0.65,
           "context_fit": 0,
-          "duration_fit": 0.9,
+          "duration_fit": 0.96,
           "preference_fit": 0.55,
           "historical_response": 0.5,
           "event_fit": 0.5,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 0.811
+          "final_score": 0.692
         },
-        "dose_for_gap_sec": 300,
+        "dose_for_gap_sec": 120,
         "why": [
           "need:stress_acute",
           "evidence:B",
-          "duration:5m"
+          "duration:2m"
         ],
-        "purpose": "Rapidly reduce acute arousal and improve mood via exhale-emphasized double inhale + long exhale.",
+        "purpose": "Simple calm breathing without holds: longer exhale than inhale.",
         "is_vault_ip": false,
-        "confidence": 0.399,
+        "confidence": 0.39,
         "explanation": {
-          "selected_id": "cyclic-sighing",
+          "selected_id": "exhale-emphasized",
           "positives": [
-            "need_match=0.56",
+            "need_match=0.7",
             "timing=0.5",
             "evidence=0.8",
-            "feasibility=0.9",
+            "feasibility=0.96",
             "need:stress_acute",
             "evidence:B",
-            "duration:5m"
+            "duration:2m"
           ],
           "penalties": [],
-          "confidence": 0.399
+          "confidence": 0.39
         },
         "dose": {
           "micro": 120,
-          "minimum": 300,
-          "recommended": 300,
+          "minimum": 120,
+          "recommended": 120,
           "extended": 300
         },
-        "preferred_dose": "recommended",
+        "preferred_dose": "extended",
         "delivery_modality": "audio"
       }
     ],
@@ -388,16 +388,16 @@
     ],
     "tau_select": 0.42,
     "scores": {
-      "physiological-sigh-acute": 0.862,
-      "54321-grounding": 0.848,
-      "cyclic-sighing": 0.811,
-      "exhale-emphasized": 0.806,
-      "tactical-breath-reset": 0.728,
-      "box-breathing": 0.701,
-      "pmr": 0.662,
+      "physiological-sigh-acute": 0.707,
+      "54321-grounding": 0.698,
+      "exhale-emphasized": 0.692,
+      "cyclic-sighing": 0.661,
+      "pmr": 0.658,
       "brief-pmr-acute": 0.634,
       "tipp": 0.627,
-      "diaphragmatic": 0.608
+      "diaphragmatic": 0.608,
+      "box-breathing": 0.601,
+      "tactical-breath-reset": 0.588
     },
     "input": {
       "client_type": "startup_founder",
@@ -424,7 +424,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:27:50.246Z",
+        "as_of": "2026-09-19T09:35:46.971Z",
         "physical": {
           "sleep_h": {
             "value": 4.5,
@@ -551,7 +551,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "startup_founder",
-      "as_of": "2026-09-19T09:27:50.246Z",
+      "as_of": "2026-09-19T09:35:46.971Z",
       "physical": {
         "sleep_h": {
           "value": 4.5,
@@ -672,16 +672,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_ffe3e7f55893",
+      "decision_id": "dr_9bbd7900b10f",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:27:50.248Z"
+        "decided_at": "2026-09-19T09:35:46.973Z"
       },
       "state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:27:50.246Z",
+        "as_of": "2026-09-19T09:35:46.971Z",
         "physical": {
           "sleep_h": {
             "value": 4.5,
@@ -802,11 +802,11 @@
       "candidates": [
         {
           "protocol_id": "physiological-sigh-acute",
-          "score": 0.862,
+          "score": 0.707,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
-            "need_match": 0.56,
+            "need_match": 0.53,
             "context_match": 0,
             "timing": 0.5,
             "evidence": 0.8,
@@ -818,7 +818,7 @@
             "penalties": 0
           },
           "score_breakdown": {
-            "goal_fit": 0.56,
+            "goal_fit": 0.53,
             "state_fit": 0.65,
             "context_fit": 0,
             "duration_fit": 0.98,
@@ -827,7 +827,7 @@
             "event_fit": 0.5,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.862
+            "final_score": 0.707
           },
           "why": [
             "need:stress_acute",
@@ -842,7 +842,7 @@
         },
         {
           "protocol_id": "54321-grounding",
-          "score": 0.848,
+          "score": 0.698,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -867,7 +867,7 @@
             "event_fit": 0.5,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.848
+            "final_score": 0.698
           },
           "why": [
             "need:stress_acute",
@@ -881,8 +881,48 @@
           "clinician_only": false
         },
         {
+          "protocol_id": "exhale-emphasized",
+          "score": 0.692,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.7,
+            "context_match": 0,
+            "timing": 0.5,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.96,
+            "expected_benefit": 0.65,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.7,
+            "state_fit": 0.65,
+            "context_fit": 0,
+            "duration_fit": 0.96,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.5,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.692
+          },
+          "why": [
+            "need:stress_acute",
+            "evidence:B",
+            "duration:2m"
+          ],
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 300,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
           "protocol_id": "cyclic-sighing",
-          "score": 0.811,
+          "score": 0.661,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -907,7 +947,7 @@
             "event_fit": 0.5,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.811
+            "final_score": 0.661
           },
           "why": [
             "need:stress_acute",
@@ -921,132 +961,12 @@
           "clinician_only": false
         },
         {
-          "protocol_id": "exhale-emphasized",
-          "score": 0.806,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.58,
-            "context_match": 0,
-            "timing": 0.5,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.96,
-            "expected_benefit": 0.65,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.58,
-            "state_fit": 0.65,
-            "context_fit": 0,
-            "duration_fit": 0.96,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.5,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.806
-          },
-          "why": [
-            "need:stress_acute",
-            "evidence:B",
-            "duration:2m"
-          ],
-          "min_duration_sec": 120,
-          "recommended_duration_sec": 120,
-          "max_duration_sec": 300,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
-          "protocol_id": "tactical-breath-reset",
-          "score": 0.728,
-          "protocol_version": "1.0.0",
-          "evidence_class": "practitioner_derived",
-          "features": {
-            "need_match": 0.44,
-            "context_match": 0,
-            "timing": 0.5,
-            "evidence": 0.55,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.96,
-            "expected_benefit": 0.5,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.44,
-            "state_fit": 0.5,
-            "context_fit": 0,
-            "duration_fit": 0.96,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.5,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.728
-          },
-          "why": [
-            "need:stress_acute",
-            "evidence:C",
-            "duration:2m"
-          ],
-          "min_duration_sec": 45,
-          "recommended_duration_sec": 120,
-          "max_duration_sec": 180,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
-          "protocol_id": "box-breathing",
-          "score": 0.701,
-          "protocol_version": "1.0.0",
-          "evidence_class": "practitioner_derived",
-          "features": {
-            "need_match": 0.44,
-            "context_match": 0.11,
-            "timing": 0.5,
-            "evidence": 0.55,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.96,
-            "expected_benefit": 0.5,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.44,
-            "state_fit": 0.5,
-            "context_fit": 0.11,
-            "duration_fit": 0.96,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.5,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.701
-          },
-          "why": [
-            "need:stress_acute",
-            "evidence:C",
-            "duration:2m"
-          ],
-          "min_duration_sec": 120,
-          "recommended_duration_sec": 120,
-          "max_duration_sec": 300,
-          "public_discrete": false,
-          "clinician_only": false
-        },
-        {
           "protocol_id": "pmr",
-          "score": 0.662,
+          "score": 0.658,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
-            "need_match": 0.56,
+            "need_match": 0.53,
             "context_match": 0.25,
             "timing": 0.5,
             "evidence": 0.8,
@@ -1058,7 +978,7 @@
             "penalties": 0
           },
           "score_breakdown": {
-            "goal_fit": 0.56,
+            "goal_fit": 0.53,
             "state_fit": 0.76,
             "context_fit": 0.25,
             "duration_fit": 0.76,
@@ -1067,7 +987,7 @@
             "event_fit": 0.5,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.662
+            "final_score": 0.658
           },
           "why": [
             "need:stress_acute",
@@ -1199,6 +1119,86 @@
           "max_duration_sec": 900,
           "public_discrete": false,
           "clinician_only": false
+        },
+        {
+          "protocol_id": "box-breathing",
+          "score": 0.601,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.44,
+            "context_match": 0.11,
+            "timing": 0.5,
+            "evidence": 0.55,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.96,
+            "expected_benefit": 0.5,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.44,
+            "state_fit": 0.5,
+            "context_fit": 0.11,
+            "duration_fit": 0.96,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.5,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.601
+          },
+          "why": [
+            "need:stress_acute",
+            "evidence:C",
+            "duration:2m"
+          ],
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 300,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "tactical-breath-reset",
+          "score": 0.588,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.44,
+            "context_match": 0,
+            "timing": 0.5,
+            "evidence": 0.55,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.96,
+            "expected_benefit": 0.5,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.44,
+            "state_fit": 0.5,
+            "context_fit": 0,
+            "duration_fit": 0.96,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.5,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.588
+          },
+          "why": [
+            "need:stress_acute",
+            "evidence:C",
+            "duration:2m"
+          ],
+          "min_duration_sec": 45,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 180,
+          "public_discrete": true,
+          "clinician_only": false
         }
       ],
       "exclusions": [
@@ -1253,7 +1253,7 @@
         }
       ],
       "ranking_features": {
-        "need_match": 0.56,
+        "need_match": 0.53,
         "context_match": 0,
         "timing": 0.5,
         "evidence": 0.8,
@@ -1267,11 +1267,11 @@
       "top": [
         {
           "protocol_id": "physiological-sigh-acute",
-          "score": 0.862,
+          "score": 0.707,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
-            "need_match": 0.56,
+            "need_match": 0.53,
             "context_match": 0,
             "timing": 0.5,
             "evidence": 0.8,
@@ -1283,7 +1283,7 @@
             "penalties": 0
           },
           "score_breakdown": {
-            "goal_fit": 0.56,
+            "goal_fit": 0.53,
             "state_fit": 0.65,
             "context_fit": 0,
             "duration_fit": 0.98,
@@ -1292,12 +1292,12 @@
             "event_fit": 0.5,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.862
+            "final_score": 0.707
           }
         },
         {
           "protocol_id": "54321-grounding",
-          "score": 0.848,
+          "score": 0.698,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -1322,45 +1322,45 @@
             "event_fit": 0.5,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.848
+            "final_score": 0.698
           }
         },
         {
-          "protocol_id": "cyclic-sighing",
-          "score": 0.811,
+          "protocol_id": "exhale-emphasized",
+          "score": 0.692,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
-            "need_match": 0.56,
+            "need_match": 0.7,
             "context_match": 0,
             "timing": 0.5,
             "evidence": 0.8,
             "history": 0.5,
             "preference": 0.55,
-            "feasibility": 0.9,
+            "feasibility": 0.96,
             "expected_benefit": 0.65,
-            "adherence_prob": 0.93,
+            "adherence_prob": 1,
             "penalties": 0
           },
           "score_breakdown": {
-            "goal_fit": 0.56,
+            "goal_fit": 0.7,
             "state_fit": 0.65,
             "context_fit": 0,
-            "duration_fit": 0.9,
+            "duration_fit": 0.96,
             "preference_fit": 0.55,
             "historical_response": 0.5,
             "event_fit": 0.5,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.811
+            "final_score": 0.692
           }
         }
       ],
-      "confidence": 0.409,
+      "confidence": 0.374,
       "explanation": {
         "selected_id": "physiological-sigh-acute",
         "positives": [
-          "need_match=0.56",
+          "need_match=0.53",
           "timing=0.5",
           "evidence=0.8",
           "feasibility=0.98",
@@ -1369,7 +1369,7 @@
           "duration:1m"
         ],
         "penalties": [],
-        "confidence": 0.409
+        "confidence": 0.374
       },
       "protocol_versions": {
         "cyclic-sighing": "1.0.0",
@@ -1429,11 +1429,11 @@
       "input_hash": "a7d9e0903bda9ace",
       "schema_version": "1.0.0"
     },
-    "confidence": 0.409,
+    "confidence": 0.374,
     "explanation": {
       "selected_id": "physiological-sigh-acute",
       "positives": [
-        "need_match=0.56",
+        "need_match=0.53",
         "timing=0.5",
         "evidence=0.8",
         "feasibility=0.98",
@@ -1442,7 +1442,7 @@
         "duration:1m"
       ],
       "penalties": [],
-      "confidence": 0.409
+      "confidence": 0.374
     }
   },
   "B": {
@@ -1529,7 +1529,7 @@
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 1.307,
+        "score": 0.993,
         "features": {
           "need_match": 0.45,
           "context_match": 0.25,
@@ -1552,7 +1552,7 @@
           "event_fit": 0.95,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 1.307
+          "final_score": 0.993
         },
         "dose_for_gap_sec": 300,
         "why": [
@@ -1563,7 +1563,7 @@
         ],
         "purpose": "Mentally rehearse steps and obstacle handling—not only the trophy moment.",
         "is_vault_ip": false,
-        "confidence": 0.452,
+        "confidence": 0.447,
         "explanation": {
           "selected_id": "process-visualization",
           "positives": [
@@ -1577,7 +1577,7 @@
             "duration:5m"
           ],
           "penalties": [],
-          "confidence": 0.452
+          "confidence": 0.447
         },
         "dose": {
           "micro": 120,
@@ -1617,7 +1617,7 @@
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 1.101,
+        "score": 0.867,
         "features": {
           "need_match": 0.45,
           "context_match": 0,
@@ -1640,7 +1640,7 @@
           "event_fit": 0.95,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 1.101
+          "final_score": 0.867
         },
         "dose_for_gap_sec": 120,
         "why": [
@@ -1651,7 +1651,7 @@
         ],
         "purpose": "Rapidly shift from distracted/tense state to controlled, present, process-focused state.",
         "is_vault_ip": false,
-        "confidence": 0.37,
+        "confidence": 0.339,
         "explanation": {
           "selected_id": "centering-ravizza",
           "positives": [
@@ -1665,7 +1665,7 @@
             "duration:2m"
           ],
           "penalties": [],
-          "confidence": 0.37
+          "confidence": 0.339
         },
         "dose": {
           "micro": 120,
@@ -1677,89 +1677,92 @@
         "delivery_modality": "audio"
       },
       {
-        "protocol_id": "ppr",
-        "name": "Pre-Performance Routine (PPR)",
+        "protocol_id": "physiological-sigh-acute",
+        "name": "Acute Physiological Sigh (1–3 Cycles)",
         "evidence": "B",
         "evidence_class": "evidence_supported",
         "protocol_version": "1.0.0",
         "max_duration_sec": 120,
-        "recommended_duration_sec": 120,
+        "recommended_duration_sec": 60,
         "min_duration_sec": 30,
         "duration": {
           "micro_sec": 30,
           "min_sec": 30,
-          "optimal_sec": 120,
+          "optimal_sec": 60,
           "extended_sec": 120
         },
-        "modality": "performance",
+        "modality": "stress",
         "arousal_direction": "down",
         "need_tags": [
+          "stress_acute",
+          "arousal_down",
+          "micro_reset",
           "pre_performance"
         ],
         "categories": [
-          "performance"
+          "stress"
         ],
-        "public_discrete": false,
+        "public_discrete": true,
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 1.071,
+        "score": 0.843,
         "features": {
-          "need_match": 0.47,
-          "context_match": 0,
+          "need_match": 0.67,
+          "context_match": 0.35,
           "timing": 0.95,
           "evidence": 0.8,
           "history": 0.5,
           "preference": 0.55,
-          "feasibility": 0.9,
+          "feasibility": 0.95,
           "expected_benefit": 0.68,
           "adherence_prob": 1,
           "penalties": 0
         },
         "score_breakdown": {
-          "goal_fit": 0.47,
+          "goal_fit": 0.67,
           "state_fit": 0.68,
-          "context_fit": 0,
-          "duration_fit": 0.9,
+          "context_fit": 0.35,
+          "duration_fit": 0.95,
           "preference_fit": 0.55,
           "historical_response": 0.5,
           "event_fit": 0.95,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 1.071
+          "final_score": 0.843
         },
-        "dose_for_gap_sec": 120,
+        "dose_for_gap_sec": 60,
         "why": [
           "need:pre_performance",
           "moment:investor_meeting",
           "evidence:B",
-          "duration:2m"
+          "duration:1m"
         ],
-        "purpose": "Stabilize attention and arousal before a skilled performance via a consistent short sequence.",
+        "purpose": "Fastest practical application of cyclic sigh pattern for spike stress.",
         "is_vault_ip": false,
-        "confidence": 0.43,
+        "confidence": 0.451,
         "explanation": {
-          "selected_id": "ppr",
+          "selected_id": "physiological-sigh-acute",
           "positives": [
-            "need_match=0.47",
+            "need_match=0.67",
             "timing=0.95",
             "evidence=0.8",
-            "feasibility=0.9",
+            "feasibility=0.95",
             "need:pre_performance",
             "moment:investor_meeting",
             "evidence:B",
-            "duration:2m"
+            "duration:1m"
           ],
           "penalties": [],
-          "confidence": 0.43
+          "confidence": 0.451
         },
         "dose": {
           "micro": 30,
           "minimum": 30,
-          "recommended": 120,
+          "recommended": 60,
           "extended": 120
         },
-        "preferred_dose": "recommended",
+        "preferred_dose": "extended",
         "delivery_modality": "audio"
       }
     ],
@@ -1890,15 +1893,15 @@
     ],
     "tau_select": 0.42,
     "scores": {
-      "process-visualization": 1.307,
-      "centering-ravizza": 1.101,
-      "ppr": 1.071,
-      "pettlep": 0.965,
-      "box-breathing": 0.844,
+      "process-visualization": 0.993,
+      "centering-ravizza": 0.867,
+      "physiological-sigh-acute": 0.843,
+      "ppr": 0.837,
+      "box-breathing": 0.824,
+      "pettlep": 0.731,
       "tactical-breath-reset": 0.725,
-      "exhale-emphasized": 0.679,
+      "exhale-emphasized": 0.673,
       "cyclic-sighing": 0.668,
-      "physiological-sigh-acute": 0.663,
       "brief-pmr-acute": 0.649
     },
     "input": {
@@ -1926,7 +1929,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:27:50.252Z",
+        "as_of": "2026-09-19T09:35:46.977Z",
         "physical": {
           "sleep_h": {
             "value": 4,
@@ -2054,7 +2057,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "startup_founder",
-      "as_of": "2026-09-19T09:27:50.252Z",
+      "as_of": "2026-09-19T09:35:46.977Z",
       "physical": {
         "sleep_h": {
           "value": 4,
@@ -2175,16 +2178,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_9f1dff98a908",
+      "decision_id": "dr_b6c22ac3294b",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:27:50.254Z"
+        "decided_at": "2026-09-19T09:35:46.978Z"
       },
       "state": {
         "client_id": null,
         "client_type": "startup_founder",
-        "as_of": "2026-09-19T09:27:50.252Z",
+        "as_of": "2026-09-19T09:35:46.977Z",
         "physical": {
           "sleep_h": {
             "value": 4,
@@ -2305,7 +2308,7 @@
       "candidates": [
         {
           "protocol_id": "process-visualization",
-          "score": 1.307,
+          "score": 0.993,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -2330,7 +2333,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.307
+            "final_score": 0.993
           },
           "why": [
             "need:pre_performance",
@@ -2346,7 +2349,7 @@
         },
         {
           "protocol_id": "centering-ravizza",
-          "score": 1.101,
+          "score": 0.867,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -2371,7 +2374,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.101
+            "final_score": 0.867
           },
           "why": [
             "need:pre_performance",
@@ -2386,8 +2389,49 @@
           "clinician_only": false
         },
         {
+          "protocol_id": "physiological-sigh-acute",
+          "score": 0.843,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.67,
+            "context_match": 0.35,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.95,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.67,
+            "state_fit": 0.68,
+            "context_fit": 0.35,
+            "duration_fit": 0.95,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.843
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:1m"
+          ],
+          "min_duration_sec": 30,
+          "recommended_duration_sec": 60,
+          "max_duration_sec": 120,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
           "protocol_id": "ppr",
-          "score": 1.071,
+          "score": 0.837,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -2412,7 +2456,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.071
+            "final_score": 0.837
           },
           "why": [
             "need:pre_performance",
@@ -2427,49 +2471,8 @@
           "clinician_only": false
         },
         {
-          "protocol_id": "pettlep",
-          "score": 0.965,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.45,
-            "context_match": 0.25,
-            "timing": 0.95,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.52,
-            "expected_benefit": 0.8,
-            "adherence_prob": 0.93,
-            "penalties": 0.08
-          },
-          "score_breakdown": {
-            "goal_fit": 0.45,
-            "state_fit": 0.8,
-            "context_fit": 0.25,
-            "duration_fit": 0.52,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.95,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.965
-          },
-          "why": [
-            "need:pre_performance",
-            "moment:investor_meeting",
-            "evidence:B",
-            "duration:5m"
-          ],
-          "min_duration_sec": 300,
-          "recommended_duration_sec": 300,
-          "max_duration_sec": 900,
-          "public_discrete": false,
-          "clinician_only": false
-        },
-        {
           "protocol_id": "box-breathing",
-          "score": 0.844,
+          "score": 0.824,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -2494,7 +2497,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.844
+            "final_score": 0.824
           },
           "why": [
             "need:pre_performance",
@@ -2505,6 +2508,47 @@
           "min_duration_sec": 120,
           "recommended_duration_sec": 120,
           "max_duration_sec": 300,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "pettlep",
+          "score": 0.731,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.45,
+            "context_match": 0.25,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.52,
+            "expected_benefit": 0.8,
+            "adherence_prob": 0.93,
+            "penalties": 0.08
+          },
+          "score_breakdown": {
+            "goal_fit": 0.45,
+            "state_fit": 0.8,
+            "context_fit": 0.25,
+            "duration_fit": 0.52,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.731
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:investor_meeting",
+            "evidence:B",
+            "duration:5m"
+          ],
+          "min_duration_sec": 300,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 900,
           "public_discrete": false,
           "clinician_only": false
         },
@@ -2551,11 +2595,11 @@
         },
         {
           "protocol_id": "exhale-emphasized",
-          "score": 0.679,
+          "score": 0.673,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
-            "need_match": 0.25,
+            "need_match": 0.22,
             "context_match": 0.47,
             "timing": 0.95,
             "evidence": 0.8,
@@ -2567,7 +2611,7 @@
             "penalties": 0
           },
           "score_breakdown": {
-            "goal_fit": 0.25,
+            "goal_fit": 0.22,
             "state_fit": 0.68,
             "context_fit": 0.47,
             "duration_fit": 0.9,
@@ -2576,7 +2620,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.679
+            "final_score": 0.673
           },
           "why": [
             "moment:investor_meeting",
@@ -2626,46 +2670,6 @@
           "min_duration_sec": 300,
           "recommended_duration_sec": 300,
           "max_duration_sec": 300,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
-          "protocol_id": "physiological-sigh-acute",
-          "score": 0.663,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.22,
-            "context_match": 0.35,
-            "timing": 0.95,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.95,
-            "expected_benefit": 0.68,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.22,
-            "state_fit": 0.68,
-            "context_fit": 0.35,
-            "duration_fit": 0.95,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.95,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.663
-          },
-          "why": [
-            "moment:investor_meeting",
-            "evidence:B",
-            "duration:1m"
-          ],
-          "min_duration_sec": 30,
-          "recommended_duration_sec": 60,
-          "max_duration_sec": 120,
           "public_discrete": true,
           "clinician_only": false
         },
@@ -2825,7 +2829,7 @@
       "top": [
         {
           "protocol_id": "process-visualization",
-          "score": 1.307,
+          "score": 0.993,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
@@ -2850,12 +2854,12 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.307
+            "final_score": 0.993
           }
         },
         {
           "protocol_id": "centering-ravizza",
-          "score": 1.101,
+          "score": 0.867,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -2880,41 +2884,41 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.101
+            "final_score": 0.867
           }
         },
         {
-          "protocol_id": "ppr",
-          "score": 1.071,
+          "protocol_id": "physiological-sigh-acute",
+          "score": 0.843,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
-            "need_match": 0.47,
-            "context_match": 0,
+            "need_match": 0.67,
+            "context_match": 0.35,
             "timing": 0.95,
             "evidence": 0.8,
             "history": 0.5,
             "preference": 0.55,
-            "feasibility": 0.9,
+            "feasibility": 0.95,
             "expected_benefit": 0.68,
             "adherence_prob": 1,
             "penalties": 0
           },
           "score_breakdown": {
-            "goal_fit": 0.47,
+            "goal_fit": 0.67,
             "state_fit": 0.68,
-            "context_fit": 0,
-            "duration_fit": 0.9,
+            "context_fit": 0.35,
+            "duration_fit": 0.95,
             "preference_fit": 0.55,
             "historical_response": 0.5,
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.071
+            "final_score": 0.843
           }
         }
       ],
-      "confidence": 0.452,
+      "confidence": 0.447,
       "explanation": {
         "selected_id": "process-visualization",
         "positives": [
@@ -2928,7 +2932,7 @@
           "duration:5m"
         ],
         "penalties": [],
-        "confidence": 0.452
+        "confidence": 0.447
       },
       "protocol_versions": {
         "cyclic-sighing": "1.0.0",
@@ -2988,7 +2992,7 @@
       "input_hash": "488068be2de36402",
       "schema_version": "1.0.0"
     },
-    "confidence": 0.452,
+    "confidence": 0.447,
     "explanation": {
       "selected_id": "process-visualization",
       "positives": [
@@ -3002,7 +3006,7 @@
         "duration:5m"
       ],
       "penalties": [],
-      "confidence": 0.452
+      "confidence": 0.447
     }
   },
   "C": {
@@ -3073,179 +3077,6 @@
       }
     ],
     "recommendations": [
-      {
-        "protocol_id": "physiological-sigh-acute",
-        "name": "Acute Physiological Sigh (1–3 Cycles)",
-        "evidence": "B",
-        "evidence_class": "evidence_supported",
-        "protocol_version": "1.0.0",
-        "max_duration_sec": 120,
-        "recommended_duration_sec": 60,
-        "min_duration_sec": 30,
-        "duration": {
-          "micro_sec": 30,
-          "min_sec": 30,
-          "optimal_sec": 60,
-          "extended_sec": 120
-        },
-        "modality": "stress",
-        "arousal_direction": "down",
-        "need_tags": [
-          "stress_acute",
-          "arousal_down",
-          "micro_reset"
-        ],
-        "categories": [
-          "stress"
-        ],
-        "public_discrete": true,
-        "clinician_only": false,
-        "compatible_ids": [],
-        "incompatible_ids": [],
-        "score": 0.836,
-        "features": {
-          "need_match": 0.52,
-          "context_match": 0,
-          "timing": 0.35,
-          "evidence": 0.8,
-          "history": 0.5,
-          "preference": 0.55,
-          "feasibility": 0.99,
-          "expected_benefit": 0.65,
-          "adherence_prob": 1,
-          "penalties": 0
-        },
-        "score_breakdown": {
-          "goal_fit": 0.52,
-          "state_fit": 0.65,
-          "context_fit": 0,
-          "duration_fit": 0.99,
-          "preference_fit": 0.55,
-          "historical_response": 0.5,
-          "event_fit": 0.35,
-          "sequence_fit": null,
-          "safety_status": "ok",
-          "final_score": 0.836
-        },
-        "dose_for_gap_sec": 60,
-        "why": [
-          "need:stress_acute",
-          "evidence:B",
-          "duration:1m"
-        ],
-        "purpose": "Fastest practical application of cyclic sigh pattern for spike stress.",
-        "is_vault_ip": false,
-        "confidence": 0.399,
-        "explanation": {
-          "selected_id": "physiological-sigh-acute",
-          "positives": [
-            "need_match=0.52",
-            "evidence=0.8",
-            "feasibility=0.99",
-            "need:stress_acute",
-            "evidence:B",
-            "duration:1m"
-          ],
-          "penalties": [],
-          "confidence": 0.399
-        },
-        "dose": {
-          "micro": 30,
-          "minimum": 30,
-          "recommended": 60,
-          "extended": 120
-        },
-        "preferred_dose": "extended",
-        "delivery_modality": "audio"
-      },
-      {
-        "protocol_id": "54321-grounding",
-        "name": "5-4-3-2-1 Sensory Grounding",
-        "evidence": "C",
-        "evidence_class": "practitioner_derived",
-        "protocol_version": "1.0.0",
-        "max_duration_sec": 300,
-        "recommended_duration_sec": 120,
-        "min_duration_sec": 120,
-        "duration": {
-          "micro_sec": 120,
-          "min_sec": 120,
-          "optimal_sec": 120,
-          "extended_sec": 300
-        },
-        "modality": "cognitive",
-        "arousal_direction": "down",
-        "need_tags": [
-          "panic_spike",
-          "dissociation_guard",
-          "stress_acute"
-        ],
-        "categories": [
-          "stress",
-          "emotional",
-          "cognitive"
-        ],
-        "public_discrete": true,
-        "clinician_only": false,
-        "compatible_ids": [],
-        "incompatible_ids": [],
-        "score": 0.828,
-        "features": {
-          "need_match": 0.42,
-          "context_match": 0,
-          "timing": 0.35,
-          "evidence": 0.55,
-          "history": 0.5,
-          "preference": 0.55,
-          "feasibility": 0.97,
-          "expected_benefit": 0.5,
-          "adherence_prob": 1,
-          "penalties": 0.08
-        },
-        "score_breakdown": {
-          "goal_fit": 0.42,
-          "state_fit": 0.5,
-          "context_fit": 0,
-          "duration_fit": 0.97,
-          "preference_fit": 0.55,
-          "historical_response": 0.5,
-          "event_fit": 0.35,
-          "sequence_fit": null,
-          "safety_status": "ok",
-          "final_score": 0.828
-        },
-        "dose_for_gap_sec": 120,
-        "why": [
-          "need:stress_acute",
-          "evidence:C",
-          "duration:2m"
-        ],
-        "purpose": "Interrupt anxiety spiral by orienting attention to present sensory details.",
-        "is_vault_ip": false,
-        "confidence": 0.328,
-        "explanation": {
-          "selected_id": "54321-grounding",
-          "positives": [
-            "evidence=0.55",
-            "feasibility=0.97",
-            "need:stress_acute",
-            "evidence:C",
-            "duration:2m"
-          ],
-          "penalties": [
-            "feature_penalties=0.08"
-          ],
-          "confidence": 0.328
-        },
-        "dose": {
-          "micro": 120,
-          "minimum": 120,
-          "recommended": 120,
-          "extended": 300
-        },
-        "preferred_dose": "extended",
-        "delivery_modality": "audio"
-      },
       {
         "protocol_id": "stimulus-control",
         "name": "Stimulus Control Therapy (CBT-I Component)",
@@ -3332,6 +3163,183 @@
         },
         "preferred_dose": "micro",
         "delivery_modality": "audio"
+      },
+      {
+        "protocol_id": "pmr",
+        "name": "Progressive Muscle Relaxation (PMR)",
+        "evidence": "B",
+        "evidence_class": "evidence_supported",
+        "protocol_version": "1.0.0",
+        "max_duration_sec": 1200,
+        "recommended_duration_sec": 720,
+        "min_duration_sec": 600,
+        "duration": {
+          "micro_sec": 120,
+          "min_sec": 600,
+          "optimal_sec": 720,
+          "extended_sec": 1200
+        },
+        "modality": "sleep_circadian",
+        "arousal_direction": "down",
+        "need_tags": [
+          "stress_acute",
+          "sleep_prep",
+          "muscle_tension",
+          "emotion_regulate"
+        ],
+        "categories": [
+          "stress",
+          "sleep",
+          "emotional"
+        ],
+        "public_discrete": false,
+        "clinician_only": false,
+        "compatible_ids": [],
+        "incompatible_ids": [],
+        "score": 0.773,
+        "features": {
+          "need_match": 0.5,
+          "context_match": 0.25,
+          "timing": 0.95,
+          "evidence": 0.8,
+          "history": 0.5,
+          "preference": 0.55,
+          "feasibility": 0.84,
+          "expected_benefit": 0.76,
+          "adherence_prob": 0.7,
+          "penalties": 0
+        },
+        "score_breakdown": {
+          "goal_fit": 0.5,
+          "state_fit": 0.76,
+          "context_fit": 0.25,
+          "duration_fit": 0.84,
+          "preference_fit": 0.55,
+          "historical_response": 0.5,
+          "event_fit": 0.95,
+          "sequence_fit": null,
+          "safety_status": "ok",
+          "final_score": 0.773
+        },
+        "dose_for_gap_sec": 720,
+        "why": [
+          "need:stress_acute",
+          "moment:1am_spiral",
+          "evidence:B",
+          "duration:12m"
+        ],
+        "purpose": "Systematically tense and release muscle groups to reduce somatic tension and anxiety.",
+        "is_vault_ip": false,
+        "confidence": 0.408,
+        "explanation": {
+          "selected_id": "pmr",
+          "positives": [
+            "need_match=0.5",
+            "timing=0.95",
+            "evidence=0.8",
+            "feasibility=0.84",
+            "need:stress_acute",
+            "moment:1am_spiral",
+            "evidence:B",
+            "duration:12m"
+          ],
+          "penalties": [],
+          "confidence": 0.408
+        },
+        "dose": {
+          "micro": 120,
+          "minimum": 600,
+          "recommended": 720,
+          "extended": 1200
+        },
+        "preferred_dose": "extended",
+        "delivery_modality": "audio"
+      },
+      {
+        "protocol_id": "worry-postpone",
+        "name": "Scheduled Worry / Postpone Worry",
+        "evidence": "B",
+        "evidence_class": "evidence_supported",
+        "protocol_version": "1.0.0",
+        "max_duration_sec": 1200,
+        "recommended_duration_sec": 600,
+        "min_duration_sec": 600,
+        "duration": {
+          "micro_sec": 120,
+          "min_sec": 600,
+          "optimal_sec": 600,
+          "extended_sec": 1200
+        },
+        "modality": "cognitive",
+        "arousal_direction": "down",
+        "need_tags": [
+          "rumination",
+          "sleep_prep"
+        ],
+        "categories": [
+          "stress",
+          "cognitive",
+          "emotional"
+        ],
+        "public_discrete": true,
+        "clinician_only": false,
+        "compatible_ids": [],
+        "incompatible_ids": [],
+        "score": 0.751,
+        "features": {
+          "need_match": 0.19,
+          "context_match": 0.25,
+          "timing": 0.95,
+          "evidence": 0.8,
+          "history": 0.5,
+          "preference": 0.55,
+          "feasibility": 0.87,
+          "expected_benefit": 0.76,
+          "adherence_prob": 0.77,
+          "penalties": 0
+        },
+        "score_breakdown": {
+          "goal_fit": 0.19,
+          "state_fit": 0.76,
+          "context_fit": 0.25,
+          "duration_fit": 0.87,
+          "preference_fit": 0.55,
+          "historical_response": 0.5,
+          "event_fit": 0.95,
+          "sequence_fit": null,
+          "safety_status": "ok",
+          "final_score": 0.751
+        },
+        "dose_for_gap_sec": 600,
+        "why": [
+          "moment:1am_spiral",
+          "evidence:B",
+          "duration:10m"
+        ],
+        "purpose": "Contain rumination by postponing worry to a limited daily worry period.",
+        "is_vault_ip": false,
+        "confidence": 0.369,
+        "explanation": {
+          "selected_id": "worry-postpone",
+          "positives": [
+            "timing=0.95",
+            "evidence=0.8",
+            "feasibility=0.87",
+            "moment:1am_spiral",
+            "evidence:B",
+            "duration:10m"
+          ],
+          "penalties": [],
+          "confidence": 0.369
+        },
+        "dose": {
+          "micro": 120,
+          "minimum": 600,
+          "recommended": 600,
+          "extended": 1200
+        },
+        "preferred_dose": "extended",
+        "delivery_modality": "audio"
       }
     ],
     "exclusions": [
@@ -3395,24 +3403,24 @@
     ],
     "exclusions_total": 8,
     "exclusions_truncated": false,
-    "personalized_message": "Context: night rumination · bedroom. Why now: interrupt spiral without screens or protocols that raise arousal. Action: run “Acute Physiological Sigh (1–3 Cycles)” (physiological-sigh-acute). Duration: ~1 min (fits 30 min gap; dose ≤ gap). Skip/SILENCE is always OK.",
+    "personalized_message": "Context: night rumination · bedroom. Why now: interrupt spiral without screens or protocols that raise arousal. Action: run “Stimulus Control Therapy (CBT-I Component)” (stimulus-control). Duration: ~60 min (fits 30 min gap; dose ≤ gap). Skip/SILENCE is always OK.",
     "why_selected": [
-      "need:stress_acute",
-      "evidence:B",
-      "duration:1m"
+      "moment:1am_spiral",
+      "evidence:A",
+      "duration:60m"
     ],
     "tau_select": 0.42,
     "scores": {
-      "physiological-sigh-acute": 0.836,
-      "54321-grounding": 0.828,
       "stimulus-control": 0.824,
-      "cyclic-sighing": 0.787,
-      "exhale-emphasized": 0.778,
-      "pmr": 0.776,
+      "pmr": 0.773,
       "worry-postpone": 0.751,
-      "tactical-breath-reset": 0.708,
-      "box-breathing": 0.681,
-      "body-scan": 0.643
+      "physiological-sigh-acute": 0.683,
+      "54321-grounding": 0.678,
+      "exhale-emphasized": 0.66,
+      "body-scan": 0.643,
+      "cyclic-sighing": 0.637,
+      "478-breathing": 0.621,
+      "brief-pmr-acute": 0.614
     },
     "input": {
       "client_type": "sleep_recovery_seekers",
@@ -3439,7 +3447,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "sleep_recovery_seekers",
-        "as_of": "2026-09-19T09:27:50.257Z",
+        "as_of": "2026-09-19T09:35:46.981Z",
         "physical": {
           "sleep_h": {
             "value": 3,
@@ -3566,7 +3574,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "sleep_recovery_seekers",
-      "as_of": "2026-09-19T09:27:50.257Z",
+      "as_of": "2026-09-19T09:35:46.981Z",
       "physical": {
         "sleep_h": {
           "value": 3,
@@ -3687,16 +3695,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_51e10dc1ad92",
+      "decision_id": "dr_cd5026d79b17",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:27:50.259Z"
+        "decided_at": "2026-09-19T09:35:46.983Z"
       },
       "state": {
         "client_id": null,
         "client_type": "sleep_recovery_seekers",
-        "as_of": "2026-09-19T09:27:50.257Z",
+        "as_of": "2026-09-19T09:35:46.981Z",
         "physical": {
           "sleep_h": {
             "value": 3,
@@ -3816,86 +3824,6 @@
       },
       "candidates": [
         {
-          "protocol_id": "physiological-sigh-acute",
-          "score": 0.836,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.52,
-            "context_match": 0,
-            "timing": 0.35,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.99,
-            "expected_benefit": 0.65,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.52,
-            "state_fit": 0.65,
-            "context_fit": 0,
-            "duration_fit": 0.99,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.35,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.836
-          },
-          "why": [
-            "need:stress_acute",
-            "evidence:B",
-            "duration:1m"
-          ],
-          "min_duration_sec": 30,
-          "recommended_duration_sec": 60,
-          "max_duration_sec": 120,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
-          "protocol_id": "54321-grounding",
-          "score": 0.828,
-          "protocol_version": "1.0.0",
-          "evidence_class": "practitioner_derived",
-          "features": {
-            "need_match": 0.42,
-            "context_match": 0,
-            "timing": 0.35,
-            "evidence": 0.55,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.97,
-            "expected_benefit": 0.5,
-            "adherence_prob": 1,
-            "penalties": 0.08
-          },
-          "score_breakdown": {
-            "goal_fit": 0.42,
-            "state_fit": 0.5,
-            "context_fit": 0,
-            "duration_fit": 0.97,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.35,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.828
-          },
-          "why": [
-            "need:stress_acute",
-            "evidence:C",
-            "duration:2m"
-          ],
-          "min_duration_sec": 120,
-          "recommended_duration_sec": 120,
-          "max_duration_sec": 300,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
           "protocol_id": "stimulus-control",
           "score": 0.824,
           "protocol_version": "1.0.0",
@@ -3936,92 +3864,12 @@
           "clinician_only": false
         },
         {
-          "protocol_id": "cyclic-sighing",
-          "score": 0.787,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.52,
-            "context_match": 0,
-            "timing": 0.35,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.93,
-            "expected_benefit": 0.65,
-            "adherence_prob": 0.93,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.52,
-            "state_fit": 0.65,
-            "context_fit": 0,
-            "duration_fit": 0.93,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.35,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.787
-          },
-          "why": [
-            "need:stress_acute",
-            "evidence:B",
-            "duration:5m"
-          ],
-          "min_duration_sec": 300,
-          "recommended_duration_sec": 300,
-          "max_duration_sec": 300,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
-          "protocol_id": "exhale-emphasized",
-          "score": 0.778,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.53,
-            "context_match": 0,
-            "timing": 0.35,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.97,
-            "expected_benefit": 0.65,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.53,
-            "state_fit": 0.65,
-            "context_fit": 0,
-            "duration_fit": 0.97,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.35,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.778
-          },
-          "why": [
-            "need:stress_acute",
-            "evidence:B",
-            "duration:2m"
-          ],
-          "min_duration_sec": 120,
-          "recommended_duration_sec": 120,
-          "max_duration_sec": 300,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
           "protocol_id": "pmr",
-          "score": 0.776,
+          "score": 0.773,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
-            "need_match": 0.52,
+            "need_match": 0.5,
             "context_match": 0.25,
             "timing": 0.95,
             "evidence": 0.8,
@@ -4033,7 +3881,7 @@
             "penalties": 0
           },
           "score_breakdown": {
-            "goal_fit": 0.52,
+            "goal_fit": 0.5,
             "state_fit": 0.76,
             "context_fit": 0.25,
             "duration_fit": 0.84,
@@ -4042,7 +3890,7 @@
             "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.776
+            "final_score": 0.773
           },
           "why": [
             "need:stress_acute",
@@ -4097,8 +3945,48 @@
           "clinician_only": false
         },
         {
-          "protocol_id": "tactical-breath-reset",
-          "score": 0.708,
+          "protocol_id": "physiological-sigh-acute",
+          "score": 0.683,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.5,
+            "context_match": 0,
+            "timing": 0.35,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.99,
+            "expected_benefit": 0.65,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.5,
+            "state_fit": 0.65,
+            "context_fit": 0,
+            "duration_fit": 0.99,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.35,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.683
+          },
+          "why": [
+            "need:stress_acute",
+            "evidence:B",
+            "duration:1m"
+          ],
+          "min_duration_sec": 30,
+          "recommended_duration_sec": 60,
+          "max_duration_sec": 120,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "54321-grounding",
+          "score": 0.678,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -4111,7 +3999,7 @@
             "feasibility": 0.97,
             "expected_benefit": 0.5,
             "adherence_prob": 1,
-            "penalties": 0
+            "penalties": 0.08
           },
           "score_breakdown": {
             "goal_fit": 0.42,
@@ -4123,47 +4011,7 @@
             "event_fit": 0.35,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.708
-          },
-          "why": [
-            "need:stress_acute",
-            "evidence:C",
-            "duration:2m"
-          ],
-          "min_duration_sec": 45,
-          "recommended_duration_sec": 120,
-          "max_duration_sec": 180,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
-          "protocol_id": "box-breathing",
-          "score": 0.681,
-          "protocol_version": "1.0.0",
-          "evidence_class": "practitioner_derived",
-          "features": {
-            "need_match": 0.42,
-            "context_match": 0.11,
-            "timing": 0.35,
-            "evidence": 0.55,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.97,
-            "expected_benefit": 0.5,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.42,
-            "state_fit": 0.5,
-            "context_fit": 0.11,
-            "duration_fit": 0.97,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.35,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.681
+            "final_score": 0.678
           },
           "why": [
             "need:stress_acute",
@@ -4173,7 +4021,47 @@
           "min_duration_sec": 120,
           "recommended_duration_sec": 120,
           "max_duration_sec": 300,
-          "public_discrete": false,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "exhale-emphasized",
+          "score": 0.66,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.63,
+            "context_match": 0,
+            "timing": 0.35,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.97,
+            "expected_benefit": 0.65,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.63,
+            "state_fit": 0.65,
+            "context_fit": 0,
+            "duration_fit": 0.97,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.35,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.66
+          },
+          "why": [
+            "need:stress_acute",
+            "evidence:B",
+            "duration:2m"
+          ],
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 300,
+          "public_discrete": true,
           "clinician_only": false
         },
         {
@@ -4214,6 +4102,126 @@
           "recommended_duration_sec": 720,
           "max_duration_sec": 2700,
           "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "cyclic-sighing",
+          "score": 0.637,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.52,
+            "context_match": 0,
+            "timing": 0.35,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.93,
+            "expected_benefit": 0.65,
+            "adherence_prob": 0.93,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.52,
+            "state_fit": 0.65,
+            "context_fit": 0,
+            "duration_fit": 0.93,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.35,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.637
+          },
+          "why": [
+            "need:stress_acute",
+            "evidence:B",
+            "duration:5m"
+          ],
+          "min_duration_sec": 300,
+          "recommended_duration_sec": 300,
+          "max_duration_sec": 300,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "478-breathing",
+          "score": 0.621,
+          "protocol_version": "1.0.0",
+          "evidence_class": "practitioner_derived",
+          "features": {
+            "need_match": 0.19,
+            "context_match": 0.43,
+            "timing": 0.95,
+            "evidence": 0.55,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.97,
+            "expected_benefit": 0.5,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.19,
+            "state_fit": 0.5,
+            "context_fit": 0.43,
+            "duration_fit": 0.97,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.621
+          },
+          "why": [
+            "moment:1am_spiral",
+            "evidence:C",
+            "duration:2m"
+          ],
+          "min_duration_sec": 120,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 120,
+          "public_discrete": false,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "brief-pmr-acute",
+          "score": 0.614,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.42,
+            "context_match": 0,
+            "timing": 0.35,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.97,
+            "expected_benefit": 0.65,
+            "adherence_prob": 1,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.42,
+            "state_fit": 0.65,
+            "context_fit": 0,
+            "duration_fit": 0.97,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.35,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.614
+          },
+          "why": [
+            "need:stress_acute",
+            "evidence:B",
+            "duration:2m"
+          ],
+          "min_duration_sec": 90,
+          "recommended_duration_sec": 120,
+          "max_duration_sec": 300,
+          "public_discrete": true,
           "clinician_only": false
         }
       ],
@@ -4269,78 +4277,18 @@
         }
       ],
       "ranking_features": {
-        "need_match": 0.52,
-        "context_match": 0,
-        "timing": 0.35,
-        "evidence": 0.8,
+        "need_match": 0.29,
+        "context_match": 0.29,
+        "timing": 0.95,
+        "evidence": 1,
         "history": 0.5,
         "preference": 0.55,
-        "feasibility": 0.99,
-        "expected_benefit": 0.65,
-        "adherence_prob": 1,
-        "penalties": 0
+        "feasibility": 0.93,
+        "expected_benefit": 0.92,
+        "adherence_prob": 0.2,
+        "penalties": 0.08
       },
       "top": [
-        {
-          "protocol_id": "physiological-sigh-acute",
-          "score": 0.836,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.52,
-            "context_match": 0,
-            "timing": 0.35,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.99,
-            "expected_benefit": 0.65,
-            "adherence_prob": 1,
-            "penalties": 0
-          },
-          "score_breakdown": {
-            "goal_fit": 0.52,
-            "state_fit": 0.65,
-            "context_fit": 0,
-            "duration_fit": 0.99,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.35,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.836
-          }
-        },
-        {
-          "protocol_id": "54321-grounding",
-          "score": 0.828,
-          "protocol_version": "1.0.0",
-          "evidence_class": "practitioner_derived",
-          "features": {
-            "need_match": 0.42,
-            "context_match": 0,
-            "timing": 0.35,
-            "evidence": 0.55,
-            "history": 0.5,
-            "preference": 0.55,
-            "feasibility": 0.97,
-            "expected_benefit": 0.5,
-            "adherence_prob": 1,
-            "penalties": 0.08
-          },
-          "score_breakdown": {
-            "goal_fit": 0.42,
-            "state_fit": 0.5,
-            "context_fit": 0,
-            "duration_fit": 0.97,
-            "preference_fit": 0.55,
-            "historical_response": 0.5,
-            "event_fit": 0.35,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.828
-          }
-        },
         {
           "protocol_id": "stimulus-control",
           "score": 0.824,
@@ -4370,21 +4318,83 @@
             "safety_status": "ok",
             "final_score": 0.824
           }
+        },
+        {
+          "protocol_id": "pmr",
+          "score": 0.773,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.5,
+            "context_match": 0.25,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.84,
+            "expected_benefit": 0.76,
+            "adherence_prob": 0.7,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.5,
+            "state_fit": 0.76,
+            "context_fit": 0.25,
+            "duration_fit": 0.84,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.773
+          }
+        },
+        {
+          "protocol_id": "worry-postpone",
+          "score": 0.751,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.19,
+            "context_match": 0.25,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0.55,
+            "feasibility": 0.87,
+            "expected_benefit": 0.76,
+            "adherence_prob": 0.77,
+            "penalties": 0
+          },
+          "score_breakdown": {
+            "goal_fit": 0.19,
+            "state_fit": 0.76,
+            "context_fit": 0.25,
+            "duration_fit": 0.87,
+            "preference_fit": 0.55,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.751
+          }
         }
       ],
-      "confidence": 0.399,
+      "confidence": 0.421,
       "explanation": {
-        "selected_id": "physiological-sigh-acute",
+        "selected_id": "stimulus-control",
         "positives": [
-          "need_match=0.52",
-          "evidence=0.8",
-          "feasibility=0.99",
-          "need:stress_acute",
-          "evidence:B",
-          "duration:1m"
+          "timing=0.95",
+          "evidence=1",
+          "feasibility=0.93",
+          "moment:1am_spiral",
+          "evidence:A",
+          "duration:60m"
         ],
-        "penalties": [],
-        "confidence": 0.399
+        "penalties": [
+          "feature_penalties=0.08"
+        ],
+        "confidence": 0.421
       },
       "protocol_versions": {
         "cyclic-sighing": "1.0.0",
@@ -4444,19 +4454,21 @@
       "input_hash": "e5aeb5b7a0cf131f",
       "schema_version": "1.0.0"
     },
-    "confidence": 0.399,
+    "confidence": 0.421,
     "explanation": {
-      "selected_id": "physiological-sigh-acute",
+      "selected_id": "stimulus-control",
       "positives": [
-        "need_match=0.52",
-        "evidence=0.8",
-        "feasibility=0.99",
-        "need:stress_acute",
-        "evidence:B",
-        "duration:1m"
+        "timing=0.95",
+        "evidence=1",
+        "feasibility=0.93",
+        "moment:1am_spiral",
+        "evidence:A",
+        "duration:60m"
       ],
-      "penalties": [],
-      "confidence": 0.399
+      "penalties": [
+        "feature_penalties=0.08"
+      ],
+      "confidence": 0.421
     }
   },
   "D": {
@@ -4520,7 +4532,7 @@
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 1.129,
+        "score": 0.979,
         "features": {
           "need_match": 0.84,
           "context_match": 0.57,
@@ -4543,7 +4555,7 @@
           "event_fit": 0.7,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 1.129
+          "final_score": 0.979
         },
         "dose_for_gap_sec": 120,
         "why": [
@@ -4555,7 +4567,7 @@
         ],
         "purpose": "Rapidly shift from distracted/tense state to controlled, present, process-focused state.",
         "is_vault_ip": false,
-        "confidence": 0.438,
+        "confidence": 0.43,
         "explanation": {
           "selected_id": "centering-ravizza",
           "positives": [
@@ -4572,7 +4584,7 @@
             "public_discrete"
           ],
           "penalties": [],
-          "confidence": 0.438
+          "confidence": 0.43
         },
         "dose": {
           "micro": 120,
@@ -4672,90 +4684,97 @@
         "delivery_modality": "text"
       },
       {
-        "protocol_id": "affect-labeling",
-        "name": "Affect Labeling (Putting Feelings into Words)",
+        "protocol_id": "physiological-sigh-acute",
+        "name": "Acute Physiological Sigh (1–3 Cycles)",
         "evidence": "B",
         "evidence_class": "evidence_supported",
         "protocol_version": "1.0.0",
-        "max_duration_sec": 180,
-        "recommended_duration_sec": 120,
-        "min_duration_sec": 60,
+        "max_duration_sec": 120,
+        "recommended_duration_sec": 60,
+        "min_duration_sec": 30,
         "duration": {
-          "micro_sec": 60,
-          "min_sec": 60,
-          "optimal_sec": 120,
-          "extended_sec": 180
+          "micro_sec": 30,
+          "min_sec": 30,
+          "optimal_sec": 60,
+          "extended_sec": 120
         },
-        "modality": "cognitive",
+        "modality": "stress",
         "arousal_direction": "down",
         "need_tags": [
-          "emotion_regulate",
-          "affect_label",
-          "micro_reset"
+          "stress_acute",
+          "arousal_down",
+          "micro_reset",
+          "pre_performance"
         ],
         "categories": [
-          "emotional",
-          "cognitive"
+          "stress"
         ],
         "public_discrete": true,
         "clinician_only": false,
         "compatible_ids": [],
         "incompatible_ids": [],
-        "score": 0.686,
+        "score": 0.698,
         "features": {
-          "need_match": 0.16,
-          "context_match": 0.73,
-          "timing": 0.35,
+          "need_match": 0.98,
+          "context_match": 0.9,
+          "timing": 0.95,
           "evidence": 0.8,
           "history": 0.5,
-          "preference": 0.75,
-          "feasibility": 0.8,
+          "preference": 0,
+          "feasibility": 0.9,
           "expected_benefit": 0.68,
           "adherence_prob": 1,
-          "penalties": 0
+          "penalties": 0.35
         },
         "score_breakdown": {
-          "goal_fit": 0.16,
+          "goal_fit": 0.98,
           "state_fit": 0.68,
-          "context_fit": 0.73,
-          "duration_fit": 0.8,
-          "preference_fit": 0.75,
+          "context_fit": 0.9,
+          "duration_fit": 0.9,
+          "preference_fit": 0,
           "historical_response": 0.5,
-          "event_fit": 0.35,
+          "event_fit": 0.95,
           "sequence_fit": null,
           "safety_status": "ok",
-          "final_score": 0.686
+          "final_score": 0.698
         },
-        "dose_for_gap_sec": 60,
+        "dose_for_gap_sec": 30,
         "why": [
+          "need:pre_performance",
+          "moment:live_blank",
           "evidence:B",
-          "duration:2m",
-          "pref:non-breath",
+          "duration:1m",
+          "pref:breath_penalty",
           "public_discrete"
         ],
-        "purpose": "Reduce emotional reactivity by specifically naming felt emotions.",
+        "purpose": "Fastest practical application of cyclic sigh pattern for spike stress.",
         "is_vault_ip": false,
-        "confidence": 0.369,
+        "confidence": 0.479,
         "explanation": {
-          "selected_id": "affect-labeling",
+          "selected_id": "physiological-sigh-acute",
           "positives": [
-            "context_match=0.73",
+            "need_match=0.98",
+            "context_match=0.9",
+            "timing=0.95",
             "evidence=0.8",
-            "preference=0.75",
-            "feasibility=0.8",
+            "feasibility=0.9",
+            "need:pre_performance",
+            "moment:live_blank",
             "evidence:B",
-            "duration:2m",
-            "pref:non-breath",
+            "duration:1m",
             "public_discrete"
           ],
-          "penalties": [],
-          "confidence": 0.369
+          "penalties": [
+            "pref:breath_penalty",
+            "feature_penalties=0.35"
+          ],
+          "confidence": 0.479
         },
         "dose": {
-          "micro": 60,
-          "minimum": 60,
-          "recommended": 120,
-          "extended": 180
+          "micro": 30,
+          "minimum": 30,
+          "recommended": 60,
+          "extended": 120
         },
         "preferred_dose": "micro",
         "delivery_modality": "text"
@@ -5018,11 +5037,11 @@
     ],
     "tau_select": 0.42,
     "scores": {
-      "centering-ravizza": 1.129,
+      "centering-ravizza": 0.979,
       "brief-pmr-acute": 0.704,
+      "physiological-sigh-acute": 0.698,
       "affect-labeling": 0.686,
       "if-then-gollwitzer": 0.651,
-      "physiological-sigh-acute": 0.564,
       "tactical-breath-reset": 0.537,
       "social-connection-micro": 0.494,
       "worry-postpone": 0.481,
@@ -5054,7 +5073,7 @@
       "client_state": {
         "client_id": null,
         "client_type": "corporate_ceo",
-        "as_of": "2026-09-19T09:27:50.262Z",
+        "as_of": "2026-09-19T09:35:46.986Z",
         "physical": {
           "sleep_h": {
             "value": null,
@@ -5180,7 +5199,7 @@
     "client_state": {
       "client_id": null,
       "client_type": "corporate_ceo",
-      "as_of": "2026-09-19T09:27:50.262Z",
+      "as_of": "2026-09-19T09:35:46.986Z",
       "physical": {
         "sleep_h": {
           "value": null,
@@ -5300,16 +5319,16 @@
       "label": null
     },
     "decision_record": {
-      "decision_id": "dr_171ac8041754",
+      "decision_id": "dr_cc7673741655",
       "client_id": null,
       "staff_id": null,
       "timestamps": {
-        "decided_at": "2026-09-19T09:27:50.264Z"
+        "decided_at": "2026-09-19T09:35:46.988Z"
       },
       "state": {
         "client_id": null,
         "client_type": "corporate_ceo",
-        "as_of": "2026-09-19T09:27:50.262Z",
+        "as_of": "2026-09-19T09:35:46.986Z",
         "physical": {
           "sleep_h": {
             "value": null,
@@ -5429,7 +5448,7 @@
       "candidates": [
         {
           "protocol_id": "centering-ravizza",
-          "score": 1.129,
+          "score": 0.979,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -5454,7 +5473,7 @@
             "event_fit": 0.7,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.129
+            "final_score": 0.979
           },
           "why": [
             "need:pre_performance",
@@ -5507,6 +5526,49 @@
           "min_duration_sec": 90,
           "recommended_duration_sec": 120,
           "max_duration_sec": 300,
+          "public_discrete": true,
+          "clinician_only": false
+        },
+        {
+          "protocol_id": "physiological-sigh-acute",
+          "score": 0.698,
+          "protocol_version": "1.0.0",
+          "evidence_class": "evidence_supported",
+          "features": {
+            "need_match": 0.98,
+            "context_match": 0.9,
+            "timing": 0.95,
+            "evidence": 0.8,
+            "history": 0.5,
+            "preference": 0,
+            "feasibility": 0.9,
+            "expected_benefit": 0.68,
+            "adherence_prob": 1,
+            "penalties": 0.35
+          },
+          "score_breakdown": {
+            "goal_fit": 0.98,
+            "state_fit": 0.68,
+            "context_fit": 0.9,
+            "duration_fit": 0.9,
+            "preference_fit": 0,
+            "historical_response": 0.5,
+            "event_fit": 0.95,
+            "sequence_fit": null,
+            "safety_status": "ok",
+            "final_score": 0.698
+          },
+          "why": [
+            "need:pre_performance",
+            "moment:live_blank",
+            "evidence:B",
+            "duration:1m",
+            "pref:breath_penalty",
+            "public_discrete"
+          ],
+          "min_duration_sec": 30,
+          "recommended_duration_sec": 60,
+          "max_duration_sec": 120,
           "public_discrete": true,
           "clinician_only": false
         },
@@ -5589,48 +5651,6 @@
           "min_duration_sec": 300,
           "recommended_duration_sec": 300,
           "max_duration_sec": 600,
-          "public_discrete": true,
-          "clinician_only": false
-        },
-        {
-          "protocol_id": "physiological-sigh-acute",
-          "score": 0.564,
-          "protocol_version": "1.0.0",
-          "evidence_class": "evidence_supported",
-          "features": {
-            "need_match": 0.74,
-            "context_match": 0.9,
-            "timing": 0.95,
-            "evidence": 0.8,
-            "history": 0.5,
-            "preference": 0,
-            "feasibility": 0.9,
-            "expected_benefit": 0.68,
-            "adherence_prob": 1,
-            "penalties": 0.35
-          },
-          "score_breakdown": {
-            "goal_fit": 0.74,
-            "state_fit": 0.68,
-            "context_fit": 0.9,
-            "duration_fit": 0.9,
-            "preference_fit": 0,
-            "historical_response": 0.5,
-            "event_fit": 0.95,
-            "sequence_fit": null,
-            "safety_status": "ok",
-            "final_score": 0.564
-          },
-          "why": [
-            "moment:live_blank",
-            "evidence:B",
-            "duration:1m",
-            "pref:breath_penalty",
-            "public_discrete"
-          ],
-          "min_duration_sec": 30,
-          "recommended_duration_sec": 60,
-          "max_duration_sec": 120,
           "public_discrete": true,
           "clinician_only": false
         },
@@ -6067,7 +6087,7 @@
       "top": [
         {
           "protocol_id": "centering-ravizza",
-          "score": 1.129,
+          "score": 0.979,
           "protocol_version": "1.0.0",
           "evidence_class": "practitioner_derived",
           "features": {
@@ -6092,7 +6112,7 @@
             "event_fit": 0.7,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 1.129
+            "final_score": 0.979
           }
         },
         {
@@ -6126,37 +6146,37 @@
           }
         },
         {
-          "protocol_id": "affect-labeling",
-          "score": 0.686,
+          "protocol_id": "physiological-sigh-acute",
+          "score": 0.698,
           "protocol_version": "1.0.0",
           "evidence_class": "evidence_supported",
           "features": {
-            "need_match": 0.16,
-            "context_match": 0.73,
-            "timing": 0.35,
+            "need_match": 0.98,
+            "context_match": 0.9,
+            "timing": 0.95,
             "evidence": 0.8,
             "history": 0.5,
-            "preference": 0.75,
-            "feasibility": 0.8,
+            "preference": 0,
+            "feasibility": 0.9,
             "expected_benefit": 0.68,
             "adherence_prob": 1,
-            "penalties": 0
+            "penalties": 0.35
           },
           "score_breakdown": {
-            "goal_fit": 0.16,
+            "goal_fit": 0.98,
             "state_fit": 0.68,
-            "context_fit": 0.73,
-            "duration_fit": 0.8,
-            "preference_fit": 0.75,
+            "context_fit": 0.9,
+            "duration_fit": 0.9,
+            "preference_fit": 0,
             "historical_response": 0.5,
-            "event_fit": 0.35,
+            "event_fit": 0.95,
             "sequence_fit": null,
             "safety_status": "ok",
-            "final_score": 0.686
+            "final_score": 0.698
           }
         }
       ],
-      "confidence": 0.438,
+      "confidence": 0.43,
       "explanation": {
         "selected_id": "centering-ravizza",
         "positives": [
@@ -6173,7 +6193,7 @@
           "public_discrete"
         ],
         "penalties": [],
-        "confidence": 0.438
+        "confidence": 0.43
       },
       "protocol_versions": {
         "cyclic-sighing": "1.0.0",
@@ -6233,7 +6253,7 @@
       "input_hash": "e48f180085a58054",
       "schema_version": "1.0.0"
     },
-    "confidence": 0.438,
+    "confidence": 0.43,
     "explanation": {
       "selected_id": "centering-ravizza",
       "positives": [
@@ -6250,7 +6270,7 @@
         "public_discrete"
       ],
       "penalties": [],
-      "confidence": 0.438
+      "confidence": 0.43
     }
   }
 }
