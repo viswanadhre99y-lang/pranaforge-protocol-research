@@ -48,3 +48,57 @@
 
 ## Evidence notes
 Exercise/sleep A/B; reappraisal/distancing A/B; coherent breathing B; worry postpone B; healthcare burnout literature applied; clinical PTSD/depression → professional care.
+
+---
+
+## Full protocol schema adaptations (client-specific)
+
+### Full schema — Exec Moral-Distress Boundary Ritual
+**Protocol name:** Exec Moral-Distress Boundary Ritual
+**Primary purpose:** Contain after hard staffing/safety decisions without denying accountability.
+**Problem it targets:** Carry-home moral load.
+**Typical duration:** 8–12 minutes
+**Minimum useful duration:** 5 minutes
+**Step-by-step instructions:**
+1. Write facts vs values tension (**no PHI**).
+2. Affect label; self-distancing paragraph.
+3. If clinical distress → EAP/physician health — not self-treat.
+4. Coherent breathing 6–8 min.
+5. Schedule constructive action (staffing plan) next business window.
+**When to use it:** After ethically heavy days.
+**Expected short-term effect:** Less bedtime rumination; clearer action.
+**Expected longer-term effect:** Distancing/reappraisal A/B; breath B.
+**Mechanism / proposed mechanism:** Perspective + autonomic + plan.
+**Evidence level:** B
+**Best supporting research:** Self-distancing; Lehrer; healthcare burnout lit (applied).
+**Potential risks:** Avoidance of accountability — keep formal review paths.
+**Who should avoid or modify it:** Suicidality/depression — immediate care.
+**Source links:** Distancing literature; PMC4104929.
+**Original creator/developer, if known:** Applied.
+**Safety:** Sentinel events → EAP/peer + formal processes; not protocol theater alone.
+
+### Full schema — Hospital Leader Shutdown + Sleep Protect
+**Protocol name:** Hospital Leader Shutdown + Sleep Protect
+**Primary purpose:** Create off-ramp from 24/7 culture.
+**Problem it targets:** Chronic hypervigilance.
+**Typical duration:** 10–20 min nightly
+**Minimum useful duration:** 7 minutes
+**Step-by-step instructions:**
+1. Worry-postpone admin loops to morning list.
+2. Device park outside bedroom if possible.
+3. Evening light hygiene.
+4. PMR or coherent breathing.
+5. Fixed wake most days.
+6. NSDR if racing — not sleep replacement.
+**When to use it:** Most nights.
+**Expected short-term effect:** Better sleep opportunity.
+**Expected longer-term effect:** Worry postpone B; light A; coherent B.
+**Mechanism / proposed mechanism:** Offload + circadian + RSA.
+**Evidence level:** B
+**Best supporting research:** CBT-I adjacent hygiene; Balban; Lehrer.
+**Potential risks:** Insomnia disorder → CBT-I clinician.
+**Who should avoid or modify it:** On-call nights — adapt expectations.
+**Source links:** AASM adjacent; PMC4104929.
+**Original creator/developer, if known:** Applied.
+**Safety:** Chest pain → ED; burnout → physician health programs.
+

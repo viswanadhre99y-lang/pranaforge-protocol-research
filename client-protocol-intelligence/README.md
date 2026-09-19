@@ -46,11 +46,18 @@ Inherited from parent library `../00_README.md`:
 |---------|-------|-------------|
 | **A** | Wealth / executive / capital | Profiles present for founders, CEOs, FO, IB, VC/PE, etc. |
 | **B** | Professionals (consultants, lawyers, physicians…) | See `00_universe/README.md` schema notes |
-| **D** | Travel / lifestyle / performance-adjacent | **This delivery:** 15 deep-dives × profiles/protocols/moments/stacks + synthesis |
+| **C** | Sport / performance / duty | **Delivered:** 14 deep-dives × profiles/protocols/moments/stacks + `MATRIX_PERFORMANCE_DUTY.csv` + UHNW travel whitespace — see `00_universe/CLUSTER_C_SLUGS.md` |
+| **D** | Travel / lifestyle / performance-adjacent | 15 deep-dives × profiles/protocols/moments/stacks + synthesis |
 
 ### Cluster D deep-dive slugs
 
 `frequent_international_travelers` · `private_jet_uhnw_travelers` · `digital_nomads` · `irregular_schedule_shift_adjacent` · `demanding_social_calendar_hosts` · `executive_parents` · `high_profile_families` · `executive_power_couples` · `extreme_academic_students` · `competitive_exam_candidates` · `young_professionals` · `burnout_seekers` · `high_cognitive_load_knowledge_workers` · `sleep_recovery_seekers` · `performance_optimization_seekers`
+
+### Cluster C deep-dive slugs
+
+`professional_athletes` · `olympic_elite_athletes` · `combat_motorsport_athletes` · `team_sport_athletes` · `coaches_sports_execs` · `actors_performing_artists` · `musicians_dancers` · `public_speakers_creators` · `political_public_officials` · `diplomats` · `military_special_ops_adjacent` · `emergency_responders` · `pilots_aviation` · `hospital_executives`
+
+Matrix: `05_matrix/MATRIX_PERFORMANCE_DUTY.csv` · Report: `06_synthesis/CLUSTER_C_REPORT.md` · UHNW whitespace: `06_synthesis/WHITESPACE_UHNW_ATHLETE_PERFORMER_TRAVEL.md`
 
 ## Hard product rules (travel / sleep)
 

@@ -44,3 +44,56 @@
 
 ## Evidence notes
 PPR B; tactical/box C; sigh B; cold-face C package-level; weight-cut myths E. Heat/concussion safety override evidence claims.
+
+---
+
+## Full protocol schema adaptations (client-specific)
+
+### Full schema — Grid / Corner Composure PPR
+**Protocol name:** Grid / Corner Composure PPR
+**Primary purpose:** Channel high arousal into task cues without aggression spillover.
+**Problem it targets:** Rage or panic errors under extreme arousal.
+**Typical duration:** 20–60 seconds
+**Minimum useful duration:** 10 seconds
+**Step-by-step instructions:**
+1. Physical set (marks).
+2. 2 tactical breaths — short/no holds if CO2-sensitive.
+3. External cue: hip line / apex / glove.
+4. One process word (timing, relax grip, see).
+5. Go on planned trigger (bell/lights).
+**When to use it:** Final seconds pre-action.
+**Expected short-term effect:** Attentional set under extreme arousal.
+**Expected longer-term effect:** PPR evidence generalizes cautiously to high-arousal sports.
+**Mechanism / proposed mechanism:** Cue binding + arousal containment.
+**Evidence level:** B/C
+**Best supporting research:** Rupprecht 2021; tactical breathing applied literature.
+**Potential risks:** Hold dizziness; hostile cue words widening attention poorly.
+**Who should avoid or modify it:** Post-concussion; heat illness; never while operating vehicle.
+**Source links:** IRSEP PPR meta-analysis.
+**Original creator/developer, if known:** Applied synthesis.
+**Safety (heat/cold/breath/trauma):** CRITICAL — never hyperventilate before water/ice/driving; no breath-holds for weight cut; heat → medical cooling first.
+
+### Full schema — Fight/Race-Week Downshift (Non-Weight-Cut)
+**Protocol name:** Fight/Race-Week Downshift (Non-Weight-Cut)
+**Primary purpose:** Protect sleep and cut unnecessary sympathetic load outside medical cut protocols.
+**Problem it targets:** Media + travel stacking (separate from licensed weight cut).
+**Typical duration:** 10–20 min evening
+**Minimum useful duration:** 5 min exhale pacing
+**Step-by-step instructions:**
+1. Separate medical cut from nervous-system protocol.
+2. Evening coherent/~6 bpm or exhale-emphasized 10–15 min.
+3. Brief PMR jaw/shoulders/hands.
+4. Worry-postpone if rumination.
+5. No cyclic hyperventilation as cut/fat-burn aid (unsupported + risky).
+**When to use it:** Evenings fight/race week.
+**Expected short-term effect:** Subjective calm; sleep opportunity.
+**Expected longer-term effect:** Breathing B; PMR B; cut myths E.
+**Mechanism / proposed mechanism:** RSA/HRV + muscle discrimination + cognitive offload.
+**Evidence level:** B
+**Best supporting research:** Lehrer HRVB PMC4104929; PMR base; Balban 2023.
+**Potential risks:** Confusing with cut; overbreathing.
+**Who should avoid or modify it:** Eating disorders; unstable cardiac; pregnancy.
+**Source links:** PMC4104929; PubMed 36630953.
+**Original creator/developer, if known:** Applied synthesis — explicitly non-medical cut.
+**Safety:** Weight cut only under licensed medical/nutrition staff.
+

@@ -44,3 +44,57 @@
 
 ## Evidence notes
 ICAO Doc 9966 / EASA FTL-FRM frameworks A (regulatory science); naps/controlled rest B operational; jet-lag light B; off-duty coherent breathing B — never in lieu of sleep or fitness-for-duty.
+
+---
+
+## Full protocol schema adaptations (client-specific)
+
+### Full schema — Layover Circadian Recovery Pack
+**Protocol name:** Layover Circadian Recovery Pack
+**Primary purpose:** Maximize recovery sleep on short layovers within FTL/FRMS.
+**Problem it targets:** Sleep debt between FDPs.
+**Typical duration:** Layover-length dependent
+**Minimum useful duration:** Protect core sleep first
+**Step-by-step instructions:**
+1. Prioritize uninterrupted sleep opportunity over tourism.
+2. Dark cool room; earplugs/mask.
+3. Light timing for next FDP direction.
+4. 10–20 min nap only if it will not ruin main sleep; controlled rest only if approved procedure.
+5. Alcohol is not a sleep aid.
+6. Off-duty coherent breathing/PMR for wind-down after sleep plan set.
+7. Never use hyperventilation/cold extremes to “reset” before FDP.
+**When to use it:** Short layovers; east-west swings.
+**Expected short-term effect:** Better recovery sleep chance.
+**Expected longer-term effect:** FRMS science A/B; sleep hygiene C practical.
+**Mechanism / proposed mechanism:** Homeostat + circadian.
+**Evidence level:** A/B
+**Best supporting research:** ICAO Doc 9966; EASA FTL/FRM; jet-lag reviews.
+**Potential risks:** Wrong-timed light; alcohol.
+**Who should avoid or modify it:** Medical cert issues — AME.
+**Source links:** ICAO FRMS; EASA fatigue pages.
+**Original creator/developer, if known:** ICAO/EASA / sleep science.
+**Safety:** Report unfit when needed; never violate FTL for owner pressure; no cockpit breath experiments.
+
+### Full schema — Off-Duty Autonomic Downshift (Non-Duty)
+**Protocol name:** Off-Duty Autonomic Downshift (Non-Duty)
+**Primary purpose:** Reduce carryover stress without substituting for sleep.
+**Problem it targets:** Layover wired/anxious.
+**Typical duration:** 10–15 minutes
+**Minimum useful duration:** 5 minutes
+**Step-by-step instructions:**
+1. Only off-duty / not when alertness required imminently.
+2. Coherent/~6 bpm or exhale-emphasized.
+3. Brief PMR neck/shoulders.
+4. Worry-postpone non-urgent life admin.
+**When to use it:** Hotel after duty.
+**Expected short-term effect:** Subjective calm.
+**Expected longer-term effect:** Breath B.
+**Mechanism / proposed mechanism:** RSA.
+**Evidence level:** B
+**Best supporting research:** Lehrer HRVB; PMR.
+**Potential risks:** Dizziness.
+**Who should avoid or modify it:** On-duty / pre-report windows where sedation-like calm undesired — prefer light walk.
+**Source links:** PMC4104929.
+**Original creator/developer, if known:** Applied.
+**Safety:** Never in lieu of sleep or fitness-for-duty; controlled rest only if approved.
+

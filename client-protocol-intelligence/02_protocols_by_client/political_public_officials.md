@@ -46,3 +46,54 @@
 
 ## Evidence notes
 Reappraisal/self-distancing A/B; worry postpone B; tactical breath C; sleep/light A/B; if–then A.
+
+---
+
+## Full protocol schema adaptations (client-specific)
+
+### Full schema — Debate Green-Room Composure
+**Protocol name:** Debate Green-Room Composure
+**Primary purpose:** Clear thinking without flat affect on camera.
+**Problem it targets:** Debate anxiety.
+**Typical duration:** 5–8 minutes
+**Minimum useful duration:** 2 minutes
+**Step-by-step instructions:**
+1. Exhale-emphasized 3–5 min (preserve voice; quiet).
+2. Affect label; reappraisal: activation for clarity.
+3. PPR: posture → breath → first message pillar.
+4. Avoid hyperventilation before stage.
+**When to use it:** Debates, major hearings.
+**Expected short-term effect:** Steadier open; less shake.
+**Expected longer-term effect:** Breath B; reappraisal A; PPR C transfer.
+**Mechanism / proposed mechanism:** RSA + cognitive set.
+**Evidence level:** B
+**Best supporting research:** ER science; Balban; PPR transfer.
+**Potential risks:** Flat affect if overdone.
+**Who should avoid or modify it:** Voice issues; panic disorder modifications.
+**Source links:** PubMed 36630953; reappraisal lit.
+**Original creator/developer, if known:** Applied.
+**Safety:** Discretion absolute; crisis/suicidality → security+clinical.
+
+### Full schema — Attack-Cycle Cognitive Boundary
+**Protocol name:** Attack-Cycle Cognitive Boundary
+**Primary purpose:** Contain rumination that destroys sleep/decision quality.
+**Problem it targets:** Media attack loops.
+**Typical duration:** 10–15 min evening
+**Minimum useful duration:** 5 minutes
+**Step-by-step instructions:**
+1. Worry-postpone scheduled 15 min review with staff.
+2. Outside window: if–then → breath + written parked note.
+3. Self-distancing: advice-to-colleague write.
+4. Evening light hygiene + coherent 8–10 min.
+**When to use it:** Hostile news cycles.
+**Expected short-term effect:** Better sleep opportunity; clearer next-day decisions.
+**Expected longer-term effect:** Worry postpone B; distancing B.
+**Mechanism / proposed mechanism:** Offload + perspective + autonomic.
+**Evidence level:** B
+**Best supporting research:** Borkovec; self-distancing research.
+**Potential risks:** Avoidance of real legal/ethics issues — keep staff review.
+**Who should avoid or modify it:** Clinical depression/anxiety — care.
+**Source links:** Distancing literature.
+**Original creator/developer, if known:** Applied.
+**Safety:** Threats → security pathways.
+

@@ -46,3 +46,55 @@
 
 ## Evidence notes
 Performer anxiety metas support CBT-family (B); slow breathing B; grounding C; trauma-informed de-role applied C with safety priority.
+
+---
+
+## Full protocol schema adaptations (client-specific)
+
+### Full schema — Holding-Room Downshift + Ground
+**Protocol name:** Holding-Room Downshift + Ground
+**Primary purpose:** Reduce anticipatory anxiety without sedation that flattens craft affect.
+**Problem it targets:** Audition arousal.
+**Typical duration:** 3–7 minutes
+**Minimum useful duration:** 90 seconds
+**Step-by-step instructions:**
+1. Exhale-emphasized or coherent breathing 2–5 min (quiet).
+2. 5-4-3-2-1 sensory ground eyes open.
+3. One process intention (listen, truth, pace) — not “book it.”
+4. Light posture reset; sip water.
+**When to use it:** Auditions, rehearsals, ADR waits.
+**Expected short-term effect:** Lower state anxiety; present attention.
+**Expected longer-term effect:** Breath B; grounding C; MPA-adjacent support.
+**Mechanism / proposed mechanism:** Attention redirection + RSA.
+**Evidence level:** B/C
+**Best supporting research:** MPA intervention reviews PMC11851691; Balban 2023.
+**Potential risks:** Over-calm flattening needed affect.
+**Who should avoid or modify it:** Panic with breath focus — shorten; trauma — eyes open.
+**Source links:** PMC11851691; PubMed 36630953.
+**Original creator/developer, if known:** Applied synthesis.
+**Safety:** No hyperventilation for tears; intimacy protocols supersede.
+
+### Full schema — Post-Role De-Role Grounding
+**Protocol name:** Post-Role De-Role Grounding
+**Primary purpose:** Exit character physiologically/psychologically after heavy material.
+**Problem it targets:** Emotional hangover / role residue.
+**Typical duration:** 5–12 minutes
+**Minimum useful duration:** 3 minutes
+**Step-by-step instructions:**
+1. Name: “scene over; I am [own name].”
+2. External orientation walk or 5-4-3-2-1.
+3. Brief PMR face/jaw/hands.
+4. Optional affect label of residue; schedule processing if needed.
+5. No forced cathartic hyperventilation.
+**When to use it:** After intense scenes/shows.
+**Expected short-term effect:** Reduced residue; sleep protect.
+**Expected longer-term effect:** Applied trauma-informed performance practice (C).
+**Mechanism / proposed mechanism:** State boundary + gentle interoceptive reset.
+**Evidence level:** C
+**Best supporting research:** Trauma-informed care principles; grounding applied.
+**Potential risks:** Flooding if rushed catharsis.
+**Who should avoid or modify it:** PTSD/dissociation — clinician; follow intimacy coordinator protocols.
+**Source links:** Trauma-informed practice literature.
+**Original creator/developer, if known:** Applied synthesis.
+**Safety:** Stop if dissociating; refer clinical care.
+

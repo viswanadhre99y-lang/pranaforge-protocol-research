@@ -46,3 +46,55 @@
 
 ## Evidence notes
 Reappraisal A; affect labeling B; exercise A; worry postpone B; sideline-specific packages C; task-switch buffers C.
+
+---
+
+## Full protocol schema adaptations (client-specific)
+
+### Full schema — Sideline Decision Breath + Label
+**Protocol name:** Sideline Decision Breath + Label
+**Primary purpose:** Insert 5–15s regulation before high-stakes call when time allows.
+**Problem it targets:** Emotional decisions under crowd noise.
+**Typical duration:** 5–15 seconds
+**Minimum useful duration:** One exhale + label
+**Step-by-step instructions:**
+1. If time: physiological sigh or long exhale.
+2. Silent affect label (anger/fear).
+3. Ask: what does the game-model say?
+4. Communicate calmly; park ego review for later.
+5. Skip entirely when true instant decisions required.
+**When to use it:** Timeouts, reviews, substitutions with seconds available.
+**Expected short-term effect:** Slightly cooler decision framing.
+**Expected longer-term effect:** Sideline-specific RCTs scarce (C); components from labeling/sigh science.
+**Mechanism / proposed mechanism:** Affect labeling + exhale + cognitive model cue.
+**Evidence level:** C
+**Best supporting research:** Affect labeling literature; Balban sigh 2023.
+**Potential risks:** Hesitation.
+**Who should avoid or modify it:** On-field medical emergencies — medical first.
+**Source links:** Affect labeling lit; PubMed 36630953.
+**Original creator/developer, if known:** Applied synthesis.
+**Safety:** Chest pain → medical; burnout/depression → referral.
+
+### Full schema — Exec Cognitive Load Shutdown
+**Protocol name:** Exec Cognitive Load Shutdown
+**Primary purpose:** End-of-day closure so film/politics do not invade sleep.
+**Problem it targets:** Bedtime problem-solving.
+**Typical duration:** 10–15 minutes
+**Minimum useful duration:** 5 minutes
+**Step-by-step instructions:**
+1. Worry-postpone: top 3 open loops + first next action each.
+2. Device park; evening light hygiene.
+3. Coherent breathing or PMR 8–10 min.
+4. Fixed wake even after late games when possible.
+**When to use it:** Nights after games/board days.
+**Expected short-term effect:** Reduced bedtime arousal.
+**Expected longer-term effect:** Worry postpone B; coherent B.
+**Mechanism / proposed mechanism:** Cognitive offload + autonomic downshift + circadian.
+**Evidence level:** B
+**Best supporting research:** Borkovec worry-postpone lineage; Lehrer HRVB.
+**Potential risks:** Avoidance of needed planning — schedule morning block.
+**Who should avoid or modify it:** Clinical insomnia → CBT-I clinician.
+**Source links:** Worry postpone literature; PMC4104929.
+**Original creator/developer, if known:** Applied synthesis.
+**Safety:** NSDR if used = rest, not sleep replacement.
+

@@ -46,3 +46,53 @@
 
 ## Evidence notes
 Reappraisal A; PPR transfer B; cyclic sighing B; WOOP/if–then A; Pomodoro C.
+
+---
+
+## Full protocol schema adaptations (client-specific)
+
+### Full schema — Keynote Pre-Stage PPR
+**Protocol name:** Keynote Pre-Stage PPR
+**Primary purpose:** Stabilize voice/attention before walk-on.
+**Problem it targets:** Stage fright.
+**Typical duration:** 60–180 seconds
+**Minimum useful duration:** 30 seconds
+**Step-by-step instructions:**
+1. Plant feet; soften knees.
+2. 1–3 quiet physiological sighs or exhale pacing (mic-aware).
+3. Cue: serve audience / first story beat (process).
+4. Soften jaw; walk on with breath out.
+**When to use it:** Keynotes, pitches, panels.
+**Expected short-term effect:** Composure; fewer rushed openers.
+**Expected longer-term effect:** PPR B transfer; sigh B.
+**Mechanism / proposed mechanism:** Attention + autonomic.
+**Evidence level:** B
+**Best supporting research:** Rupprecht 2021; Balban 2023.
+**Potential risks:** Over-ritual.
+**Who should avoid or modify it:** Severe panic — clinical.
+**Source links:** IRSEP; PubMed 36630953.
+**Original creator/developer, if known:** Applied.
+**Safety:** Quiet breath for live mics; no stimulant pile-on.
+
+### Full schema — Creator Metrics Detox If–Then
+**Protocol name:** Creator Metrics Detox If–Then
+**Primary purpose:** Break compulsive analytics checks that spike anxiety.
+**Problem it targets:** Metric obsession.
+**Typical duration:** Plan 5 min; execute seconds
+**Minimum useful duration:** One if–then
+**Step-by-step instructions:**
+1. If urge to check analytics outside window → then 3 exhales + open draft task.
+2. Schedule 1–2 metrics windows/day.
+3. Values compass weekly: why create?
+**When to use it:** Daily creator life.
+**Expected short-term effect:** Fewer anxiety spikes; more deep work.
+**Expected longer-term effect:** If–then A; values C.
+**Mechanism / proposed mechanism:** Cue-response + values.
+**Evidence level:** A/C
+**Best supporting research:** Gollwitzer implementation intentions; ACT values brief.
+**Potential risks:** Avoidance of needed business review — keep scheduled window.
+**Who should avoid or modify it:** Clinical depression/OCD — care.
+**Source links:** Implementation intention metas.
+**Original creator/developer, if known:** Applied.
+**Safety:** Breath alone is not treatment for compulsive use disorders.
+

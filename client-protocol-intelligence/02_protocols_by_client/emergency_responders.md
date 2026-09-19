@@ -46,3 +46,57 @@
 
 ## Evidence notes
 Shiftwork sleep medicine B; grounding C; TIPP package-level C; first-responder mindfulness heterogeneous C; exercise A; trauma-focused care first-line for PTSD — breath/mindfulness adjunct with caveats.
+
+---
+
+## Full protocol schema adaptations (client-specific)
+
+### Full schema — Trauma-Informed Post-Call Reset
+**Protocol name:** Trauma-Informed Post-Call Reset
+**Primary purpose:** Stabilize without forcing catharsis after difficult calls.
+**Problem it targets:** Post-incident arousal or numbing.
+**Typical duration:** 3–10 minutes
+**Minimum useful duration:** 2 minutes
+**Step-by-step instructions:**
+1. Eyes-open 5-4-3-2-1 or external orientation.
+2. Optional 1–3 gentle exhales — stop if dissociating.
+3. Affect label lightly; hydrate; change clothes if ritual helps.
+4. Do NOT do prolonged breath holds, hyperventilation, or intense body-scan if flooding.
+5. Log need for EAP/CISM/peer support; follow agency policy.
+**When to use it:** After difficult calls (as soon as safe).
+**Expected short-term effect:** Reduced acute overwhelm for some.
+**Expected longer-term effect:** Grounding C; trauma-informed principles.
+**Mechanism / proposed mechanism:** Orienting + choice + gentle autonomic.
+**Evidence level:** C
+**Best supporting research:** Trauma-informed care; grounding applied; first-responder mindfulness caveats.
+**Potential risks:** Flooding/dissociation if intense interoception.
+**Who should avoid or modify it:** PTSD/clinical — professional care; suicidality — emergency.
+**Source links:** Trauma-informed breathwork caution literature.
+**Original creator/developer, if known:** Applied trauma-informed.
+**Safety:** EAP/CISM over DIY catharsis; no hyperventilation on duty.
+
+### Full schema — Shiftwork Sleep Anchor
+**Protocol name:** Shiftwork Sleep Anchor
+**Primary purpose:** Protect core sleep across rotating shifts.
+**Problem it targets:** Circadian misalignment.
+**Typical duration:** Ongoing
+**Minimum useful duration:** Fixed core sleep opportunity
+**Step-by-step instructions:**
+1. Protect longest dark sleep opportunity possible post-shift.
+2. Light timing / sunglasses strategy per shiftwork guidance.
+3. 10–20 min nap pre-night if policy allows.
+4. Caffeine early in shift not late.
+5. Family boundary if–thens for sleep protection.
+6. Screen dim pre-sleep.
+**When to use it:** Rotating/night shifts.
+**Expected short-term effect:** Better sleep opportunity; less debt accrual.
+**Expected longer-term effect:** Circadian B; naps B.
+**Mechanism / proposed mechanism:** SCN + homeostat.
+**Evidence level:** B
+**Best supporting research:** Shiftwork sleep medicine reviews.
+**Potential risks:** Melatonin/shift without guidance can worsen.
+**Who should avoid or modify it:** Sleep disorders — clinician.
+**Source links:** Shiftwork medicine reviews.
+**Original creator/developer, if known:** Sleep medicine.
+**Safety:** Fitness-for-duty policies supersede preference.
+
